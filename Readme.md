@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Sergey Erofeev](https://up.htmlacademy.ru/adaptive/17/user/118968).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Пушкарев](https://up.htmlacademy.ru/adaptive/17/user/87167).
 
 ---
 
