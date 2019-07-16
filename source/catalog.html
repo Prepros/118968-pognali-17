@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог - Сервис совместного путешествия "Погнали"</title>
+</head>
+<body>
+<header class="page-header">
+  <a class="page-header__logo logo" href="#">
+    <img class="logo__img" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали">
+  </a>
+  <button class="page-header__menu button-menu" type="button">
+    <span class="visually-hidden">Меню</span>
+  </button>
+  <nav class="page-header__nav">
+    <ul class="page-header__page-menu page-menu">
+      <li class="page-menu__item">
+        <a class="page-menu__link" href="#">О сервисе</a>
+      </li>
+      <li class="page-menu__item">
+        <a class="page-menu__link" href="#">Направления</a>
+      </li>
+      <li class="page-menu__item">
+        <a class="page-menu__link" href="#">Попутчики</a>
+      </li>
+    </ul>
+    <ul class="page-header__user-menu user-menu">
+      <li class="user-menu__item">
+        <a class="user-menu__link button" href="#">Авторизация</a>
+      </li>
+    </ul>
+    <ul class="page-header__contact-menu contact-menu">
+      <li class="contact-menu__item">
+        <a class="contact-menu__link" href="tel:88005558628">8 800 555-86-28</a>
+      </li>
+      <li class="contact-menu__item">
+        <a class="contact-menu__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </li>
+    </ul>
+    <ul class="page-header__social social">
+      <li class="social__item">
+        <a class="social__link social__link--fb" href="#"><span class="visually-hidden">Facebook</span></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--inst" href="#"><span class="visually-hidden">Instagram</span></a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page-main">
+  <h1 class="page-main__title">Попутчики</h1>
+
+  <section class="country-filter">
+    <header class="country-filter__head">
+      <h2 class="country-filter__title">Фильтрация по странам</h2>
+      <button class="country-filter__menu" type="button">
+        <span class="visually-hidden">Показать/скрыть фильтрацию по странам</span>
+      </button>
+    </header>
+    <div class="country-filter__content">
+      <ul class="country-filter__continent">
+        <li class="country-filter__continent-item">
+          <a class="country-filter__continent-link country-filter__continent-link--active" href="#">Европа</a>
+        </li>
+        <li class="country-filter__continent-item">
+          <a class="country-filter__continent-link" href="#">Азия</a>
+        </li>
+        <li class="country-filter__continent-item">
+          <a class="country-filter__continent-link" href="#">Америка</a>
+        </li>
+        <li class="country-filter__continent-item">
+          <a class="country-filter__continent-link" href="#">Острова</a>
+        </li>
+      </ul>
+      <ol class="country-filter__alphabet">
+        <li class="country-filter__alphabet-item">
+          <ol class="country-filter__alphabet-row">
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">А</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Б</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">В</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Г</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Д</a>
+            </li>
+          </ol>
+        </li>
+        <li class="country-filter__alphabet-item">
+          <ol class="country-filter__alphabet-row">
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Е</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Ё</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Ж</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">З</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">И</a>
+            </li>
+          </ol>
+        </li>
+        <li class="country-filter__alphabet-item">
+          <ol class="country-filter__alphabet-row">
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Й</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">К</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Л</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">М</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Н</a>
+            </li>
+          </ol>
+        </li>
+        <li class="country-filter__alphabet-item">
+          <ol class="country-filter__alphabet-row">
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">О</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">П</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Р</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">С</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Т</a>
+            </li>
+          </ol>
+        </li>
+        <li class="country-filter__alphabet-item">
+          <ol class="country-filter__alphabet-row">
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">У</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Ф</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Х</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Ц</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Ч</a>
+            </li>
+          </ol>
+        </li>
+        <li class="country-filter__alphabet-item">
+          <ol class="country-filter__alphabet-row">
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Ш</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Щ</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Э</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Ю</a>
+            </li>
+            <li class="country-filter__alphabet-col">
+              <a class="country-filter__alphabet-link" href="#">Я</a>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <ol class="country-filter__country">
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Афганистан</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Албания</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Алгерия</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Андорра</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Аргентина</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Армения</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Австралия</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Австрия</a>
+        </li>
+        <li class="country-filter__country-item">
+          <a class="country-filter__country-link" href="#">Азербайджанм</a>
+        </li>
+      </ol>
+      <button class="country-filter__button button button--grey">Свернуть</button>
+    </div>
+  </section>
+
+  <section class="person-filter">
+    <h2 class="person-filter__title">Подберите идеального попутчика</h2>
+    <form class="person-filter__form" action="http://echo.htmlacademy.ru" method="get">
+      <div class="person-filter__list">
+        <div class="person-filter__head">
+          <h3 class="person-filter__subtitle">Хобби</h3>
+          <button class="person-filter__more">
+            <span class="visually-hidden">Подробнее</span>
+          </button>
+        </div>
+        <div class="person-filter__wrapp">
+          <p class="person-filter__item input">
+            <input class="visually-hidden" id="hobbi-1" type="checkbox" name="hobbi[]" value="Шахматы" checked>
+            <label class="person-filter__label input__checkbox" for="hobbi-1">Шахматы</label>
+          </p>      <p class="person-filter__item input">
+          <input class="visually-hidden" id="hobbi-2" type="checkbox" name="hobbi[]" value="Рисование" checked>
+          <label class="person-filter__label input__checkbox" for="hobbi-2">Рисование</label>
+        </p>
+          <p class="person-filter__item input">
+            <input class="visually-hidden" id="hobbi-3" type="checkbox" name="hobbi[]" value="Пение">
+            <label class="person-filter__label input__checkbox" for="hobbi-3">Пение</label>
+          </p>
+        </div>
+      </div>
+      <div class="person-filter__list">
+        <div class="person-filter__head">
+          <h3 class="person-filter__subtitle">Музыка</h3>
+          <button class="person-filter__more">
+            <span class="visually-hidden">Подробнее</span>
+          </button>
+        </div>
+        <div class="person-filter__wrapp">
+          <p class="person-filter__item input">
+            <input class="visually-hidden" id="music-1" type="checkbox" name="music[]" value="Тяжелый рок" checked>
+            <label class="person-filter__label input__checkbox" for="music-1">Тяжелый рок</label>
+          </p>
+          <p class="person-filter__item input">
+          <input class="visually-hidden" id="music-2" type="checkbox" name="music[]" value="Русский рэп">
+          <label class="person-filter__label input__checkbox" for="music-2">Русский рэп</label>
+          </p>
+          <p class="person-filter__item input">
+            <input class="visually-hidden" id="music-3" type="checkbox" name="music[]" value="Евроденс">
+            <label class="person-filter__label input__checkbox" for="music-3">Евроденс</label>
+          </p>
+        </div>
+      </div>
+      <div class="person-filter__list">
+        <div class="person-filter__head">
+          <h3 class="person-filter__subtitle">Еда</h3>
+          <button class="person-filter__more">
+            <span class="visually-hidden">Подробнее</span>
+          </button>
+        </div>
+        <div class="person-filter__wrapp">
+          <p class="person-filter__item input">
+            <input class="visually-hidden" id="eat-1" type="checkbox" name="eat[]" value="Европейская кухня" checked>
+            <label class="person-filter__label input__checkbox" for="eat-1">Европейская кухня</label>
+          </p>
+          <p class="person-filter__item input">
+          <input class="visually-hidden" id="eat-2" type="checkbox" name="eat[]" value="Азиатская кухня">
+          <label class="person-filter__label input__checkbox" for="eat-2">Азиатская кухня</label>
+        </p>
+          <p class="person-filter__item input">
+            <input class="visually-hidden" id="eat-3" type="checkbox" name="eat[]" value="Русская кухня">
+            <label class="person-filter__label input__checkbox" for="eat-3">Русская кухня</label>
+          </p>
+        </div>
+      </div>
+      <div class="person-filter__list">
+        <div class="person-filter__head">
+          <h3 class="person-filter__subtitle">Транспорт</h3>
+          <button class="person-filter__more">
+            <span class="visually-hidden">Подробнее</span>
+          </button>
+        </div>
+        <div class="person-filter__wrapp">
+          <ul class="person-filter__transport transport">
+            <li class="transport__item">
+              <input class="visually-hidden transport__input" id="air" type="checkbox" checked>
+              <label for="air">
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
+              </label>
+              <span class="transport__tooltip">Авиаперелеты</span>
+            </li>
+            <li class="transport__item">
+              <input class="visually-hidden transport__input" id="transport" type="checkbox" checked>
+              <label for="transport">
+                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
+              </label>
+              <span class="transport__tooltip">Автотранспорт</span>
+            </li>
+            <li class="transport__item">
+              <input class="visually-hidden transport__input" id="bike" type="checkbox">
+              <label for="bike">
+                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
+              </label>
+              <span class="transport__tooltip">Велосипед</span>
+            </li>
+            <li class="transport__item">
+              <input class="visually-hidden transport__input" id="pedestrian" type="checkbox" checked>
+              <label for="pedestrian">
+                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
+              </label>
+              <span class="transport__tooltip">Пешком</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="person-filter__list">
+        <div class="person-filter__head">
+          <h3 class="person-filter__subtitle">Левел</h3>
+          <button class="person-filter__more">
+            <span class="visually-hidden">Подробнее</span>
+          </button>
+        </div>
+        <div class="person-filter__wrapp">
+          <div class="level-filter">
+            <div class="level-filter__lvl">
+              <label class="level-filter__lvl-min">
+                <input class="level-filter__input" type="text" name="level" value="30">
+              </label>
+              <label class="level-filter__lvl-max">
+                <input class="level-filter__input" type="text" name="level" value="100">
+              </label>
+            </div>
+            <div class="level-filter__range">
+              <div class="level-filter__range-scale">
+                <div class="level-filter__range-bar"></div>
+              </div>
+              <button class="level-filter__toggle level-filter__toggle--min">
+                <span class="visually-hidden">Минимальное значение</span>
+              </button>
+              <button class="level-filter__toggle level-filter__toggle--max">
+                <span class="visually-hidden">Максимальное значение</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="person-filter__button button button--white">Показать</button>
+    </form>
+  </section>
+
+  <section class="user-companion">
+    <h2 class="visually-hidden">Найденые пользователи</h2>
+    <div class="user-companion__list">
+      <article class="user-companion__item">
+        <header class="user-companion__head">
+          <div class="user-companion__avatar">
+            <p class="user-companion__pic">
+              <img class="user-companion__img" src="http://placehold.it/70x70" width="70" height="70" alt="Фотография Тани Фирсовой">
+            </p>
+            <a class="user-companion__like user-companion__like--active" href="#">
+              <span class="visually-hidden">Нравится</span>
+            </a>
+          </div>
+          <div class="user-companion__info">
+            <h2 class="user-companion__name indicator indicator--offline">Таня Фирсова</h2>
+            <span class="user-companion__subscriber">1,5 М</span>
+          </div>
+        </header>
+        <ul class="user-companion__tag tag">
+          <!-- Теги здесь являются ссылками ??? -->
+          <li class="tag__item">
+            <a class="tag__link" href="#">#ЗОЖ</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#ПП</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#Фитнес</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#пляж</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#авокадо</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#смузи</a>
+          </li>
+        </ul>
+        <div class="user-companion__want-visit">
+          <h3 class="user-companion__title">Хочет посетить:</h3>
+          <ul class="user-companion__flags">
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+              <span class="user-companion__flag-name">Шри Ланка</span>
+            </li>
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Тайланда">
+              <span class="user-companion__flag-name">Тайланд</span>
+            </li>
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Сейшейлы">
+              <span class="user-companion__flag-name">Сейшейлы</span>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__transport">
+          <h3 class="user-companion__title">Транспорт:</h3>
+          <ul class="article-companion__transport transport">
+            <li class="transport__item">
+              <!-- Транспорт здесь являются ссылками ??? -->
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
+                <span class="transport__tooltip">Авиаперелеты</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
+                <span class="transport__tooltip">Автотранспорт</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
+                <span class="transport__tooltip">Велосипед</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
+                <span class="transport__tooltip">Пешком</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__level">
+          <h3 class="user-companion__title">Левел:</h3>
+          <p class="user-companion__level-item block-level">
+            <span class="block-level__number">99</span>
+          </p>
+        </div>
+        <a class="user-companion__button button" href="#">Позвать!</a>
+      </article>
+      <article class="user-companion__item">
+        <header class="user-companion__head">
+          <div class="user-companion__avatar">
+            <p class="user-companion__pic">
+              <img class="user-companion__img" src="http://placehold.it/70x70" width="70" height="70" alt="Фотография Пети Демина">
+            </p>
+            <a class="user-companion__like" href="#">
+              <span class="visually-hidden">Нравится</span>
+            </a>
+          </div>
+          <div class="user-companion__info">
+            <h2 class="user-companion__name indicator indicator--offline">Петя Демин</h2>
+            <span class="user-companion__subscriber">150</span>
+          </div>
+        </header>
+        <ul class="user-companion__tag tag">
+          <!-- Теги здесь являются ссылками ??? -->
+          <li class="tag__item">
+            <a class="tag__link" href="#">#бургер</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#бар</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#футбол</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#пляж</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#концерт</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#крафт</a>
+          </li>
+        </ul>
+        <div class="user-companion__want-visit">
+          <h3 class="user-companion__title">Хочет посетить:</h3>
+          <ul class="user-companion__flags">
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Бульгии">
+              <span class="user-companion__flag-name">Бельгия</span>
+            </li>
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Чехии">
+              <span class="user-companion__flag-name">Чехия</span>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__transport">
+          <h3 class="user-companion__title">Транспорт:</h3>
+          <ul class="article-companion__transport transport">
+            <li class="transport__item">
+              <!-- Транспорт здесь являются ссылками ??? -->
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
+                <span class="transport__tooltip">Авиаперелеты</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
+                <span class="transport__tooltip">Автотранспорт</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
+                <span class="transport__tooltip">Велосипед</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
+                <span class="transport__tooltip">Пешком</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__level">
+          <h3 class="user-companion__title">Левел:</h3>
+          <p class="user-companion__level-item block-level">
+            <span class="block-level__number">80</span>
+          </p>
+        </div>
+        <a class="user-companion__button button" href="#">Позвать!</a>
+      </article>
+      <article class="user-companion__item">
+        <header class="user-companion__head">
+          <div class="user-companion__avatar">
+            <p class="user-companion__pic">
+              <img class="user-companion__img" src="http://placehold.it/70x70" width="70" height="70" alt="Фотография Марка Смолова">
+            </p>
+            <a class="user-companion__like" href="#">
+              <span class="visually-hidden">Нравится</span>
+            </a>
+          </div>
+          <div class="user-companion__info">
+            <h2 class="user-companion__name indicator indicator--offline">Марк Смолов</h2>
+            <span class="user-companion__subscriber">1700</span>
+          </div>
+        </header>
+        <ul class="user-companion__tag tag">
+          <!-- Теги здесь являются ссылками ??? -->
+          <li class="tag__item">
+            <a class="tag__link" href="#">#рэп</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#тату</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#хайпбист</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#кроссовки</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#суприм</a>
+          </li>
+        </ul>
+        <div class="user-companion__want-visit">
+          <h3 class="user-companion__title">Хочет посетить:</h3>
+          <ul class="user-companion__flags">
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг США">
+              <span class="user-companion__flag-name">США</span>
+            </li>
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Австралии">
+              <span class="user-companion__flag-name">Австралия</span>
+            </li>
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Доминиканы">
+              <span class="user-companion__flag-name">Доминикана</span>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__transport">
+          <h3 class="user-companion__title">Транспорт:</h3>
+          <ul class="article-companion__transport transport">
+            <li class="transport__item">
+              <!-- Транспорт здесь являются ссылками ??? -->
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
+                <span class="transport__tooltip">Авиаперелеты</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
+                <span class="transport__tooltip">Автотранспорт</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
+                <span class="transport__tooltip">Велосипед</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
+                <span class="transport__tooltip">Пешком</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__level">
+          <h3 class="user-companion__title">Левел:</h3>
+          <p class="user-companion__level-item block-level">
+            <span class="block-level__number">25</span>
+          </p>
+        </div>
+        <a class="user-companion__button button" href="#">Позвать!</a>
+      </article>
+      <article class="user-companion__item">
+        <header class="user-companion__head">
+          <div class="user-companion__avatar">
+            <p class="user-companion__pic">
+              <img class="user-companion__img" src="http://placehold.it/70x70" width="70" height="70" alt="Фотография Ларисы Роговой">
+            </p>
+            <a class="user-companion__like" href="#">
+              <span class="visually-hidden">Нравится</span>
+            </a>
+          </div>
+          <div class="user-companion__info">
+            <h2 class="user-companion__name indicator indicator--online">Лариса Рогова</h2>
+            <span class="user-companion__subscriber">23</span>
+          </div>
+        </header>
+        <ul class="user-companion__tag tag">
+          <!-- Теги здесь являются ссылками ??? -->
+          <li class="tag__item">
+            <a class="tag__link" href="#">#образование</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#карьера</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#учеба</a>
+          </li>
+          <li class="tag__item">
+            <a class="tag__link" href="#">#линкедин</a>
+          </li>
+        </ul>
+        <div class="user-companion__want-visit">
+          <h3 class="user-companion__title">Хочет посетить:</h3>
+          <ul class="user-companion__flags">
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Великобритании">
+              <span class="user-companion__flag-name">Великобритания</span>
+            </li>
+            <li class="user-companion__flag">
+              <img class="user-companion__flag-img img-flag" src="http://placehold.it/26x18" width="26" height="18" alt="Флаг Германии">
+              <span class="user-companion__flag-name">Германия</span>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__transport">
+          <h3 class="user-companion__title">Транспорт:</h3>
+          <ul class="article-companion__transport transport">
+            <li class="transport__item">
+              <!-- Транспорт здесь являются ссылками ??? -->
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
+                <span class="transport__tooltip">Авиаперелеты</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
+                <span class="transport__tooltip">Автотранспорт</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
+                <span class="transport__tooltip">Велосипед</span>
+              </a>
+            </li>
+            <li class="transport__item">
+              <a class="transport__link" href="#">
+                <!-- Вместо картинки тут будет svg ??? -->
+                <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
+                <span class="transport__tooltip">Пешком</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="user-companion__level">
+          <h3 class="user-companion__title">Левел:</h3>
+          <p class="user-companion__level-item block-level">
+            <span class="block-level__number">50</span>
+          </p>
+        </div>
+        <a class="user-companion__button button" href="#">Позвать!</a>
+      </article>
+    </div>
+    <a class="user-companion__more" href="#">Показать еще</a>
+    <p class="user-companion__slide">
+      <button class="user-companion__toggle user-companion__toggle--left">
+        <span class="visually-hidden">Назад</span>
+      </button>
+      <button class="user-companion__toggle user-companion__toggle--right">
+        <span class="visually-hidden">Вперед</span>
+      </button>
+    </p>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <a class="page-footer__logo logo" href="#">
+    <img class="logo__img" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали">
+  </a>
+  <ul class="page-footer__social social">
+    <li class="social__item">
+      <a class="social__link social__link--fb" href="#"><span class="visually-hidden">Facebook</span></a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--inst" href="#"><span class="visually-hidden">Instagram</span></a>
+    </li>
+  </ul>
+  <p class="page-footer__copyright copyright">
+    <b class="copyright__text">Разработано</b>
+    <a class="copyright__link" href="#">
+      <img class="copyright__img" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип Html Academy">
+      <span class="visually-hidden">Html Academy</span>
+    </a>
+  </p>
+</footer>
+</body>
+</html>
