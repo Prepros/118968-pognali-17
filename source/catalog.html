@@ -228,9 +228,9 @@
   <section class="person-filter">
     <h2 class="person-filter__title">Подберите идеального попутчика</h2>
     <form class="person-filter__form" action="http://echo.htmlacademy.ru" method="get">
-      <fieldset class="person-filter__list">
+      <div class="person-filter__list">
         <div class="person-filter__head">
-          <legend class="person-filter__subtitle">Хобби</legend>
+          <h3 class="person-filter__subtitle">Хобби</h3>
           <button class="person-filter__more">
             <span class="visually-hidden">Подробнее</span>
           </button>
@@ -248,10 +248,10 @@
             <label class="person-filter__label input__checkbox" for="hobbi-3">Пение</label>
           </p>
         </div>
-      </fieldset>
-      <fieldset class="person-filter__list">
+      </div>
+      <div class="person-filter__list">
         <div class="person-filter__head">
-          <legend class="person-filter__subtitle">Музыка</legend>
+          <h3 class="person-filter__subtitle">Музыка</h3>
           <button class="person-filter__more">
             <span class="visually-hidden">Подробнее</span>
           </button>
@@ -270,10 +270,10 @@
             <label class="person-filter__label input__checkbox" for="music-3">Евроденс</label>
           </p>
         </div>
-      </fieldset>
-      <fieldset class="person-filter__list">
+      </div>
+      <div class="person-filter__list">
         <div class="person-filter__head">
-          <legend class="person-filter__subtitle">Еда</legend>
+          <h3 class="person-filter__subtitle">Еда</h3>
           <button class="person-filter__more">
             <span class="visually-hidden">Подробнее</span>
           </button>
@@ -292,10 +292,10 @@
             <label class="person-filter__label input__checkbox" for="eat-3">Русская кухня</label>
           </p>
         </div>
-      </fieldset>
-      <fieldset class="person-filter__list">
+      </div>
+      <div class="person-filter__list">
         <div class="person-filter__head">
-          <legend class="person-filter__subtitle">Транспорт</legend>
+          <h3 class="person-filter__subtitle">Транспорт</h3>
           <button class="person-filter__more">
             <span class="visually-hidden">Подробнее</span>
           </button>
@@ -303,48 +303,39 @@
         <div class="person-filter__wrapp">
           <ul class="person-filter__transport transport">
             <li class="transport__item">
-              <!-- Транспорт здесь являются ссылками ??? -->
-              <a class="transport__link" href="#">
-                <input class="visually-hidden transport__input" id="air" type="checkbox" checked>
-                <label for="air">
-                  <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
-                </label>
-                <span class="transport__tooltip">Авиаперелеты</span>
-              </a>
+              <input class="visually-hidden transport__input" id="air" type="checkbox" checked>
+              <label for="air">
+                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
+              </label>
+              <span class="transport__tooltip">Авиаперелеты</span>
             </li>
             <li class="transport__item">
-              <a class="transport__link" href="#">
-                <input class="visually-hidden transport__input" id="transport" type="checkbox" checked>
-                <label for="transport">
-                  <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
-                </label>
-                <span class="transport__tooltip">Автотранспорт</span>
-              </a>
+              <input class="visually-hidden transport__input" id="transport" type="checkbox" checked>
+              <label for="transport">
+                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
+              </label>
+              <span class="transport__tooltip">Автотранспорт</span>
             </li>
             <li class="transport__item">
-              <a class="transport__link" href="#">
-                <input class="visually-hidden transport__input" id="bike" type="checkbox">
-                <label for="bike">
-                  <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
-                </label>
-                <span class="transport__tooltip">Велосипед</span>
-              </a>
+              <input class="visually-hidden transport__input" id="bike" type="checkbox">
+              <label for="bike">
+                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
+              </label>
+              <span class="transport__tooltip">Велосипед</span>
             </li>
             <li class="transport__item">
-              <a class="transport__link" href="#">
-                <input class="visually-hidden transport__input" id="pedestrian" type="checkbox" checked>
-                <label for="pedestrian">
-                  <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
-                </label>
-                <span class="transport__tooltip">Пешком</span>
-              </a>
+              <input class="visually-hidden transport__input" id="pedestrian" type="checkbox" checked>
+              <label for="pedestrian">
+                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
+              </label>
+              <span class="transport__tooltip">Пешком</span>
             </li>
           </ul>
         </div>
-      </fieldset>
-      <fieldset class="person-filter__list">
+      </div>
+      <div class="person-filter__list">
         <div class="person-filter__head">
-          <legend class="person-filter__subtitle">Левел</legend>
+          <h3 class="person-filter__subtitle">Левел</h3>
           <button class="person-filter__more">
             <span class="visually-hidden">Подробнее</span>
           </button>
@@ -372,7 +363,7 @@
             </div>
           </div>
         </div>
-      </fieldset>
+      </div>
       <button class="person-filter__button button button--white">Показать</button>
     </form>
   </section>
