@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Промо секция
+   ========================================================================== */
+
+.promo {
+  padding-top: 30px;
+  padding-bottom: 110px;
+
+  color: $white-color;
+  background-color: $blue-color--dark;
+}
+
+.promo__content {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  width: $width-mobile;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 88px 125px, 0 -100px;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 240px;
+  padding: 0 16px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.promo__wrapp {
+
+}
+
+.promo__list {
+  @include reset-ul;
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.promo__item {
+
+}
+
+.promo__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  
+  &--phone {
+    background-color: $orange-color;
+    border-radius: 50%;
+  }
+
+  &--email {
+    background-color: $yellow-color--dark;
+    border-radius: 50%;
+  }
+
+  &--button {
+    min-width: 189px;
+  }
+}
+
+.promo__page-info {
+  padding-left: 25px;
+  padding-right: 90px;
+}

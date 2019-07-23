@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Информационный блок
+   ========================================================================== */
+
+.page-info {
+
+}
+
+.page-info__title {
+
+}
+
+.page-info__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: 300;
+  color: $white-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
