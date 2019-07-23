@@ -19,3 +19,13 @@
   color: $blue-color;
   text-decoration: none;
 }
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .site-menu__item {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+}

@@ -3,16 +3,19 @@
    ========================================================================== */
 
 .page-nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.page-nav__site-menu {
-  margin-bottom: 50px;
-}
-
 .page-nav__user-menu {
   margin-bottom: 60px;
+}
+
+.page-nav__site-menu {
+  margin-bottom: 50px;
 }
 
 .page-nav__contact-menu {
@@ -21,4 +24,44 @@
 
 .page-nav__social-menu {
   //
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .page-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: -39px;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+
+  .page-nav__user-menu {
+    order: -1;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .page-nav__site-menu,
+  .page-nav__contact-menu,
+  .page-nav__social-menu {
+    width: 100%;
+  }
+
+  .page-nav__site-menu {
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 160px;
+  }
+
+  .page-nav__contact-menu {
+    margin-left: 60px;
+    margin-bottom: 140px;
+  }
+
+  .page-nav__social-menu {
+    margin-left: 80px;
+  }
 }

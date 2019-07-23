@@ -55,8 +55,20 @@
   border: none;
 }
 
-.page-nav {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  /* Обертка для логотипа и навигации */
+  .page-header__wrapp {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: $width-tablet;
+    padding: 40px;
+  }
+
+  .page-header__scroll {
+    width: 353px;
+    padding: 0;
+  }
 }

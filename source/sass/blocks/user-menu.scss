@@ -17,3 +17,10 @@
   border-radius: 30px;
 }
 
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .user-menu__link {
+    min-width: 189px;
+  }
+}

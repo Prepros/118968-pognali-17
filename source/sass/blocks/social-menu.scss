@@ -16,3 +16,11 @@
 .social-menu__link {
   //
 }
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .social-menu {
+    justify-content: flex-start;
+  }
+}
