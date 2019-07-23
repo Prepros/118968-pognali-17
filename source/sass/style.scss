@@ -13,7 +13,17 @@
    ========================================================================== */
 @import "globals/base";
 @import "globals/container";
+@import "globals/logo";
+@import "globals/button";
+
+/* Навигации
+   ========================================================================== */
+@import "blocks/site-menu";
+@import "blocks/user-menu";
+@import "blocks/thumb-menu";
+@import "blocks/social-menu";
 
 /* Секции
    ========================================================================== */
-//@import "blocks/";
+@import "blocks/page-header";
+@import "blocks/page-nav";

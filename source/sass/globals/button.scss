@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Кнопки
+   ========================================================================== */
+
+.button {
+  display: inline-block;
+  min-width: 230px;
+  margin: 0;
+  padding: 8px 15px 2px;
+
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $blue-color--dark;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $yellow-color;
+  border: none;
+  border-radius: 20px;
+}

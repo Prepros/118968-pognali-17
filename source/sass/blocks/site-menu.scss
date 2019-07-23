@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Навигация по сайту
+   ========================================================================== */
+
+.site-menu {
+  @include reset-ul;
+}
+
+.site-menu__item {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+  color: $blue-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.site-menu__link {
+  color: $blue-color;
+  text-decoration: none;
+}
