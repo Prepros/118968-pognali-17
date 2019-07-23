@@ -36,7 +36,7 @@
 }
 
 .promo__wrapp {
-
+  //
 }
 
 .promo__list {
@@ -53,7 +53,7 @@
   display: block;
   width: 40px;
   height: 40px;
-  
+
   &--phone {
     background-color: $orange-color;
     border-radius: 50%;
@@ -73,3 +73,45 @@
   padding-left: 25px;
   padding-right: 90px;
 }
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .promo {
+    background-color: $blue-color--light2;
+  }
+
+  .promo__content {
+    width: $width-tablet;
+    min-height: 900px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
+    background-position: 280px 250px, center 235px;
+  }
+
+  .promo__title {
+    margin-bottom: 100px;
+    padding: 0 145px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .promo__list {
+    display: none;
+  }
+
+  .promo__page-info {
+    padding-left: 35px;
+    padding-right: 390px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+
+}
+

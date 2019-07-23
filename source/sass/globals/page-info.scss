@@ -27,3 +27,19 @@
     font-weight: 700;
   }
 }
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .page-info__text {
+    margin-bottom: 50px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    &--bold {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+}
