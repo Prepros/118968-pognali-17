@@ -72,3 +72,27 @@
     padding: 0;
   }
 }
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .page-header__scroll-bg--white {
+    background-color: transparent;
+    border: none;
+  }
+
+  /* Обертка для логотипа и навигации */
+  .page-header__wrapp {
+    align-items: center;
+    width: $width-desktop;
+    padding: 50px 60px 20px;
+  }
+
+  .page-header__scroll {
+    width: 345px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}

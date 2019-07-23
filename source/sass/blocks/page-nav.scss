@@ -65,3 +65,28 @@
     margin-left: 80px;
   }
 }
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .page-nav {
+    width: 630px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-nav__site-menu,
+  .page-nav__user-menu,
+  .page-nav__contact-menu,
+  .page-nav__social-menu {
+    display: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-nav__site-menu {
+    display: flex;
+    width: inherit;
+  }
+}

@@ -25,6 +25,14 @@
   .thumb-menu__item {
     font-size: 28px;
     line-height: 28px;
-    color: $blue-color;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .thumb-menu__item  {
+    font-size: 20px;
+    line-height: 20px;
   }
 }

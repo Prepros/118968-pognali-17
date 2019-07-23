@@ -29,3 +29,28 @@
     text-align: left;
   }
 }
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .site-menu {
+    order: -1;
+    display: flex;
+  }
+
+  .site-menu__item {
+    margin-right: 37px;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: $white-color;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .site-menu__link {
+    color: $white-color;
+  }
+}
