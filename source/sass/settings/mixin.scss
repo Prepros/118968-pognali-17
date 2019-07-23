@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Миксины
+   ========================================================================== */
+
+/* Подключает шрифт
+   ========================================================================== */
+@mixin font-face($font-family, $url, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$font-family}";
+    font-weight: $weight;
+    font-style: $style;
+    src: url("#{$url}.eot");
+    src: url("#{$url}.eot?#iefix") format("embedded-opentype"),
+      url("#{$url}.woff2") format("woff2"),
+      url("#{$url}.woff") format("woff"),
+      url("#{$url}.ttf") format("truetype"),
+      url("#{$url}.svg") format("svg");
+  }
+}
+
+/* Сброс списков
+   ========================================================================== */
+@mixin reset-ul() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Задает длину и ширину
+   ========================================================================== */
+@mixin size($width, $height: false) {
+  @if $height != false {
+    width: $width;
+    height: $height;
+  } else {
+  width: $width;
+  }
+}
