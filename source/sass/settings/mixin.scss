@@ -25,14 +25,3 @@
   padding: 0;
   list-style: none;
 }
-
-/* Задает длину и ширину
-   ========================================================================== */
-@mixin size($width, $height: false) {
-  @if $height != false {
-    width: $width;
-    height: $height;
-  } else {
-  width: $width;
-  }
-}
