@@ -130,5 +130,49 @@
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
+  .step {
+    margin-top: -230px;
+  }
 
+  .step__item {
+    padding-bottom: 30px;
+
+    &::before {
+      top: -15px;
+      left: auto;
+      right: 33px;
+
+      font-size: 24px;
+    }
+
+    &:nth-child(4n+1)::before,
+    &:nth-child(4n+2)::before,
+    &:nth-child(4n+3)::before {
+      right: 66px;
+    }
+
+    &:nth-child(1n) {
+      border-radius: 20px;
+    }
+
+    &:nth-child(1n+2) {
+      margin-left: -32px;
+    }
+
+    &:nth-child(4n+1) {
+      width: 25%; //330px
+      margin-left: 0;
+    }
+
+    &:nth-child(4n+2),
+    &:nth-child(4n+3) {
+      width: 29.16666666666667%; //385px
+    }
+
+    &:nth-child(4n+3) {}
+
+    &:nth-child(4n+4) {
+      width: 23.86363636363636%; //315px
+    }
+  }
 }
