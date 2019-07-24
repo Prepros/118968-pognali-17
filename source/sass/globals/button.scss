@@ -20,4 +20,72 @@
   background-color: $yellow-color;
   border: none;
   border-radius: 20px;
+
+  cursor: pointer;
+}
+
+.button-big {
+  position: relative;
+
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 230px;
+  margin: 0;
+  //padding: 8px 15px 2px;
+
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $blue-color--light;
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
+
+  background-color: $yellow-color;
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+.button-big__arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 10px;
+  height: 14px;
+
+  transform: translateY(-50%);
+
+  & polygon {
+    fill: $blue-color--light;
+  }
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .button {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .button-big {
+    padding: 30px 35px 27px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .button-big__arrow {
+    right: 35px;
+    top: 50%;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  //
 }

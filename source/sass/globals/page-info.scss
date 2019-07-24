@@ -25,7 +25,7 @@
   font-weight: 300;
   color: $white-color;
 
-  &:last-child {
+  &:last-of-type {
     margin-bottom: 0;
   }
 
@@ -37,6 +37,13 @@
 /* Планшеты
    ========================================================================== */
 @media (min-width: $breakpoint-tablet) {
+  .page-info__title {
+    margin-bottom: 50px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
   .page-info__text {
     margin-bottom: 50px;
 
@@ -46,6 +53,18 @@
     &--bold {
       font-size: 21px;
       line-height: 25px;
+    }
+  }
+
+  .service .page-info__title {
+    margin-bottom: 40px;
+  }
+
+  .service .page-info__text {
+    margin-bottom: 35px;
+
+    &:last-of-type {
+      margin-bottom: 45px;
     }
   }
 }
