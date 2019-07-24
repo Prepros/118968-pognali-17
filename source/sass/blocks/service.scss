@@ -52,5 +52,25 @@
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
-  //
+  .service {
+    padding-top: 200px;
+
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 120px, #192144 120px, #192144 100%);
+  }
+
+  .service__container {
+    padding-bottom: 215px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: right 50px;
+  }
+
+  .service__page-info {
+    width: 615px;
+
+    padding-top: 40px;
+    padding-left: 70px;
+    padding-right: 0;
+  }
 }

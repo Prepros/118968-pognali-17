@@ -72,5 +72,16 @@
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
-  //
+  .service .page-info__title {
+    margin-bottom: 60px;
+  }
+
+  .service .page-info__text {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      width: 415px;
+      margin-bottom: 85px;
+    }
+  }
 }
