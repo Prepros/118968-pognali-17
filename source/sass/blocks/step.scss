@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Инструкция пользования сервисом
+   ========================================================================== */
+
+.step {
+  padding-top: 110px;
+
+  color: $white-color--blue;
+
+  background-color: $blue-color;
+  background-image: linear-gradient(to bottom, $blue-color--dark 110px, $blue-color 110px, $blue-color 100%);
+}
+
+.step__container {
+  margin-top: -75px;
+}
+
+.step__list {
+  @include reset-ul;
+  counter-reset: section;
+}
+
+.step__item {
+  position: relative;
+
+  margin-top: -15px;
+  padding: 22px 23px 34px 25px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $blue-color--dark;
+
+  background-color: $orange-color;
+  border-radius: 10px;
+
+  &::before {
+    counter-increment: section;
+    content: counter(section);
+    position: absolute;
+    right: 23px;
+
+    color: $white-color;
+  }
+
+  &:nth-child(1) {
+    margin-top: 0;
+    background-color: $orange-color;
+  }
+
+  &:nth-child(2) {
+    background-color: $orange-color--light;
+  }
+
+  &:nth-child(3) {
+    background-color: $yellow-color--dark;
+  }
+
+  &:nth-child(4) {
+    padding-bottom: 22px;
+    background-color: $yellow-color;
+  }
+}
+
+.step__text {
+  display: inline-block;
+  max-width: 140px;
+}
