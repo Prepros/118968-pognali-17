@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Секция о сервисе
+   ========================================================================== */
+
+.service {
+  color: $white-color;
+  background-color: $blue-color;
+}
+
+.service__container {
+  padding-bottom: 78px;
+
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+}
+
+.service__page-info {
+  padding-top: 35px;
+  padding-left: 25px;
+  padding-right: 35px;
+}
