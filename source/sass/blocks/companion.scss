@@ -110,7 +110,11 @@
 }
 
 .companion__transport {
+  //
+}
 
+.companion__button {
+  width: 100%;
 }
 
 /* Планшеты
@@ -191,5 +195,36 @@
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
+  .companion {
+    padding-top: 130px;
+  }
 
+  .companion__wrapp {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-left: 70px;
+    padding-bottom: 54px;
+
+    background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 130px 260px, 485px 0;
+  }
+
+  .companion__page-info {
+    padding-top: 0;
+    margin-bottom: 168px;
+  }
+
+  .companion__list {
+    width: 630px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .companion__button {
+    width: 280px;
+    margin-top: -80px;
+  }
 }
