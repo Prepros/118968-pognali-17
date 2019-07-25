@@ -21,14 +21,11 @@
 .direction__list {
   @include reset-ul;
   box-sizing: border-box;
+  margin-bottom: 25px;
 }
 
 .direction__item {
   margin-bottom: 10px;
-
-  &:last-of-type {
-    margin-bottom: 25px;
-  }
 }
 
 .direction__thumb {
@@ -36,15 +33,10 @@
   margin: 0;
   line-height: 0;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .direction__thumb-img {
   border-radius: 10px;
-}
-
-.direction__item:hover .direction__thumb-img {
-  transform: scale(1.1);
 }
 
 .direction__thumb-flag {
@@ -118,4 +110,102 @@
 
 .direction__button {
   width: 100%;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .direction {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  .direction__container {
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: 440px top;
+  }
+  
+  .direction__page-info {
+    width: 350px;
+    margin-bottom: 100px;
+    padding-left: 35px;
+    padding-right: 0;
+  }
+
+  .direction__wrapp {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .direction__list {
+    margin-bottom: 47px;
+  }
+
+  .direction__item {
+    display: flex;
+  }
+
+  .direction__thumb {
+    width: 186px;
+  }
+
+  .direction__thumb-img {
+    width: 186px;
+    height: 140px;
+
+    border-radius: 0 20px 20px 0;
+  }
+
+  .direction__thumb-flag {
+    width: 70px;
+    height: 47px;
+
+    top: 13px;
+    left: -35px;
+  }
+
+  .direction__content {
+    align-items: stretch;
+    order: -1;
+    width: 432px;
+    margin: 0;
+    padding: 28px 30px 20px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .direction__title {
+    width: 100%;
+    margin-bottom: 5px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .direction__count {
+    order: 3;
+    padding-left: 30px;
+
+    font-size: 20px;
+    text-align: left;
+
+    &::before {
+      top: 3px;
+
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .direction__text {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  //
 }
