@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Транспорт
+   ========================================================================== */
+
+.transport {
+  @include reset-ul;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.transport__item {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

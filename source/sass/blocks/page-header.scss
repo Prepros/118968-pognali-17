@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Шапка сайта
+   ========================================================================== */
+
+.page-header {
+  color: $white-color;
+  background-color: $blue-color--dark;
+}
+
+.page-header__scroll-bg {
+  color: $white-color;
+  background-color: $blue-color--dark;
+
+  &--white {
+    color: $blue-color--dark;
+
+    background-color: $white-color;
+    border-bottom: 1px solid $white-color--dark;
+  }
+}
+
+/* Обертка для логотипа и навигации */
+.page-header__wrapp {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  width: $width-mobile;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.page-header__scroll {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 0 31px;
+}
+
+.page-header__scroll-bg--white .page-header__scroll {
+  //
+}
+
+.page-header__logo {
+  //
+}
+
+.page-header__toggle {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+
+  background-color: $grey-color--light;
+  border: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  /* Обертка для логотипа и навигации */
+  .page-header__wrapp {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: $width-tablet;
+    padding: 40px;
+  }
+
+  .page-header__scroll {
+    width: 353px;
+    padding: 0;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .page-header__scroll-bg--white {
+    background-color: transparent;
+    border: none;
+  }
+
+  /* Обертка для логотипа и навигации */
+  .page-header__wrapp {
+    align-items: center;
+    width: $width-desktop;
+    padding: 50px 60px 20px;
+  }
+
+  .page-header__scroll {
+    width: 345px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}

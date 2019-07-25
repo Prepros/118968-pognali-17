@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Навигация по сайту
+   ========================================================================== */
+
+.site-menu {
+  @include reset-ul;
+}
+
+.site-menu__item {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+  color: $blue-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.site-menu__link {
+  color: $blue-color;
+  text-decoration: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .site-menu__item {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .site-menu {
+    order: -1;
+    display: flex;
+  }
+
+  .site-menu__item {
+    margin-right: 37px;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: $white-color;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .site-menu__link {
+    color: $white-color;
+  }
+}

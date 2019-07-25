@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Основной файл
+   ========================================================================== */
+
+/* Размер шрифтов
+   ========================================================================== */
+@import "settings/normalize";
+@import "settings/variable";
+@import "settings/mixin";
+@import "settings/font";
+
+/* Глобальные стили
+   ========================================================================== */
+@import "globals/base";
+@import "globals/container";
+@import "globals/logo";
+@import "globals/button";
+@import "globals/page-info";
+@import "globals/img-flag";
+@import "blocks/tags";
+@import "blocks/transport";
+
+/* Навигации
+   ========================================================================== */
+@import "blocks/site-menu";
+@import "blocks/user-menu";
+@import "blocks/thumb-menu";
+@import "blocks/social-menu";
+
+/* Секции
+   ========================================================================== */
+@import "blocks/page-header";
+@import "blocks/page-nav";
+@import "blocks/promo";
+@import "blocks/step";
+@import "blocks/service";
+@import "blocks/direction";
+@import "blocks/companion";

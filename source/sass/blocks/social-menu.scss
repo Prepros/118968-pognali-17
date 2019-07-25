@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Навигация по соцсетям
+   ========================================================================== */
+
+.social-menu {
+  @include reset-ul;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-menu__item {
+  //
+}
+
+.social-menu__link {
+  //
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .social-menu {
+    justify-content: flex-start;
+  }
+}

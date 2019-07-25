@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Тэги
+   ========================================================================== */
+
+.tags {
+  @include reset-ul;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags__item {
+  margin-right: 7px;
+
+  font-size: $fz;
+  line-height: 18px;
+  font-weight: normal;
+  color: $grey-color;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tags__link {
+  color: $grey-color;
+  text-decoration: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .tags__item {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  //
+}

@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Секция о сервисе
+   ========================================================================== */
+
+.service {
+  padding-top: 35px;
+
+  color: $white-color;
+
+  background-color: $blue-color;
+}
+
+.service__container {
+  padding-bottom: 78px;
+
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+}
+
+.service__page-info {
+  padding-left: 25px;
+  padding-right: 35px;
+}
+
+.service__button {
+  display: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .service {
+    padding-top: 40px;
+  }
+
+  .service__container {
+    padding-bottom: 88px;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: right 50px;
+  }
+
+  .service__page-info {
+    width: 300px;
+    padding-left: 35px;
+    padding-right: 0;
+  }
+
+  .service__button {
+    display: inline-block;
+    min-width: 274px;
+  }
+
+  .service .page-info__title {
+    margin-bottom: 40px;
+  }
+
+  .service .page-info__text {
+    margin-bottom: 35px;
+
+    &:last-of-type {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .service {
+    padding-top: 240px;
+
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 120px, #192144 120px, #192144 100%);
+  }
+
+  .service__container {
+    padding-bottom: 215px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: right 50px;
+  }
+
+  .service__page-info {
+    width: 615px;
+    padding-left: 70px;
+    padding-right: 0;
+  }
+
+  .service .page-info__title {
+    margin-bottom: 60px;
+  }
+
+  .service .page-info__text {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      width: 415px;
+      margin-bottom: 85px;
+    }
+  }
+}

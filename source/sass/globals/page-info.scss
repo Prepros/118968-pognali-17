@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Информационный блок
+   ========================================================================== */
+
+.page-info {
+  color: $white-color;
+
+  &--light {
+    color: $grey-color;
+  }
+}
+
+.page-info__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $orange-color;
+}
+
+.page-info__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: 300;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .page-info__title {
+    margin-bottom: 50px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .page-info__text {
+    margin-bottom: 50px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    &--bold {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  //
+}

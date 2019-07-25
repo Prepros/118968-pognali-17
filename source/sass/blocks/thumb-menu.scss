@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Ссылки с круглой миниатюрой
+   ========================================================================== */
+
+.thumb-menu {
+  @include reset-ul;
+}
+
+.thumb-menu__item {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: $blue-color;
+  text-transform: uppercase;
+}
+
+.thumb-menu__link {
+  color: $blue-color;
+  text-decoration: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .thumb-menu__item {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .thumb-menu__item {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

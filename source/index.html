@@ -1,369 +1,310 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Главная страница - Сервис совместного путешествия "Погнали"</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
-  <a class="page-header__logo logo" href="#">
-    <img class="logo__img" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали">
-  </a>
-  <button class="page-header__menu button-menu" type="button">
-    <span class="visually-hidden">Меню</span>
-  </button>
-  <nav class="page-header__nav">
-    <ul class="page-header__page-menu page-menu">
-      <li class="page-menu__item">
-        <a class="page-menu__link" href="#">О сервисе</a>
-      </li>
-      <li class="page-menu__item">
-        <a class="page-menu__link" href="#">Направления</a>
-      </li>
-      <li class="page-menu__item">
-        <a class="page-menu__link" href="#">Попутчики</a>
-      </li>
-    </ul>
-    <ul class="page-header__user-menu user-menu">
-      <li class="user-menu__item">
-        <a class="user-menu__link button" href="#">Авторизация</a>
-      </li>
-    </ul>
-    <ul class="page-header__contact-menu contact-menu">
-      <li class="contact-menu__item">
-        <a class="contact-menu__link" href="tel:88005558628">8 800 555-86-28</a>
-      </li>
-      <li class="contact-menu__item">
-        <a class="contact-menu__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-    </ul>
-    <ul class="page-header__social social">
-      <li class="social__item">
-        <a class="social__link social__link--fb" href="#"><span class="visually-hidden">Facebook</span></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--inst" href="#"><span class="visually-hidden">Instagram</span></a>
-      </li>
-    </ul>
-  </nav>
-</header>
+    <div class="page-header__scroll-bg page-header__scroll-bg--white">
+      <div class="page-header__wrapp">
+        <div class="page-header__scroll">
+          <a class="page-header__logo logo" href="#">
+            <img class="logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали">
+          </a>
+          <button class="page-header__toggle">
+            <span class="visually-hidden">Меню</span>
+          </button>
+        </div>
+        <nav class="page-nav">
+          <ul class="page-nav__site-menu site-menu">
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="#">О сервисе</a>
+            </li>
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="form.html">Направления</a>
+            </li>
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="page-nav__user-menu user-menu">
+            <li class="user-menu__item">
+              <a class="user-menu__link button" href="#">Авторизация</a>
+            </li>
+          </ul>
+          <ul class="page-nav__contact-menu thumb-menu">
+            <li class="thumb-menu__item">
+              <a class="thumb-menu__link" href="#">8 800 555-86-28</a>
+            </li>
+            <li class="thumb-menu__item">
+              <a class="thumb-menu__link" href="#">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="page-nav__social-menu social-menu">
+            <li class="social-menu__item">
+              <a class="social-menu__link" href="#">
+                F
+              </a>
+            </li>
+            <li class="social-menu__item">
+              <a class="social-menu__link" href="#">
+                VK
+              </a>
+            </li>
+            <li class="social-menu__item">
+              <a class="social-menu__link" href="#">
+                INST
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
 <main class="page-main">
-  <h1 class="visually-hidden">Сервис для совместного путешествия Погнали</h1>
+  <h1 class="visually-hidden">Сервис совместного путешествия "Погнали"</h1>
 
   <section class="promo">
-    <h2 class="promo__title page-title">В путешествие с крутыми попутчиками!</h2>
-    <ul class="promo__connect connect-menu">
-      <li class="connect-menu__item">
-        <a class="connect-menu__link connect-menu__link--phone" href="#"><span class="visually-hidden">Позвонить нам</span></a>
-      </li>
-      <li class="connect-menu__item">
-        <a class="connect-menu__link connect-menu__link--email" href="#"><span class="visually-hidden">Написать нам</span></a>
-      </li>
-      <li class="connect-menu__item">
-        <a class="connect-menu__link" href="#">Авторизация</a>
-      </li>
-    </ul>
-    <div class="page-info">
-      <p class="page-info__text">«Лучшее приложение, что я видел в жизни!»</p>
-      <p class="page-info__text page-info__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
+    <div class="promo__container container">
+      <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
+      <div class="promo__wrapp">
+        <ul class="promo__list">
+        <li class="promo__item">
+          <a class="promo__link promo__link--phone" href="#">
+            <span class="visually-hidden">Телефон</span>
+          </a>
+        </li>
+        <li class="promo__item">
+          <a class="promo__link promo__link--email" href="#">
+            <span class="visually-hidden">Email</span>
+          </a>
+        </li>
+        <li class="promo__item">
+          <a class="promo__link promo__link--button button" href="#">Авторизация</a>
+        </li>
+      </ul>
+        <div class="promo__page-info page-info">
+          <p class="page-info__text">«Лучшее приложение, что я видел в жизни!»</p>
+          <p class="page-info__text page-info__text--bold">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="step">
-    <h2 class="visually-hidden">Как работать с сервисом?</h2>
-    <ul class="step__list">
-      <li class="step__item">Выберите направление</li>
-      <li class="step__item">Изучите идеи путешественников</li>
-      <li class="step__item">Находите тех, кто похож на вас</li>
-      <li class="step__item">Путешествуйте вместе!</li>
-    </ul>
+    <div class="step__container container">
+      <h2 class="visually-hidden">Инструкция пользования сервисом</h2>
+      <ul class="step__list">
+        <li class="step__item">
+          <b class="step__text">Выберите направление</b>
+        </li>
+        <li class="step__item">
+          <b class="step__text">Изучите идеи путешественников</b>
+        </li>
+        <li class="step__item">
+          <b class="step__text">Находите тех,<br> кто похож на вас</b>
+        </li>
+        <li class="step__item">
+          <b class="step__text">Путешествуйте вместе!</b>
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section class="service-about page-info">
-    <h2 class="service-about__title page-info__title">О сервисе</h2>
-    <p class="page-info__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-    <p class="page-info__text page-info__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+  <section class="service">
+    <div class="service__container container">
+      <div class="service__page-info page-info">
+        <h2 class="page-info__title">О сервисе</h2>
+        <p class="page-info__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="page-info__text page-info__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        <a class="service__button button-big" href="#">
+          Подробнее
+          <svg class="button-big__arrow" width="10" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" xml:space="preserve">
+            <polygon points="0,14 0,0.1 10,7.1 "/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </section>
 
   <section class="direction">
-    <div class="direction__info page-info">
-      <h2 class="direction__title page-info__title">Направления</h2>
-      <p class="page-info__text page-info__text--dark">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+    <div class="direction__container container">
+      <div class="direction__page-info page-info page-info--light">
+        <h2 class="page-info__title">Направления</h2>
+        <p class="page-info__text">Мы не продаем туры<br> и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+      </div>
+      <div class="direction__wrapp">
+        <ul class="direction__list">
+          <li class="direction__item">
+            <p class="direction__thumb">
+              <img class="direction__thumb-img" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Миниатюра Тайланда">
+              <img class="direction__thumb-flag img-flag" src="img/flag-thailand.png" width="35" height="24" alt="Флаг Тайланда">
+            </p>
+            <div class="direction__content">
+              <h3 class="direction__title">
+                <a class="direction__title-link" href="#">Тайланд</a>
+              </h3>
+              <span class="direction__count">18321</span>
+              <b class="direction__text">Джугли зовут!</b>
+            </div>
+          </li>
+          <li class="direction__item">
+            <p class="direction__thumb">
+              <img class="direction__thumb-img" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Миниатюра Франции">
+              <img class="direction__thumb-flag img-flag" src="img/flag-france.png" width="35" height="24" alt="Флаг Франции">
+            </p>
+            <div class="direction__content">
+              <h3 class="direction__title">
+                <a class="direction__title-link" href="#">Франция</a>
+              </h3>
+              <span class="direction__count">12518</span>
+              <b class="direction__text">Трэ бьен, манифик!</b>
+            </div>
+          </li>
+          <li class="direction__item">
+            <p class="direction__thumb">
+              <img class="direction__thumb-img" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Миниатюра Чехии">
+              <img class="direction__thumb-flag img-flag" src="img/flag-czhech.png" width="35" height="24" alt="Флаг Чехии">
+            </p>
+            <div class="direction__content">
+              <h3 class="direction__title">
+                <a class="direction__title-link" href="#">Чехия</a>
+              </h3>
+              <span class="direction__count">5326</span>
+              <b class="direction__text">Закоулки старой Европы</b>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="direction__wrapp direction__wrapp--button">
+        <a class="direction__button button-big" href="form.html">
+          Показать все
+          <svg class="button-big__arrow" width="10" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" xml:space="preserve">
+              <polygon points="0,14 0,0.1 10,7.1 "></polygon>
+            </svg>
+        </a>
+      </div>
     </div>
-    <div class="direction__country">
-      <article class="article-country">
-        <p class="article-country__pic">
-          <img class="article-country__img" src="http://placehold.it/270x110" width="270" height="110" alt="Тайланд">
-        </p>
-        <div class="article-country__content">
-          <img class="article-country__flag img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Тайланда">
-          <h2 class="article-country__title">Тайланд</h2>
-          <p class="article-country__count">18321</p>
-          <p class="article-country__text">Джунгли зовут!</p>
-        </div>
-      </article>
-      <article class="article-country">
-        <p class="article-country__pic">
-          <img class="article-country__img" src="http://placehold.it/270x110" width="270" height="110" alt="Франция">
-        </p>
-        <div class="article-country__content">
-          <img class="article-country__flag img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Франции">
-          <h2 class="article-country__title">Франция</h2>
-          <p class="article-country__count">12518</p>
-          <p class="article-country__text">Трэ бьен, манифик!</p>
-        </div>
-      </article>
-      <article class="article-country">
-        <p class="article-country__pic">
-          <img class="article-country__img" src="http://placehold.it/270x110" width="270" height="110" alt="Чехия">
-        </p>
-        <div class="article-country__content">
-          <img class="article-country__flag img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехии">
-          <h2 class="article-country__title">Чехия</h2>
-          <p class="article-country__count">5326</p>
-          <p class="article-country__text">Закоулки старой Европы</p>
-        </div>
-      </article>
-    </div>
-    <a class="direction__button button button--big" href="form.html">Показать все</a>
   </section>
 
   <section class="companion">
-    <div class="companion__info page-info">
-      <h2 class="companion__title page-info__title">Попутчики</h2>
-      <p class="page-info__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-      <p class="page-info__text page-info__text--bold">Теперь можно легко найти единомышленников!</p>
+    <div class="companion__container container">
+      <div class="companion__wrapp">
+        <div class="companion__page-info page-info">
+          <h2 class="page-info__title">Попутчики</h2>
+          <p class="page-info__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.</p>
+          <p class="page-info__text page-info__text--bold">Теперь можно легко<br> найти единомышленников!</p>
+        </div>
+        <ul class="companion__list">
+          <li class="companion__item">
+            <div class="companion__header">
+              <p class="companion__header-photo">
+                <img class="companion__header-img" src="img/firsova-mobile2@1x.jpg" width="270" height="270" alt="Фотография Тани Фирсовой">
+              </p>
+            </div>
+            <div class="companion__content">
+              <ul class="companion__flags">
+                <li class="companion__flag">
+                  <img class="companion__flag-img img-flag" src="img/flag-srilanka.png" width="35" height="24" alt="Флаг Шриланки">
+                </li>
+                <li class="companion__flag">
+                  <img class="companion__flag-img img-flag" src="img/flag-thailand.png" width="35" height="24" alt="Флаг Тайланда">
+                </li>
+                <li class="companion__flag">
+                  <img class="companion__flag-img img-flag" src="img/flag-seychelles.png" width="35" height="24" alt="Флаг Сэйншил">
+                </li>
+              </ul>
+              <h3 class="companion__title">
+                <a class="companion__title-link" href="#">Таня Фирсова</a>
+              </h3>
+              <ul class="companion__tags tags">
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#ЗОЖ</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#ПП</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#Фитнес</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#пляж</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#авокадо</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#смузи</a>
+                </li>
+              </ul>
+              <ul class="companion__transport transport">
+                <li class="transport__item">Автотранспорт</li>
+                <li class="transport__item">Авиаперелет</li>
+                <li class="transport__item">Велосипед</li>
+                <li class="transport__item">Пешком</li>
+              </ul>
+            </div>
+          </li>
+          <li class="companion__item">
+            <div class="companion__header">
+              <p class="companion__header-photo">
+                <img class="companion__header-img" src="img/demin-mobile2@1x.jpg" width="270" height="270" alt="Фотография Пети Демина">
+              </p>
+            </div>
+            <div class="companion__content">
+              <ul class="companion__flags">
+                <li class="companion__flag">
+                  <img class="companion__flag-img img-flag" src="img/flag-srilanka.png" width="35" height="24" alt="Флаг Германии">
+                </li>
+                <li class="companion__flag">
+                  <img class="companion__flag-img img-flag" src="img/flag-thailand.png" width="35" height="24" alt="Флаг Чехии">
+                </li>
+              </ul>
+              <h3 class="companion__title">
+                <a class="companion__title-link" href="#">Петя Демин</a>
+              </h3>
+              <ul class="companion__tags tags">
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#бургер</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#бар</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#футбол</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#концерт</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#крафт</a>
+                </li>
+              </ul>
+              <ul class="companion__transport transport">
+                <li class="transport__item">Автотранспорт</li>
+                <li class="transport__item">Авиаперелет</li>
+                <li class="transport__item">Велосипед</li>
+                <li class="transport__item">Пешком</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <a class="companion__button button-big" href="catalog.html">
+          Показать всех
+          <svg class="button-big__arrow" width="10" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" xml:space="preserve">
+                <polygon points="0,14 0,0.1 10,7.1 "></polygon>
+              </svg>
+        </a>
+      </div>
     </div>
-    <div class="companion__list">
-      <article class="article-companion">
-        <div class="article-companion__pic">
-          <img class="article-companion__img" src="http://placehold.it/270x270" width="270" height="270" alt="Фотография Тани Фирсовой">
-          <p class="article-companion__level block-level">
-            <span class="block-level__number">99</span>
-            <span class="block-level__text">level</span>
-          </p>
-        </div>
-        <div class="article-companion__content">
-          <ul class="article-companion__flags">
-            <!-- Флаги здесь являются ссылками ??? -->
-            <li class="article-companion__flag">
-              <img class="article-companion__flag-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Шри-Ланки">
-            </li>
-            <li class="article-companion__flag">
-              <img class="article-companion__flag-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Тайланда">
-            </li>
-            <li class="article-companion__flag">
-              <img class="article-companion__flag-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Сейшельских островов">
-            </li>
-          </ul>
-          <h2 class="article-companion__title">
-            <a class="article-companion__link indicator indicator--offline" href="#">Таня Фирсова</a>
-          </h2>
-          <ul class="article-companion__tag tag">
-            <!-- Теги здесь являются ссылками ??? -->
-            <li class="tag__item">
-              <a class="tag__link" href="#">#ЗОЖ</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#ПП</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#Фитнес</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#пляж</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#авокадо</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#смузи</a>
-            </li>
-          </ul>
-          <ul class="article-companion__transport transport">
-            <li class="transport__item">
-              <!-- Транспорт здесь являются ссылками ??? -->
-              <a class="transport__link" href="#">
-                <!-- Вместо картинки тут будет svg ??? -->
-                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
-                <span class="transport__tooltip">Авиаперелеты</span>
-              </a>
-            </li>
-            <li class="transport__item">
-              <a class="transport__link" href="#">
-                <!-- Вместо картинки тут будет svg ??? -->
-                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
-                <span class="transport__tooltip">Автотранспорт</span>
-              </a>
-            </li>
-            <li class="transport__item">
-              <a class="transport__link" href="#">
-                <!-- Вместо картинки тут будет svg ??? -->
-                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
-                <span class="transport__tooltip">Велосипед</span>
-              </a>
-            </li>
-            <li class="transport__item">
-              <a class="transport__link" href="#">
-                <!-- Вместо картинки тут будет svg ??? -->
-                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
-                <span class="transport__tooltip">Пешком</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </article>
-      <article class="article-companion">
-        <div class="article-companion__pic">
-          <img class="article-companion__img" src="http://placehold.it/270x270" width="270" height="270" alt="Фотография Пети Демина">
-          <p class="article-companion__level block-level">
-            <span class="block-level__number">80</span>
-            <span class="block-level__text">level</span>
-          </p>
-        </div>
-        <div class="article-companion__content">
-          <ul class="article-companion__flags">
-            <!-- Флаги здесь являются ссылками ??? -->
-            <li class="article-companion__flag">
-              <img class="article-companion__flag-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Германии">
-            </li>
-            <li class="article-companion__flag">
-              <img class="article-companion__flag-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехии">
-            </li>
-          </ul>
-          <h2 class="article-companion__title">
-            <a class="article-companion__link indicator indicator--online" href="#">Петя Демин</a>
-          </h2>
-          <ul class="article-companion__tag tag">
-            <!-- Теги здесь являются ссылками ??? -->
-            <li class="tag__item">
-              <a class="tag__link" href="#">#бургер</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#бар</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#футбол</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#концерт</a>
-            </li>
-            <li class="tag__item">
-              <a class="tag__link" href="#">#крафт</a>
-            </li>
-          </ul>
-          <ul class="article-companion__transport transport">
-            <li class="transport__item">
-              <a class="transport__link" href="#">
-                <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
-                <span class="transport__tooltip">Авиаперелеты</span>
-              </a>
-            </li>
-            <li class="transport__item">
-              <a class="transport__link" href="#">
-                <img class="transport__img transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
-                <span class="transport__tooltip">Автотранспорт</span>
-              </a>
-            </li>
-            <li class="transport__item">
-              <a class="transport__link" href="#">
-                <img class="transport__img transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
-                <span class="transport__tooltip">Велосипед</span>
-              </a>
-            </li>
-            <li class="transport__item">
-              <a class="transport__link" href="#">
-                <img class="transport__img transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
-                <span class="transport__tooltip">Пешком</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </article>
-    </div>
-    <a class="companion__button button button--big" href="#">Показать всех</a>
-  </section>
-
-  <section class="tariff page-info">
-    <h2 class="tariff__title page-title">Добавьте свой профиль</h2>
-    <ol class="tariff__list">
-      <li class="tariff__item tariff__item--count">Базовое размещение Бесплатно</li>
-      <li class="tariff__item tariff__item--count">Вывод на первых позициях 99 руб./мес</li>
-      <li class="tariff__item tariff__item--count">Кастомный цвет карточки 59 руб./мес</li>
-    </ol>
-    <a class="tariff__open" href="#">Показать тарифы для бизнеса</a>
-    <article class="tariff__content">
-      <h2 class="tariff__content-title page-title">Бизнес-тарифы</h2>
-      <ul class="tariff__list">
-        <li class="tariff__item">Реклама у блоггера 300 000 руб./пост</li>
-        <li class="tariff__item">Накрутка подписчиков от 1 руб./шт.</li>
-        <li class="tariff__item">Лайки от ботов от 20 коп./лайк</li>
-        <li class="tariff__item">Ваш продакт-плейсмент Индивидуально</li>
-      </ul>
-      <a class="tariff__close" href="#">Закрыть окно</a>
-    </article>
-  </section>
-
-  <section class="subscription">
-    <div class="subscription__info page-info">
-      <h2 class="subscription__title page-info__title">Заинтересовались?</h2>
-      <p class="subscription__text page-info__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="page-info__link" href="#">авторизуйтесь.</a></p>
-    </div>
-    <form class="subscription__form" action="http://echo.htmlacademy.ru" method="post">
-      <label class="visually-hidden" for="email">Для подписки укажите свой email</label>
-      <input class="subscription__input" id="email" type="text" name="email" placeholder="E-mail">
-      <button class="subscription__button" type="submit">
-        <span class="visually-hidden">Отправить email</span>
-      </button>
-    </form>
-    <p class="subscription__text page-info__text">Остались вопросы? Мы с радостью на них ответим!</p>
-    <ul class="subscription__contact-menu contact-menu">
-      <li class="contact-menu__item">
-        <a class="contact-menu__link" href="tel:88005558628">8 800 555-86-28</a>
-      </li>
-      <li class="contact-menu__item">
-        <a class="contact-menu__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-    </ul>
-  </section>
-
-  <section class="address">
-    <h2 class="visually-hidden">Наш адрес</h2>
-    <ul class="address__contact-menu contact-menu">
-      <li class="contact-menu__item">ул. Большая Конюшенная, 19/8</li>
-    </ul>
-    <a class="address__button button button--big button--border" href="#">Проложить маршрут</a>
-    <iframe src="https://yandex.kz/map-widget/v1/-/CCsLIBY4" width="560" height="400"></iframe>
   </section>
 </main>
-
-<footer class="page-footer">
-  <a class="page-footer__logo logo" href="#">
-    <img class="logo__img" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали">
-  </a>
-  <ul class="page-footer__social social">
-    <li class="social__item">
-      <a class="social__link social__link--fb" href="#"><span class="visually-hidden">Facebook</span></a>
-    </li>
-    <li class="social__item">
-      <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
-    </li>
-    <li class="social__item">
-      <a class="social__link social__link--inst" href="#"><span class="visually-hidden">Instagram</span></a>
-    </li>
-  </ul>
-  <p class="page-footer__copyright copyright">
-    <b class="copyright__text">Разработано</b>
-    <a class="copyright__link" href="#">
-      <img class="copyright__img" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип Html Academy">
-      <span class="visually-hidden">Html Academy</span>
-    </a>
-  </p>
-</footer>
-
 </body>
 </html>
