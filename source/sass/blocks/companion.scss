@@ -7,6 +7,10 @@
   background-color: $blue-color;
 }
 
+.companion__wrapp {
+  box-sizing: border-box;
+}
+
 .companion__container {
   background-image: url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
@@ -22,6 +26,10 @@
   background-image: url("../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: right 40px;
+
+  & br {
+    display: none;
+  }
 }
 
 .companion__list {
@@ -31,7 +39,7 @@
 .companion__item {
   margin-bottom: 10px;
 
-  &:last-of-type {
+  &:last-child {
     margin-bottom: 20px;
   }
 }
@@ -102,5 +110,86 @@
 }
 
 .companion__transport {
+
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .companion {
+    padding-top: 80px;
+    padding-bottom: 88px;
+  }
+
+  .companion__container {
+    background-image: none;
+  }
+
+  .companion__wrapp {
+    padding-left: 35px;
+    padding-right: 35px;
+
+    background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 368px 0, 0 320px;
+  }
+
+  .companion__page-info {
+    width: 440px;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+    padding-top: 65px;
+
+    background-image: none;
+
+    & br {
+      display: inline;
+    }
+  }
+
+  .companion__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+
+  .companion__item {
+    width: 285px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .companion__header-img {
+    width: 285px;
+    height: 285px;
+  }
+
+  .companion__content {
+    padding: 0 35px 30px;
+  }
+
+  .companion__flags {
+    margin-bottom: 20px;
+  }
+
+  .companion__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .companion__tags {
+    margin-bottom: 25px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
 
 }

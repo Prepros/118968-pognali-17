@@ -25,3 +25,18 @@
   color: $grey-color;
   text-decoration: none;
 }
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .tags__item {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+
+}
