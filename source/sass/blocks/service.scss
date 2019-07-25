@@ -47,6 +47,18 @@
     display: inline-block;
     min-width: 274px;
   }
+
+  .service .page-info__title {
+    margin-bottom: 40px;
+  }
+
+  .service .page-info__text {
+    margin-bottom: 35px;
+
+    &:last-of-type {
+      margin-bottom: 45px;
+    }
+  }
 }
 
 /* Компьютеры
@@ -72,5 +84,18 @@
     padding-top: 40px;
     padding-left: 70px;
     padding-right: 0;
+  }
+
+  .service .page-info__title {
+    margin-bottom: 60px;
+  }
+
+  .service .page-info__text {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      width: 415px;
+      margin-bottom: 85px;
+    }
   }
 }

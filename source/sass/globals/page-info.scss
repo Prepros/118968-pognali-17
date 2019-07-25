@@ -3,7 +3,11 @@
    ========================================================================== */
 
 .page-info {
-  //
+  color: $white-color;
+
+  &--light {
+    color: $grey-color;
+  }
 }
 
 .page-info__title {
@@ -23,7 +27,6 @@
   font-size: $fz;
   line-height: $lh;
   font-weight: 300;
-  color: $white-color;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -55,33 +58,10 @@
       line-height: 25px;
     }
   }
-
-  .service .page-info__title {
-    margin-bottom: 40px;
-  }
-
-  .service .page-info__text {
-    margin-bottom: 35px;
-
-    &:last-of-type {
-      margin-bottom: 45px;
-    }
-  }
 }
 
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
-  .service .page-info__title {
-    margin-bottom: 60px;
-  }
-
-  .service .page-info__text {
-    margin-bottom: 40px;
-
-    &:last-of-type {
-      width: 415px;
-      margin-bottom: 85px;
-    }
-  }
+  //
 }
