@@ -40,6 +40,9 @@
   padding-left: 25px;
   padding-right: 85px;
 
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
   color: $grey-color;
 
   background-color: $white-color;
@@ -71,5 +74,59 @@
 }
 
 .registration__contact-menu {
+
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .registration {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  .registration__wrapp {
+    padding: 0 35px;
+  }
+
+  .registration__page-info {
+    margin-bottom: 65px;
+    padding: 0;
+  }
+
+  .registration__page-info br:first-of-type {
+    display: none;
+  }
+
+  .registration__form {
+    height: 81px;
+    margin-bottom: 55px;
+  }
+
+  .registration__form-input {
+    padding-left: 35px;
+    padding-right: 95px;
+
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+
+    border-radius: 20px;
+  }
+
+  .registration__form-button {
+    position: absolute;
+    right: 0;
+
+    width: 82px;
+    height: 81px;
+
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
 
 }
