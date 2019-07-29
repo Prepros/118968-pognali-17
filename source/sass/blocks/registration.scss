@@ -28,49 +28,7 @@
 }
 
 .registration__form {
-  position: relative;
-
-  display: flex;
-  height: 62px;
   margin-bottom: 30px;
-}
-
-.registration__form-input {
-  width: 100%;
-  padding-left: 25px;
-  padding-right: 85px;
-
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
-  color: $grey-color;
-
-  background-color: $white-color;
-  border: none;
-  border-radius: 10px;
-}
-
-.registration__form-button {
-  position: absolute;
-  right: 0;
-
-  width: 60px;
-  height: 62px;
-  padding: 0;
-
-  line-height: 0;
-
-  background-color: $yellow-color;
-  border: none;
-  border-radius: 10px;
-}
-
-.registration__form-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
 }
 
 .registration__contact-menu {
@@ -102,31 +60,31 @@
     height: 81px;
     margin-bottom: 55px;
   }
-
-  .registration__form-input {
-    padding-left: 35px;
-    padding-right: 95px;
-
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 700;
-
-    border-radius: 20px;
-  }
-
-  .registration__form-button {
-    position: absolute;
-    right: 0;
-
-    width: 82px;
-    height: 81px;
-
-    border-radius: 0 20px 20px 0;
-  }
 }
 
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
+  .registration {
+    padding-top: 110px;
+    padding-bottom: 130px;
+  }
 
+  .registration__wrapp {
+    padding: 0 74px;
+  }
+
+  .registration__contact-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .registration__contact-menu .thumb-menu__item {
+    margin-right: 235px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
