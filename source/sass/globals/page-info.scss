@@ -9,6 +9,10 @@
   &--light {
     color: $grey-color;
   }
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .page-info__title {
@@ -36,6 +40,11 @@
   &--bold {
     font-weight: 700;
   }
+}
+
+.page-info__link {
+  color: $yellow-color;
+  text-decoration: underline;
 }
 
 /* Планшеты

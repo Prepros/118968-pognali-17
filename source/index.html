@@ -329,28 +329,36 @@
     </div>
   </section>
 
-  <section class="tariff-modal">
-    <div class="tariff-modal__page-info page-info">
-      <h2 class="page-info__title">Бизнес-тарифы</h2>
+  <section class="registration">
+    <div class="registration__container container">
+      <div class="registration__wrapp">
+        <div class="registration__page-info page-info page-info--center">
+          <h2 class="page-info__title">Заинтересовались?</h2>
+          <p class="page-info__text">Зарегистрируйтесь,<br> это быстро и бесплатно!<br> Уже зарегистрированы? Тогда скорее <a class="page-info__link" href="#">авторизуйтесь</a>.</p>
+        </div>
+        <form class="registration__form" action="http://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="email">Введите свой e-mail для регистрации</label>
+          <input class="registration__form-input" id="email" type="email" name="email" placeholder="E-mail">
+          <button class="registration__form-button" type="submit">
+            <span class="visually-hidden">Зарегистрироваться</span>
+            <svg class="registration__form-icon" width="10" height="14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" xml:space="preserve">
+              <polygon fill="#1d2e5b" points="0,14 0,0.1 10,7.1 "></polygon>
+            </svg>
+          </button>
+        </form>
+        <div class="registration__page-info page-info page-info--center">
+          <p class="page-info__text">Остались вопросы?<br> Мы с радостью на них ответим!</p>
+        </div>
+        <ul class="registration__contact-menu thumb-menu">
+          <li class="thumb-menu__item">
+            <a class="thumb-menu__link" href="#">8 800 555-86-28</a>
+          </li>
+          <li class="thumb-menu__item">
+            <a class="thumb-menu__link" href="#">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <table class="tariff__price">
-      <tr class="tariff__price-row">
-        <th class="tariff__price-title">Реклама у блоггера</th>
-        <td class="tariff__price-cash">300 000 руб./пост</td>
-      </tr>
-      <tr class="tariff__price-row">
-        <th class="tariff__price-title">Накрутка подписчиков</th>
-        <td class="tariff__price-cash">от 1 руб./шт.</td>
-      </tr>
-      <tr class="tariff__price-row">
-        <th class="tariff__price-title">Лайки от ботов</th>
-        <td class="tariff__price-cash">от 20 коп./лайк</td>
-      </tr>
-      <tr class="tariff__price-row">
-        <th class="tariff__price-title">Ваш продакт-плейсмент</th>
-        <td class="tariff__price-cash">Индивидуально</td>
-      </tr>
-    </table>
   </section>
 
 </main>
