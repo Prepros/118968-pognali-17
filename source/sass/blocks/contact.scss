@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Секция с контактами и картой на главной странице
+   ========================================================================== */
+
+.contact {
+  padding-top: 35px;
+
+  background-color: $yellow-color;
+}
+
+.contact__container {
+  padding-bottom: 40px;
+}
+
+.contact__wrapp {
+
+}
+
+.contact__contact-menu {
+  margin-bottom: 30px;
+}
+
+.contact__button {
+
+}
+
+.contact__map {
+  width: 100%;
+  height: 340px;
+
+  border: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .contact {
+    padding-top: 60px;
+  }
+
+  .contact__container {
+    padding-bottom: 70px;
+  }
+
+  .contact__button {
+    width: 100%;
+  }
+
+  .contact__map {
+    height: 580px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .contact {
+    padding-top: 60px;
+  }
+
+  .contact__container {
+    padding-bottom: 60px;
+  }
+
+  .contact__wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 222px;
+    padding-right: 70px;
+  }
+
+  .contact__contact-menu {
+    width: 560px;
+    margin-bottom: 0;
+  }
+
+  .contact__button {
+    width: 324px;
+  }
+
+  .contact__map {
+    height: 500px;
+  }
+}

@@ -23,6 +23,10 @@
   border-radius: 10px;
 
   cursor: pointer;
+
+  &--bold {
+    border: 3px solid $blue-color;
+  }
 }
 
 .button-big__arrow {
