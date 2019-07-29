@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Тарифы
+   ========================================================================== */
+
+.tariff {
+  padding-bottom: 35px;
+
+  background-color: $white-color--blue;
+}
+
+.tariff__container {
+  padding-top: 50px;
+
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-position: right 37px;
+  background-size: 99px;
+}
+
+.tariff__page-info {
+  width: 110px;
+  margin-bottom: 45px;
+  padding-left: 25px;
+}
+
+.tariff__price {
+  counter-reset: section;
+
+  margin-bottom: 30px;
+
+  border-collapse: collapse;
+}
+
+.tariff__price-row {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25px;
+  margin-right: 45px;
+
+  border-top: 1px solid rgba($black-color, 0.05);
+
+  &:last-child {
+    border-bottom: 1px solid rgba($black-color, 0.05);
+  }
+
+  &:nth-child(-n+3)::before {
+    counter-increment: section;
+    content: counter(section);
+    position: absolute;
+    right: -45px;
+
+    padding: 12px 13px 8px;
+
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: normal;
+    color: $white-color;
+
+    border-radius: 50%;
+  }
+
+  &:nth-child(1)::before {
+    background-color: $orange-color--light;
+  }
+
+  &:nth-child(2)::before {
+    background-color: $yellow-color--dark;
+  }
+
+  &:nth-child(3)::before {
+    background-color: $yellow-color;
+  }
+}
+
+.tariff__price-title,
+.tariff__price-cash {
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  color: $grey-color;
+  text-align: left;
+}
+
+.tariff__price-title {
+  padding-top: 10px;
+}
+
+.tariff__price-cash {
+  padding-bottom: 10px;
+}
+
+.tariff__button {
+  display: block;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $blue-color;
+  text-align: center;
+  text-decoration: none;
+}
