@@ -26,6 +26,7 @@
 .tariff__price {
   counter-reset: section;
 
+  box-sizing: border-box;
   margin-bottom: 30px;
 
   border-collapse: collapse;
@@ -95,6 +96,8 @@
 
 .tariff__button {
   display: block;
+  padding-left: 25px;
+  padding-right: 25px;
 
   font-size: 16px;
   line-height: 16px;
@@ -102,4 +105,82 @@
   color: $blue-color;
   text-align: center;
   text-decoration: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .tariff {
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+
+  .tariff__container {
+    padding-top: 0;
+    padding-bottom: 85px;
+
+    background-position: 620px 330px;
+    background-size: 100px;
+  }
+
+  .tariff__page-info {
+    width: 100%;
+    margin-bottom: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    text-align: center;
+  }
+
+  .tariff__price {
+    margin-bottom: 60px;
+  }
+
+  .tariff__price-row {
+    margin-left: 90px;
+    margin-right: 0;
+
+    &:nth-child(-n+3)::before {
+      left: -90px;
+      right: auto;
+
+      padding: 20px 26px 16px 27px;
+
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+
+  .tariff__price-title,
+  .tariff__price-cash {
+    padding-top: 17px;
+    padding-bottom: 13px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .tariff__price-title {
+    width: 400px;
+  }
+
+  .tariff__price-cash {
+    width: 163px;
+    text-align: right;
+  }
+
+  .tariff__button {
+    padding-left: 90px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #132576;
+    text-align: left;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+
 }
