@@ -44,3 +44,53 @@
 .main-footer__copyright-link {
 
 }
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .main-footer {
+    padding-bottom: 40px;
+  }
+
+  .main-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .main-footer__logo {
+    width: 170px;
+    margin: 0;
+  }
+
+  .main-footer__social-menu {
+    width: 220px;
+    margin: 0;
+  }
+
+  .main-footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    padding-top: 0;
+
+    border-top: none;
+  }
+
+  .main-footer__copyright-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    color: $grey-color;
+  }
+
+  .main-footer__copyright-link {
+
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+
+}
