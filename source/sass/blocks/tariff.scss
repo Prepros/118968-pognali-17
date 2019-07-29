@@ -23,6 +23,10 @@
   padding-left: 25px;
 }
 
+.tariff__page-info span {
+  display: none;
+}
+
 .tariff__price {
   counter-reset: section;
 
@@ -126,10 +130,14 @@
   .tariff__page-info {
     width: 100%;
     margin-bottom: 70px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 90px;
+    padding-right: 90px;
 
     text-align: center;
+  }
+
+  .tariff__page-info span {
+    display: inline;
   }
 
   .tariff__price {
@@ -182,5 +190,31 @@
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
+  .tariff {
+    padding-top: 100px;
+    padding-bottom: 185px;
+  }
 
+  .tariff__container {
+    padding: 0;
+
+    background-position: right center;
+    background-size: 198px;
+  }
+
+  .tariff__price-row {
+    margin-left: 160px;
+
+    &:nth-child(-n+3)::before {
+      left: -90px;
+    }
+  }
+
+  .tariff__price-title {
+    width: 530px;
+  }
+
+  .tariff__price-cash {
+    width: 285px;
+  }
 }
