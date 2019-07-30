@@ -47,6 +47,11 @@
   border: none;
 }
 
+.page-header__nav {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 /* Планшеты
    ========================================================================== */
 @media (min-width: $breakpoint-tablet) {
@@ -61,6 +66,13 @@
   .page-header__scroll {
     width: 353px;
     padding: 0;
+  }
+
+  .page-header__nav {
+    width: 100%;
+    margin-top: -39px;
+    padding: 0;
+    padding-bottom: 50px;
   }
 }
 
@@ -83,5 +95,11 @@
 
   .page-header__toggle {
     display: none;
+  }
+
+  .page-nav {
+    width: 630px;
+    margin: 0;
+    padding: 0;
   }
 }
