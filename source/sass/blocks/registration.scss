@@ -27,6 +27,10 @@
   padding: 0 25px;
 }
 
+.registration__page-info .mobile-hidden {
+  display: none;
+}
+
 .registration__form {
   margin-bottom: 30px;
 }
@@ -72,6 +76,16 @@
 
   .registration__wrapp {
     padding: 0 74px;
+  }
+
+  .registration__page-info {
+    & .mobile-hidden {
+      display: inline;
+    }
+
+    & .desktop-hidden {
+      display: none;
+    }
   }
 
   .registration__contact-menu {
