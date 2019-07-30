@@ -3,17 +3,12 @@
    ========================================================================== */
 
 .step {
-  padding-top: 110px;
   padding-bottom: 40px;
 
   color: $white-color--blue;
 
   background-color: $blue-color;
-  background-image: linear-gradient(to bottom, $blue-color--dark 110px, $blue-color 110px, $blue-color 100%);
-}
-
-.step__container {
-  margin-top: -75px;
+  background-image: linear-gradient(to bottom, $blue-color--dark 80px, $blue-color 80px, $blue-color 100%);
 }
 
 .step__list {
@@ -36,6 +31,7 @@
   background-color: $orange-color;
   border-radius: 10px;
 
+  /* Счетчик */
   &::before {
     counter-increment: section;
     content: counter(section);
@@ -45,18 +41,22 @@
     color: $white-color;
   }
 
+  /* Каждый первый после каждых четырех */
   &:nth-child(4n+1) {
     background-color: $orange-color;
   }
 
+  /* Каждый второй после каждых четырех */
   &:nth-child(4n+2) {
     background-color: $orange-color--light;
   }
 
+  /* Каждый третий после каждых четырех */
   &:nth-child(4n+3) {
     background-color: $yellow-color--dark;
   }
 
+  /* Каждый четвертый после каждых четырех */
   &:nth-child(4n+4) {
     background-color: $yellow-color;
   }
@@ -75,7 +75,7 @@
    ========================================================================== */
 @media (min-width: $breakpoint-tablet) {
   .step {
-    margin-top: -200px;
+    margin-top: -205px;
     padding-top: 0;
     padding-bottom: 95px;
 
@@ -108,18 +108,19 @@
       line-height: 120px;
     }
 
+    /* Каждый четный элемент */
     &:nth-child(2n) {
       width: 50%;
-      margin-left: -33px;
+      margin-left: -4.7%;
     }
 
-    &:nth-child(1),
-    &:nth-child(2) {
+    /* Первые два элемента */
+    &:nth-child(-n+2) {
       border-radius: 20px 20px 0 0;
     }
 
-    &:nth-last-child(1),
-    &:nth-last-child(2) {
+    /* Последние два элемента */
+    &:nth-last-child(-n+2) {
       border-radius: 0 0 20px 20px;
     }
   }
@@ -154,24 +155,29 @@
       right: 66px;
     }
 
-    &:nth-child(1n) {
+    /* Каждый элемент */
+    &:nth-child(n) {
       border-radius: 20px;
     }
 
-    &:nth-child(1n+2) {
+    /* Каждый элемент начиная со второго */
+    &:nth-child(n+2) {
       margin-left: -32px;
     }
 
+    /* Каждый первый элемент после каждого четвертого */
     &:nth-child(4n+1) {
       width: 25%; //330px
       margin-left: 0;
     }
 
+    /* Каждый второй и третий элементы после каждого четвертого */
     &:nth-child(4n+2),
     &:nth-child(4n+3) {
       width: 29.16666666666667%; //385px
     }
 
+    /* Каждый четвертый элемент после каждого четвертого */
     &:nth-child(4n+4) {
       width: 23.86363636363636%; //315px
     }

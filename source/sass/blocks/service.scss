@@ -3,24 +3,54 @@
    ========================================================================== */
 
 .service {
-  padding-top: 35px;
-
   color: $white-color;
-
   background-color: $blue-color;
 }
 
 .service__container {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 35px;
   padding-bottom: 78px;
 
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: 20px 0;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    left: -17px;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: $blue-color--dark3;
+    border-radius: 20px;
+  }
+
+  &::after {
+    right: 0;
+
+    width: 100%;
+    height: 353px;
+
+    background-image: url("../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+  }
 }
 
 .service__page-info {
   padding-left: 25px;
   padding-right: 35px;
+}
+
+.service__page-info br:last-of-type {
+  display: none;
 }
 
 .service__button {
@@ -31,20 +61,46 @@
    ========================================================================== */
 @media (min-width: $breakpoint-tablet) {
   .service {
-    padding-top: 40px;
+    //
   }
 
   .service__container {
+    padding-top: 0;
     padding-bottom: 88px;
 
-    background-image: url("../img/about-tablet@1x.png");
-    background-position: right 50px;
+    &::before {
+      left: 40px;
+      right: 40px;
+
+      width: auto;
+      height: 213px;
+    }
+
+    &::after {
+      top: 45px;
+      right: 0;
+
+      width: 400px;
+      height: 548px;
+
+      background-image: url("../img/about-tablet@1x.png");
+      background-position: 20px 0;
+    }
   }
 
   .service__page-info {
-    width: 300px;
+    width: 337px;
+    padding-top: 40px;
     padding-left: 35px;
     padding-right: 0;
+  }
+
+  .service__page-info br:first-of-type {
+    display: none;
+  }
+
+  .service__page-info br:last-of-type {
+    display: inline;
   }
 
   .service__button {
@@ -69,23 +125,47 @@
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
   .service {
-    padding-top: 240px;
+    padding-top: 195px;
 
     background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent 120px, #192144 120px, #192144 100%);
+    background-image: linear-gradient(to bottom, transparent 120px, $blue-color 120px, $blue-color 100%);
   }
 
   .service__container {
-    padding-bottom: 215px;
+    padding-bottom: 145px;
 
-    background-image: url("../img/about-desktop@1x.png");
-    background-position: right 50px;
+    &::before {
+      left: 60px;
+      right: auto;
+
+      width: 213px;
+      height: 213px;
+    }
+
+    &::after {
+      top: 0;
+      right: 60px;
+
+      width: 630px;
+      height: 665px;
+
+      background-image: url("../img/about-desktop@1x.png");
+      background-position: right 0;
+    }
   }
 
   .service__page-info {
-    width: 615px;
+    width: 695px;
+    padding-top: 60px;
     padding-left: 70px;
-    padding-right: 0;
+  }
+
+  .service__page-info br:first-of-type {
+    display: none;
+  }
+
+  .service__page-info br:last-of-type {
+    display: none;
   }
 
   .service .page-info__title {
