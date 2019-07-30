@@ -8,6 +8,10 @@
   background-color: $white-color--blue;
 }
 
+.direction__wrapp {
+  box-sizing: border-box;
+}
+
 .direction__page-info {
   margin-bottom: 60px;
   padding-left: 25px;
@@ -133,7 +137,21 @@
   }
 
   .direction__list {
+    position: relative;
     margin-bottom: 47px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: -35px;
+
+      width: 141px;
+      height: 141px;
+
+      background-color: #e2e5f2;
+      border-radius: 20px;
+    }
   }
 
   .direction__item {
@@ -229,6 +247,11 @@
   .direction__list {
     width: 560px;
     margin-bottom: 0;
+
+    &::before {
+      top: -70px;
+      left: -70px;
+    }
   }
 
   .direction__button {
