@@ -3,111 +3,53 @@
    ========================================================================== */
 
 .tariff {
-  padding-bottom: 35px;
-
+  padding: 37px 0;
   background-color: $white-color--blue;
 }
 
 .tariff__container {
-  padding-top: 50px;
 
-  background-image: url("../img/rates@1x.png");
-  background-repeat: no-repeat;
-  background-position: right 37px;
-  background-size: 99px;
+}
+
+.tariff__wrapp {
+  box-sizing: border-box;
+  position: relative;
+
+  padding: 10px 25px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 99px;
+    height: 99px;
+
+    background-image: url("../img/rates@1x.png");
+    background-repeat: no-repeat;
+    background-size: 99px;
+  }
 }
 
 .tariff__page-info {
   width: 110px;
   margin-bottom: 45px;
-  padding-left: 25px;
 }
 
-.tariff__page-info span {
-  display: none;
+.tariff__page-info .page-info__title {
+  margin-bottom: 0;
 }
 
 .tariff__price {
-  counter-reset: section;
-
-  box-sizing: border-box;
   margin-bottom: 30px;
-
-  border-collapse: collapse;
-}
-
-.tariff__price-row {
-  position: relative;
-
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 25px;
-  margin-right: 45px;
-
-  border-top: 1px solid rgba($black-color, 0.05);
-
-  &:last-child {
-    border-bottom: 1px solid rgba($black-color, 0.05);
-  }
-
-  &:nth-child(-n+3)::before {
-    counter-increment: section;
-    content: counter(section);
-    position: absolute;
-    right: -45px;
-
-    padding: 12px 13px 8px;
-
-    font-size: 16px;
-    line-height: 14px;
-    font-weight: normal;
-    color: $white-color;
-
-    border-radius: 50%;
-  }
-
-  &:nth-child(1)::before {
-    background-color: $orange-color--light;
-  }
-
-  &:nth-child(2)::before {
-    background-color: $yellow-color--dark;
-  }
-
-  &:nth-child(3)::before {
-    background-color: $yellow-color;
-  }
-}
-
-.tariff__price-title,
-.tariff__price-cash {
-  width: 100%;
-
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 300;
-  color: $grey-color;
-  text-align: left;
-}
-
-.tariff__price-title {
-  padding-top: 10px;
-}
-
-.tariff__price-cash {
-  padding-bottom: 10px;
 }
 
 .tariff__button {
-  display: block;
-  padding-left: 25px;
-  padding-right: 25px;
-
-  font-size: 16px;
+  font-size: $fz;
   line-height: 16px;
   font-weight: 700;
   color: $blue-color;
-  text-align: center;
   text-decoration: none;
 }
 
@@ -115,106 +57,51 @@
    ========================================================================== */
 @media (min-width: $breakpoint-tablet) {
   .tariff {
-    padding-top: 70px;
-    padding-bottom: 0;
+    padding-top: 75px;
+    padding-bottom: 85px;
   }
 
   .tariff__container {
-    padding-top: 0;
-    padding-bottom: 85px;
 
-    background-position: 620px 330px;
-    background-size: 100px;
+  }
+
+  .tariff__wrapp {
+    padding: 0;
+    padding-left: 90px;
+    padding-right: 35px;
+
+    &::before {
+      top: auto;
+      right: 45px;
+      bottom: -45px;
+      z-index: 10;
+    }
   }
 
   .tariff__page-info {
-    width: 100%;
+    width: auto;
     margin-bottom: 70px;
-    padding-left: 90px;
-    padding-right: 90px;
 
     text-align: center;
   }
 
-  .tariff__page-info span {
-    display: inline;
+  .tariff__page-info .page-info__title {
+
   }
 
   .tariff__price {
-    margin-bottom: 60px;
-  }
-
-  .tariff__price-row {
-    margin-left: 90px;
-    margin-right: 0;
-
-    &:nth-child(-n+3)::before {
-      left: -90px;
-      right: auto;
-
-      padding: 20px 26px 16px 27px;
-
-      font-size: 28px;
-      line-height: 28px;
-    }
-  }
-
-  .tariff__price-title,
-  .tariff__price-cash {
-    padding-top: 17px;
-    padding-bottom: 13px;
-
-    font-size: 28px;
-    line-height: 33px;
-  }
-
-  .tariff__price-title {
-    width: 400px;
-  }
-
-  .tariff__price-cash {
-    width: 163px;
-    text-align: right;
+    margin-bottom: 55px;
   }
 
   .tariff__button {
-    padding-left: 90px;
-
     font-size: 20px;
     line-height: 20px;
     color: #132576;
-    text-align: left;
   }
 }
 
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
-  .tariff {
-    padding-top: 100px;
-    padding-bottom: 185px;
-  }
 
-  .tariff__container {
-    padding: 0;
-
-    background-position: right center;
-    background-size: 198px;
-  }
-
-  .tariff__price-row {
-    margin-left: 160px;
-
-    &:nth-child(-n+3)::before {
-      left: -90px;
-    }
-  }
-
-  .tariff__price-title {
-    width: 530px;
-  }
-
-  .tariff__price-cash {
-    width: 285px;
-  }
 }
