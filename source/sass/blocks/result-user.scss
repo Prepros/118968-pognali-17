@@ -1,0 +1,482 @@
+/* ==========================================================================
+   Найденные пользователи
+   ========================================================================== */
+
+.result-user {
+  padding-bottom: 50px;
+}
+
+.result-user__container {
+
+}
+
+.result-user__wrapp {
+  box-sizing: border-box;
+  margin-bottom: 18px;
+}
+
+.result-user__content {
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 22px;
+
+  color: $grey-color;
+
+  background-color: $white-color;
+  border-radius: 20px;
+}
+
+/* Первая секция с фотографией, именем и тегами
+   ========================================================================== */
+.result-user__head {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 22px 0 18px;
+}
+
+.result-user__head-photo {
+  width: 70px;
+  height: 70px;
+  margin: 0;
+
+  line-height: 0;
+
+  border-radius: 50%;
+}
+
+.result-user__head-img {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+}
+
+.result-user__head-wrapp {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: -70px;
+}
+
+.result-user__head-name {
+  margin: 0;
+  margin-left: 80px;
+  margin-bottom: 5px;
+  padding-right: 65px;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: $blue-color--light;
+}
+
+.result-user__head-link {
+  color: $blue-color--light;
+  text-decoration: none;
+}
+
+.result-user__head-like {
+  margin-left: 80px;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $blue-color--dark;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.result-user__head-tags {
+  margin-bottom: 10px;
+  padding-left: 8px;
+}
+
+/* Вторая секция со странами
+   ========================================================================== */
+.result-user__footer {
+  margin-bottom: 10px;
+}
+
+.result-user__title {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $grey-color;
+  text-transform: lowercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $white-color--blue;
+
+    transform: translateY(-50%);
+  }
+}
+
+.result-user__title-text {
+  margin-left: 13px;
+  margin-right: 11px;
+  padding-left: 13px;
+  padding-right: 11px;
+
+  background: $white-color;
+}
+
+.result-user__footer-flags {
+  @include reset-ul;
+  padding: 0 25px;
+}
+
+.result-user__footer-flag {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+
+  font-size: 15px;
+  line-height: 18px;
+  color: $blue-color--light;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.result-user__footer-img {
+  width: 26px;
+  height: 18px;
+  margin-right: 15px;
+}
+
+.result-user__footer-country {
+  padding-top: 2px;
+}
+
+/* Третья секция с транспортом и уровнем
+   ========================================================================== */
+.result-user__aside {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.result-user__aside-left {
+  width: 182px;
+}
+
+.result-user__aside-transport {
+  padding-left: 25px;
+}
+
+.result-user__aside-right {
+  width: 87px;
+}
+
+.result-user__level {
+  margin: 0;
+  padding-right: 20px;
+
+  text-align: center;
+}
+
+/* Кнопка позвать
+   ========================================================================== */
+.result-user__button {
+  display: block;
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+/* Кнопка показать еще
+   ========================================================================== */
+.result-user__more {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $blue-color--light;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Пагинация
+   ========================================================================== */
+.result-user__pagination {
+
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .result-user__wrapp {
+    margin-bottom: 40px;
+  }
+
+  .result-user__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+
+  .result-user__head {
+    order: 0;
+    width: 580px;
+    margin-bottom: 25px;
+    padding: 35px 0 0 35px;
+  }
+
+  .result-user__head-photo {
+    width: 190px;
+    height: 190px;
+    margin-right: 35px;
+  }
+
+  .result-user__head-img {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 15px;
+  }
+
+  .result-user__head-wrapp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 260px;
+    margin-left: 0;
+  }
+
+  .result-user__head-name {
+    order: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .result-user__head-like {
+    order: 2;
+    margin: 0;
+    margin-left: 205px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .result-user__head-tags {
+    order: 1;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+  }
+
+  .result-user__footer {
+    order: 3;
+    width: 100%;
+    margin: 0;
+  }
+
+  .result-user__title-text {
+    margin-left: 70px;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .result-user__footer-flags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 35px 25px;
+  }
+
+  .result-user__footer-flag {
+    margin: 0;
+    margin-right: 30px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .result-user__footer-img {
+    width: 35px;
+    height: 24px;
+  }
+
+  .result-user__footer-country {
+    padding: 0;
+  }
+
+  .result-user__aside {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    width: 108px;
+    margin: 0;
+    padding-top: 35px;
+    padding-right: 25px;
+  }
+
+  .result-user__aside-left,
+  .result-user__aside-right {
+    width: auto;
+  }
+
+  .result-user__aside .result-user__title {
+    display: none;
+  }
+
+  .result-user__aside-transport {
+    flex-direction: column;
+  }
+
+  .result-user__level {
+
+  }
+
+  .result-user__button {
+    z-index: 1;
+
+    order: 2;
+    max-width: none;
+    margin: 0;
+    margin-top: -70px;
+    margin-left: 255px;
+    padding: 10px 32px 5px;
+  }
+
+  .result-user__more {
+    font-size: 20px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .result-user__wrapp {
+    width: 950px;
+    margin: 0;
+  }
+
+  .result-user__content {
+
+  }
+
+  .result-user__head {
+    order: 0;
+    width: 630px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .result-user__head-photo {
+    width: 285px;
+    height: 285px;
+    margin-right: 60px;
+  }
+
+  .result-user__head-img {
+    width: 285px;
+    height: 285px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .result-user__head-wrapp {
+    padding-top: 45px;
+  }
+
+  .result-user__head-name {
+    margin-bottom: 15px;
+  }
+
+  .result-user__head-like {
+    margin-left: 200px;
+  }
+
+  .result-user__head-tags {
+
+  }
+
+  .result-user__footer {
+    order: 1;
+    width: 230px;
+    margin-left: auto;
+    padding-top: 45px;
+  }
+
+  .result-user__footer .result-user__title {
+    display: none;
+  }
+
+  .result-user__footer-flags {
+    padding: 0;
+  }
+
+  .result-user__footer-flag {
+    margin: 0;
+  }
+
+  .result-user__aside {
+    order: 3;
+    flex-direction: row;
+    width: 230px;
+    margin-top: -85px;
+    margin-left: 230px;
+    padding: 0;
+    padding-right: 44px;
+    padding-bottom: 42px;
+  }
+
+  .result-user__aside-left {
+    width: 120px;
+  }
+
+  .result-user__aside-right {
+    width: 60px;
+  }
+
+  .result-user__aside-transport {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .result-user__button {
+    order: 2;
+    margin-top: -100px;
+    margin-left: 340px;
+  }
+
+  .result-user__more {
+    margin-bottom: 70px;
+  }
+}

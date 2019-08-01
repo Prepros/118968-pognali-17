@@ -9,6 +9,7 @@
 .page-main__head {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
   padding-top: 20px;
 
   background-color: $blue-color--dark;
@@ -45,4 +46,46 @@
 
 .page-main__link {
   display: none;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $white-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .page-main__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .page-main__title {
+    padding-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 70px;
+
+    &::before {
+      bottom: -3px;
+      height: 8px;
+    }
+  }
+
+  .page-main__link {
+    display: block;
+    margin-top: 27px;
+
+    text-align: right;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  //
 }
