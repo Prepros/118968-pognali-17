@@ -84,7 +84,7 @@
     border-radius: 50%;
 
     &--active,
-    &:not([href]){
+    &:not([href]) {
       background-color: $yellow-color;
     }
   }
@@ -99,16 +99,16 @@
   }
 
   .pagination__arrow-left {
-
+    //
   }
 
   .pagination__arrow-right {
-
+    //
   }
 }
 
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
-
+  //
 }
