@@ -3,10 +3,15 @@
    ========================================================================== */
 
 .page-info {
+  box-sizing: border-box;
   color: $white-color;
 
   &--light {
     color: $grey-color;
+  }
+
+  &--center {
+    text-align: center;
   }
 }
 
@@ -35,6 +40,11 @@
   &--bold {
     font-weight: 700;
   }
+}
+
+.page-info__link {
+  color: $yellow-color;
+  text-decoration: underline;
 }
 
 /* Планшеты

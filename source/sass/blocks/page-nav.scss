@@ -6,8 +6,6 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .page-nav__user-menu {
@@ -32,10 +30,6 @@
   .page-nav {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    margin-top: -39px;
-    padding: 0;
-    padding-bottom: 50px;
   }
 
   .page-nav__user-menu {
@@ -69,12 +63,6 @@
 /* Компьютеры
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
-  .page-nav {
-    width: 630px;
-    margin: 0;
-    padding: 0;
-  }
-
   .page-nav__site-menu,
   .page-nav__user-menu,
   .page-nav__contact-menu,

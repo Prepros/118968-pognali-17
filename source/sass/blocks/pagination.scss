@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Пагинация
+   ========================================================================== */
+
+.pagination {
+  box-sizing: border-box;
+}
+
+/* Цыфры
+   ========================================================================== */
+
+.pagination__number {
+  display: none;
+}
+
+/* Стрелки
+   ========================================================================== */
+.pagination__arrow {
+  @include reset-ul;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__arrow-left,
+.pagination__arrow-right {
+  height: 50px;
+
+  text-align: center;
+
+  background-color: $white-color;
+
+  cursor: pointer;
+}
+
+.pagination__arrow-left {
+  width: 135px;
+  border-radius: 20px 0 0 20px;
+}
+
+.pagination__arrow-right {
+  width: 134px;
+  border-radius: 0 20px 20px 0;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 35px 25px 28px;
+
+    color: $blue-color--dark;
+
+    background-color: $white-color;
+    border-radius: 20px;
+  }
+
+  .pagination__number {
+    @include reset-ul;
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+  }
+
+  .pagination__number-item {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: $blue-color--dark;
+  }
+
+  .pagination__number-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    color: $blue-color--dark;
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    &--active,
+    &:not([href]) {
+      background-color: $yellow-color;
+    }
+  }
+
+  .pagination__arrow {
+    width: 60px;
+  }
+
+  .pagination__arrow-left,
+  .pagination__arrow-right {
+    width: auto;
+  }
+
+  .pagination__arrow-left {
+    //
+  }
+
+  .pagination__arrow-right {
+    //
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  //
+}

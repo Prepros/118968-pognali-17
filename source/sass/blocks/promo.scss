@@ -3,7 +3,9 @@
    ========================================================================== */
 
 .promo {
+  margin-bottom: 15px;
   padding-top: 30px;
+  padding-bottom: 30px;
 
   color: $white-color;
   background-color: $blue-color--dark;
@@ -15,6 +17,7 @@
   background-position: 88px 125px, 0 -100px;
 }
 
+/* Заголовок секции */
 .promo__title {
   margin: 0;
   margin-bottom: 240px;
@@ -26,10 +29,8 @@
   text-align: center;
 }
 
-.promo__wrapp {
-  //
-}
-
+/* Список кнопок связи
+   ========================================================================== */
 .promo__list {
   @include reset-ul;
   display: flex;
@@ -60,6 +61,8 @@
   }
 }
 
+/* Информационный блок
+   ========================================================================== */
 .promo__page-info {
   padding-left: 25px;
   padding-right: 90px;
@@ -69,6 +72,9 @@
    ========================================================================== */
 @media (min-width: $breakpoint-tablet) {
   .promo {
+    padding-top: 50px;
+    padding-bottom: 0;
+
     background-color: $blue-color--light2;
   }
 
@@ -76,7 +82,11 @@
     min-height: 900px;
 
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
-    background-position: 280px 250px, center 235px;
+    background-position: 280px 260px, center 235px;
+  }
+
+  .promo__wrapp {
+    box-sizing: border-box;
   }
 
   .promo__title {
@@ -101,12 +111,15 @@
    ========================================================================== */
 @media (min-width: $breakpoint-desktop) {
   .promo {
+    margin-bottom: 0;
     padding-top: 0;
+
     background-color: $blue-color--dark;
   }
 
   .promo__container {
     display: flex;
+    align-items: flex-start;
     min-height: 542px;
     padding-top: 90px;
 
@@ -123,6 +136,7 @@
     text-align: left;
   }
 
+  /* Обертка для компьютерных версий */
   .promo__wrapp {
     width: 290px;
     margin-top: -145px;
@@ -135,7 +149,6 @@
   }
 
   .promo__page-info {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 }
