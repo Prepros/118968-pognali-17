@@ -2,7 +2,7 @@
    Основной файл
    ========================================================================== */
 
-/* Размер шрифтов
+/* Настройки
    ========================================================================== */
 @import "settings/normalize";
 @import "settings/variable";
@@ -13,11 +13,11 @@
    ========================================================================== */
 @import "globals/base";
 @import "globals/container";
-@import "globals/logo";
-@import "globals/button";
-@import "globals/button-big";
-@import "globals/page-info";
-@import "globals/img-flag";
+@import "blocks/logo";
+@import "blocks/buttons/button";
+@import "blocks/buttons/button-big";
+@import "blocks/page-info";
+@import "blocks/img-flag";
 @import "blocks/tags";
 @import "blocks/transport";
 @import "blocks/index-form";
@@ -26,10 +26,10 @@
 
 /* Навигации
    ========================================================================== */
-@import "blocks/site-menu";
-@import "blocks/user-menu";
-@import "blocks/thumb-menu";
-@import "blocks/social-menu";
+@import "blocks/navigation/site-menu";
+@import "blocks/navigation/user-menu";
+@import "blocks/navigation/thumb-menu";
+@import "blocks/navigation/social-menu";
 
 /* Секции
    ========================================================================== */
