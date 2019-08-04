@@ -22,6 +22,10 @@
 .page-header--blue {
   color: $white-color;
   background-color: $blue-color--dark;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $blue-color--light2;
+  }
 }
 
 /* Показывает различный логотип при разном состоянии шапки */
@@ -34,14 +38,28 @@
 .page-header__wrapp {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 132px;
+  }
 }
 
 /* Обертка для логотипа и кнопки меню */
 .page-header__scroll {
   box-sizing: border-box;
+  z-index: 1;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 357px;
+    min-height: 132px;
+  }
 }
 
 /* Кнопка меню */
@@ -91,7 +109,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @media (min-width:$breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet) {
     width: 100%;
     margin-top: -88px;
     padding-top: 0;
@@ -155,25 +173,6 @@
   }
 }
 
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .page-header__wrapp {
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    min-height: 132px;
-  }
-
-  .page-header__scroll {
-    width: 357px;
-    min-height: 132px;
-    padding: 0;
-  }
-
-
-}
 
 /* Компьютеры
    ========================================================================== */
