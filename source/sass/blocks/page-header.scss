@@ -4,10 +4,45 @@
 
 /* Главная обертка шапки */
 .page-header {
+  position: absolute;
+  z-index: 999;
+  top: -73px;
+
+  width: 100%;
   min-height: 73px;
 
   color: $white-color;
   background-color: $blue-color--dark;
+
+  @media (min-width: $breakpoint-tablet) {
+    top: -132px;
+    min-height: 132px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: -90px;
+    min-height: 90px;
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+
+    padding-top: 0;
+  }
+}
+
+/* Чтобы контент под шапкой оставался на месте когда шапка вырвата из потока */
+.page-header + .page-main {
+  margin-top: 73px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 132px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 90px;
+  }
 }
 
 /* Модификатор меняет внешний вид шапки при скроле и открытия меню */
@@ -16,6 +51,28 @@
 
   background-color: $white-color;
   border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: $breakpoint-desktop) {
+    border-bottom: none;
+
+    .site-menu__link {
+      color: $blue-color;
+
+      &:hover,
+      &:focus {
+        color: $yellow-color;
+      }
+
+      &:active {
+        color: rgba($yellow-color, 0.3);
+      }
+    }
+
+    .page-header__scroll::before {
+      width: 45px;
+      background-color: $blue-color;
+    }
+  }
 }
 
 /* Модификатор меняет внешний вид шапки при закрытом меню */
@@ -25,6 +82,11 @@
 
   @media (min-width: $breakpoint-tablet) {
     background-color: $blue-color--light2;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 30px;
+    background-color: $blue-color--dark;
   }
 }
 
@@ -45,6 +107,11 @@
     flex-wrap: wrap;
     min-height: 132px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    align-items: center;
+    min-height: 90px;
+  }
 }
 
 /* Обертка для логотипа и кнопки меню */
@@ -60,6 +127,25 @@
     width: 357px;
     min-height: 132px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    position: relative;
+
+    width: 300px;
+    min-height: auto;
+    margin-right: 45px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+
+      width: 60px;
+      height: 2px;
+
+      background-color: $white-color;
+    }
+  }
 }
 
 /* Кнопка меню */
@@ -68,6 +154,10 @@
 
   background-color: transparent;
   border: none;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
 }
 
 /* Размер кнопки меню при закрытом меню */
@@ -110,10 +200,14 @@
   padding-bottom: 40px;
 
   @media (min-width: $breakpoint-tablet) {
-    width: 100%;
-    margin-top: -88px;
-    padding-top: 0;
-    padding-bottom: 50px;
+    padding-top: 45px;
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 630px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -121,27 +215,8 @@
    ========================================================================== */
 @media (max-width: $breakpoint-desktop) {
   /* Вытаскиваем шапку из потока при включенном js */
-  .page-header {
-    position: absolute;
-    z-index: 999;
-    top: -73px;
-
-    width: 100%;
-
-    /* Шапки в потоке при выключенном js */
-    &--no-js {
-      position: static;
-    }
-
-    &--fixed {
-      position: fixed;
-      top: 0;
-    }
-  }
-
-  /* Чтобы контент под шапкой оставался на месте когда шапка вырвата из потока */
-  .page-header + .page-main {
-    margin-top: 73px;
+  .page-header--no-js {
+    position: static;
   }
 
   /* Меняем фон шапки при выключенном js */
@@ -170,35 +245,5 @@
   /* Возвращаем стандартное положение контенту под шапкой когда шапка не вырвата из потока */
   .page-header--no-js + .page-main {
     margin-top: 0;
-  }
-}
-
-
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .page-header--white {
-    background-color: $blue-color--dark;
-  }
-
-  .page-header__wrapp {
-    align-items: center;
-    width: $width-desktop;
-    padding: 0 60px;
-  }
-
-  .page-header__scroll {
-    width: 345px;
-    min-height: 90px;
-  }
-
-  .page-header__toggle {
-    display: none;
-  }
-
-  .page-nav {
-    width: 630px;
-    margin: 0;
-    padding: 0;
   }
 }

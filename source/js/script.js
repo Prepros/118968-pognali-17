@@ -60,10 +60,18 @@ menuToggle.addEventListener("click", function (evt) {
 
 // Скролим страницу
 window.addEventListener("scroll", function (evt) {
-  if (window.pageYOffset > 0) {
-    scroll = true;
+  if (window.innerWidth < 1440) {
+    if (window.pageYOffset > 0) {
+      scroll = true;
+    } else {
+      scroll = false;
+    }
   } else {
-    scroll = false;
+    if (window.pageYOffset > 750) {
+      scroll = true;
+    } else {
+      scroll = false;
+    }
   }
 
   // Если страница проскролена
@@ -86,4 +94,30 @@ window.addEventListener("scroll", function (evt) {
   }
 });
 
+// Для больших экранах закрываем навигацию
+window.addEventListener('resize', function(evt) {
+  if (window.innerWidth >= 1440) {
+    // Меняем иконку
+    if (menuToggle.classList.contains("page-header__toggle--close")) {
+      menuToggle.classList.remove("page-header__toggle--close");
+      menuToggle.classList.add("page-header__toggle--open");
+    }
+
+    // Если навигация открыта - закрываем ее
+      if (pageNav.classList.contains("page-nav--open")) {
+      pageNav.classList.remove("page-nav--open");
+      pageNav.classList.add("page-nav--close");
+
+      // Если страница не проскролена шапка сайта синего цвета
+      if (!scroll) {
+        // Меняем фон шапки сайта
+        if (pageHeader.classList.contains("page-header--white")) {
+          pageHeader.classList.remove("page-header--white");
+          pageHeader.classList.add("page-header--blue");
+        }
+        pageHeader.classList.remove("page-header--fixed");
+      }
+    }
+  }
+});
 

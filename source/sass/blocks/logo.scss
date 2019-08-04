@@ -7,26 +7,26 @@
   padding: 27px 0;
 
   line-height: 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 45px 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0;
+  }
 }
 
 .logo__img {
   width: 100px;
   height: 19px;
-}
 
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .logo__img {
+  @media (min-width: $breakpoint-tablet) {
     width: 166px;
     height: 42px;
   }
-}
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .logo__img {
+  @media (min-width: $breakpoint-desktop) {
     width: 200px;
     height: 52px;
   }
