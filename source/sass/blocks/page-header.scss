@@ -2,25 +2,38 @@
    Шапка сайта
    ========================================================================== */
 
+/* Главная обертка шапки */
 .page-header {
+  min-height: 73px;
+
   color: $white-color;
   background-color: $blue-color--dark;
+}
 
-  &--white {
-    color: $blue-color--dark;
-    background-color: $white-color;
-  }
+/* Модификатор меняет внешний вид шапки при скроле и открытия меню */
+.page-header--white {
+  color: $blue-color--dark;
+
+  background-color: $white-color;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Модификатор меняет внешний вид шапки при закрытом меню */
+.page-header--blue {
+  color: $white-color;
+  background-color: $blue-color--dark;
+}
+
+/* Показывает различный логотип при разном состоянии шапки */
+.page-header--blue .logo--white,
+.page-header--white .logo--blue {
+  display: block;
 }
 
 /* Обертка для логотипа и навигации */
 .page-header__wrapp {
-  box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  width: $width-mobile;
-  margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 /* Обертка для логотипа и кнопки меню */
@@ -29,28 +42,112 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 27px 0 31px;
-}
-
-/* Логотип в шапке */
-.page-header__logo {
-  //
 }
 
 /* Кнопка меню */
 .page-header__toggle {
-  width: 25px;
-  height: 25px;
   padding: 0;
 
-  background-color: $grey-color--light;
+  background-color: transparent;
   border: none;
 }
 
+/* Размер кнопки меню при закрытом меню */
+.page-header__toggle--open {
+  width: 25px;
+  height: 25px;
+}
+
+/* Размер кнопки меню при открытом меню */
+.page-header__toggle--close {
+  width: 19px;
+  height: 19px;
+}
+
+/* Иконка кнопки меню */
+.page-header__toggle-icon {
+  display: none;
+  fill: $white-color;
+}
+
+/* При фиксированной шапке меняем цвет кнопки меню */
+.page-header--fixed .page-header__toggle-icon {
+  fill: $grey-color--light;
+}
+
+/* Показывет иконку в виде бургера при закрытом меню */
+.page-header__toggle--open .page-header__toggle-icon--open {
+  display: block;
+}
+
+/* Показывет иконку в виде крестика при открытом меню меню */
+.page-header__toggle--close .page-header__toggle-icon--close {
+  display: block;
+  fill: $grey-color--light;
+}
+
+/* Навигация в шапке сайта */
 .page-header__nav {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
+/* Стилизация шапки только для мобильных и планшетных устройств
+   ========================================================================== */
+@media (max-width: $breakpoint-desktop) {
+  /* Вытаскиваем шапку из потока при включенном js */
+  .page-header {
+    position: absolute;
+    z-index: 999;
+    top: -73px;
+
+    width: 100%;
+
+    /* Шапки в потоке при выключенном js */
+    &--no-js {
+      position: static;
+    }
+
+    &--fixed {
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  /* Чтобы контент под шапкой оставался на месте когда шапка вырвата из потока */
+  .page-header + .page-main {
+    margin-top: 73px;
+  }
+
+  /* Меняем фон шапки при выключенном js */
+  .page-header--no-js.page-header--blue {
+    color: $blue-color--dark;
+
+    background-color: $white-color;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  /* Убираем белый логотип при выключенном js */
+  .page-header--no-js .logo--white {
+    display: none;
+  }
+
+  /* Ставим синий логотип при выключенном js */
+  .page-header--no-js .logo--blue {
+    display: block;
+  }
+
+  /* Убираем кнопку меню при выключенном js */
+  .page-header--no-js .page-header__toggle {
+    display: none;
+  }
+
+  /* Возвращаем стандартное положение контенту под шапкой когда шапка не вырвата из потока */
+  .page-header--no-js + .page-main {
+    margin-top: 0;
+  }
+}
+
 
 /* Планшеты
    ========================================================================== */
@@ -59,12 +156,12 @@
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: $width-tablet;
-    padding: 40px;
+    min-height: 132px;
   }
 
   .page-header__scroll {
-    width: 353px;
+    width: 357px;
+    min-height: 132px;
     padding: 0;
   }
 
@@ -86,11 +183,12 @@
   .page-header__wrapp {
     align-items: center;
     width: $width-desktop;
-    padding: 50px 60px 20px;
+    padding: 0 60px;
   }
 
   .page-header__scroll {
     width: 345px;
+    min-height: 90px;
   }
 
   .page-header__toggle {

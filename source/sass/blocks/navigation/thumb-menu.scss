@@ -2,10 +2,12 @@
    Ссылки с круглой миниатюрой
    ========================================================================== */
 
+/* Меню с изображением */
 .thumb-menu {
   @include reset-ul;
 }
 
+/* Элемент меню с изображением */
 .thumb-menu__item {
   font-size: 16px;
   line-height: 22px;
@@ -14,9 +16,50 @@
   text-transform: uppercase;
 }
 
+/* Ссылка меню с изображением */
 .thumb-menu__link {
+  display: flex;
+  align-items: center;
+
   color: $blue-color;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($blue-color, 0.7);
+  }
+
+  &:active {
+    color: rgba($blue-color, 0.3);
+  }
+}
+
+/* Обертка для иконки элемента */
+.thumb-menu__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  margin-right: 15px;
+
+  background-color: $blue-color--dark2;
+  border-radius: 50%;
+}
+
+/* Иконка элемента */
+.thumb-menu__icon-svg {
+  fill: $yellow-color;
+}
+
+.thumb-menu__link:hover .thumb-menu__icon-svg,
+.thumb-menu__link:focus .thumb-menu__icon-svg {
+  fill: $yellow-color--dark;
+}
+
+.thumb-menu__link:active .thumb-menu__icon-svg {
+  fill: rgba($yellow-color--dark, 0.3);
 }
 
 /* Планшеты

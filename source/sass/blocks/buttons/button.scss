@@ -21,6 +21,15 @@
   border-radius: 20px;
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-color--dark;
+  }
+
+  &:active {
+    color: rgba($blue-color--dark, 0.3);
+  }
 }
 
 /* Планшеты

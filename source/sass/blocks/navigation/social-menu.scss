@@ -2,6 +2,7 @@
    Навигация по соцсетям
    ========================================================================== */
 
+/* Меню с соц. сетями */
 .social-menu {
   @include reset-ul;
   display: flex;
@@ -9,12 +10,34 @@
   flex-wrap: wrap;
 }
 
+/* Элемент меню с соц. сетями */
 .social-menu__item {
+  display: flex;
+  align-items: center;
+  margin-right: 28px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Ссылка меню с соц. сетями */
+.social-menu__link {
   //
 }
 
-.social-menu__link {
-  //
+/* Изображение соц сети */
+.social-menu__icon {
+  fill: $grey-color--light;
+}
+
+.social-menu__link:hover .social-menu__icon,
+.social-menu__link:focus .social-menu__icon {
+  fill: rgba($grey-color--light, 0.6);
+}
+
+.social-menu__link:active .social-menu__icon {
+  fill: rgba($grey-color--light, 0.3);
 }
 
 /* Планшеты

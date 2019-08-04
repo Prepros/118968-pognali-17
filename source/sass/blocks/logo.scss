@@ -3,10 +3,31 @@
    ========================================================================== */
 
 .logo {
+  display: none;
+  padding: 27px 0;
+
   line-height: 0;
 }
 
 .logo__img {
   width: 100px;
   height: 19px;
+}
+
+/* Планшеты
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  .logo__img {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+/* Компьютеры
+   ========================================================================== */
+@media (min-width: $breakpoint-desktop) {
+  .logo__img {
+    width: 200px;
+    height: 52px;
+  }
 }
