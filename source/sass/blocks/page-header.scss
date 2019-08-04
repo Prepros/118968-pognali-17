@@ -90,6 +90,13 @@
 .page-header__nav {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width:$breakpoint-tablet) {
+    width: 100%;
+    margin-top: -88px;
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
 }
 
 /* Стилизация шапки только для мобильных и планшетных устройств
@@ -165,12 +172,7 @@
     padding: 0;
   }
 
-  .page-header__nav {
-    width: 100%;
-    margin-top: -39px;
-    padding: 0;
-    padding-bottom: 50px;
-  }
+
 }
 
 /* Компьютеры
