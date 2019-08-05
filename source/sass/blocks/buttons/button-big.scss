@@ -24,6 +24,15 @@
 
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: $yellow-color--dark;
+  }
+
+  &:active {
+    color: rgba($blue-color--dark, 0.3);
+  }
+
   &--bold {
     border: 3px solid $blue-color;
   }
