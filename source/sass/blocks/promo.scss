@@ -39,7 +39,7 @@
   z-index: 0;
 
   @media (min-width: $breakpoint-tablet) {
-    min-height: 902px;
+    min-height: 850px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -72,7 +72,7 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    height: 835px;
+    height: 100%;
 
     background-image: url("../img/tablet/traveller-illustration-tablet@1x.png"), url("../img/tablet/globe-back-tablet@1x.jpg");
     background-position: 280px 260px, center bottom;
