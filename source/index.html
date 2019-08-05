@@ -37,6 +37,14 @@
   <symbol id="menu-svg--close" viewBox="0 0 18 18">
     <path d="M10.3 9l7.4-7.4c.4-.4.4-.9 0-1.3s-.9-.4-1.3 0L9 7.7 1.6.3C1.2-.1.7-.1.3.3s-.4.9 0 1.3L7.7 9 .3 16.4c-.4.4-.4.9 0 1.3s.9.4 1.3 0L9 10.3l7.4 7.4c.4.4.9.4 1.3 0s.4-.9 0-1.3L10.3 9z"/>
   </symbol>
+  <symbol id="phone2-svg" viewBox="0 0 18 18">
+    <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1zM9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1z"/>
+    <path d="M9.1 6.9V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2zM9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
+  </symbol>
+  <symbol id="mail2-svg" viewBox="0 0 18 14">
+    <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
+    <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
+</symbol>
 </svg>
 
 <header class="page-header page-header--no-js page-header--blue">
@@ -146,11 +154,17 @@
           <li class="promo__item">
             <a class="promo__link promo__link--phone" href="#">
               <span class="visually-hidden">Телефон</span>
+              <svg class="promo__svg promo__svg--phone" width="18" height="18">
+                <use xlink:href="#phone2-svg"></use>
+              </svg>
             </a>
           </li>
           <li class="promo__item">
             <a class="promo__link promo__link--email" href="#">
               <span class="visually-hidden">Email</span>
+              <svg class="promo__svg promo__svg--mail" width="18" height="14">
+                <use xlink:href="#mail2-svg"></use>
+              </svg>
             </a>
           </li>
           <li class="promo__item">

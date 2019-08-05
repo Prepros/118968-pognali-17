@@ -15,6 +15,7 @@
   }
 }
 
+/* Заголовок информационного блока */
 .page-info__title {
   margin: 0;
   margin-bottom: 20px;
@@ -23,11 +24,19 @@
   line-height: 24px;
   font-weight: 700;
   color: $orange-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 45px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
+/* Текст информационного блока */
 .page-info__text {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   font-size: $fz;
   line-height: $lh;
@@ -37,41 +46,26 @@
     margin-bottom: 0;
   }
 
-  &--bold {
-    font-weight: 700;
-  }
-}
-
-.page-info__link {
-  color: $yellow-color;
-  text-decoration: underline;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .page-info__title {
-    margin-bottom: 50px;
-
-    font-size: 45px;
-    line-height: 45px;
-  }
-
-  .page-info__text {
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: 50px;
 
     font-size: 28px;
     line-height: 33px;
-
-    &--bold {
-      font-size: 21px;
-      line-height: 25px;
-    }
   }
 }
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  //
+/* Жирный текст информационного блока */
+.page-info__text--bold {
+  font-weight: 700;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+/* Ссылка информационного блока */
+.page-info__link {
+  color: $yellow-color;
+  text-decoration: underline;
 }

@@ -17,6 +17,11 @@
 
 .page-main__container {
   //
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .page-main__title {
@@ -42,6 +47,18 @@
     background-color: $orange-color;
     border-radius: 3px;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 70px;
+
+    &::before {
+      bottom: -3px;
+      height: 8px;
+    }
+  }
 }
 
 .page-main__link {
@@ -53,39 +70,11 @@
   color: $white-color;
   text-transform: uppercase;
   text-decoration: none;
-}
 
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .page-main__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .page-main__title {
-    padding-bottom: 60px;
-
-    font-size: 60px;
-    line-height: 70px;
-
-    &::before {
-      bottom: -3px;
-      height: 8px;
-    }
-  }
-
-  .page-main__link {
+  @media (min-width: $breakpoint-tablet) {
     display: block;
     margin-top: 27px;
 
     text-align: right;
   }
-}
-
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  //
 }

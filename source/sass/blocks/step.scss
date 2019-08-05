@@ -31,6 +31,10 @@
   background-color: $orange-color;
   border-radius: 10px;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   /* Счетчик */
   &::before {
     counter-increment: section;
