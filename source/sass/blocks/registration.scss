@@ -19,6 +19,7 @@
   }
 }
 
+/* Меню с миниатюрой */
 .registration .thumb-menu__item,
 .registration .thumb-menu__link {
   color: $yellow-color;
@@ -33,10 +34,12 @@
   color: rgba($yellow-color--dark, 0.3);
 }
 
+/* Контейнер центровщик */
 .registration__container {
   //
 }
 
+/* Обертка */
 .registration__wrapp {
   @media (min-width: $breakpoint-tablet) {
     padding: 0 35px;
@@ -47,6 +50,7 @@
   }
 }
 
+/* Информационный блок */
 .registration__page-info {
   margin-bottom: 30px;
   padding: 0 25px;
@@ -57,12 +61,14 @@
   }
 }
 
+/* Перенос */
 .registration__page-info br:first-of-type {
   @media (min-width: $breakpoint-tablet) {
     display: none;
   }
 }
 
+/* Скрываем на мобильных */
 .registration__page-info .mobile-hidden {
   display: none;
 
@@ -71,12 +77,14 @@
   }
 }
 
+/* Скрываем на десктопе */
 .registration__page-info .desktop-hidden {
   @media (min-width: $breakpoint-desktop) {
     display: none;
   }
 }
 
+/* Регистрационная форма */
 .registration__form {
   margin-bottom: 30px;
 
@@ -86,6 +94,7 @@
   }
 }
 
+/* Обертка для меню с миниатюрой */
 .registration__contact-menu {
   @media (min-width: $breakpoint-desktop) {
     display: flex;
