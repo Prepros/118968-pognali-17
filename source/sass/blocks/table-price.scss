@@ -2,6 +2,7 @@
    Тарифы
    ========================================================================== */
 
+/* Таблица */
 .table-price {
   width: 100%;
   table-layout: fixed;
@@ -9,43 +10,89 @@
   border-collapse: collapse;
 }
 
+/* Обертка таблицы */
 .table-price tbody {
   counter-reset: section;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $breakpoint-tablet) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Верхний и нижний декоративный элемент */
+.table-price tbody::before,
+.table-price tbody::after {
+  @media (min-width: $breakpoint-tablet) {
+    content: "";
+    position: absolute;
+    right: -33px;
+    z-index: -1;
+
+    width: 196px;
+    height: 43px;
+
+    background-color: #e2e5f2;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    right: -155px;
+
+    width: 442px;
+    height: 51px;
+  }
+}
+
+/* Верхний декор */
+.table-price tbody::before {
+  @media (min-width: $breakpoint-tablet) {
+    top: -43px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: -51px;
+  }
+}
+
+/* Нижний декор */
+.table-price tbody::after {
+  @media (min-width: $breakpoint-tablet) {
+    bottom: -43px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    bottom: -51px;
+  }
 }
 
 /* Строка в таблице */
 .table-price__row {
   border-bottom: 1px solid #e1e3e9;
 
-  &:first-child {
-    border-top: 1px solid #e1e3e9;
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    width: 100%;
+
+    border: none;
+  }
+}
+
+/* Первая строка в таблице */
+.table-price__row:first-child {
+  border-top: 1px solid #e1e3e9;
+
+  @media (min-width: $breakpoint-tablet) {
+    border: none;
   }
 }
 
 /* Строка с счетчиком */
 .table-price--count .table-price__row {
   position: relative;
-
-  /* Первые три строки */
-  &:nth-child(-n+3)::before {
-    counter-increment: section;
-    content: counter(section);
-    position: absolute;
-    right: 0;
-
-    width: 34px;
-    height: 34px;
-    padding: 12px 13px;
-
-    font-size: $fz;
-    line-height: 14px;
-    font-weight: normal;
-    color: $white-color;
-
-    border-radius: 50%;
-  }
 
   /* Первый счетчик */
   &:nth-child(1)::before {
@@ -63,6 +110,37 @@
   }
 }
 
+/* Первые три строки */
+.table-price--count .table-price__row:nth-child(-n+3)::before {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  right: 0;
+
+  width: 34px;
+  height: 34px;
+  padding: 12px 13px;
+
+  font-size: $fz;
+  line-height: 14px;
+  font-weight: normal;
+  color: $white-color;
+
+  border-radius: 50%;
+
+  @media (min-width: $breakpoint-tablet) {
+    left: -90px;
+    right: auto;
+
+    width: 67px;
+    height: 67px;
+    padding: 24px 26px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
 /* Столбцы таблицы наименование и цена */
 .table-price__title,
 .table-price__cash {
@@ -74,158 +152,87 @@
   font-weight: 300;
   color: $grey-color;
   text-align: left;
-}
 
-/* Столбец наименование */
-.table-price__title {
-  padding-top: 10px;
-}
-
-/* Столбец цена */
-.table-price__cash {
-  padding-bottom: 10px;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  /* Декоративная рамка */
-  .table-price tbody {
-    position: relative;
-    z-index: 1;
-
-    /* Рамка сверху и снизу */
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      right: -33px;
-      z-index: -1;
-
-      width: 196px;
-      height: 43px;
-
-      background-color: #e2e5f2;
-    }
-
-    /* Рамка сверху */
-    &::before {
-      top: -43px;
-      border-radius: 20px 20px 0 0;
-    }
-
-    /* Рамка снизу */
-    &::after {
-      bottom: -43px;
-      border-radius: 0 0 20px 20px;
-    }
-  }
-
-  .table-price__row {
-    display: flex;
-    width: 100%;
-
-    border: none;
-
-    &:first-child {
-      border: none;
-    }
-  }
-
-  .table-price--count .table-price__row:nth-child(-n+3)::before {
-    left: -90px;
-    right: auto;
-
-    width: 67px;
-    height: 67px;
-    padding: 24px 26px;
-
-    font-size: 28px;
-    line-height: 28px;
-  }
-
-  .table-price__title,
-  .table-price__cash {
+  @media (min-width: $breakpoint-tablet) {
     padding: 16px 0;
 
     font-size: 28px;
     line-height: 33px;
   }
+}
 
-  .table-price__title {
+/* Столбец наименование */
+.table-price__title {
+  padding-top: 10px;
+
+  @media (min-width: $breakpoint-tablet) {
     width: 400px;
+    padding: 16px 0;
   }
 
-  .table-price__row:first-child .table-price__title {
+  @media (min-width: $breakpoint-desktop) {
+    width: 528px;
+  }
+}
+
+.table-price__row:first-child .table-price__title {
+  @media (min-width: $breakpoint-tablet) {
     border-top: 1px solid #e1e3e9;
     border-bottom: 1px solid #e1e3e9;
   }
+}
 
-  .table-price__row:nth-child(n+2) .table-price__title {
+.table-price__row:nth-child(n+2) .table-price__title {
+  @media (min-width: $breakpoint-tablet) {
     border-bottom: 1px solid #e1e3e9;
   }
+}
 
-  .table-price__cash {
+/* Столбец цена */
+.table-price__cash {
+  padding-bottom: 10px;
+
+  @media (min-width: $breakpoint-tablet) {
     position: relative;
     z-index: 1;
 
     width: 163px;
     text-align: right;
-
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      left: 0;
-      top: 0;
-
-      width: 120%;
-      height: 100%;
-
-      background-color: #e2e5f2;
-    }
   }
 
-  .table-price__row:first-child .table-price__cash {
+  @media (min-width: $breakpoint-desktop) {
+    width: 285px;
+  }
+}
+
+.table-price__cash::after {
+  @media (min-width: $breakpoint-tablet) {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+    width: 120%;
+    height: 100%;
+
+    background-color: #e2e5f2;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 155%;
+  }
+}
+
+.table-price__row:first-child .table-price__cash {
+  @media (min-width: $breakpoint-tablet) {
     border-top: 1px solid #d6d9e6;
-    border-bottom: 1px solid #d6d9e6;
-  }
-
-  .table-price__row:nth-child(n+2) .table-price__cash {
     border-bottom: 1px solid #d6d9e6;
   }
 }
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .table-price tbody {
-    &::before,
-    &::after {
-      right: -155px;
-
-      width: 442px;
-      height: 51px;
-    }
-
-    &::before {
-      top: -51px;
-    }
-
-    &::after {
-      bottom: -51px;
-    }
-  }
-
-  .table-price__title {
-    width: 528px;
-  }
-
-  .table-price__cash {
-    width: 285px;
-
-    &::after {
-      width: 155%;
-    }
+.table-price__row:nth-child(n+2) .table-price__cash {
+  @media (min-width: $breakpoint-tablet) {
+    border-bottom: 1px solid #d6d9e6;
   }
 }

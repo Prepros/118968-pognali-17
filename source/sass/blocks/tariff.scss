@@ -5,111 +5,166 @@
 .tariff {
   padding: 37px 0;
   background-color: $white-color--blue;
-}
 
-.tariff__wrapp {
-  box-sizing: border-box;
-  position: relative;
-
-  padding: 10px 25px 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 99px;
-    height: 99px;
-
-    background-image: url("../img/rates@1x.png");
-    background-repeat: no-repeat;
-    background-size: 99px;
-  }
-}
-
-.tariff__page-info {
-  width: 110px;
-  margin-bottom: 45px;
-}
-
-.tariff__page-info .page-info__title {
-  margin-bottom: 0;
-}
-
-.tariff__price {
-  margin-bottom: 30px;
-}
-
-.tariff__button {
-  font-size: $fz;
-  line-height: 16px;
-  font-weight: 700;
-  color: $blue-color;
-  text-decoration: none;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .tariff {
+  @media (min-width: $breakpoint-tablet) {
     padding-top: 75px;
     padding-bottom: 85px;
   }
+}
 
-  .tariff__wrapp {
+/* Обертка */
+.tariff__wrapp {
+  position: relative;
+
+  box-sizing: border-box;
+  padding: 10px 25px 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 35px;
     padding: 0;
     padding-left: 90px;
     padding-right: 35px;
-
-    &::before {
-      top: auto;
-      right: 45px;
-      bottom: -45px;
-      z-index: 10;
-    }
   }
 
-  .tariff__page-info {
+  @media (min-width: $breakpoint-desktop) {
+    padding-left: 160px;
+    padding-right: 345px;
+  }
+}
+
+/* Миниатюра */
+.tariff__wrapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 99px;
+  height: 99px;
+
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-size: 99px auto;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/rates@2x.png");
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    top: auto;
+    right: 45px;
+    bottom: -115px;
+    z-index: 10;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    right: 75px;
+    bottom: 65px;
+
+    width: 198px;
+    height: 198px;
+
+    background-size: 198px;
+  }
+}
+
+/* Информационный блок */
+.tariff__page-info {
+  width: 110px;
+  margin-bottom: 45px;
+
+  @media (min-width: $breakpoint-tablet) {
     width: auto;
     margin-bottom: 70px;
 
     text-align: center;
   }
 
-  .tariff__price {
-    margin-bottom: 55px;
-  }
-
-  .tariff__button {
-    font-size: 20px;
-    line-height: 20px;
-    color: #132576;
-  }
-}
-
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .tariff__wrapp {
-    padding-left: 160px;
-    padding-right: 345px;
-
-    &::before {
-      right: 75px;
-      bottom: 65px;
-
-      width: 198px;
-      height: 198px;
-
-      background-size: 198px;
-    }
-  }
-
-  .tariff__page-info {
+  @media (min-width: $breakpoint-desktop) {
     width: auto;
     margin-bottom: 70px;
 
     text-align: right;
   }
+}
+
+/* Заголовок */
+.tariff__page-info .page-info__title {
+  margin-bottom: 0;
+}
+
+/* Обертка для таблицы прайс */
+.tariff__price {
+
+}
+
+/* Кнопка показать все тарифы */
+.tariff__button {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  margin: 0 auto;
+
+  font-size: $fz;
+  line-height: 16px;
+  font-weight: 700;
+  color: $blue-color;
+  text-decoration: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: auto;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #132576;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 400px;
+    margin-left: 70px;
+  }
+}
+
+.tariff__button:hover,
+.tariff__button:focus {
+  color: rgba(#132576, 0.7);
+}
+
+.tariff__button:active {
+  color: rgba(#132576, 0.3);
+}
+
+/* Фон миниатюры */
+.tariff__button-icon {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 67px;
+    height: 67px;
+    margin: 0;
+    margin-right: 23px;
+
+    background-color: #e2e5f2;
+    border-radius: 50%;
+  }
+}
+
+/* Иконка кнопки */
+.tariff__button-svg {
+  fill: #132576;
+}
+
+.tariff__button:hover .tariff__button-svg,
+.tariff__button:focus .tariff__button-svg {
+  opacity: 0.7;
+}
+
+.tariff__button:active .tariff__button-svg {
+  opacity: 0.3;
 }
