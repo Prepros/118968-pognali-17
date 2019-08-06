@@ -2,12 +2,14 @@
    Тэги
    ========================================================================== */
 
+/* Список тэгов */
 .tags {
   @include reset-ul;
   display: flex;
   flex-wrap: wrap;
 }
 
+/* Тэг */
 .tags__item {
   margin-right: 7px;
 
@@ -19,24 +21,20 @@
   &:last-child {
     margin-right: 0;
   }
-}
 
-.tags__link {
-  color: $grey-color;
-  text-decoration: none;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .tags__item {
+  @media (min-width: $breakpoint-tablet) {
     font-size: 20px;
     line-height: 24px;
   }
 }
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  //
+/* Ссылка тэга */
+.tags__link {
+  color: $grey-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }

@@ -10,6 +10,7 @@
 .tooltip__desc {
   position: absolute;
   left: -7px;
+  z-index: 1;
 
   display: none;
   margin-top: 16px;
@@ -40,6 +41,7 @@
   transform: translateX(-50%);
 }
 
+/* Показываем тултип при наведении */
 .tooltip:hover .tooltip__desc,
 .tooltip:focus .tooltip__desc {
   display: block;

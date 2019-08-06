@@ -2,6 +2,7 @@
    Транспорт
    ========================================================================== */
 
+/* Список транспортов */
 .transport {
   @include reset-ul;
   display: flex;
@@ -9,9 +10,44 @@
   flex-wrap: wrap;
 }
 
+/* Транспорт */
 .transport__item {
   width: 24px;
   height: 24px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-right: 13px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Тултип обертка */
+.transport__tooltip {
+  margin: 0;
+}
+
+/* Иконка */
+.transport-svg {
+  fill: #d9d9d9;
+}
+
+/* Иконка активная */
+.transport-svg--active {
+  fill: #1d2e5b;
+}
+
+.transport-svg--plane {
+  //
+}
+
+.transport-svg--bus {
+  //
+}
+
+.transport-svg--bike {
+  //
+}
+
+.transport-svg--run {
+  //
 }
