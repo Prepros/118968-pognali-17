@@ -67,6 +67,9 @@
   <symbol id="location-svg" viewBox="0 0 28 43">
     <path d="M11.7 13.9c0-1.2 1-2.2 2.3-2.2s2.3 1 2.3 2.2c0 1.2-1 2.2-2.3 2.2-1.2 0-2.3-1-2.3-2.2zM14 8.1c-3.2 0-5.9 2.6-5.9 5.8s2.6 5.8 5.9 5.8c3.2 0 5.9-2.6 5.9-5.8 0-3.2-2.7-5.8-5.9-5.8zM0 13.6c0 9.1 10.9 16.2 11.7 26.7v.4c0 1.2 1 2.2 2.3 2.2s2.3-1 2.3-2.2v-.4C17.2 29.8 28 22.8 28 13.6 28 6.1 21.7 0 14 0S0 6.1 0 13.6zm14-9.1c5.2 0 9.5 4.2 9.5 9.4s-4.2 9.4-9.5 9.4-9.5-4.2-9.5-9.4S8.8 4.5 14 4.5z"/>
   </symbol>
+  <symbol id="htmlacademy-svg" viewBox="0 0 27 34">
+    <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"/>
+  </symbol>
 </svg>
 
 <header class="page-header page-header--no-js page-header--blue">
@@ -604,29 +607,42 @@
 
 <footer class="main-footer">
   <div class="main-footer__container container">
-    <a class="main-footer__logo logo" href="#">
-<!--      <img class="logo__img" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали">-->
+    <a class="main-footer__logo logo logo--blue" href="#">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-blue@1x.png 1x, img/desktop/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-blue@1x.png 1x, img/tablet/logo-tablet-blue@2x.png">
+        <img class="logo__img" src="img/mobile/logo-mobile-blue@1x.png" srcset="img/mobile/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
+      </picture>
     </a>
-    <ul class="main-footer__social-menu social-menu">
+
+    <ul class="main-footer__social-menu social-menu social-menu--bg">
       <li class="social-menu__item">
         <a class="social-menu__link" href="#">
-          F
+          <span class="visually-hidden">Facebook</span>
+          <svg class="social-menu__icon social-menu__icon--fb" width="11" height="22" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#facebook-svg"></use>
+          </svg>
         </a>
       </li>
       <li class="social-menu__item">
         <a class="social-menu__link" href="#">
-          VK
+          <span class="visually-hidden">Вконтакте</span>
+          <svg class="social-menu__icon social-menu__icon--vk" width="23" height="12" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#vk-svg"></use>
+          </svg>
         </a>
       </li>
       <li class="social-menu__item">
         <a class="social-menu__link" href="#">
-          INST
+          <span class="visually-hidden">Instagram</span>
+          <svg class="social-menu__icon social-menu__icon--inst" width="18" height="18" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#inst-svg"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <p class="main-footer__copyright">
-      <span class="main-footer__copyright-text">Разработано</span>
-      <a class="main-footer__copyright-link" href="#"><span class="visuall1y-hidden">Html Academy</span></a>
+      <a class="main-footer__copyright-link" href="#">Разработано</a>
     </p>
   </div>
 </footer>

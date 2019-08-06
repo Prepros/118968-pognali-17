@@ -4,17 +4,7 @@
 
 .logo {
   display: none;
-  padding: 27px 0;
-
   line-height: 0;
-
-  @media (min-width: $breakpoint-tablet) {
-    padding: 45px 0;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    padding: 0;
-  }
 }
 
 .logo__img {

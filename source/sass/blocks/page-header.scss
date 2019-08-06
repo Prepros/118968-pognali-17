@@ -91,6 +91,18 @@
   }
 }
 
+.page-header__logo {
+  padding: 27px 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 45px 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0;
+  }
+}
+
 /* Показывает различный логотип при разном состоянии шапки */
 .page-header--blue .logo--white,
 .page-header--white .logo--blue {
