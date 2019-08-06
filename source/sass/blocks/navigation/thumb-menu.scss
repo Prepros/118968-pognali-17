@@ -9,6 +9,9 @@
 
 /* Элемент меню с изображением */
 .thumb-menu__item {
+  display: flex;
+  align-items: center;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
@@ -44,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 45px;
   height: 45px;
   margin: 0;
