@@ -68,4 +68,13 @@
 .page-info__link {
   color: $yellow-color;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $orange-color;
+  }
+
+  &:active {
+    color: rgba($orange-color, 0.3);
+  }
 }
