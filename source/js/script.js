@@ -120,4 +120,3 @@ window.addEventListener('resize', function(evt) {
     }
   }
 });
-
