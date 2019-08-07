@@ -289,7 +289,7 @@
 
 /* Тултип обертка */
 .companion__tooltip {
-  margin: 0;
+  //
 }
 
 /* Заголовок */
@@ -313,6 +313,8 @@
 
 /* Ссылка */
 .companion__title-link {
+  padding-left: 17px;
+
   color: $blue-color--light;
   text-decoration: none;
 

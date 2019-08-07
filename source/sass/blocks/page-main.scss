@@ -13,6 +13,10 @@
   padding-top: 20px;
 
   background-color: $blue-color--dark;
+
+  @media (min-width: $breakpoint-tablet) {
+
+  }
 }
 
 .page-main__container {
