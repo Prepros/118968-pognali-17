@@ -33,6 +33,10 @@
   }
 }
 
+.inner-page .page-header {
+  background-color: $blue-color--dark;
+}
+
 /* Чтобы контент под шапкой оставался на месте когда шапка вырвата из потока */
 .page-header + .page-main {
   margin-top: 73px;
