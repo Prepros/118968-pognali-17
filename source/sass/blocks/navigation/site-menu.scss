@@ -2,10 +2,17 @@
    Навигация по сайту
    ========================================================================== */
 
+/* Список основного меню */
 .site-menu {
   @include reset-ul;
+
+  @media (min-width: $breakpoint-desktop) {
+    order: -1;
+    display: flex;
+  }
 }
 
+/* Элемент основного меню */
 .site-menu__item {
   font-size: 30px;
   line-height: 36px;
@@ -13,32 +20,14 @@
   color: $blue-color;
   text-align: center;
   text-transform: uppercase;
-}
 
-.site-menu__link {
-  color: $blue-color;
-  text-decoration: none;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .site-menu__item {
+  @media (min-width: $breakpoint-tablet) {
     font-size: 60px;
     line-height: 71px;
     text-align: left;
   }
-}
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .site-menu {
-    order: -1;
-    display: flex;
-  }
-
-  .site-menu__item {
+  @media (min-width: $breakpoint-desktop) {
     margin-right: 37px;
 
     font-size: 20px;
@@ -49,8 +38,34 @@
       margin-right: 0;
     }
   }
+}
 
-  .site-menu__link {
+/* Ссылка основного меню */
+.site-menu__link {
+  display: block;
+
+  color: $blue-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($blue-color, 0.7);
+  }
+
+  &:active {
+    color: rgba($blue-color, 0.3);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
     color: $white-color;
+
+    &:hover,
+    &:focus {
+      color: $yellow-color;
+    }
+
+    &:active {
+      color: rgba($yellow-color, 0.3);
+    }
   }
 }

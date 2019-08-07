@@ -24,6 +24,15 @@
 
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: $yellow-color--dark;
+  }
+
+  &:active {
+    color: rgba($blue-color--dark, 0.3);
+  }
+
   &--bold {
     border: 3px solid $blue-color;
   }
@@ -39,9 +48,11 @@
 
   transform: translateY(-50%);
 
-  & polygon {
-    fill: $blue-color--light;
-  }
+  fill: $blue-color--light;
+}
+
+.button-big:active .button-big__arrow {
+  fill: rgba($blue-color--light, 0.3);
 }
 
 .button-big__text {

@@ -3,18 +3,110 @@
    ========================================================================== */
 
 .promo {
-  margin-bottom: 15px;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
 
   color: $white-color;
   background-color: $blue-color--dark;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 30px;
+    padding-bottom: 0;
+
+    background-color: $blue-color--light2;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 0;
+    padding-top: 0;
+
+    background-color: $blue-color--dark;
+    background-image: url("../img/desktop/globe-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 1800px 750px;
+    background-position: -145px -110px;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/desktop/globe-back-desktop@2x.jpg");
+    }
+  }
 }
 
+/* Контейнер центровщик */
 .promo__container {
-  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
+  position: relative;
+  z-index: 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    min-height: 850px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    align-items: flex-start;
+    min-height: 552px;
+    padding-top: 90px;
+  }
+}
+
+/* Фон секции */
+.promo__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 380px;
+
+  background-image: url("../img/mobile/traveller-illustration-mobile@1x.png"), url("../img/mobile/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 88px 125px, 0 -100px;
+  background-size: 192px auto, 320px auto;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/mobile/traveller-illustration-mobile@2x.png"), url("../img/mobile/globe-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 100%;
+
+    background-image: url("../img/tablet/traveller-illustration-tablet@1x.png"), url("../img/tablet/globe-back-tablet@1x.jpg");
+    background-position: 280px 260px, center bottom;
+    background-size: 372px auto, 1479px auto;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/tablet/traveller-illustration-tablet@2x.png"), url("../img/tablet/globe-back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 640px;
+
+    background-image: url("../img/desktop/traveller-illustration-desktop@1x.png");
+    background-size: 431px auto;
+    background-position: 605px 0;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/desktop/traveller-illustration-desktop@2x.png");
+    }
+  }
+}
+
+/* Обертка */
+.promo__wrapp {
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 290px;
+    margin-top: 10px;
+    margin-left: auto;
+  }
 }
 
 /* Заголовок секции */
@@ -27,107 +119,17 @@
   line-height: 40px;
   font-weight: 700;
   text-align: center;
-}
+  color: $white-color;
 
-/* Список кнопок связи
-   ========================================================================== */
-.promo__list {
-  @include reset-ul;
-  display: flex;
-  margin-bottom: 28px;
-}
-
-.promo__item {
-  //
-}
-
-.promo__link {
-  display: block;
-  width: 40px;
-  height: 40px;
-
-  &--phone {
-    background-color: $orange-color;
-    border-radius: 50%;
-  }
-
-  &--email {
-    background-color: $yellow-color--dark;
-    border-radius: 50%;
-  }
-
-  &--button {
-    min-width: 189px;
-  }
-}
-
-/* Информационный блок
-   ========================================================================== */
-.promo__page-info {
-  padding-left: 25px;
-  padding-right: 90px;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .promo {
-    padding-top: 50px;
-    padding-bottom: 0;
-
-    background-color: $blue-color--light2;
-  }
-
-  .promo__container {
-    min-height: 900px;
-
-    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
-    background-position: 280px 260px, center 235px;
-  }
-
-  .promo__wrapp {
-    box-sizing: border-box;
-  }
-
-  .promo__title {
-    margin-bottom: 100px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 85px;
     padding: 0 145px;
 
     font-size: 60px;
     line-height: 70px;
   }
 
-  .promo__list {
-    display: none;
-  }
-
-  .promo__page-info {
-    padding-left: 35px;
-    padding-right: 390px;
-  }
-}
-
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .promo {
-    margin-bottom: 0;
-    padding-top: 0;
-
-    background-color: $blue-color--dark;
-  }
-
-  .promo__container {
-    display: flex;
-    align-items: flex-start;
-    min-height: 542px;
-    padding-top: 90px;
-
-    background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
-    background-position: 605px -10px, center -120px;
-  }
-
-  .promo__title {
+  @media (min-width: $breakpoint-desktop) {
     width: 395px;
     margin-bottom: 0;
     padding: 0;
@@ -135,20 +137,95 @@
 
     text-align: left;
   }
+}
 
-  /* Обертка для компьютерных версий */
-  .promo__wrapp {
-    width: 290px;
-    margin-top: -145px;
-    margin-left: auto;
+/* Список кнопок связи */
+.promo__list {
+  @include reset-ul;
+  display: flex;
+  margin-bottom: 26px;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+/* Элемент кнопок связи */
+.promo__item {
+  //
+}
+
+/* Ссылка кнопок связи */
+.promo__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* Ссылка с телефоном */
+.promo__link--phone {
+  background-color: $orange-color;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: #f26926;
+  }
+}
+
+/* Ссылка с почтой */
+.promo__link--email {
+  background-color: $yellow-color--dark;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $orange-color;
+  }
+}
+
+/* Ссылка с кнопкой авторизации */
+.promo__link--button {
+  min-width: 189px;
+  padding: 6px 15px 4px;
+}
+
+/* Миниатюра */
+.promo__svg {
+  fill: $blue-color--dark;
+}
+
+/* Миниатюра телефона */
+.promo__svg--phone {
+  width: 18px;
+  height: 18px;
+}
+
+/* Миниатюра почты */
+.promo__svg--mail {
+  width: 18px;
+  height: 14px;
+}
+
+/* Миниатюры при наведении */
+.promo__link--phone:active .promo__svg--phone,
+.promo__link--email:active .promo__svg--mail {
+  fill: rgba($blue-color--dark, 0.3);
+}
+
+/* Информационный блок */
+.promo__page-info {
+  padding-left: 25px;
+  padding-right: 90px;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-left: 35px;
+    padding-right: 390px;
   }
 
-  .promo__list {
-    display: flex;
-    margin-bottom: 120px;
-  }
-
-  .promo__page-info {
+  @media (min-width: $breakpoint-desktop) {
     padding: 0;
   }
 }

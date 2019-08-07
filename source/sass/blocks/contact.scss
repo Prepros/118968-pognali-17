@@ -4,67 +4,32 @@
 
 .contact {
   padding-top: 35px;
-
   line-height: 0;
-
   background-color: $yellow-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 60px;
+  }
 }
 
 .contact__container {
   padding-bottom: 40px;
-}
 
-.contact__wrapp {
-  //
-}
-
-.contact__contact-menu {
-  margin-bottom: 30px;
-}
-
-.contact__button {
-  //
-}
-
-.contact__map {
-  width: 100%;
-  height: 340px;
-
-  border: none;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .contact {
-    padding-top: 60px;
-  }
-
-  .contact__container {
+  @media (min-width: $breakpoint-tablet) {
     padding-bottom: 70px;
   }
 
-  .contact__button {
-    width: 100%;
-  }
-
-  .contact__map {
-    height: 580px;
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: 60px;
   }
 }
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .contact {
-    padding-top: 60px;
-  }
-
-  .contact__container {
-    padding-bottom: 60px;
-  }
-
-  .contact__wrapp {
+.contact__wrapp {
+  @media (min-width: $breakpoint-desktop) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,17 +37,62 @@
     padding-left: 222px;
     padding-right: 70px;
   }
+}
 
-  .contact__contact-menu {
+.contact__thumb-menu {
+  margin-bottom: 30px;
+
+  @media (min-width: $breakpoint-desktop) {
     width: 560px;
     margin-bottom: 0;
   }
+}
 
-  .contact__button {
-    width: 324px;
+.contact__thumb-menu br {
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.contact__button {
+  @media (min-width: $breakpoint-tablet) {
+    width: 100%;
   }
 
-  .contact__map {
+  @media (min-width: $breakpoint-desktop) {
+    width: 324px;
+  }
+}
+
+.contact__button:hover,
+.contact__button:focus {
+  color: $white-color;
+  background-color: $blue-color;
+
+  .button-big__arrow {
+    fill: $white-color;
+  }
+}
+
+.contact__button:active {
+  color: rgba($white-color, 0.3);
+
+  .button-big__arrow {
+    fill: rgba($white-color, 0.3);
+  }
+}
+
+.contact__map {
+  width: 100%;
+  height: 340px;
+
+  border: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 580px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
     height: 500px;
   }
 }

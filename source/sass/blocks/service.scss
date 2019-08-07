@@ -5,175 +5,197 @@
 .service {
   color: $white-color;
   background-color: $blue-color;
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 195px;
+
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 120px, $blue-color 120px, $blue-color 100%);
+  }
 }
 
+/* Контейнер центровщик */
 .service__container {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 
   padding-top: 35px;
   padding-bottom: 78px;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: -1;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 0;
+    padding-bottom: 88px;
   }
 
-  &::before {
-    left: -17px;
-
-    width: 132px;
-    height: 132px;
-
-    background-color: $blue-color--dark3;
-    border-radius: 20px;
-  }
-
-  &::after {
-    right: 0;
-
-    width: 100%;
-    height: 353px;
-
-    background-image: url("../img/about-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: 20px 0;
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: 145px;
   }
 }
 
+/* Контейнер центровщик */
+.service__container::before,
+.service__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+/* Декоративный элемент в виде квадрата */
+.service__container::before {
+  left: -17px;
+
+  width: 132px;
+  height: 132px;
+
+  background-color: $blue-color--dark3;
+  border-radius: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    left: 40px;
+    right: 40px;
+
+    width: auto;
+    height: 213px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    left: 60px;
+    right: auto;
+
+    width: 213px;
+    height: 213px;
+  }
+}
+
+/* Фоновая картинка */
+.service__container::after {
+  right: 0;
+
+  width: 100%;
+  height: 350px;
+
+  background-image: url("../img/mobile/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 292px auto;
+  background-position: 20px 0;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/mobile/about-mobile@2x.png");
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    top: 45px;
+    right: 0;
+
+    width: 400px;
+    height: 548px;
+
+    background-image: url("../img/tablet/about-tablet@1x.png");
+    background-size: 376px auto;
+    background-position: 20px 0;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/tablet/about-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: 0;
+    right: 60px;
+
+    width: 630px;
+    height: 665px;
+
+    background-image: url("../img/desktop/about-desktop@1x.png");
+    background-size: 630px auto;
+    background-position: right 0;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/desktop/about-desktop@2x.png");
+    }
+  }
+}
+
+/* Информационный блок */
 .service__page-info {
   box-sizing: border-box;
   padding-left: 25px;
   padding-right: 35px;
-}
 
-.service__page-info br:last-of-type {
-  display: none;
-}
-
-.service__button {
-  display: none;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .service {
-    //
-  }
-
-  .service__container {
-    padding-top: 0;
-    padding-bottom: 88px;
-
-    &::before {
-      left: 40px;
-      right: 40px;
-
-      width: auto;
-      height: 213px;
-    }
-
-    &::after {
-      top: 45px;
-      right: 0;
-
-      width: 400px;
-      height: 548px;
-
-      background-image: url("../img/about-tablet@1x.png");
-      background-position: 20px 0;
-    }
-  }
-
-  .service__page-info {
+  @media (min-width: $breakpoint-tablet) {
     width: 337px;
     padding-top: 40px;
     padding-left: 35px;
     padding-right: 0;
   }
 
-  .service__page-info br:first-of-type {
+  @media (min-width: $breakpoint-desktop) {
+    width: 695px;
+    padding-top: 60px;
+    padding-left: 70px;
+  }
+}
+
+/* Убираем br на разном разрешении экрана */
+.service__page-info br:first-of-type {
+  @media (min-width: $breakpoint-tablet) {
     display: none;
   }
 
-  .service__page-info br:last-of-type {
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+/* Убираем br на разном разрешении экрана */
+.service__page-info br:last-of-type {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
     display: inline;
   }
 
-  .service__button {
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+/* Кнопка подробнее */
+.service__button {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
     display: inline-block;
     min-width: 274px;
   }
+}
 
-  .service .page-info__title {
+/* Заголовок в информационном блоке */
+.service .page-info__title {
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: 40px;
   }
 
-  .service .page-info__text {
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+/* Текст в информационном блоке */
+.service .page-info__text {
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: 35px;
 
     &:last-of-type {
       margin-bottom: 45px;
     }
   }
-}
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .service {
-    padding-top: 195px;
-
-    background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent 120px, $blue-color 120px, $blue-color 100%);
-  }
-
-  .service__container {
-    padding-bottom: 145px;
-
-    &::before {
-      left: 60px;
-      right: auto;
-
-      width: 213px;
-      height: 213px;
-    }
-
-    &::after {
-      top: 0;
-      right: 60px;
-
-      width: 630px;
-      height: 665px;
-
-      background-image: url("../img/about-desktop@1x.png");
-      background-position: right 0;
-    }
-  }
-
-  .service__page-info {
-    width: 695px;
-    padding-top: 60px;
-    padding-left: 70px;
-  }
-
-  .service__page-info br:first-of-type {
-    display: none;
-  }
-
-  .service__page-info br:last-of-type {
-    display: none;
-  }
-
-  .service .page-info__title {
-    margin-bottom: 60px;
-  }
-
-  .service .page-info__text {
+  @media (min-width: $breakpoint-desktop) {
     margin-bottom: 40px;
 
     &:last-of-type {

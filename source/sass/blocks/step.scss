@@ -9,12 +9,31 @@
 
   background-color: $blue-color;
   background-image: linear-gradient(to bottom, $blue-color--dark 80px, $blue-color 80px, $blue-color 100%);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -139px;
+    padding-top: 0;
+    padding-bottom: 95px;
+
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 138px, $blue-color 138px, $blue-color 100%);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: -230px;
+    padding: 0;
+  }
 }
 
 .step__list {
   @include reset-ul;
   box-sizing: border-box;
   counter-reset: section;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .step__item {
@@ -31,14 +50,8 @@
   background-color: $orange-color;
   border-radius: 10px;
 
-  /* Счетчик */
-  &::before {
-    counter-increment: section;
-    content: counter(section);
-    position: absolute;
-    right: 23px;
-
-    color: $white-color;
+  &:first-child {
+    margin-top: 0;
   }
 
   /* Каждый первый после каждых четырех */
@@ -64,31 +77,8 @@
   &:last-child {
     padding-bottom: 22px;
   }
-}
 
-.step__text {
-  display: inline-block;
-  max-width: 143px;
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .step {
-    margin-top: -205px;
-    padding-top: 0;
-    padding-bottom: 95px;
-
-    background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent 138px, $blue-color 138px, $blue-color 100%);
-  }
-
-  .step__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .step__item {
+  @media (min-width: $breakpoint-tablet) {
     width: 54.7%;
     margin: 0;
     padding: 30px 100px 60px 35px;
@@ -97,16 +87,6 @@
     line-height: 24px;
 
     border-radius: 0;
-
-    &::before {
-      top: 40px;
-      left: 34px;
-      right: auto;
-      bottom: 0;
-
-      font-size: 30px;
-      line-height: 120px;
-    }
 
     /* Каждый четный элемент */
     &:nth-child(2n) {
@@ -125,29 +105,8 @@
     }
   }
 
-  .step__text {
-    max-width: 100%;
-  }
-}
-
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .step {
-    margin-top: -230px;
-    padding: 0;
-  }
-
-  .step__item {
+  @media (min-width: $breakpoint-desktop) {
     padding-bottom: 30px;
-
-    &::before {
-      top: -15px;
-      left: auto;
-      right: 33px;
-
-      font-size: 24px;
-    }
 
     &:nth-child(4n+1)::before,
     &:nth-child(4n+2)::before,
@@ -181,5 +140,42 @@
     &:nth-child(4n+4) {
       width: 23.86363636363636%; //315px
     }
+  }
+}
+
+/* Счетчик */
+.step__item::before {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  right: 23px;
+
+  color: $white-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    top: 40px;
+    left: 34px;
+    right: auto;
+    bottom: 0;
+
+    font-size: 30px;
+    line-height: 120px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: -15px;
+    left: auto;
+    right: 33px;
+
+    font-size: 24px;
+  }
+}
+
+.step__text {
+  display: inline-block;
+  max-width: 143px;
+
+  @media (min-width: $breakpoint-tablet) {
+    max-width: 100%;
   }
 }

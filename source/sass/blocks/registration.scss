@@ -7,95 +7,105 @@
   padding-bottom: 40px;
 
   background-color: $blue-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 110px;
+    padding-bottom: 130px;
+  }
 }
 
+/* Меню с миниатюрой */
 .registration .thumb-menu__item,
 .registration .thumb-menu__link {
   color: $yellow-color;
 }
 
+.registration .thumb-menu__link:hover,
+.registration .thumb-menu__link:focus {
+  color: $yellow-color--dark;
+}
+
+.registration .thumb-menu__link:active {
+  color: rgba($yellow-color--dark, 0.3);
+}
+
+/* Контейнер центровщик */
 .registration__container {
   //
 }
 
+/* Обертка */
 .registration__wrapp {
-  //
-}
-
-.registration__page-info {
-  margin-bottom: 30px;
-  padding: 0 25px;
-}
-
-.registration__page-info .mobile-hidden {
-  display: none;
-}
-
-.registration__form {
-  margin-bottom: 30px;
-}
-
-.registration__contact-menu {
-  //
-}
-
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .registration {
-    padding-top: 75px;
-    padding-bottom: 80px;
-  }
-
-  .registration__wrapp {
+  @media (min-width: $breakpoint-tablet) {
     padding: 0 35px;
   }
 
-  .registration__page-info {
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0 74px;
+  }
+}
+
+/* Информационный блок */
+.registration__page-info {
+  margin-bottom: 30px;
+  padding: 0 25px;
+
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: 65px;
     padding: 0;
   }
+}
 
-  .registration__page-info br:first-of-type {
+/* Перенос */
+.registration__page-info br:first-of-type {
+  @media (min-width: $breakpoint-tablet) {
     display: none;
   }
+}
 
-  .registration__form {
+/* Скрываем на мобильных */
+.registration__page-info .mobile-hidden {
+  display: none;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: inline;
+  }
+}
+
+/* Скрываем на десктопе */
+.registration__page-info .desktop-hidden {
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+/* Регистрационная форма */
+.registration__form {
+  margin-bottom: 30px;
+
+  @media (min-width: $breakpoint-tablet) {
     height: 81px;
     margin-bottom: 55px;
   }
 }
 
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .registration {
-    padding-top: 110px;
-    padding-bottom: 130px;
-  }
-
-  .registration__wrapp {
-    padding: 0 74px;
-  }
-
-  .registration__page-info {
-    & .mobile-hidden {
-      display: inline;
-    }
-
-    & .desktop-hidden {
-      display: none;
-    }
-  }
-
-  .registration__contact-menu {
+/* Обертка для меню с миниатюрой */
+.registration__contact-menu {
+  @media (min-width: $breakpoint-desktop) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
+}
 
-  .registration__contact-menu .thumb-menu__item {
-    margin-right: 235px;
+.registration__contact-menu .thumb-menu__item {
+  @media (min-width: $breakpoint-desktop) {
+    margin-right: 110px;
 
     &:last-child {
       margin-right: 0;
