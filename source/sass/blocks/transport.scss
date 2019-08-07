@@ -7,6 +7,7 @@
   @include reset-ul;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -19,11 +20,75 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /* Тултип обертка */
 .transport__tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
   margin: 0;
+
+  background-color: $white-color--blue;
+  border-radius: 50%;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+.transport .transport-svg--plane {
+  width: 14px;
+  height: 16px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 19px;
+    height: 21px;
+  }
+}
+
+.transport__tooltip .transport-svg--bus {
+  width: 13px;
+  height: 16px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 17px;
+    height: 21px;
+  }
+}
+
+.transport__tooltip .transport-svg--bike {
+  width: 19px;
+  height: 17px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 24px;
+    height: 21px;
+  }
+}
+
+.transport__tooltip .transport-svg--run {
+  width: 15px;
+  height: 17px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 20px;
+    height: 21px;
+  }
 }
 
 /* Иконка */
@@ -34,20 +99,4 @@
 /* Иконка активная */
 .transport-svg--active {
   fill: #1d2e5b;
-}
-
-.transport-svg--plane {
-  //
-}
-
-.transport-svg--bus {
-  //
-}
-
-.transport-svg--bike {
-  //
-}
-
-.transport-svg--run {
-  //
 }
