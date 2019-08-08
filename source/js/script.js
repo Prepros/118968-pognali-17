@@ -135,6 +135,12 @@ if (window.innerWidth <= 767) {
   } else {
     country.style.height = heightCountrySubList + 'px';
   }
+
+  for (var i = 0; i < countryItem.length; i++) {
+    if (!countryItem[i].children[1]) {
+      countryItem[i].remove();
+    }
+  }
 }
 
 for (var i = 0; i < countryItem.length; i++) {

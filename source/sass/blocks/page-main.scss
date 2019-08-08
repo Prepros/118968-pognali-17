@@ -64,6 +64,10 @@
       height: 8px;
     }
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-left: 70px;
+  }
 }
 
 .page-main__link {
@@ -94,6 +98,10 @@
     padding-right: 60px;
 
     text-align: right;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 60px;
   }
 }
 
