@@ -178,24 +178,717 @@
 
   <section class="country-filter">
     <div class="country-filter__container container">
-      <header class="country-filter__continent">
-        <h2 class="country-filter__continent-title">Фильтрация по странам</h2>
-        <ul class="country-filter__continent-list">
-          <li class="country-filter__continent-item">
-            <a class="country-filter__continent-link" href="#">Европа</a>
-          </li>
-          <li class="country-filter__continent-item">
-            <a class="country-filter__continent-link" href="#">Азия</a>
-          </li>
-          <li class="country-filter__continent-item">
-            <a class="country-filter__continent-link" href="#">Америка</a>
-          </li>
-          <li class="country-filter__continent-item">
-            <a class="country-filter__continent-link" href="#">Острова</a>
-          </li>
-        </ul>
-        <button class="country-filter__continent-button" type="button">Показать все</button>
-      </header>
+      <div class="country-filter__main-wrapp country-filter__main-wrapp--close">
+        <header class="country-filter__continent">
+          <h2 class="country-filter__continent-title">Фильтрация по странам</h2>
+          <ul class="country-filter__continent-list">
+            <li class="country-filter__continent-item country-filter__continent-item--active">
+              <a class="country-filter__continent-link" href="#">Европа</a>
+            </li>
+            <li class="country-filter__continent-item">
+              <a class="country-filter__continent-link" href="#">Азия</a>
+            </li>
+            <li class="country-filter__continent-item">
+              <a class="country-filter__continent-link" href="#">Америка</a>
+            </li>
+            <li class="country-filter__continent-item">
+              <a class="country-filter__continent-link" href="#">Острова</a>
+            </li>
+          </ul>
+          <button class="country-filter__continent-button" type="button">
+            <span class="visually-hidden">Показать все</span>
+          </button>
+        </header>
+        <div class="country-filter__country">
+          <ul class="country-filter__country-list">
+            <li class="country-filter__country-item ">
+              <a class="country-filter__country-letter" href="#">А</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Австралия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Австрия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Азербайджан</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Албания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Алжир</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Ангола</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Андорра</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Антигуа и Барбуда</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Аргентина</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Армения</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Афганистан</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Б</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Багамские Острова</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бангладеш</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бангладеш</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бахрейн</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Белоруссия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Белиз</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бельгия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бенин</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Болгария</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Боливия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Босния и Герцеговина</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Ботсвана</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бразилия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бруней</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Буркина-Фасо</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бурунди</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Бутан</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">В</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Вануату</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Великобритания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Венгрия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Венесуэла</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Восточный Тимор</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Вьетнам</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Г</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Габон</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гаити</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гайана</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гамбия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гана</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гватемала</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гвинея</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гвинея-Бисау</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Германия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гондурас</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гренада</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Гренада</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Грузия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Д</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Дания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Джибути</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Доминика</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Доминикана</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Е</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Египет</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Ё</a>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Ж</a>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">З</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Замбия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Зимбабве</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">И</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Израиль</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Индия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Индонезия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Иордания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Ирак</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Иран</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Ирландия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Исландия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Испания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Италия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Й</a>
+            </li>
+            <li class="country-filter__country-item ">
+              <a class="country-filter__country-letter" href="#">К</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Кабо-Верде</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Казахстан</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Камбоджа</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Камерун</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Канада</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Катар</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Кения</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Кипр</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Киргизия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Кирибати</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Китай</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Колумбия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Коморы</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Конго</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">КНДР</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Республика Корея</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Коста-Рика</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Кот-д’Ивуар</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Куба</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Кувейт</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Л</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Лаос</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Латвия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Лесото</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Либерия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Ливан</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Ливия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Литва</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Лихтенштейн</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Люксембург</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">М</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Маврикий</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мавритания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мадагаскар</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Малави</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Малайзия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мали</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мальдивы</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мальта</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Марокко</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Маршалловы Острова</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мексика</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мозамбик</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Молдавия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Монако</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Монголия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Мьянма</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Н</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Намибия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Науру</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Непал</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Нигер</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Нигер</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Нигер</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Никарагуа</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Новая Зеландия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Норвегия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">О</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">ОАЭ</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Оман</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item country-filter__country-item--active">
+              <a class="country-filter__country-letter" href="#">П</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Пакистан</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Палау</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Панама</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Папуа — Новая Гвинея</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Папуа — Новая Гвинея</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Перу</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Польша</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Португалия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Р</a>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">С</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сальвадор</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Самоа</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сан-Марино</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сан-Томе и Принсипи</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Саудовская Аравия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Северная Македония</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сейшелы</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сенегал</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сент-Люсия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сербия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сингапур</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сирия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Словакия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Словения</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">США</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сомали</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Судан</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Суринам</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Сьерра-Леоне</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Т</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Таджикистан</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Таиланд</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Танзания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Танзания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Танзания</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Тринидад и Тобаго</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Тувалу</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Тувалу</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Туркмения</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Турция</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">У</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Уганда</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Узбекистан</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Украина</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Уругвай</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Ф</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Фиджи</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Филиппины</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Финляндия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Финляндия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Х</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Хорватия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Ц</a>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Ч</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Чад</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Черногория</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Чехия</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Чили</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Ш</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Швейцария</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Швеция</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Шри-Ланка</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Щ</a>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Э</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Эквадор</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Эритрея</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Эсватини</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Эстония</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Эфиопия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Ю</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">ЮАР</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Южный Судан</a>
+                </li>
+              </ul>
+            </li>
+            <li class="country-filter__country-item">
+              <a class="country-filter__country-letter" href="#">Я</a>
+              <ul class="country-filter__country-sublist">
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Ямайка</a>
+                </li>
+                <li class="country-filter__country-subitem">
+                  <a class="country-filter__country-name" href="#">Япония</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button class="country-filter__country-button" type="button">Свернуть</button>
+      </div>
     </div>
   </section>
 </main>

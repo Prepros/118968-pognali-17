@@ -33,10 +33,6 @@
   }
 }
 
-.inner-page .page-header {
-  background-color: $blue-color--dark;
-}
-
 /* Чтобы контент под шапкой оставался на месте когда шапка вырвата из потока */
 .page-header + .page-main {
   margin-top: 73px;
@@ -93,6 +89,10 @@
     padding-top: 30px;
     background-color: $blue-color--dark;
   }
+}
+
+.inner-page .page-header--blue {
+  background-color: $blue-color--dark;
 }
 
 .page-header__logo {

@@ -120,3 +120,68 @@ window.addEventListener('resize', function(evt) {
     }
   }
 });
+
+
+var country = document.querySelector(".country-filter__country");
+var countryItem = document.querySelectorAll(".country-filter__country-item");
+var heightCountryList = document.querySelector(".country-filter__country-list").offsetHeight;
+var heightCountrySubList = document.querySelector(".country-filter__country-item--active .country-filter__country-sublist").offsetHeight;
+country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+
+for (var i = 0; i < countryItem.length; i++) {
+  countryItem[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    for (var j = 0; j < countryItem.length; j++) {
+      countryItem[j].classList.remove('country-filter__country-item--active');
+    }
+
+    this.classList.add('country-filter__country-item--active');
+
+    heightCountryList = document.querySelector(".country-filter__country-list").offsetHeight;
+    try {
+      heightCountrySubList = document.querySelector(".country-filter__country-item--active .country-filter__country-sublist").offsetHeight;
+    } catch (e) {
+      heightCountrySubList = 0;
+    }
+
+    country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+  });
+}
+
+var countryWrapp = document.querySelector(".country-filter__main-wrapp");
+var continentButton = document.querySelector(".country-filter__continent-button");
+
+continentButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+
+  if (countryWrapp.classList.contains("country-filter__main-wrapp--close")) {
+    countryWrapp.classList.remove("country-filter__main-wrapp--close");
+    countryWrapp.classList.add("country-filter__main-wrapp--open");
+  } else {
+    countryWrapp.classList.remove("country-filter__main-wrapp--open");
+    countryWrapp.classList.add("country-filter__main-wrapp--close");
+  }
+
+  heightCountryList = document.querySelector(".country-filter__country-list").offsetHeight;
+  try {
+    heightCountrySubList = document.querySelector(".country-filter__country-item--active .country-filter__country-sublist").offsetHeight;
+  } catch (e) {
+    heightCountrySubList = 0;
+  }
+
+  country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+});
+
+var countryButton = document.querySelector(".country-filter__country-button");
+countryButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+
+  if (countryWrapp.classList.contains("country-filter__main-wrapp--close")) {
+    countryWrapp.classList.remove("country-filter__main-wrapp--close");
+    countryWrapp.classList.add("country-filter__main-wrapp--open");
+  } else {
+    countryWrapp.classList.remove("country-filter__main-wrapp--open");
+    countryWrapp.classList.add("country-filter__main-wrapp--close");
+  }
+});

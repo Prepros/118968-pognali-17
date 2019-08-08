@@ -26,6 +26,16 @@
   list-style: none;
 }
 
+@mixin visually-show() {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  clip-path: none;
+  overflow: auto;
+}
+
 @mixin placeholder {
   &::-webkit-input-placeholder {
     @content;
