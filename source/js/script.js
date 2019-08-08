@@ -126,7 +126,16 @@ var country = document.querySelector(".country-filter__country");
 var countryItem = document.querySelectorAll(".country-filter__country-item");
 var heightCountryList = document.querySelector(".country-filter__country-list").offsetHeight;
 var heightCountrySubList = document.querySelector(".country-filter__country-item--active .country-filter__country-sublist").offsetHeight;
-country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+
+if (window.innerWidth <= 767) {
+  country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+} else if (window.innerWidth <= 1439) {
+  if (heightCountryList > heightCountrySubList) {
+    country.style.height = heightCountryList + 'px';
+  } else {
+    country.style.height = heightCountrySubList + 'px';
+  }
+}
 
 for (var i = 0; i < countryItem.length; i++) {
   countryItem[i].addEventListener("click", function (evt) {
@@ -144,8 +153,15 @@ for (var i = 0; i < countryItem.length; i++) {
     } catch (e) {
       heightCountrySubList = 0;
     }
-
-    country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+    if (window.innerWidth <= 767) {
+      country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+    } else if (window.innerWidth <= 1439) {
+      if (heightCountryList > heightCountrySubList) {
+        country.style.height = heightCountryList + 'px';
+      } else {
+        country.style.height = heightCountrySubList + 'px';
+      }
+    }
   });
 }
 
@@ -154,6 +170,14 @@ var continentButton = document.querySelector(".country-filter__continent-button"
 
 continentButton.addEventListener("click", function (evt) {
   evt.preventDefault();
+
+  var textButton = continentButton.querySelector(".visually-hidden");
+
+  if (textButton.innerHTML === "Показать все") {
+    textButton.innerHTML = "Свернуть";
+  } else {
+    textButton.innerHTML = "Показать все";
+  }
 
   if (countryWrapp.classList.contains("country-filter__main-wrapp--close")) {
     countryWrapp.classList.remove("country-filter__main-wrapp--close");
@@ -169,8 +193,15 @@ continentButton.addEventListener("click", function (evt) {
   } catch (e) {
     heightCountrySubList = 0;
   }
-
-  country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+  if (window.innerWidth <= 767) {
+    country.style.height = heightCountryList + heightCountrySubList + 50 + 'px';
+  } else if (window.innerWidth <= 1439) {
+    if (heightCountryList > heightCountrySubList) {
+      country.style.height = heightCountryList + 'px';
+    } else {
+      country.style.height = heightCountrySubList + 'px';
+    }
+  }
 });
 
 var countryButton = document.querySelector(".country-filter__country-button");
