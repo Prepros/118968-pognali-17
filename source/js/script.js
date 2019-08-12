@@ -67,7 +67,7 @@ window.addEventListener("scroll", function (evt) {
       scroll = false;
     }
   } else {
-    if (window.pageYOffset > 750) {
+    if (window.pageYOffset > 200) {
       scroll = true;
     } else {
       scroll = false;
@@ -222,5 +222,20 @@ countryButton.addEventListener("click", function (evt) {
   } else {
     countryWrapp.classList.remove("country-filter__main-wrapp--open");
     countryWrapp.classList.add("country-filter__main-wrapp--close");
+  }
+});
+
+var userFilterLink = document.querySelector(".user-filter__subtitle-link");
+var userFilterFeature = document.querySelector(".user-filter__feature");
+
+userFilterLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+
+  if (userFilterFeature.classList.contains("user-filter__feature--collapse")) {
+    userFilterFeature.classList.remove("user-filter__feature--collapse");
+    userFilterFeature.classList.add("user-filter__feature--show");
+  } else {
+    userFilterFeature.classList.remove("user-filter__feature--show");
+    userFilterFeature.classList.add("user-filter__feature--collapse");
   }
 });

@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Регулятор уровня
+   ========================================================================== */
+
+.level-range {
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-wrap: wrap;
+  }
+}
+
+.level-range__level {
+  display: flex;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: $breakpoint-tablet) {
+    order: 1;
+    width: 149px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    order: 0;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+.level-range__min,
+.level-range__max {
+  position: relative;
+  width: 50%;
+}
+
+.level-range__min {
+  z-index: 1;
+}
+
+.level-range__min::before,
+.level-range__max::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+
+  width: 1px;
+  height: 11px;
+
+  background-color: $white-color;
+}
+
+.level-range__min::before {
+  right: 0;
+}
+
+.level-range__max::before {
+  left: 0;
+}
+
+.level-range__min::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  right: -11px;
+
+  width: 21px;
+  height: 1px;
+
+  background-color: #cbced9;
+}
+
+.level-range__input {
+  width: 100%;
+  padding: 10px 15px;
+
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  color: $blue-color--light;
+  text-align: center;
+
+  border: 1px solid #cbced9;
+  outline: none;
+}
+
+.level-range__min .level-range__input {
+  border-radius: 3px 0 0 3px;
+}
+
+.level-range__level .level-range__input:hover,
+.level-range__level .level-range__input:focus {
+  border-color: #959bb2;
+}
+
+.level-range__level .level-range__input:active {
+  border-color: $blue-color--dark;
+}
+
+.level-range__max .level-range__input {
+  border-radius: 0 3px 3px 0;
+}
+
+.level-range__range {
+  position: relative;
+
+  @media (min-width: $breakpoint-tablet) {
+    order: 0;
+    width: 277px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.level-range__range-scale {
+  position: relative;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: rgba($blue-color--light, 0.2);
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 3px;
+  }
+}
+
+.level-range__range-bar {
+  position: absolute;
+  right: 0;
+
+  width: 153px;
+  height: 100%;
+
+  background-color: $blue-color--light;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 201px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 125px;
+  }
+}
+
+.level-range__range-toggle {
+  position: absolute;
+  top: -4px;
+
+  width: 10px;
+  height: 10px;
+  padding: 0;
+
+  background-color: $blue-color--light;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: all 0.5s;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.level-range__range-toggle--min {
+  left: 66px;
+
+  @media (min-width: $breakpoint-desktop) {
+    left: 90px;
+  }
+}
+
+.level-range__range-toggle--max {
+  right: 0;
+}
+
+.level-range__range-toggle:hover,
+.level-range__range-toggle:focus {
+  top: -8px;
+  width: 19px;
+  height: 19px;
+
+  transition: all 0.5s;
+}
+
+.level-range__range-toggle:active {
+  box-shadow: 0 3px 7px rgba($blue-color--light, 0.35);
+}

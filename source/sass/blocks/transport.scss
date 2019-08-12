@@ -74,3 +74,8 @@
 .transport-svg--active {
   fill: #1d2e5b;
 }
+
+
+.transport__input:checked + .transport__tooltip .transport-svg {
+  fill: #1d2e5b;
+}

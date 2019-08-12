@@ -46,6 +46,12 @@
   }
 }
 
+.page-header--fixed + .page-main {
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 120px;
+  }
+}
+
 /* Модификатор меняет внешний вид шапки при скроле и открытия меню */
 .page-header--white {
   color: $blue-color--dark;
