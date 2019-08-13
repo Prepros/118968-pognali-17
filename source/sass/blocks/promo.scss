@@ -139,80 +139,12 @@
   }
 }
 
-/* Список кнопок связи */
 .promo__list {
-  @include reset-ul;
-  display: flex;
   margin-bottom: 26px;
 
   @media (min-width: $breakpoint-tablet) {
     display: none;
   }
-}
-
-/* Элемент кнопок связи */
-.promo__item {
-  //
-}
-
-/* Ссылка кнопок связи */
-.promo__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-}
-
-/* Ссылка с телефоном */
-.promo__link--phone {
-  background-color: $orange-color;
-  border-radius: 50%;
-
-  &:hover,
-  &:focus {
-    background-color: #f26926;
-  }
-}
-
-/* Ссылка с почтой */
-.promo__link--email {
-  background-color: $yellow-color--dark;
-  border-radius: 50%;
-
-  &:hover,
-  &:focus {
-    background-color: $orange-color;
-  }
-}
-
-/* Ссылка с кнопкой авторизации */
-.promo__link--button {
-  min-width: 189px;
-  padding: 6px 15px 4px;
-}
-
-/* Миниатюра */
-.promo__svg {
-  fill: $blue-color--dark;
-}
-
-/* Миниатюра телефона */
-.promo__svg--phone {
-  width: 18px;
-  height: 18px;
-}
-
-/* Миниатюра почты */
-.promo__svg--mail {
-  width: 18px;
-  height: 14px;
-}
-
-/* Миниатюры при наведении */
-.promo__link--phone:active .promo__svg--phone,
-.promo__link--email:active .promo__svg--mail {
-  fill: rgba($blue-color--dark, 0.3);
 }
 
 /* Информационный блок */

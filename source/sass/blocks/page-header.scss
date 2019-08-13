@@ -126,7 +126,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     min-height: 132px;
   }
@@ -215,6 +215,41 @@
 .page-header__toggle--close .page-header__toggle-icon--close {
   display: block;
   fill: $grey-color--light;
+}
+
+/* Кнопки связи */
+.page-header__contact {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    margin-left: auto;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    order: 1;
+    margin-left: 0;
+  }
+}
+
+.page-header__contact .contact-btn__item--phone {
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
+
+.page-header__contact .contact-btn__item--email {
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
 }
 
 /* Навигация в шапке сайта */
