@@ -2,88 +2,12 @@
    Шапка сайта
    ========================================================================== */
 
-/* Главная обертка шапки */
 .page-header {
-  position: absolute;
+  position: relative;
   z-index: 999;
-  top: -73px;
 
   width: 100%;
-  min-height: 73px;
 
-  color: $white-color;
-  background-color: $blue-color--dark;
-
-  @media (min-width: $breakpoint-tablet) {
-    top: -132px;
-    min-height: 132px;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    position: static;
-    top: auto;
-    min-height: 90px;
-  }
-
-  &--fixed {
-    position: fixed;
-    top: 0;
-
-    padding-top: 0;
-  }
-}
-
-/* Чтобы контент под шапкой оставался на месте когда шапка вырвата из потока */
-.page-header + .page-main {
-  margin-top: 73px;
-
-  @media (min-width: $breakpoint-tablet) {
-    margin-top: 132px;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    margin-top: 0;
-  }
-}
-
-.page-header--fixed + .page-main {
-  @media (min-width: $breakpoint-desktop) {
-    margin-top: 120px;
-  }
-}
-
-/* Модификатор меняет внешний вид шапки при скроле и открытия меню */
-.page-header--white {
-  color: $blue-color--dark;
-
-  background-color: $white-color;
-  border-bottom: 1px solid #e5e5e5;
-
-  @media (min-width: $breakpoint-desktop) {
-    border-bottom: none;
-
-    .site-menu__link {
-      color: $blue-color;
-
-      &:hover,
-      &:focus {
-        color: $yellow-color;
-      }
-
-      &:active {
-        color: rgba($yellow-color, 0.3);
-      }
-    }
-
-    .page-header__scroll::before {
-      width: 45px;
-      background-color: $blue-color;
-    }
-  }
-}
-
-/* Модификатор меняет внешний вид шапки при закрытом меню */
-.page-header--blue {
   color: $white-color;
   background-color: $blue-color--dark;
 
@@ -97,57 +21,119 @@
   }
 }
 
-.inner-page .page-header--blue {
-  background-color: $blue-color--dark;
+.page-header--no-js {
+  color: $blue-color--dark;
+  background-color: $white-color;
+
+  @media (min-width: $breakpoint-desktop) {
+    color: $white-color;
+    background-color: $blue-color--dark;
+  }
 }
 
-.page-header__logo {
-  padding: 27px 0;
+.page-header--close {
+  color: $white-color;
+  background-color: $blue-color--dark;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 45px 0;
+    background-color: $blue-color--light2;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding: 0;
+    background-color: $blue-color--dark;
   }
 }
 
-/* Показывает различный логотип при разном состоянии шапки */
-.page-header--blue .logo--white,
-.page-header--white .logo--blue {
-  display: block;
-}
+.page-header--open {
+  position: absolute;
+  top: -73px;
 
-/* Обертка для логотипа и навигации */
-.page-header__wrapp {
-  display: flex;
-  flex-direction: column;
+  color: $blue-color--dark;
+  background-color: $white-color;
 
   @media (min-width: $breakpoint-tablet) {
-    flex-direction: row;
+    top: -132px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: -120px;
+    background-color: $blue-color--dark;
+  }
+}
+
+.page-header--open + .page-main {
+  margin-top: 73px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 132px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 120px;
+  }
+}
+
+.page-header--fixed {
+  position: fixed;
+  top: 0;
+
+  color: $blue-color--dark;
+  background-color: $white-color;
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 0;
+  }
+}
+
+.page-header--fixed .site-menu__item,
+.page-header--fixed .site-menu__link {
+  color: $blue-color;
+}
+
+.page-header--fixed + .page-main {
+  margin-top: 73px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 132px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 120px;
+  }
+}
+
+.page-header--close.page-header--fixed {
+  border-bottom: 1px solid $white-color--dark;
+}
+
+.page-header--open.page-header--fixed {
+  @media (min-width: $breakpoint-desktop) {
+    border-bottom: 1px solid $white-color--dark;
+  }
+}
+
+.page-header__wrapp {
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     min-height: 132px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    align-items: center;
     min-height: 90px;
   }
 }
 
-/* Обертка для логотипа и кнопки меню */
 .page-header__scroll {
-  box-sizing: border-box;
-  z-index: 1;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 73px;
 
   @media (min-width: $breakpoint-tablet) {
-    width: 357px;
+    width: 355px;
     min-height: 132px;
   }
 
@@ -155,93 +141,142 @@
     position: relative;
 
     width: 300px;
-    min-height: auto;
-    margin-right: 45px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-
-      width: 60px;
-      height: 2px;
-
-      background-color: $white-color;
-    }
+    min-height: 90px;
   }
 }
 
-/* Кнопка меню */
-.page-header__toggle {
-  padding: 0;
+.page-header__scroll::after {
+  @media (min-width: $breakpoint-desktop) {
+    content: "";
+    position: absolute;
+    right: 0;
 
-  background-color: transparent;
-  border: none;
+    width: 60px;
+    height: 2px;
+
+    background-color: $white-color;
+  }
+}
+
+.page-header--fixed .page-header__scroll::after {
+  @media (min-width: $breakpoint-desktop) {
+    width: 45px;
+    background-color: $blue-color;
+  }
+}
+
+.page-header__logo {
+  display: none;
+}
+
+.page-header--no-js .page-header__logo--blue,
+.page-header--fixed .page-header__logo--blue {
+  display: block;
 
   @media (min-width: $breakpoint-desktop) {
     display: none;
   }
 }
 
-/* Размер кнопки меню при закрытом меню */
-.page-header__toggle--open {
-  width: 25px;
-  height: 25px;
-}
-
-/* Размер кнопки меню при открытом меню */
-.page-header__toggle--close {
-  width: 19px;
-  height: 19px;
-}
-
-/* Иконка кнопки меню */
-.page-header__toggle-icon {
-  display: none;
-  fill: $white-color;
-}
-
-/* При фиксированной шапке меняем цвет кнопки меню */
-.page-header--fixed .page-header__toggle-icon {
-  fill: $grey-color--light;
-}
-
-/* Показывет иконку в виде бургера при закрытом меню */
-.page-header__toggle--open .page-header__toggle-icon--open {
-  display: block;
-}
-
-/* Показывет иконку в виде крестика при открытом меню меню */
-.page-header__toggle--close .page-header__toggle-icon--close {
-  display: block;
-  fill: $grey-color--light;
-}
-
-/* Кнопки связи */
-.page-header__contact {
-  display: none;
-
-  @media (min-width: $breakpoint-tablet) {
-    display: flex;
-    margin-left: auto;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    order: 1;
-    margin-left: 0;
-  }
-}
-
-.page-header__contact .contact-btn__item--phone {
-  @media (min-width: $breakpoint-tablet) {
-    display: none;
-  }
-
+.page-header--no-js .page-header__logo--white {
   @media (min-width: $breakpoint-desktop) {
     display: block;
   }
 }
 
+.page-header--close .page-header__logo--white,
+.page-header--open .page-header__logo--blue {
+  display: block;
+}
+
+.page-header--close .page-header__logo--white,
+.page-header--open .page-header__logo--white {
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
+
+.page-header--close .page-header__logo--blue,
+.page-header--open .page-header__logo--blue {
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.page-header--fixed .page-header__logo--white {
+  display: none;
+}
+
+.page-header--fixed .page-header__logo--blue {
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
+
+.page-header__toggle {
+  display: none;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+
+  line-height: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+.page-header--close .page-header__toggle--open,
+.page-header--open .page-header__toggle--close {
+  display: block;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.page-header--close .page-header__toggle--close,
+.page-header--open .page-header__toggle--open {
+  display: none;
+}
+
+.page-header__toggle-icon {
+  fill: $white-color;
+}
+
+.page-header__toggle--open .page-header__toggle-icon {
+  width: 25px;
+  height: 11px;
+}
+
+.page-header__toggle--close .page-header__toggle-icon {
+  width: 19px;
+  height: 19px;
+}
+
+.page-header--close .page-header__toggle-icon {
+  fill: $white-color;
+}
+
+.page-header--open .page-header__toggle-icon,
+.page-header--fixed .page-header__toggle-icon {
+  fill: $grey-color--light;
+}
+
+.page-header__contact {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    max-width: 195px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    order: 1;
+    max-width: 300px;
+  }
+}
+
+.page-header__contact .contact-btn__item--phone,
 .page-header__contact .contact-btn__item--email {
   @media (min-width: $breakpoint-tablet) {
     display: none;
@@ -252,56 +287,24 @@
   }
 }
 
-/* Навигация в шапке сайта */
 .page-header__nav {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  display: none;
+  width: 100%;
+  padding: 40px 0;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 45px;
-    padding-bottom: 90px;
+    padding: 50px 0 90px;
   }
 
   @media (min-width: $breakpoint-desktop) {
+    order: 0;
+    display: block;
     width: 630px;
-    margin: 0;
     padding: 0;
   }
 }
 
-/* Стилизация шапки только для мобильных и планшетных устройств
-   ========================================================================== */
-@media (max-width: $breakpoint-desktop) {
-  /* Вытаскиваем шапку из потока при включенном js */
-  .page-header--no-js {
-    position: static;
-  }
-
-  /* Меняем фон шапки при выключенном js */
-  .page-header--no-js.page-header--blue {
-    color: $blue-color--dark;
-
-    background-color: $white-color;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  /* Убираем белый логотип при выключенном js */
-  .page-header--no-js .logo--white {
-    display: none;
-  }
-
-  /* Ставим синий логотип при выключенном js */
-  .page-header--no-js .logo--blue {
-    display: block;
-  }
-
-  /* Убираем кнопку меню при выключенном js */
-  .page-header--no-js .page-header__toggle {
-    display: none;
-  }
-
-  /* Возвращаем стандартное положение контенту под шапкой когда шапка не вырвата из потока */
-  .page-header--no-js + .page-main {
-    margin-top: 0;
-  }
+.page-header--no-js .page-header__nav,
+.page-header--open .page-header__nav {
+  display: flex;
 }
