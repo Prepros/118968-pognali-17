@@ -11,6 +11,10 @@
   background-color: $blue-color;
   border-radius: 0 0 30px 30px;
 
+  @media (min-width: $breakpoint-tablet) {
+    border-radius: 0 0 60px 60px;
+  }
+
   @media (min-width: $breakpoint-desktop) {
     padding-top: 195px;
 

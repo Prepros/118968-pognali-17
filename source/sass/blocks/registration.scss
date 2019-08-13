@@ -14,8 +14,11 @@
   border-radius: 0 0 30px 30px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 75px;
+    margin-top: -50px;
+    padding-top: 120px;
     padding-bottom: 80px;
+
+    border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: $breakpoint-desktop) {

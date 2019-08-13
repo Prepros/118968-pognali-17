@@ -239,3 +239,22 @@ userFilterLink.addEventListener("click", function (evt) {
     userFilterFeature.classList.add("user-filter__feature--collapse");
   }
 });
+
+var showTariff = document.querySelector(".tariff__button-text");
+var closeTariffPopup = document.querySelector(".tariff-popup__button");
+var tariffPopup = document.querySelector(".tariff-popup");
+
+showTariff.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  if (!tariffPopup.classList.contains("tariff-popup--show")) {
+    tariffPopup.classList.add("tariff-popup--show")
+  }
+});
+
+closeTariffPopup.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  if (tariffPopup.classList.contains("tariff-popup--show")) {
+    tariffPopup.classList.remove("tariff-popup--show")
+  }
+});
+
