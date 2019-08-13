@@ -3,9 +3,15 @@
    ========================================================================== */
 
 .direction {
-  padding-top: 70px;
+  position: relative;
+  z-index: 8;
+
+  margin-top: -30px;
+  padding-top: 100px;
   padding-bottom: 30px;
+
   background-color: $white-color--blue;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: $breakpoint-tablet) {
     padding-top: 75px;

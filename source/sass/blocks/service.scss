@@ -3,8 +3,13 @@
    ========================================================================== */
 
 .service {
+  position: relative;
+  z-index: 9;
+
   color: $white-color;
+
   background-color: $blue-color;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: $breakpoint-desktop) {
     padding-top: 195px;

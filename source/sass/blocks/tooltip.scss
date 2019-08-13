@@ -4,18 +4,42 @@
 
 .tooltip {
   position: relative;
+  z-index: 2;
+
   margin: 0;
 }
 
-/* Текст тултипа */
-.tooltip__desc {
+/* Оцентровка элементов тултипа */
+.tooltip:hover::before,
+.tooltip:hover::after {
+  content: "";
   position: absolute;
-  left: -7px;
-  z-index: 1;
+  left: 50%;
 
-  display: none;
-  margin-top: 16px;
-  padding: 17px 23px;
+  transform: translateX(-50%);
+}
+
+/* Треугольник */
+.tooltip:hover::before {
+  top: 24px;
+
+  width: 0;
+  height: 0;
+
+  border: 8px solid transparent;
+  border-bottom-color: #101d41;
+
+  @media (min-width: $breakpoint-tablet) {
+    top: 44px;
+  }
+}
+
+/* Тело тултипа */
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  top: 40px;
+
+  padding: 17px 21px;
 
   font-size: 20px;
   line-height: 24px;
@@ -24,26 +48,8 @@
 
   background-color: #101d41;
   border-radius: 3px;
-}
 
-/* Треугольник */
-.tooltip__desc::before {
-  content: "";
-  position: absolute;
-  top: -16px;
-  left: 50%;
-
-  width: 16px;
-  height: 16px;
-
-  border: 8px solid transparent;
-  border-bottom-color: #101d41;
-
-  transform: translateX(-50%);
-}
-
-/* Показываем тултип при наведении */
-.tooltip:hover .tooltip__desc,
-.tooltip:focus .tooltip__desc {
-  display: block;
+  @media (min-width: $breakpoint-tablet) {
+    top: 60px;
+  }
 }

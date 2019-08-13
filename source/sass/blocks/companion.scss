@@ -3,9 +3,15 @@
    ========================================================================== */
 
 .companion {
-  padding-top: 40px;
+  position: relative;
+  z-index: 7;
+
+  margin-top: -30px;
+  padding-top: 70px;
   padding-bottom: 30px;
+
   background-color: $blue-color;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: $breakpoint-tablet) {
     padding-top: 80px;
@@ -292,6 +298,16 @@
   //
 }
 
+/* Треугольник */
+.companion__tooltip:hover::before {
+  top: 24px;
+}
+
+/* Тело тултипа */
+.companion__tooltip:hover::after {
+  top: 40px;
+}
+
 /* Заголовок */
 .companion__title {
   margin: 0;
@@ -341,6 +357,14 @@
 /* Транспорт обертка */
 .companion__transport {
   //
+}
+
+.companion__transport .transport__item {
+  margin-right: 17px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 /* Кнопка */

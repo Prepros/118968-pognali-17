@@ -19,10 +19,16 @@
 /* Тултип обертка */
 .transport__tooltip {
   //
+}
 
-  @media (min-width: $breakpoint-tablet) {
-    //
-  }
+/* Треугольник */
+.transport__tooltip:hover::before {
+  top: 24px;
+}
+
+/* Тело тултипа */
+.transport__tooltip:hover::after {
+  top: 40px;
 }
 
 .transport .transport-svg--plane {

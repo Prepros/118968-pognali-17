@@ -3,8 +3,14 @@
    ========================================================================== */
 
 .tariff {
-  padding: 37px 0;
+  position: relative;
+  z-index: 6;
+
+  margin-top: -30px;
+  padding: 67px 0 37px;
+
   background-color: $white-color--blue;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: $breakpoint-tablet) {
     padding-top: 75px;
