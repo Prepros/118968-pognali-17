@@ -69,20 +69,155 @@ var tariffPopup = document.querySelector(".tariff-popup");
 var tariffPopupOpen = document.querySelector(".tariff__button-text");
 var tariffPopupClose = document.querySelector(".tariff-popup__button");
 
+if (tariffPopup) {
 // Открываем модальное окно
-tariffPopupOpen.addEventListener("click", function (evt) {
-  evt.preventDefault();
+  tariffPopupOpen.addEventListener("click", function (evt) {
+    evt.preventDefault();
 
-  if (!tariffPopup.classList.contains("tariff-popup--show")) {
-    tariffPopup.classList.add("tariff-popup--show");
-  }
-});
+    if (!tariffPopup.classList.contains("tariff-popup--show")) {
+      tariffPopup.classList.add("tariff-popup--show");
+    }
+  });
 
 // Закрываем модальное окно
-tariffPopupClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
+  tariffPopupClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
 
-  if (tariffPopup.classList.contains("tariff-popup--show")) {
-    tariffPopup.classList.remove("tariff-popup--show");
+    if (tariffPopup.classList.contains("tariff-popup--show")) {
+      tariffPopup.classList.remove("tariff-popup--show");
+    }
+  });
+}
+
+/**
+ * Фильтрация по странам
+ **/
+
+// Высоты родительского блока
+function countHeight() {
+  var countryMainBlock = document.querySelector(".country-filter__country");
+  var countryListBlock = document.querySelector(".country-filter__country-list");
+  var countrySubListBlock = document.querySelector(".country-filter__country-item--active .country-filter__country-sublist");
+
+  try {
+    var listHeight = countryListBlock.offsetHeight;
+    var subListHeight = countrySubListBlock.offsetHeight;
+  } catch (e) {
+    subListHeight = 0;
   }
+
+  // Считаем высоту countryMainBlock для мобильных устройств
+  if (window.innerWidth <= 767) {
+    if (listHeight < 234) {
+      listHeight = 234;
+    }
+
+    countryMainBlock.style.height = listHeight + subListHeight + 50 + 'px';
+    console.log(subListHeight);
+  }
+  // Считаем высоту countryMainBlock для планшетных устройств
+  else if (window.innerWidth <= 1439) {
+    if (listHeight >= subListHeight) {
+      countryMainBlock.style.height = listHeight + 'px';
+    } else {
+      countryMainBlock.style.height = subListHeight + 'px';
+    }
+  }
+  // Высота блока для десктопа
+  else {
+    countryMainBlock.style.height = listHeight + 'px';
+  }
+}
+
+// Убирам буквы из алфавита, у которых нет стран для планшетов и компьютеров
+function removeEmptyLetter() {
+  if (window.innerWidth > 767) {
+    for (i = 0; i < countryItemBlock.length; i++) {
+      if (!countryItemBlock[i].children[1]) {
+        countryItemBlock[i].remove();
+      }
+    }
+  } else {
+    countryListBlock.innerHTML = '';
+    for (i = 0; i < countryItemBlock.length; i++) {
+      countryListBlock.appendChild(countryItemBlock[i]);
+    }
+  }
+}
+
+var countryFilterOpen = document.querySelector(".country-filter__continent-button");
+var countryFilterClose = document.querySelector(".country-filter__country-button");
+var countryFilterWrapp = document.querySelector(".country-filter__main-wrapp");
+
+// Открываем-закрываем фильтр
+if (countryFilterOpen) {
+  countryFilterOpen.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    // Меняем название кнопки
+    var textButton = countryFilterOpen.querySelector(".visually-hidden");
+
+    if (textButton.innerHTML === "Показать все") {
+      textButton.innerHTML = "Свернуть";
+    } else {
+      textButton.innerHTML = "Показать все";
+    }
+
+    // Открываем-закрываем фильтр
+    if (countryFilterWrapp.classList.contains("country-filter__main-wrapp--close")) {
+      countryFilterWrapp.classList.remove("country-filter__main-wrapp--close");
+      countryFilterWrapp.classList.add("country-filter__main-wrapp--open");
+    } else {
+      countryFilterWrapp.classList.remove("country-filter__main-wrapp--open");
+      countryFilterWrapp.classList.add("country-filter__main-wrapp--close");
+    }
+
+    // Подгоняем высоту блока под содержимое
+    countHeight();
+  });
+}
+
+if (countryFilterClose) {
+  countryFilterClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    // Закрываем фильтр
+    if (countryFilterWrapp.classList.contains("country-filter__main-wrapp--open")) {
+      countryFilterWrapp.classList.remove("country-filter__main-wrapp--open");
+      countryFilterWrapp.classList.add("country-filter__main-wrapp--close");
+    }
+  });
+}
+
+// Показываем страны выбраной буквы
+var countryListBlock = document.querySelector(".country-filter__country-list");
+var countryItemBlock = document.querySelectorAll(".country-filter__country-item");
+
+if (countryItemBlock) {
+  // Удаляем пустые буквы
+  removeEmptyLetter();
+
+  // Переключаем буквы
+  for (i = 0; i < countryItemBlock.length; i++) {
+    countryItemBlock[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+
+      // Деактивируем предыдущую выбранную букву
+      for (var j = 0; j < countryItemBlock.length; j++) {
+        countryItemBlock[j].classList.remove('country-filter__country-item--active');
+      }
+
+      // Активируем текущую выбранную букву
+      this.classList.add('country-filter__country-item--active');
+
+      // Подгоняем высоту блока под содержимое
+      countHeight();
+    });
+  }
+}
+
+// При переходе на разное разрешение экрана пересчитываем высоту блока
+window.addEventListener("resize", function (evt) {
+  countHeight();
+  removeEmptyLetter();
 });

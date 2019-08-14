@@ -355,10 +355,13 @@
   }
 }
 
+.result-user__footer-tooltip {
+  margin-right: 15px;
+}
+
 .result-user__footer-img {
   width: 26px;
   height: 18px;
-  margin-right: 15px;
 
   @media (min-width: $breakpoint-tablet) {
     width: 35px;

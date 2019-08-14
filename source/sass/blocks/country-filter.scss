@@ -325,14 +325,14 @@
   }
 }
 
-.country-filter__country-item:nth-child(5n) {
-  @media (min-width: $breakpoint-tablet) {
+.country-filter__country-item:nth-of-type(5n) {
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
     margin-right: 0;
   }
 }
 
 .country-filter__country-item:nth-last-child(-n+5) {
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
     margin-bottom: 0;
   }
 }
