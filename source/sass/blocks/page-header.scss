@@ -88,6 +88,15 @@
 .page-header--fixed .site-menu__item,
 .page-header--fixed .site-menu__link {
   color: $blue-color;
+
+  &:hover,
+  &:focus {
+    color: $yellow-color;
+  }
+
+  &:active {
+    color: rgba($yellow-color, 0.3);
+  }
 }
 
 .page-header--fixed + .page-main {

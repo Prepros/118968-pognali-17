@@ -99,48 +99,54 @@ function countHeight() {
   var countryListBlock = document.querySelector(".country-filter__country-list");
   var countrySubListBlock = document.querySelector(".country-filter__country-item--active .country-filter__country-sublist");
 
-  try {
-    var listHeight = countryListBlock.offsetHeight;
-    var subListHeight = countrySubListBlock.offsetHeight;
-  } catch (e) {
-    subListHeight = 0;
-  }
-
-  // Считаем высоту countryMainBlock для мобильных устройств
-  if (window.innerWidth <= 767) {
-    if (listHeight < 234) {
-      listHeight = 234;
+  if (countryMainBlock) {
+    try {
+      var listHeight = countryListBlock.offsetHeight;
+      var subListHeight = countrySubListBlock.offsetHeight;
+    } catch (e) {
+      subListHeight = 0;
     }
 
-    countryMainBlock.style.height = listHeight + subListHeight + 50 + 'px';
-    console.log(subListHeight);
-  }
-  // Считаем высоту countryMainBlock для планшетных устройств
-  else if (window.innerWidth <= 1439) {
-    if (listHeight >= subListHeight) {
+    // Считаем высоту countryMainBlock для мобильных устройств
+    if (window.innerWidth <= 767) {
+      if (listHeight < 234) {
+        listHeight = 234;
+      }
+
+      countryMainBlock.style.height = listHeight + subListHeight + 50 + 'px';
+    }
+    // Считаем высоту countryMainBlock для планшетных устройств
+    else if (window.innerWidth <= 1439) {
+      if (listHeight >= subListHeight) {
+        countryMainBlock.style.height = listHeight + 'px';
+      } else {
+        countryMainBlock.style.height = subListHeight + 'px';
+      }
+    }
+    // Высота блока для десктопа
+    else {
       countryMainBlock.style.height = listHeight + 'px';
-    } else {
-      countryMainBlock.style.height = subListHeight + 'px';
     }
-  }
-  // Высота блока для десктопа
-  else {
-    countryMainBlock.style.height = listHeight + 'px';
   }
 }
 
 // Убирам буквы из алфавита, у которых нет стран для планшетов и компьютеров
 function removeEmptyLetter() {
-  if (window.innerWidth > 767) {
-    for (i = 0; i < countryItemBlock.length; i++) {
-      if (!countryItemBlock[i].children[1]) {
-        countryItemBlock[i].remove();
+  if (countryListBlock) {
+    // Удаляем буквы где нет стран для планшета и компа
+    if (window.innerWidth > 767) {
+      for (i = 0; i < countryItemBlock.length; i++) {
+        if (!countryItemBlock[i].children[1]) {
+          countryItemBlock[i].remove();
+        }
       }
     }
-  } else {
-    countryListBlock.innerHTML = '';
-    for (i = 0; i < countryItemBlock.length; i++) {
-      countryListBlock.appendChild(countryItemBlock[i]);
+    // Добавляем буквы где нет стран для мобильников
+    else {
+      countryListBlock.innerHTML = "";
+      for (i = 0; i < countryItemBlock.length; i++) {
+        countryListBlock.appendChild(countryItemBlock[i]);
+      }
     }
   }
 }
@@ -221,3 +227,43 @@ window.addEventListener("resize", function (evt) {
   countHeight();
   removeEmptyLetter();
 });
+
+/**
+ * Уровень пользователя
+ **/
+var levelModule = document.querySelectorAll(".level-module");
+
+for (var i = 0; i < levelModule.length; i++) {
+  // Получаем уровень пользователя
+  var levelNumber = levelModule[i].dataset.level;
+  var circle = levelModule[i].querySelector(".level-module__draw");
+  var circleStyle = window.getComputedStyle(circle);
+
+  // По умолчанию уровень 100
+  if (isNaN(levelNumber)) {
+    levelNumber = 100;
+  }
+  else {
+    // Радиус круга
+    var r = circleStyle.getPropertyValue("r");
+    r = parseInt(r, 10);
+
+    // Длина окружности
+    var c = Math.PI*r*2;
+    // dashoffset
+    var pct = 0;
+
+    if (levelNumber < 0) {
+      levelNumber = 0;
+    }
+    if (levelNumber >= 100) {
+      levelNumber = 100;
+      pct = ((100-levelNumber)/100)*c;
+    } else {
+      pct = ((100-levelNumber)/100)*c+3;
+    }
+
+
+    circle.setAttribute("style", "stroke-dasharray: " + c + "; stroke-dashoffset: " + pct);
+  }
+}

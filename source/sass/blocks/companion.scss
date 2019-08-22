@@ -231,6 +231,7 @@
 
 /* Верхняя часть элемента Попутчик */
 .companion__header {
+  position: relative;
   margin: 0;
 
   line-height: 0;
@@ -253,6 +254,13 @@
 /* Зумим фотографию */
 .companion__item:hover .companion__header-img {
   transform: scale(1.25);
+}
+
+/* Индикатор уровня пользователя */
+.companion__level {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /* Контент попутчика */

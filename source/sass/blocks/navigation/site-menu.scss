@@ -42,30 +42,44 @@
 
 /* Ссылка основного меню */
 .site-menu__link {
+  position: relative;
+
   display: block;
 
   color: $blue-color;
   text-decoration: none;
 
+  overflow: hidden;
+
   &:hover,
   &:focus {
-    color: rgba($blue-color, 0.7);
+    color: $yellow-color;
   }
 
   &:active {
-    color: rgba($blue-color, 0.3);
+    color: rgba($yellow-color, 0.3);
   }
 
   @media (min-width: $breakpoint-desktop) {
     color: $white-color;
-
-    &:hover,
-    &:focus {
-      color: $yellow-color;
-    }
-
-    &:active {
-      color: rgba($yellow-color, 0.3);
-    }
   }
 }
+
+.site-menu__link span {
+  display: block;
+  transition: transform 0.3s;
+}
+
+.site-menu__link:hover span {
+  transform: translateY(-100%);
+}
+
+.site-menu__link span::before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 100%;
+
+  transform: translate3d(0, 0, 0);
+}
+
+

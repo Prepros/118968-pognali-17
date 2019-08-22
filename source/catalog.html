@@ -1029,28 +1029,28 @@
                 <ul class="result-user__aside-transport transport">
                   <li class="transport__item">
                     <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Авиаперелет">
-                      <svg class="transport-svg transport-svg--plane transport-svg--active" width="19" height="21">
+                      <svg class="transport__svg transport__svg--plane transport__svg--active" width="19" height="21">
                         <use xlink:href="#plane-svg"></use>
                       </svg>
                     </p>
                   </li>
                   <li class="transport__item">
                     <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Автотранспорт">
-                      <svg class="transport-svg transport-svg--bus" width="17" height="21">
+                      <svg class="transport__svg transport__svg--bus" width="17" height="21">
                         <use xlink:href="#bus-svg"></use>
                       </svg>
                     </p>
                   </li>
                   <li class="transport__item">
                     <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Велосипед">
-                      <svg class="transport-svg transport-svg--bike" width="24" height="21">
+                      <svg class="transport__svg transport__svg--bike" width="24" height="21">
                         <use xlink:href="#bike-svg"></use>
                       </svg>
                     </p>
                   </li>
                   <li class="transport__item">
                     <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Пешком">
-                      <svg class="transport-svg transport-svg--run" width="20" height="21">
+                      <svg class="transport__svg transport__svg--run" width="20" height="21">
                         <use xlink:href="#run-svg"></use>
                       </svg>
                     </p>
@@ -1061,7 +1061,345 @@
                 <b class="result-user__title">
                   <span class="result-user__title-text">Левел:</span>
                 </b>
-                <p class="result-user__level">99</p>
+                <div class="result-user__level level-module" data-level="99">
+                  <svg class="level-module__svg" width="60" height="60" viewport="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="level-module__draw" r="29" cx="30" cy="30" fill="transparent" stroke="#ff8d30" stroke-width="3" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+                  </svg>
+                  <span class="level-module__text">level</span>
+                </div>
+              </div>
+            </div>
+            <a class="result-user__button button" href="#">Позвать!</a>
+          </article>
+          <article class="result-user__content">
+            <div class="result-user__head">
+              <p class="result-user__head-photo">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.jpg 1x, img/desktop/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.jpg 1x, img/tablet/demin-tablet@2x.jpg 2x">
+                  <img class="result-user__head-img" src="img/mobile/demin-mobile@1x.jpg" srcset="img/mobile/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Пети Демина">
+                </picture>
+              </p>
+              <div class="result-user__head-wrapp">
+                <h2 class="result-user__head-name">
+                  <a class="result-user__head-link indicator indicator--offline" href="#">Петя Демин</a>
+                </h2>
+                <a class="result-user__head-like like" href="#">
+                  <p class="like__icon">
+                    <svg class="like__svg" width="13" height="11">
+                      <use class="like__heart" xlink:href="#heart-svg"></use>
+                      <use class="like__heart-active" xlink:href="#heartactive-svg"></use>
+                    </svg>
+                  </p>
+                  <span class="like__count">150</span>
+                </a>
+                <ul class="result-user__head-tags tags">
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#бургер</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#бар</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#футбол</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#концерт</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#крафт</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="result-user__footer">
+              <b class="result-user__title">
+                <span class="result-user__title-text">Хочет посетить:</span>
+              </b>
+              <ul class="result-user__footer-flags">
+                <li class="result-user__footer-flag">
+                  <p class="result-user__footer-tooltip tooltip" data-tooltip="Бельния">
+                    <img class="result-user__footer-img img-flag" src="img/flags/flag-belgium.svg" width="35" height="24" alt="Флаг Бельгии">
+                  </p>
+                  <span class="result-user__footer-country">Бельгия</span>
+                </li>
+                <li class="result-user__footer-flag">
+                  <p class="result-user__footer-tooltip tooltip" data-tooltip="Чехия">
+                    <img class="result-user__footer-img img-flag" src="img/flags/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
+                  </p>
+                  <span class="result-user__footer-country">Чехия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="result-user__aside">
+              <div class="result-user__aside-left">
+                <b class="result-user__title">
+                  <span class="result-user__title-text">Транспорт:</span>
+                </b>
+                <ul class="result-user__aside-transport transport">
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Авиаперелет">
+                      <svg class="transport__svg transport__svg--plane transport__svg--active" width="19" height="21">
+                        <use xlink:href="#plane-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Автотранспорт">
+                      <svg class="transport__svg transport__svg--bus transport__svg--active" width="17" height="21">
+                        <use xlink:href="#bus-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Велосипед">
+                      <svg class="transport__svg transport__svg--bike" width="24" height="21">
+                        <use xlink:href="#bike-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Пешком">
+                      <svg class="transport__svg transport__svg--run transport__svg--active" width="20" height="21">
+                        <use xlink:href="#run-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="result-user__aside-right">
+                <b class="result-user__title">
+                  <span class="result-user__title-text">Левел:</span>
+                </b>
+                <div class="result-user__level level-module" data-level="80">
+                  <svg class="level-module__svg" width="60" height="60" viewport="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="level-module__draw" r="29" cx="30" cy="30" fill="transparent" stroke="#ff8d30" stroke-width="3" stroke-dasharray="182" stroke-dashoffset="41"></circle>
+                  </svg>
+                  <span class="level-module__text">level</span>
+                </div>
+              </div>
+            </div>
+            <a class="result-user__button button" href="#">Позвать!</a>
+          </article>
+          <article class="result-user__content">
+            <div class="result-user__head">
+              <p class="result-user__head-photo">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop/smolov-desktop@1x.jpg 1x, img/desktop/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/tablet/smolov-tablet@1x.jpg 1x, img/tablet/smolov-tablet@2x.jpg 2x">
+                  <img class="result-user__head-img" src="img/mobile/smolov-mobile@1x.jpg" srcset="img/mobile/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Марка Смолова">
+                </picture>
+              </p>
+              <div class="result-user__head-wrapp">
+                <h2 class="result-user__head-name">
+                  <a class="result-user__head-link indicator indicator--offline" href="#">Марк Смолов</a>
+                </h2>
+                <a class="result-user__head-like like" href="#">
+                  <p class="like__icon">
+                    <svg class="like__svg" width="13" height="11">
+                      <use class="like__heart" xlink:href="#heart-svg"></use>
+                      <use class="like__heart-active" xlink:href="#heartactive-svg"></use>
+                    </svg>
+                  </p>
+                  <span class="like__count">1700</span>
+                </a>
+                <ul class="result-user__head-tags tags">
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#рэп</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#тату</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#хайпбист</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#кроссовки</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#суприм</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="result-user__footer">
+              <b class="result-user__title">
+                <span class="result-user__title-text">Хочет посетить:</span>
+              </b>
+              <ul class="result-user__footer-flags">
+                <li class="result-user__footer-flag">
+                  <p class="result-user__footer-tooltip tooltip" data-tooltip="США">
+                    <img class="result-user__footer-img img-flag" src="img/flags/flag-usa.svg" width="35" height="24" alt="Флаг США">
+                  </p>
+                  <span class="result-user__footer-country">США</span>
+                </li>
+                <li class="result-user__footer-flag">
+                  <p class="result-user__footer-tooltip tooltip" data-tooltip="Австралия">
+                    <img class="result-user__footer-img img-flag" src="img/flags/flag-australia.svg" width="35" height="24" alt="Флаг Австралии">
+                  </p>
+                  <span class="result-user__footer-country">Австралия</span>
+                </li>
+                <li class="result-user__footer-flag">
+                  <p class="result-user__footer-tooltip tooltip" data-tooltip="Доминикана">
+                    <img class="result-user__footer-img img-flag" src="img/flags/flag-dominica.svg" width="35" height="24" alt="Флаг Доминиканы">
+                  </p>
+                  <span class="result-user__footer-country">Доминикана</span>
+                </li>
+              </ul>
+            </div>
+            <div class="result-user__aside">
+              <div class="result-user__aside-left">
+                <b class="result-user__title">
+                  <span class="result-user__title-text">Транспорт:</span>
+                </b>
+                <ul class="result-user__aside-transport transport">
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Авиаперелет">
+                      <svg class="transport__svg transport__svg--plane transport__svg--active" width="19" height="21">
+                        <use xlink:href="#plane-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Автотранспорт">
+                      <svg class="transport__svg transport__svg--bus" width="17" height="21">
+                        <use xlink:href="#bus-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Велосипед">
+                      <svg class="transport__svg transport__svg--bike transport__svg--active" width="24" height="21">
+                        <use xlink:href="#bike-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Пешком">
+                      <svg class="transport__svg transport__svg--run" width="20" height="21">
+                        <use xlink:href="#run-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="result-user__aside-right">
+                <b class="result-user__title">
+                  <span class="result-user__title-text">Левел:</span>
+                </b>
+                <div class="result-user__level level-module" data-level="25">
+                  <svg class="level-module__svg" width="60" height="60" viewport="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="level-module__draw" r="29" cx="30" cy="30" fill="transparent" stroke="#ff8d30" stroke-width="3" stroke-dasharray="182" stroke-dashoffset="41"></circle>
+                  </svg>
+                  <span class="level-module__text">level</span>
+                </div>
+              </div>
+            </div>
+            <a class="result-user__button button" href="#">Позвать!</a>
+          </article>
+          <article class="result-user__content">
+            <div class="result-user__head">
+              <p class="result-user__head-photo">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop/rogovaya-desktop@1x.jpg 1x, img/desktop/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/tablet/rogovaya-tablet@1x.jpg 1x, img/tablet/rogovaya-tablet@2x.jpg 2x">
+                  <img class="result-user__head-img" src="img/mobile/rogovaya-mobile@1x.jpg" srcset="img/mobile/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Ларисы Роговой">
+                </picture>
+              </p>
+              <div class="result-user__head-wrapp">
+                <h2 class="result-user__head-name">
+                  <a class="result-user__head-link indicator indicator--online" href="#">Лариса Рогова</a>
+                </h2>
+                <a class="result-user__head-like like" href="#">
+                  <p class="like__icon">
+                    <svg class="like__svg" width="13" height="11">
+                      <use class="like__heart" xlink:href="#heart-svg"></use>
+                      <use class="like__heart-active" xlink:href="#heartactive-svg"></use>
+                    </svg>
+                  </p>
+                  <span class="like__count">23</span>
+                </a>
+                <ul class="result-user__head-tags tags">
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#образование</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#карьера</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#учеба</a>
+                  </li>
+                  <li class="tags__item">
+                    <a class="tags__link" href="#">#линкедин</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="result-user__footer">
+              <b class="result-user__title">
+                <span class="result-user__title-text">Хочет посетить:</span>
+              </b>
+              <ul class="result-user__footer-flags">
+                <li class="result-user__footer-flag">
+                  <p class="result-user__footer-tooltip tooltip" data-tooltip="Великобритания">
+                    <img class="result-user__footer-img img-flag" src="img/flags/flag-united-kingdom.svg" width="35" height="24" alt="Флаг Великобритании">
+                  </p>
+                  <span class="result-user__footer-country">Великобритания</span>
+                </li>
+                <li class="result-user__footer-flag">
+                  <p class="result-user__footer-tooltip tooltip" data-tooltip="Германия">
+                    <img class="result-user__footer-img img-flag" src="img/flags/flag-belgium.svg" width="35" height="24" alt="Флаг Германии">
+                  </p>
+                  <span class="result-user__footer-country">Германия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="result-user__aside">
+              <div class="result-user__aside-left">
+                <b class="result-user__title">
+                  <span class="result-user__title-text">Транспорт:</span>
+                </b>
+                <ul class="result-user__aside-transport transport">
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Авиаперелет">
+                      <svg class="transport__svg transport__svg--plane transport__svg--active" width="19" height="21">
+                        <use xlink:href="#plane-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Автотранспорт">
+                      <svg class="transport__svg transport__svg--bus transport__svg--active" width="17" height="21">
+                        <use xlink:href="#bus-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Велосипед">
+                      <svg class="transport__svg transport__svg--bike" width="24" height="21">
+                        <use xlink:href="#bike-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                  <li class="transport__item">
+                    <p class="transport__tooltip tooltip tooltip--circle" data-tooltip="Пешком">
+                      <svg class="transport__svg transport__svg--run" width="20" height="21">
+                        <use xlink:href="#run-svg"></use>
+                      </svg>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="result-user__aside-right">
+                <b class="result-user__title">
+                  <span class="result-user__title-text">Левел:</span>
+                </b>
+                <div class="result-user__level level-module" data-level="50">
+                  <svg class="level-module__svg" width="60" height="60" viewport="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="level-module__draw" r="29" cx="30" cy="30" fill="transparent" stroke="#ff8d30" stroke-width="3" stroke-dasharray="182" stroke-dashoffset="41"></circle>
+                  </svg>
+                  <span class="level-module__text">level</span>
+                </div>
               </div>
             </div>
             <a class="result-user__button button" href="#">Позвать!</a>
@@ -1234,7 +1572,7 @@
                 <li class="transport__item">
                   <input class="visually-hidden transport__input" id="transport1" type="checkbox" name="transport[]" value="Авиаперелет" checked>
                   <label class="transport__tooltip tooltip" for="transport1" data-tooltip="Авиаперелет">
-                    <svg class="transport-svg transport-svg--plane" width="14" height="16">
+                    <svg class="transport__svg transport__svg--plane" width="14" height="16">
                       <use xlink:href="#plane-svg"></use>
                     </svg>
                   </label>
@@ -1242,7 +1580,7 @@
                 <li class="transport__item">
                   <input class="visually-hidden transport__input" id="transport2" type="checkbox" name="transport[]" value="Автотранспорт" checked>
                   <label class="transport__tooltip tooltip" for="transport2" data-tooltip="Автотранспорт">
-                    <svg class="transport-svg transport-svg--bus" width="13" height="16">
+                    <svg class="transport__svg transport__svg--bus" width="13" height="16">
                       <use xlink:href="#bus-svg"></use>
                     </svg>
                   </label>
@@ -1250,7 +1588,7 @@
                 <li class="transport__item">
                   <input class="visually-hidden transport__input" id="transport3" type="checkbox" name="transport[]" value="Велосипед">
                   <label class="transport__tooltip tooltip" for="transport3" data-tooltip="Велосипед">
-                    <svg class="transport-svg transport-svg--bike" width="19" height="17">
+                    <svg class="transport__svg transport__svg--bike" width="19" height="17">
                       <use xlink:href="#bike-svg"></use>
                     </svg>
                   </label>
@@ -1258,7 +1596,7 @@
                 <li class="transport__item">
                   <input class="visually-hidden transport__input" id="transport4" type="checkbox" name="transport[]" value="Пешком" checked>
                   <label class="transport__tooltip tooltip" for="transport4" data-tooltip="Пешком">
-                    <svg class="transport-svg transport-svg--run" width="15" height="17">
+                    <svg class="transport__svg transport__svg--run" width="15" height="17">
                       <use xlink:href="#run-svg"></use>
                     </svg>
                   </label>
