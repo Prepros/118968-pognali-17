@@ -229,261 +229,275 @@
 <main class="page-main">
   <section class="page-main__head">
     <div class="page-main__container container">
-      <h1 class="page-main__title">Попутчики</h1>
+      <h1 class="page-main__title">Направления</h1>
     </div>
   </section>
 
-  <section class="user-setting">
-    <h2 class="visually-hidden">Пользовательские настройки</h2>
-    <div class="user-setting__head">
-      <div class="user-setting__head-wrapp">
-        <p class="user-setting__level block-level">
-          <span class="block-level__number">80</span>
-          <span class="block-level__text">level</span>
-        </p>
-        <p class="user-setting__avatar">
-          <img class="user-setting__avatar-img" src="http://placehold.it/100x100" width="100" height="100" alt="Фотография">
-        </p>
-      </div>
-      <a class="user-setting__button button button--grey" href="#">Сменить фото</a>
-      <fieldset class="user-setting__box">
-        <legend class="user-setting__box-title">Тэги</legend>
-        <textarea class="user-setting__box-text" name="tag">#бургер #бар #футбол #концерт #крафт</textarea>
-      </fieldset>
-      <fieldset class="user-setting__box">
-        <legend class="user-setting__box-title">Транспорт</legend>
-        <ul class="user-setting__transport transport">
-          <li class="transport__item">
-            <!-- Транспорт здесь являются ссылками ??? -->
-            <a class="transport__link" href="#">
-              <!-- Вместо картинки тут будет svg ??? -->
-              <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Авиаперелеты">
-              <span class="transport__tooltip">Авиаперелеты</span>
-            </a>
-          </li>
-          <li class="transport__item">
-            <a class="transport__link" href="#">
-              <!-- Вместо картинки тут будет svg ??? -->
-              <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Автотранспорт">
-              <span class="transport__tooltip">Автотранспорт</span>
-            </a>
-          </li>
-          <li class="transport__item">
-            <a class="transport__link" href="#">
-              <!-- Вместо картинки тут будет svg ??? -->
-              <img class="transport__img" src="http://placehold.it/24x21" width="24" height="21" alt="Велосипед">
-              <span class="transport__tooltip">Велосипед</span>
-            </a>
-          </li>
-          <li class="transport__item">
-            <a class="transport__link" href="#">
-              <!-- Вместо картинки тут будет svg ??? -->
-              <img class="transport__img transport__img--active" src="http://placehold.it/24x21" width="24" height="21" alt="Пешком">
-              <span class="transport__tooltip">Пешком</span>
-            </a>
-          </li>
-        </ul>
-      </fieldset>
-    </div>
-  </section>
-
-  <section class="my-plan">
-    <h2 class="my-plan__title directions-title">Мои планы:</h2>
-    <ol class="my-plan__list">
-      <li class="my-plan__item">
-        <h3 class="my-plan__country">1. Франция, Италия</h3>
-        <p class="my-plan__info">3 попутчика</p>
-        <p class="my-plan__info">26 мар — 29 мар</p>
-        <a class="my-plan__edit" href="#">Изменить</a>
-      </li>
-      <li class="my-plan__item">
-        <h3 class="my-plan__country">2. Тайланд, Индонезия</h3>
-        <p class="my-plan__info">1 попутчик</p>
-        <p class="my-plan__info">1 июл — 15 июл</p>
-        <a class="my-plan__edit" href="#">Изменить</a>
-      </li>
-    </ol>
-  </section>
-
-  <section class="add-plan">
-    <h2 class="add-plan__title directions-title">Мои планы:</h2>
-    <form class="add-plan__form" action="http://echo.htmlacademy.ru" method="post">
-      <fieldset class="add-plan__step">
-        <legend class="add-plan__title">Шаг 1. Даты пребывания</legend>
-        <p class="add-plan__info">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-        <div class="add-plan__list">
-          <div class="add-plan__item meter-input">
-            <p class="meter-input__head">
-              <b class="meter-input__title">Ищу попутчиков:</b>
-              <span class="meter-input__desc">Чел.</span>
-            </p>
-            <p class="meter-input__content">
-              <button class="meter-input__button meter-input__button--minus">-</button>
-              <input class="meter-input__text" type="text" name="count-person" placeholder="0" value="2">
-              <button class="meter-input__button meter-input__button--plus">+</button>
-            </p>
+  <form action="http://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+    <section class="user-setting">
+      <div class="user-setting__container container">
+        <h2 class="visually-hidden">Пользовательские настройки</h2>
+        <div class="user-setting__wrapp">
+          <div class="user-setting__level level-module" data-level="80">
+            <svg class="level-module__svg" width="100" height="100" viewport="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="level-module__draw" r="49" cx="50" cy="50" fill="transparent" stroke="#ff8d30" stroke-width="3" stroke-dasharray="169" stroke-dashoffset="7"></circle>
+            </svg>
+            <span class="level-module__text">level</span>
           </div>
-          <div class="add-plan__item meter-input">
-            <p class="meter-input__head">
-              <b class="meter-input__title">Длительность:</b>
-              <span class="meter-input__desc">Дн.</span>
-            </p>
-            <p class="meter-input__content">
-              <button class="meter-input__button meter-input__button--minus">-</button>
-              <input class="meter-input__text" type="text" name="count-person" placeholder="0" value="2">
-              <button class="meter-input__button meter-input__button--plus">+</button>
-            </p>
-          </div>
-          <p class="add-plan__item input">
-            <input class="visually-hidden" id="children" type="checkbox" name="children" value="Можно с детьми" checked>
-            <label class="add-plan__label input__checkbox" for="children">Можно с детьми</label>
+          <p class="user-setting__avatar">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.jpg 1x, img/desktop/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.jpg 1x, img/tablet/demin-tablet@2x.jpg 2x">
+              <img class="user-setting__avatar-img" src="img/mobile/demin-mobile2@1x.jpg" srcset="img/mobile/demin-mobile2@2x.jpg 2x" width="100" height="100" alt="Фотография Пети Демина">
+            </picture>
           </p>
-          <article class="add-plan__item calendar">
-            <header class="calendar__head">
-              <button class="calendar__button calendar__button--left">&lt;</button>
-              <h2 class="calendar__title">Март 2019</h2>
-              <button class="calendar__button calendar__button--right">&gt;</button>
-            </header>
-            <table class="calendar__content">
-              <tr>
-                <th>П</th>
-                <th>В</th>
-                <th>С</th>
-                <th>Ч</th>
-                <th>П</th>
-                <th>С</th>
-                <th>В</th>
-              </tr>
-              <tr>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
-                <td>1</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
-                <td>15</td>
-                <td>16</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-              </tr>
-              <tr>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-              </tr>
-              <tr>
-                <td>31</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-              </tr>
-            </table>
-          </article>
+          <p class="user-setting__button">
+            <input class="visually-hidden" id="photo-file" type="file" name="photo-file">
+            <label class="user-setting__button-file button button--grey" for="photo-file"><span>Сменить</span> фото</label>
+          </p>
+          <div class="user-setting__box user-setting__box--tag">
+            <label class="user-setting__box-title" for="tag">Тэги</label>
+            <textarea class="user-setting__box-text" id="tag" name="tag" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+          </div>
+          <div class="user-setting__box user-setting__box--transport">
+            <b class="user-setting__box-title">Транспорт</b>
+            <ul class="user-setting__transport transport-action">
+              <li class="transport-action__item">
+                <input class="visually-hidden transport-action__input" id="transport1" type="checkbox" name="transport[]" value="Авиаперелет" checked>
+                <label class="transport-action__tooltip tooltip" for="transport1" data-tooltip="Авиаперелет">
+                  <svg class="transport-action__svg transport-action__svg--plane" width="14" height="16">
+                    <use xlink:href="#plane-svg"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="transport-action__item">
+                <input class="visually-hidden transport-action__input" id="transport2" type="checkbox" name="transport[]" value="Автотранспорт" checked>
+                <label class="transport-action__tooltip tooltip" for="transport2" data-tooltip="Автотранспорт">
+                  <svg class="transport-action__svg transport-action__svg--bus" width="13" height="16">
+                    <use xlink:href="#bus-svg"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="transport-action__item">
+                <input class="visually-hidden transport-action__input" id="transport3" type="checkbox" name="transport[]" value="Велосипед">
+                <label class="transport-action__tooltip tooltip" for="transport3" data-tooltip="Велосипед">
+                  <svg class="transport-action__svg transport-action__svg--bike" width="19" height="17">
+                    <use xlink:href="#bike-svg"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="transport-action__item">
+                <input class="visually-hidden transport-action__input" id="transport4" type="checkbox" name="transport[]" value="Пешком" checked>
+                <label class="transport-action__tooltip tooltip" for="transport4" data-tooltip="Пешком">
+                  <svg class="transport-action__svg transport-action__svg--run" width="15" height="17">
+                    <use xlink:href="#run-svg"></use>
+                  </svg>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-plan">
+      <h2 class="my-plan__title directions-title">Мои планы:</h2>
+      <ol class="my-plan__list">
+        <li class="my-plan__item">
+          <h3 class="my-plan__country">1. Франция, Италия</h3>
+          <p class="my-plan__info">3 попутчика</p>
+          <p class="my-plan__info">26 мар — 29 мар</p>
+          <a class="my-plan__edit" href="#">Изменить</a>
+        </li>
+        <li class="my-plan__item">
+          <h3 class="my-plan__country">2. Тайланд, Индонезия</h3>
+          <p class="my-plan__info">1 попутчик</p>
+          <p class="my-plan__info">1 июл — 15 июл</p>
+          <a class="my-plan__edit" href="#">Изменить</a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="add-plan">
+      <h2 class="add-plan__title directions-title">Мои планы:</h2>
+      <form class="add-plan__form" action="http://echo.htmlacademy.ru" method="post">
+        <fieldset class="add-plan__step">
+          <legend class="add-plan__title">Шаг 1. Даты пребывания</legend>
+          <p class="add-plan__info">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+          <div class="add-plan__list">
+            <div class="add-plan__item meter-input">
+              <p class="meter-input__head">
+                <b class="meter-input__title">Ищу попутчиков:</b>
+                <span class="meter-input__desc">Чел.</span>
+              </p>
+              <p class="meter-input__content">
+                <button class="meter-input__button meter-input__button--minus">-</button>
+                <input class="meter-input__text" type="text" name="count-person" placeholder="0" value="2">
+                <button class="meter-input__button meter-input__button--plus">+</button>
+              </p>
+            </div>
+            <div class="add-plan__item meter-input">
+              <p class="meter-input__head">
+                <b class="meter-input__title">Длительность:</b>
+                <span class="meter-input__desc">Дн.</span>
+              </p>
+              <p class="meter-input__content">
+                <button class="meter-input__button meter-input__button--minus">-</button>
+                <input class="meter-input__text" type="text" name="count-person" placeholder="0" value="2">
+                <button class="meter-input__button meter-input__button--plus">+</button>
+              </p>
+            </div>
+            <p class="add-plan__item input">
+              <input class="visually-hidden" id="children" type="checkbox" name="children" value="Можно с детьми" checked>
+              <label class="add-plan__label input__checkbox" for="children">Можно с детьми</label>
+            </p>
+            <article class="add-plan__item calendar">
+              <header class="calendar__head">
+                <button class="calendar__button calendar__button--left">&lt;</button>
+                <h2 class="calendar__title">Март 2019</h2>
+                <button class="calendar__button calendar__button--right">&gt;</button>
+              </header>
+              <table class="calendar__content">
+                <tr>
+                  <th>П</th>
+                  <th>В</th>
+                  <th>С</th>
+                  <th>Ч</th>
+                  <th>П</th>
+                  <th>С</th>
+                  <th>В</th>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>1</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+              </table>
+            </article>
+            <a class="add-plan__next button" href="#">Следующий шаг</a>
+          </div>
+        </fieldset>
+        <fieldset class="add-plan__step">
+          <legend class="add-plan__title">Шаг 2. Маршрут</legend>
+          <p class="add-plan__info">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+          <div class="add-plan__list route-input">
+            <div class="route-input__item">
+              <select class="route-input__select" name="country">
+                <option value="Босня и Герцеговина" selected>Босня и Герцеговина</option>
+                <option value="Чехословакия">Чехословакия</option>
+                <option value="Чехословакия">Франция</option>
+              </select>
+              <p class="route-input__pic">
+                <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
+                <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
+              </p>
+            </div>
+            <div class="route-input__item">
+              <select class="route-input__select" name="country">
+                <option value="Босня и Герцеговина">Босня и Герцеговина</option>
+                <option value="Чехословакия" selected>Чехословакия</option>
+                <option value="Чехословакия">Франция</option>
+              </select>
+              <p class="route-input__pic">
+                <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехословакия">
+                <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
+              </p>
+            </div>
+            <div class="route-input__item">
+              <select class="route-input__select route-input__select--wide" name="country">
+                <option selected>Выбирите страну</option>
+                <option value="Босня и Герцеговина">Босня и Герцеговина</option>
+                <option value="Чехословакия">Чехословакия</option>
+                <option value="Чехословакия">Франция</option>
+              </select>
+              <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
+            </div>
+            <div class="route-input__item">
+              <select class="route-input__select route-input__select--wide" name="country">
+                <option selected>Добавить страну</option>
+                <option value="Босня и Герцеговина">Босня и Герцеговина</option>
+                <option value="Чехословакия">Чехословакия</option>
+                <option value="Франция">Франция</option>
+              </select>
+            </div>
+          </div>
           <a class="add-plan__next button" href="#">Следующий шаг</a>
-        </div>
-      </fieldset>
-      <fieldset class="add-plan__step">
-        <legend class="add-plan__title">Шаг 2. Маршрут</legend>
-        <p class="add-plan__info">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-        <div class="add-plan__list route-input">
-          <div class="route-input__item">
-            <select class="route-input__select" name="country">
-              <option value="Босня и Герцеговина" selected>Босня и Герцеговина</option>
-              <option value="Чехословакия">Чехословакия</option>
-              <option value="Чехословакия">Франция</option>
-            </select>
-            <p class="route-input__pic">
-              <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
-              <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
-            </p>
+          <a class="add-plan__back" href="#">На шаг назад</a>
+        </fieldset>
+        <fieldset class="add-plan__step">
+          <legend class="add-plan__title">Шаг 3. Развлечения</legend>
+          <p class="add-plan__info">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+          <div class="add-plan__list">
+            <div class="add-plan__item">
+              <p class="add-plan__item-top">
+                <span class="add-plan__item-title">Босния и герцегови</span>
+                <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
+              </p>
+              <textarea name="plan" placeholder="План действий"></textarea>
+            </div>
+            <div class="add-plan__item">
+              <p class="add-plan__item-top">
+                <span class="add-plan__item-title">Чехославвакия</span>
+                <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехославвакия">
+              </p>
+              <textarea name="plan" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+            </div>
           </div>
-          <div class="route-input__item">
-            <select class="route-input__select" name="country">
-              <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-              <option value="Чехословакия" selected>Чехословакия</option>
-              <option value="Чехословакия">Франция</option>
-            </select>
-            <p class="route-input__pic">
-              <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехословакия">
-              <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
-            </p>
-          </div>
-          <div class="route-input__item">
-            <select class="route-input__select route-input__select--wide" name="country">
-              <option selected>Выбирите страну</option>
-              <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-              <option value="Чехословакия">Чехословакия</option>
-              <option value="Чехословакия">Франция</option>
-            </select>
-            <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
-          </div>
-          <div class="route-input__item">
-            <select class="route-input__select route-input__select--wide" name="country">
-              <option selected>Добавить страну</option>
-              <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-              <option value="Чехословакия">Чехословакия</option>
-              <option value="Франция">Франция</option>
-            </select>
-          </div>
-        </div>
-        <a class="add-plan__next button" href="#">Следующий шаг</a>
-        <a class="add-plan__back" href="#">На шаг назад</a>
-      </fieldset>
-      <fieldset class="add-plan__step">
-        <legend class="add-plan__title">Шаг 3. Развлечения</legend>
-        <p class="add-plan__info">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-        <div class="add-plan__list">
-          <div class="add-plan__item">
-            <p class="add-plan__item-top">
-              <span class="add-plan__item-title">Босния и герцегови</span>
-              <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
-            </p>
-            <textarea name="plan" placeholder="План действий"></textarea>
-          </div>
-          <div class="add-plan__item">
-            <p class="add-plan__item-top">
-              <span class="add-plan__item-title">Чехославвакия</span>
-              <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехославвакия">
-            </p>
-            <textarea name="plan" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
-          </div>
-        </div>
-        <button class="add-plan__next button" type="submit">Отправить</button>
-        <a class="add-plan__back" href="#">На шаг назад</a>
-      </fieldset>
-    </form>
-  </section>
+          <button class="add-plan__next button" type="submit">Отправить</button>
+          <a class="add-plan__back" href="#">На шаг назад</a>
+        </fieldset>
+      </form>
+    </section>
+  </form>
 </main>
 
 <footer class="main-footer">

@@ -44,6 +44,16 @@
   }
 }
 
+.inner-page .page-header--close {
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $blue-color--dark;
+  }
+}
+
+.inner-page .page-header--fixed {
+  background: $white-color;
+}
+
 .page-header--open {
   position: absolute;
   top: -73px;

@@ -33,17 +33,12 @@
 
 /* Иконка */
 .transport__svg {
-  fill: #d9d9d9;
+  fill: rgba($black-color, 0.15);
 }
 
 /* Иконка активная */
 .transport__svg--active {
-  fill: #1d2e5b;
-}
-
-
-.transport__input:checked + .transport__tooltip .transport__svg {
-  fill: #1d2e5b;
+  fill: $blue-color--light;
 }
 
 .transport__svg--plane {

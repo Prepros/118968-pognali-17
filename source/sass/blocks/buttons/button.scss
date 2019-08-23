@@ -6,7 +6,7 @@
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  padding: 8px 15px 2px;
+  padding: 6px 15px 4px;
 
   font-size: 17px;
   line-height: 30px;
@@ -47,6 +47,19 @@
     color: rgba($blue-color--dark, 0.3);
     background-color: #f3c72b;
     box-shadow: none;
+  }
+}
+
+.button--grey {
+  background-color: #dfe3f0;
+
+  &:hover,
+  &:focus {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    color: rgba($blue-color--light, 0.3);
   }
 }
 

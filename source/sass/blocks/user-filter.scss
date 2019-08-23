@@ -242,24 +242,6 @@
   }
 }
 
-.user-filter__transport .transport__tooltip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-
-  background-color: $white-color;
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  @media (min-width: $breakpoint-tablet) {
-    width: 43px;
-    height: 43px;
-  }
-}
-
 .user-filter__level {
   @media (min-width: $breakpoint-tablet) {
     width: 488px;
