@@ -301,26 +301,33 @@
     </section>
 
     <section class="my-plan">
-      <h2 class="my-plan__title directions-title">Мои планы:</h2>
-      <ol class="my-plan__list">
-        <li class="my-plan__item">
-          <h3 class="my-plan__country">1. Франция, Италия</h3>
-          <p class="my-plan__info">3 попутчика</p>
-          <p class="my-plan__info">26 мар — 29 мар</p>
-          <a class="my-plan__edit" href="#">Изменить</a>
-        </li>
-        <li class="my-plan__item">
-          <h3 class="my-plan__country">2. Тайланд, Индонезия</h3>
-          <p class="my-plan__info">1 попутчик</p>
-          <p class="my-plan__info">1 июл — 15 июл</p>
-          <a class="my-plan__edit" href="#">Изменить</a>
-        </li>
-      </ol>
+      <div class="my-plan__container container">
+        <div class="my-plan__wrapp">
+          <h2 class="my-plan__title">Мои планы:</h2>
+          <ol class="my-plan__list">
+            <li class="my-plan__item">
+              <h3 class="my-plan__country">Франция, Италия</h3>
+              <p class="my-plan__desc">
+                <b class="my-plan__info">3 попутчика</b>
+                <b class="my-plan__info">26 мар — 29 мар</b>
+                <a class="my-plan__edit" href="#">Изменить</a>
+              </p>
+            </li>
+            <li class="my-plan__item">
+              <h3 class="my-plan__country">Тайланд, Индонезия</h3>
+              <p class="my-plan__desc">
+                <b class="my-plan__info">1 попутчик</b>
+                <b class="my-plan__info">1 июл — 15 июл</b>
+                <a class="my-plan__edit" href="#">Изменить</a>
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
     </section>
 
     <section class="add-plan">
       <h2 class="add-plan__title directions-title">Мои планы:</h2>
-      <form class="add-plan__form" action="http://echo.htmlacademy.ru" method="post">
         <fieldset class="add-plan__step">
           <legend class="add-plan__title">Шаг 1. Даты пребывания</legend>
           <p class="add-plan__info">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
@@ -495,7 +502,6 @@
           <button class="add-plan__next button" type="submit">Отправить</button>
           <a class="add-plan__back" href="#">На шаг назад</a>
         </fieldset>
-      </form>
     </section>
   </form>
 </main>

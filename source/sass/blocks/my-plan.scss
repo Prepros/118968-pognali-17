@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Планы
+   ========================================================================== */
+
+.my-plan {
+  padding-top: 29px;
+  padding-bottom: 30px;
+
+  background-color: #dfe3f0;
+  border-radius: 30px 30px 0 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.my-plan__container {
+
+}
+
+.my-plan__wrapp {
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0 35px;
+  }
+}
+
+.my-plan__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $blue-color--light;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 40px;
+
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+.my-plan__list {
+  @include reset-ul;
+  box-sizing: border-box;
+  counter-reset: section;
+}
+
+.my-plan__item {
+  margin-bottom: 10px;
+  padding: 20px 25px;
+
+  background-color: $white-color;
+  border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 25px 42px;
+  }
+}
+
+.my-plan__country {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 15px;
+  padding-left: 17px;
+
+  font-size: $fz;
+  line-height: 16px;
+  font-weight: 700;
+  color: $blue-color--light;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 100%;
+    margin-left: 37px;
+    margin-right: 32px;
+    margin-bottom: 30px;
+    padding-left: 0;
+    padding-top: 30px;
+
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 525px;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+  }
+}
+
+.my-plan__country::before {
+  counter-increment: section;
+  content: counter(section) ".";
+  position: absolute;
+  left: 0;
+
+  font: inherit;
+
+  @media (min-width: $breakpoint-tablet) {
+    left: auto;
+    right: 0;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    left: 0;
+    right: auto;
+  }
+}
+
+.my-plan__country span {
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 18px;
+  }
+}
+
+.my-plan__desc {
+  width: 100%;
+  margin: 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 35px;
+
+    border-top: 1px solid #eff0f4;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 590px;
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.my-plan__info {
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: $blue-color--light;
+  text-transform: uppercase;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 18px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.my-plan__edit {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: rgba($black-color, 0.3);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($black-color, 0.6);
+  }
+
+  &:focus {
+    color: rgba($black-color, 0.1);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 18px;
+  }
+}

@@ -3,7 +3,8 @@
    ========================================================================== */
 
 .user-setting {
-  //
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .user-setting__container {
@@ -15,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 20px;
 
   @media (min-width: $breakpoint-tablet) {
     align-items: flex-start;
