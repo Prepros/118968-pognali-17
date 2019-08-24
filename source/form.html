@@ -327,181 +327,226 @@
     </section>
 
     <section class="add-plan">
-      <h2 class="add-plan__title directions-title">Мои планы:</h2>
-        <fieldset class="add-plan__step">
-          <legend class="add-plan__title">Шаг 1. Даты пребывания</legend>
-          <p class="add-plan__info">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-          <div class="add-plan__list">
-            <div class="add-plan__item meter-input">
-              <p class="meter-input__head">
-                <b class="meter-input__title">Ищу попутчиков:</b>
-                <span class="meter-input__desc">Чел.</span>
-              </p>
-              <p class="meter-input__content">
-                <button class="meter-input__button meter-input__button--minus">-</button>
-                <input class="meter-input__text" type="text" name="count-person" placeholder="0" value="2">
-                <button class="meter-input__button meter-input__button--plus">+</button>
-              </p>
-            </div>
-            <div class="add-plan__item meter-input">
-              <p class="meter-input__head">
-                <b class="meter-input__title">Длительность:</b>
-                <span class="meter-input__desc">Дн.</span>
-              </p>
-              <p class="meter-input__content">
-                <button class="meter-input__button meter-input__button--minus">-</button>
-                <input class="meter-input__text" type="text" name="count-person" placeholder="0" value="2">
-                <button class="meter-input__button meter-input__button--plus">+</button>
-              </p>
-            </div>
-            <p class="add-plan__item input">
-              <input class="visually-hidden" id="children" type="checkbox" name="children" value="Можно с детьми" checked>
-              <label class="add-plan__label input__checkbox" for="children">Можно с детьми</label>
-            </p>
-            <article class="add-plan__item calendar">
-              <header class="calendar__head">
-                <button class="calendar__button calendar__button--left">&lt;</button>
-                <h2 class="calendar__title">Март 2019</h2>
-                <button class="calendar__button calendar__button--right">&gt;</button>
+      <div class="add-plan__container container">
+        <div class="add-plan__wrapp">
+          <h2 class="add-plan__title">Добавить план:</h2>
+          <div class="add-plan__step">
+            <div class="add-plan__step-wrapp">
+              <header class="add-plan__header">
+                <div class="add-plan__header-info">
+                  <h3 class="add-plan__step-title">Шаг 1.<br> Даты пребывания</h3>
+                  <p class="add-plan__info">Укажите предпочтительное количество попутчиков, которых<br> вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                </div>
+                <ol class="add-plan__header-list">
+                  <li class="add-plan__header-item add-plan__header-item--active">Даты</li>
+                  <li class="add-plan__header-item">Маршрут</li>
+                  <li class="add-plan__header-item">Развлечения</li>
+                </ol>
               </header>
-              <table class="calendar__content">
-                <tr>
-                  <th>П</th>
-                  <th>В</th>
-                  <th>С</th>
-                  <th>Ч</th>
-                  <th>П</th>
-                  <th>С</th>
-                  <th>В</th>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>25</td>
-                  <td>26</td>
-                  <td>27</td>
-                  <td>28</td>
-                  <td>1</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>6</td>
-                  <td>7</td>
-                  <td>8</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>11</td>
-                  <td>12</td>
-                  <td>13</td>
-                  <td>14</td>
-                  <td>15</td>
-                  <td>16</td>
-                </tr>
-                <tr>
-                  <td>17</td>
-                  <td>18</td>
-                  <td>19</td>
-                  <td>20</td>
-                  <td>21</td>
-                  <td>22</td>
-                  <td>23</td>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>25</td>
-                  <td>26</td>
-                  <td>27</td>
-                  <td>28</td>
-                  <td>29</td>
-                  <td>30</td>
-                </tr>
-                <tr>
-                  <td>31</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>6</td>
-                </tr>
-              </table>
-            </article>
+              <div class="add-plan__content">
+                <div class="add-plan__item add-plan__item--person">
+                  <b class="add-plan__item-title">Ищу попутчиков:</b>
+                  <span class="add-plan__item-desc">Чел.</span>
+                  <p class="add-plan__item-counter counter-input">
+                    <button class="counter-input__button counter-input__button--minus">
+                      <span class="visually-hidden">отнять</span>
+                    </button>
+                    <label class="visually-hidden" for="count-person">Добавить/убавить попутчиков</label>
+                    <input class="counter-input__text" id="count-person" type="text" name="count-person" placeholder="0" value="2">
+                    <button class="counter-input__button counter-input__button--plus">
+                      <span class="visually-hidden">прибавить</span>
+                    </button>
+                  </p>
+                </div>
+                <div class="add-plan__item add-plan__item--day">
+                  <b class="add-plan__item-title">Длительность:</b>
+                  <span class="add-plan__item-desc">Дн.</span>
+                  <p class="add-plan__item-counter counter-input">
+                    <button class="counter-input__button counter-input__button--minus">
+                      <span class="visually-hidden">отнять</span>
+                    </button>
+                    <label class="visually-hidden" for="count-day">Добавить/убавить дни</label>
+                    <input class="counter-input__text" id="count-day" type="text" name="count-day" placeholder="0" value="2">
+                    <button class="counter-input__button counter-input__button--plus">
+                      <span class="visually-hidden">прибавить</span>
+                    </button>
+                  </p>
+                </div>
+                <p class="add-plan__item add-plan__item--children check-big">
+                  <input class="visually-hidden check-big__checkbox" id="children" type="checkbox" name="children" value="Можно с детьми" checked>
+                  <label class="check-big__box" for="children">
+                    <span class="check-big__input">
+                      <svg class="check-big__svg" width="9" height="9">
+                        <use xlink:href="#tick-svg"></use>
+                      </svg>
+                    </span>
+                    <b class="check-big__name">Можно с детьми</b>
+                  </label>
+                </p>
+                <article class="add-plan__calendar calendar">
+                  <header class="calendar__head">
+                    <button class="calendar__button calendar__button--left">
+                      <span class="visually-hidden">Назад</span>
+                    </button>
+                    <h2 class="calendar__title">Март 2019</h2>
+                    <button class="calendar__button calendar__button--right">
+                      <span class="visually-hidden">Вперед</span>
+                    </button>
+                  </header>
+                  <table class="calendar__content">
+                    <tr class="calendar__row">
+                      <th>П<span>н</span></th>
+                      <th>В<span>т</span></th>
+                      <th>С<span>р</span></th>
+                      <th>Ч<span>т</span></th>
+                      <th>П<span>т</span></th>
+                      <th>С<span>б</span></th>
+                      <th>В<span>с</span></th>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>1 мар</td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td class="calendar__col calendar__col--chosen calendar__col--active">
+                        <div>
+                          26 <span>Заезд</span>
+                        </div>
+                      </td>
+                      <td class="calendar__col calendar__col--chosen"><div>27</div></td>
+                      <td class="calendar__col calendar__col--chosen">
+                        <div>
+                          28 <span>Выезд</span>
+                        </div>
+                      </td>
+                      <td class="calendar__col">29</td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td class="calendar__col">30</td>
+                      <td class="calendar__col">31</td>
+                      <td class="calendar__col">1 апр</td>
+                      <td class="calendar__col">2</td>
+                      <td class="calendar__col">3</td>
+                      <td class="calendar__col">4</td>
+                      <td class="calendar__col">5</td>
+                    </tr>
+                  </table>
+                </article>
+                <a class="add-plan__next button-big" href="catalog.html">
+                  Следующий шаг
+                  <svg class="button-big__arrow" width="10" height="14">
+                    <use xlink:href="#arrow-svg"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <fieldset class="add-plan__step">
+            <legend class="add-plan__title">Шаг 2. Маршрут</legend>
+            <p class="add-plan__info">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+            <div class="add-plan__list route-input">
+              <div class="route-input__item">
+                <select class="route-input__select" name="country">
+                  <option value="Босня и Герцеговина" selected>Босня и Герцеговина</option>
+                  <option value="Чехословакия">Чехословакия</option>
+                  <option value="Чехословакия">Франция</option>
+                </select>
+                <p class="route-input__pic">
+                  <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
+                  <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
+                </p>
+              </div>
+              <div class="route-input__item">
+                <select class="route-input__select" name="country">
+                  <option value="Босня и Герцеговина">Босня и Герцеговина</option>
+                  <option value="Чехословакия" selected>Чехословакия</option>
+                  <option value="Чехословакия">Франция</option>
+                </select>
+                <p class="route-input__pic">
+                  <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехословакия">
+                  <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
+                </p>
+              </div>
+              <div class="route-input__item">
+                <select class="route-input__select route-input__select--wide" name="country">
+                  <option selected>Выбирите страну</option>
+                  <option value="Босня и Герцеговина">Босня и Герцеговина</option>
+                  <option value="Чехословакия">Чехословакия</option>
+                  <option value="Чехословакия">Франция</option>
+                </select>
+                <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
+              </div>
+              <div class="route-input__item">
+                <select class="route-input__select route-input__select--wide" name="country">
+                  <option selected>Добавить страну</option>
+                  <option value="Босня и Герцеговина">Босня и Герцеговина</option>
+                  <option value="Чехословакия">Чехословакия</option>
+                  <option value="Франция">Франция</option>
+                </select>
+              </div>
+            </div>
             <a class="add-plan__next button" href="#">Следующий шаг</a>
-          </div>
-        </fieldset>
-        <fieldset class="add-plan__step">
-          <legend class="add-plan__title">Шаг 2. Маршрут</legend>
-          <p class="add-plan__info">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-          <div class="add-plan__list route-input">
-            <div class="route-input__item">
-              <select class="route-input__select" name="country">
-                <option value="Босня и Герцеговина" selected>Босня и Герцеговина</option>
-                <option value="Чехословакия">Чехословакия</option>
-                <option value="Чехословакия">Франция</option>
-              </select>
-              <p class="route-input__pic">
-                <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
-                <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
-              </p>
+            <a class="add-plan__back" href="#">На шаг назад</a>
+          </fieldset>
+          <fieldset class="add-plan__step">
+            <legend class="add-plan__title">Шаг 3. Развлечения</legend>
+            <p class="add-plan__info">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <div class="add-plan__list">
+              <div class="add-plan__item">
+                <p class="add-plan__item-top">
+                  <span class="add-plan__item-title">Босния и герцегови</span>
+                  <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
+                </p>
+                <textarea name="plan" placeholder="План действий"></textarea>
+              </div>
+              <div class="add-plan__item">
+                <p class="add-plan__item-top">
+                  <span class="add-plan__item-title">Чехославвакия</span>
+                  <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехославвакия">
+                </p>
+                <textarea name="plan" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+              </div>
             </div>
-            <div class="route-input__item">
-              <select class="route-input__select" name="country">
-                <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-                <option value="Чехословакия" selected>Чехословакия</option>
-                <option value="Чехословакия">Франция</option>
-              </select>
-              <p class="route-input__pic">
-                <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехословакия">
-                <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
-              </p>
-            </div>
-            <div class="route-input__item">
-              <select class="route-input__select route-input__select--wide" name="country">
-                <option selected>Выбирите страну</option>
-                <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-                <option value="Чехословакия">Чехословакия</option>
-                <option value="Чехословакия">Франция</option>
-              </select>
-              <button class="route-input__close" type="button"><span class="visually-hidden">Убрать маршрут</span></button>
-            </div>
-            <div class="route-input__item">
-              <select class="route-input__select route-input__select--wide" name="country">
-                <option selected>Добавить страну</option>
-                <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-                <option value="Чехословакия">Чехословакия</option>
-                <option value="Франция">Франция</option>
-              </select>
-            </div>
-          </div>
-          <a class="add-plan__next button" href="#">Следующий шаг</a>
-          <a class="add-plan__back" href="#">На шаг назад</a>
-        </fieldset>
-        <fieldset class="add-plan__step">
-          <legend class="add-plan__title">Шаг 3. Развлечения</legend>
-          <p class="add-plan__info">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-          <div class="add-plan__list">
-            <div class="add-plan__item">
-              <p class="add-plan__item-top">
-                <span class="add-plan__item-title">Босния и герцегови</span>
-                <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Босня и Герцеговина">
-              </p>
-              <textarea name="plan" placeholder="План действий"></textarea>
-            </div>
-            <div class="add-plan__item">
-              <p class="add-plan__item-top">
-                <span class="add-plan__item-title">Чехославвакия</span>
-                <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24" alt="Флаг Чехославвакия">
-              </p>
-              <textarea name="plan" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
-            </div>
-          </div>
-          <button class="add-plan__next button" type="submit">Отправить</button>
-          <a class="add-plan__back" href="#">На шаг назад</a>
-        </fieldset>
+            <button class="add-plan__next button" type="submit">Отправить</button>
+            <a class="add-plan__back" href="#">На шаг назад</a>
+          </fieldset>
+        </div>
+      </div>
     </section>
   </form>
 </main>

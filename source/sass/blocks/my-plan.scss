@@ -28,6 +28,10 @@
   @media (min-width: $breakpoint-tablet) {
     padding: 0 35px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-left: 65px;
+  }
 }
 
 .my-plan__title {

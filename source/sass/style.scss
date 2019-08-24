@@ -29,8 +29,11 @@
 @import "blocks/indicator";
 @import "blocks/like";
 @import "blocks/check";
+@import "blocks/check-big";
 @import "blocks/level-range";
 @import "blocks/level-module";
+@import "blocks/counter-input";
+@import "blocks/calendar";
 
 /* Навигации
    ========================================================================== */
@@ -59,3 +62,4 @@
 @import "blocks/tariff-popup";
 @import "blocks/user-setting";
 @import "blocks/my-plan";
+@import "blocks/add-plan";

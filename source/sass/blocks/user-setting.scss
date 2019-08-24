@@ -5,6 +5,15 @@
 .user-setting {
   padding-top: 20px;
   padding-bottom: 30px;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 0;
+  }
 }
 
 .user-setting__container {
@@ -19,13 +28,12 @@
 
   @media (min-width: $breakpoint-tablet) {
     align-items: flex-start;
-    padding: 65px 35px 0;
+    padding: 0 35px;
   }
 
   @media (min-width: $breakpoint-desktop) {
     justify-content: flex-end;
     margin-top: -190px;
-    padding: 0;
     padding-left: 65px;
   }
 }
@@ -189,6 +197,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-radius: 0 0 5px 5px;
   }
 }
