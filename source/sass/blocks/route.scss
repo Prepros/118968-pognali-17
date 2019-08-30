@@ -4,6 +4,26 @@
 
 .route {
   @include reset-ul;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 40px;
+  }
+}
+
+.route::after {
+  @media (min-width: $breakpoint-tablet) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 395px;
+
+    width: 1px;
+    height: 115%;
+
+    background-image: linear-gradient(to bottom,#dfe3f0 86%,#fff 100%);
+  }
 }
 
 .route__item {
@@ -17,16 +37,24 @@
     margin-bottom: 0;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -17px;
-    right: 50px;
+  @media (min-width: $breakpoint-tablet) {
+    min-height: 70px;
+  }
+}
 
-    width: 5px;
-    height: 10px;
+.route__item::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  right: 50px;
 
-    background: url("../img/icons/small-arrow.svg") no-repeat;
+  width: 5px;
+  height: 10px;
+
+  background: url("../img/icons/small-arrow.svg") no-repeat;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
   }
 }
 
@@ -36,8 +64,11 @@
 
 .route__item--add {
   background-color: $white-color--blue;
-  border: 1px solid transparent;
   border-radius: 5px;
+
+  @media (min-width: $breakpoint-tablet) {
+    background: transparent;
+  }
 }
 
 .route__country {
@@ -52,23 +83,30 @@
   border: 1px solid #cbced9;
   border-radius: 5px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    right: -4px;
-
-    width: 8px;
-    height: 8px;
-
-    background-color: $blue-color--light;
-    border-radius: 50%;
+  @media (min-width: $breakpoint-tablet) {
+    width: 370px;
+    padding: 20px 25px;
   }
 }
 
-.route__item--select .route__country::before,
-.route__item--add .route__country::before {
-  background-color: transparent;
-  border: 1px solid #ced0db;
+.route__country::before {
+  content: "";
+  position: absolute;
+  right: -4px;
+  z-index: 1;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: $blue-color--light;
+  border-radius: 50%;
+
+  @media (min-width: $breakpoint-tablet) {
+    right: -34px;
+
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .route__item--select .route__country,
@@ -77,8 +115,34 @@
   border-radius: 5px 0 0 5px;
 }
 
+.route__item--select .route__country {
+  @media (min-width: $breakpoint-tablet) {
+    border: 1px solid #cbced9;
+    border-radius: 5px;
+  }
+}
+
+.route__item--select .route__country::before,
+.route__item--add .route__country::before {
+  border: 1px solid #ced0db;
+}
+
+.route__item--select .route__country::before {
+  background-color: $white-color;
+}
+
+.route__item--add .route__country::before {
+  background-color: $white-color--blue;
+}
+
 .route__item--add .route__country {
   border: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $white-color--blue;
+    border: 1px solid transparent;
+    border-radius: 5px;
+  }
 }
 
 .route__country-name {
@@ -107,6 +171,13 @@
 
     background-image: linear-gradient(to right, transparent 0, $white-color 70%);
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 295px;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
 }
 
 .route__item--select .route__country-name::after,
@@ -125,19 +196,29 @@
   background-color: transparent;
   border: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  @media (min-width: $breakpoint-tablet) {
+    width: 17px;
+    height: 17px;
+  }
+}
 
-    width: 12px;
-    height: 7px;
+.route__country-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    background: url("../img/icons/dropdown-form.svg") no-repeat;
-    opacity: 0.3;
+  width: 12px;
+  height: 7px;
 
-    transform: translate(-50%, -50%);
+  background: url("../img/icons/dropdown-form.svg") no-repeat;
+  opacity: 0.3;
+
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 17px;
+    height: 9px;
   }
 }
 
@@ -158,6 +239,13 @@
 .route__item--add .route__country-btn {
   left: auto;
   right: -52px;
+}
+
+.route__item--select .route__country-btn,
+.route__item--add .route__country-btn {
+  @media (min-width: $breakpoint-tablet) {
+    right: auto;
+  }
 }
 
 .route__country-btn--add {
@@ -181,6 +269,14 @@
   border: 1px solid #cbced9;
   border-left: none;
   border-radius: 5px;
+
+  @media (min-width: $breakpoint-tablet) {
+    justify-content: flex-start;
+    width: 110px;
+    margin-left: auto;
+
+    border: none;
+  }
 }
 
 .route__item--select .route__flag,
@@ -198,7 +294,15 @@
   border: none;
 }
 
-.route__flag-img {}
+.route__flag-img {
+  width: 35px;
+  height: 24px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 70px;
+    height: 47px;
+  }
+}
 
 .route__flag-btn {
   position: absolute;
@@ -213,19 +317,34 @@
   border: none;
   border-radius: 50%;
 
-  &::before {
-    content: "";
-    position: absolute;
+  @media (min-width: $breakpoint-tablet) {
     top: 50%;
-    left: 50%;
+    right: -5px;
 
-    width: 9px;
-    height: 9px;
+    background-color: transparent;
+    transform: translateY(-50%);
+  }
+}
 
-    background: url("../img/icons/small-cross.svg") no-repeat;
-    opacity: 0.3;
+.route__flag-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+
+  background: url("../img/icons/small-cross.svg") no-repeat;
+  opacity: 0.3;
+
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 18px;
+    height: 18px;
+
+    opacity: 0.2;
   }
 }
 
@@ -248,6 +367,13 @@
   z-index: 2;
 
   min-height: 508px;
+
+  box-shadow: 0 20px 50px rgba($blue-color--light, 0.1);
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 370px;
+    min-height: auto;
+  }
 }
 
 .route__modal-head {
@@ -262,6 +388,10 @@
 
   background-color: $blue-color--light;
   border-radius: 5px 5px 0 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 20px 25px;
+  }
 }
 
 .route__modal-action {
@@ -273,6 +403,11 @@
   color: $white-color;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 18px;
+  }
 }
 
 .route__modal-btn {
@@ -285,18 +420,28 @@
 
   background: none;
   border: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .route__modal-svg {
   width: 9px;
   height: 9px;
 
-  fill: rgba($white-color, 0.3);
+  fill: $white-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .route__modal-btn:hover .route__modal-svg,
 .route__modal-btn:focus .route__modal-svg {
-  fill: $white-color;
+  fill: rgba($white-color, 0.3);
 }
 
 .route__modal-btn:active .route__modal-svg {
@@ -308,6 +453,15 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 1px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: 0;
+    padding: 34px 27px;
+
+    background-color: $white-color;
+    border-right: 1px solid #eaecf2;
+    border-radius: 0 0 0 5px;
+  }
 }
 
 .route__modal-letter {
@@ -326,6 +480,24 @@
 
   &--active {
     background-color: $white-color--blue;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 53px;
+    height: 70px;
+
+    &:nth-child(5n) {
+      width: 53px;
+    }
+
+    &:nth-child(6n) {
+      width: 55px;
+    }
+
+    &--active {
+      color: $white-color;
+      background-color: $blue-color--light;
+    }
   }
 }
 
@@ -347,6 +519,17 @@
   &:focus {
     background-color: $white-color--blue;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 18px;
+  }
+}
+
+.route__modal-letter--active .route__modal-abr {
+  @media (min-width: $breakpoint-tablet) {
+    color: $white-color;
+  }
 }
 
 .route__modal-list {
@@ -363,6 +546,19 @@
   border: 1px solid #cbced9;
   border-top: none;
   border-radius: 0 0 5px 5px;
+
+  @media (min-width: $breakpoint-tablet) {
+    top: 60px;
+    right: -205px;
+    left: auto;
+
+    width: 205px;
+    min-height: 413px;
+    padding: 30px 25px 0;
+
+    border: none;
+    box-shadow: 50px 20px 50px rgba(29, 46, 91, 0.1);
+  }
 }
 
 .route__modal-letter--active .route__modal-list {
@@ -381,4 +577,9 @@
   color: $grey-color;
   text-decoration: none;
   text-transform: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

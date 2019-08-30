@@ -407,4 +407,8 @@
 
 .add-plan__route {
   margin-bottom: 25px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 50px;
+  }
 }
