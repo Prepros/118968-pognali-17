@@ -83,14 +83,6 @@
   color: $grey-color;
 }
 
-.calendar__row span {
-  display: none;
-
-  @media (min-width: $breakpoint-tablet) {
-    display: inline-block;
-  }
-}
-
 .calendar__row th,
 .calendar__row td {
   width: 30px;
@@ -203,5 +195,13 @@
   @media (min-width: $breakpoint-desktop) {
     display: block;
     width: 100%;
+  }
+}
+
+.calendar__mounth {
+  display: none;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: inline-block;
   }
 }

@@ -36,6 +36,34 @@
   &--bold {
     border: 3px solid $blue-color;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 30px 35px 27px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+}
+
+.button-big--transparent {
+  padding: 0;
+  padding-left: 35px;
+
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: rgba($blue-color--light, 0.7);
+    background-color: transparent;
+  }
+
+  &:active {
+    color: rgba($blue-color--light, 0.3);
+  }
 }
 
 .button-big__arrow {
@@ -49,6 +77,19 @@
   transform: translateY(-50%);
 
   fill: $blue-color--light;
+
+  @media (min-width: $breakpoint-tablet) {
+    right: 35px;
+    top: 50%;
+  }
+}
+
+.button-big__arrow--rotate {
+  top: 6px;
+  left: 0;
+  right: auto;
+
+  transform: rotate(180deg);
 }
 
 .button-big:active .button-big__arrow {
@@ -57,30 +98,8 @@
 
 .button-big__text {
   display: none;
-}
 
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .button-big {
-    padding: 30px 35px 27px;
-
-    font-size: 24px;
-    line-height: 24px;
-
-    border-radius: 20px;
-  }
-
-  .button-big__arrow {
-    right: 35px;
-    top: 50%;
-  }
-}
-
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .button-big__text {
+  @media (min-width: $breakpoint-desktop) {
     display: inline-block;
   }
 }

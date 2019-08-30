@@ -1,0 +1,384 @@
+/* ==========================================================================
+   Направления стран
+   ========================================================================== */
+
+.route {
+  @include reset-ul;
+}
+
+.route__item {
+  position: relative;
+
+  display: flex;
+  min-height: 42px;
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: 50px;
+
+    width: 5px;
+    height: 10px;
+
+    background: url("../img/icons/small-arrow.svg") no-repeat;
+  }
+}
+
+.route__item:last-child::after {
+  display: none;
+}
+
+.route__item--add {
+  background-color: $white-color--blue;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.route__country {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 168px;
+  padding: 10px 13px 10px 11px;
+
+  border: 1px solid #cbced9;
+  border-radius: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -4px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: $blue-color--light;
+    border-radius: 50%;
+  }
+}
+
+.route__item--select .route__country::before,
+.route__item--add .route__country::before {
+  background-color: transparent;
+  border: 1px solid #ced0db;
+}
+
+.route__item--select .route__country,
+.route__item--add .route__country {
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.route__item--add .route__country {
+  border: none;
+}
+
+.route__country-name {
+  position: relative;
+
+  width: 130px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $blue-color--light;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+
+    width: 30px;
+    height: 100%;
+
+    background-image: linear-gradient(to right, transparent 0, $white-color 70%);
+  }
+}
+
+.route__item--select .route__country-name::after,
+.route__item--add .route__country-name::after {
+  display: none;
+}
+
+.route__country-btn {
+  position: relative;
+  z-index: 1;
+
+  width: 12px;
+  height: 12px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 12px;
+    height: 7px;
+
+    background: url("../img/icons/dropdown-form.svg") no-repeat;
+    opacity: 0.3;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.route__country-btn:hover,
+.route__country-btn:focus {
+  &::before {
+    opacity: 0.6;
+  }
+}
+
+.route__country-btn:active {
+  &::before {
+    opacity: 0.2;
+  }
+}
+
+.route__item--select .route__country-btn,
+.route__item--add .route__country-btn {
+  left: auto;
+  right: -52px;
+}
+
+.route__country-btn--add {
+  width: 14px;
+  height: 14px;
+
+  &::before {
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../img/icons/qty-plus.svg");
+  }
+}
+
+.route__flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+
+  border: 1px solid #cbced9;
+  border-left: none;
+  border-radius: 5px;
+}
+
+.route__item--select .route__flag,
+.route__item--add .route__flag {
+  border-radius: 0 5px 5px 0;
+}
+
+.route__item--select .route__flag::before,
+.route__item--add .route__flag::before {
+  background-color: transparent;
+  border: 1px solid #ced1db;
+}
+
+.route__item--add .route__flag {
+  border: none;
+}
+
+.route__flag-img {}
+
+.route__flag-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  width: 21px;
+  height: 21px;
+  padding: 0;
+
+  background-color: $white-color--blue;
+  border: none;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 9px;
+    height: 9px;
+
+    background: url("../img/icons/small-cross.svg") no-repeat;
+    opacity: 0.3;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.route__flag-btn:hover,
+.route__flag-btn:focus {
+  &::before {
+    opacity: 0.4;
+  }
+}
+
+.route__flag-btn:active {
+  &::before {
+    opacity: 0.2;
+  }
+}
+
+.route__modal {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+
+  min-height: 508px;
+}
+
+.route__modal-head {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 13px 10px;
+
+  background-color: $blue-color--light;
+  border-radius: 5px 5px 0 0;
+}
+
+.route__modal-action {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $white-color;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.route__modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+
+  background: none;
+  border: none;
+}
+
+.route__modal-svg {
+  width: 9px;
+  height: 9px;
+
+  fill: rgba($white-color, 0.3);
+}
+
+.route__modal-btn:hover .route__modal-svg,
+.route__modal-btn:focus .route__modal-svg {
+  fill: $white-color;
+}
+
+.route__modal-btn:active .route__modal-svg {
+  fill: rgba($white-color, 0.5);
+}
+
+.route__modal-letters {
+  @include reset-ul;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1px;
+}
+
+.route__modal-letter {
+  flex-grow: 1;
+  width: 44px;
+  height: 42px;
+  margin-top: -1px;
+  margin-left: -1px;
+
+  background: $white-color;
+  border: 1px solid #cbced9;
+
+  &:nth-child(5n) {
+    width: 43px;
+  }
+
+  &--active {
+    background-color: $white-color--blue;
+  }
+}
+
+.route__modal-abr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $blue-color--light;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $white-color--blue;
+  }
+}
+
+.route__modal-list {
+  @include reset-ul;
+  position: absolute;
+  left: 0;
+  top: 288px;
+
+  display: none;
+  width: 100%;
+  padding: 10px 19px;
+
+  background: $white-color;
+  border: 1px solid #cbced9;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.route__modal-letter--active .route__modal-list {
+  display: block;
+}
+
+.route__modal-item {
+
+}
+
+.route__modal-name {
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: normal;
+  letter-spacing: 0;
+  color: $grey-color;
+  text-decoration: none;
+  text-transform: none;
+}

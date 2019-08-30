@@ -19,7 +19,7 @@
 }
 
 .add-plan__container {
-
+  //
 }
 
 .add-plan__wrapp {
@@ -217,11 +217,12 @@
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-wrap: wrap;
+
+    border-top: 1px solid #d6d9e6;
   }
 
   @media (min-width: $breakpoint-desktop) {
     padding-top: 30px;
-    border-top: 1px solid #d6d9e6;
   }
 }
 
@@ -244,8 +245,6 @@
 
     font-size: 20px;
     line-height: 18px;
-
-    border-top: 1px solid #d6d9e6;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -270,6 +269,8 @@
   @media (min-width: $breakpoint-tablet) {
     order: 3;
     margin-bottom: 60px;
+
+    border-top: 1px solid #d6d9e6;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -282,8 +283,6 @@
   @media (min-width: $breakpoint-tablet) {
     order: 2;
     padding: 0;
-
-    border: none;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -343,11 +342,21 @@
   }
 }
 
-.add-plan__next {
+.add-plan__button-wrapp {
   order: 5;
 
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.add-plan__button-next {
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
+    margin-bottom: 12px;
     padding: 5px 30px;
 
     font-size: 17px;
@@ -360,6 +369,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     max-width: 286px;
+    margin-bottom: 0;
     padding: 25px 76px 25px 35px;
 
     font-size: 24px;
@@ -370,10 +380,31 @@
   }
 }
 
-.add-plan__next .button-big__arrow {
+.add-plan__button-next .button-big__arrow,
+.add-plan__button-down .button-big__arrow {
   display: none;
 
   @media (min-width: $breakpoint-tablet) {
     display: block;
   }
+}
+
+.add-plan__button-down {
+  width: 100%;
+  padding: 0;
+
+  text-align: center;
+
+  background-color: transparent;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: auto;
+    padding-left: 35px;
+
+    text-transform: none;
+  }
+}
+
+.add-plan__route {
+  margin-bottom: 25px;
 }
