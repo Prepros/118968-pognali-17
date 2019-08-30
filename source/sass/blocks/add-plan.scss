@@ -419,3 +419,143 @@
     margin-bottom: 60px;
   }
 }
+
+.add-plan__country {
+  @include reset-ul;
+  margin-bottom: 22px;
+}
+
+.add-plan__country-item {
+  position: relative;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.add-plan__country-item::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -12px;
+
+  width: 15px;
+  height: 110%;
+
+  border: 2px solid $blue-color--light;
+  border-right-color: transparent;
+}
+
+.add-plan__country-head {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add-plan__country-item:last-child::before {
+  display: none;
+}
+
+.add-plan__country-name {
+  position: relative;
+
+  width: 100%;
+  padding-left: 12px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $blue-color--light;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+}
+
+.add-plan__country-name::before {
+  top: 50%;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: $blue-color--light;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.add-plan__country-name::after {
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent 0, $white-color 70%);
+}
+
+.add-plan__country-flag {
+  width: 35px;
+  height: 24px;
+}
+
+.add-plan__country-content {
+  position: relative;
+  margin: 0;
+}
+
+.add-plan__country-input {
+  @include placeholder {
+    color: rgba($grey-color, 0.3);
+  }
+  width: 100%;
+  min-height: 220px;
+  padding: 5px 15px;
+
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: normal;
+  color: $grey-color;
+
+  border: 1px solid #cbced9;
+  border-radius: 3px;
+  resize: none;
+  outline: none;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $blue-color--dark;
+  }
+}
+
+.add-plan__country-content--error .add-plan__country-input {
+  border-color: #f47e7e;
+}
+
+.add-plan__country-error {
+  position: absolute;
+  left: 1px;
+  bottom: 7px;
+
+  display: none;
+  width: 218px;
+  padding: 5px 15px;
+
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: normal;
+  color: #ff0000;
+
+  background-color: #ffefef;
+}
+
+.add-plan__country-content--error .add-plan__country-error {
+  display: block;
+}

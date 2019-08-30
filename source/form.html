@@ -1269,93 +1269,63 @@
             </div>
           </div>
 
-          <hr>
-          <fieldset class="add-plan__step">
-            <legend class="add-plan__title">Шаг 2. Маршрут</legend>
-            <p class="add-plan__info">
-              Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.
-            </p>
-            <div class="add-plan__list route-input">
-              <div class="route-input__item">
-                <select class="route-input__select" name="country">
-                  <option value="Босня и Герцеговина" selected>Босня и Герцеговина</option>
-                  <option value="Чехословакия">Чехословакия</option>
-                  <option value="Чехословакия">Франция</option>
-                </select>
-                <p class="route-input__pic">
-                  <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24"
-                       alt="Флаг Босня и Герцеговина">
-                  <button class="route-input__close" type="button">
-                    <span class="visually-hidden">Убрать маршрут</span>
-                  </button>
-                </p>
-              </div>
-              <div class="route-input__item">
-                <select class="route-input__select" name="country">
-                  <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-                  <option value="Чехословакия" selected>Чехословакия</option>
-                  <option value="Чехословакия">Франция</option>
-                </select>
-                <p class="route-input__pic">
-                  <img class="route-input__img img-flag" src="http://placehold.it/35x24" width="35" height="24"
-                       alt="Флаг Чехословакия">
-                  <button class="route-input__close" type="button">
-                    <span class="visually-hidden">Убрать маршрут</span>
-                  </button>
-                </p>
-              </div>
-              <div class="route-input__item">
-                <select class="route-input__select route-input__select--wide" name="country">
-                  <option selected>Выбирите страну</option>
-                  <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-                  <option value="Чехословакия">Чехословакия</option>
-                  <option value="Чехословакия">Франция</option>
-                </select>
-                <button class="route-input__close" type="button">
-                  <span class="visually-hidden">Убрать маршрут</span>
-                </button>
-              </div>
-              <div class="route-input__item">
-                <select class="route-input__select route-input__select--wide" name="country">
-                  <option selected>Добавить страну</option>
-                  <option value="Босня и Герцеговина">Босня и Герцеговина</option>
-                  <option value="Чехословакия">Чехословакия</option>
-                  <option value="Франция">Франция</option>
-                </select>
-              </div>
-            </div>
-            <a class="add-plan__next button" href="#">Следующий шаг</a>
-            <a class="add-plan__back" href="#">На шаг назад</a>
-          </fieldset>
-          <fieldset class="add-plan__step">
-            <legend class="add-plan__title">Шаг 3. Развлечения</legend>
-            <p class="add-plan__info">
-              Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-            </p>
-            <div class="add-plan__list">
-              <div class="add-plan__item">
-                <p class="add-plan__item-top">
-                  <span class="add-plan__item-title">Босния и герцегови</span>
-                  <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24"
-                       alt="Флаг Босня и Герцеговина">
-                </p>
-                <textarea name="plan" placeholder="План действий"></textarea>
-              </div>
-              <div class="add-plan__item">
-                <p class="add-plan__item-top">
-                  <span class="add-plan__item-title">Чехославвакия</span>
-                  <img class="add-plan__item-img img-flag" src="http://placehold.it/35x24" width="35" height="24"
-                       alt="Флаг Чехославвакия">
-                </p>
-                <textarea name="plan" placeholder="План действий">
-Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+          <div class="add-plan__step">
+            <div class="add-plan__step-wrapp">
+              <header class="add-plan__header">
+                <div class="add-plan__header-info">
+                  <h3 class="add-plan__step-title">Шаг 3.<br> Развлечения</h3>
+                  <p class="add-plan__info">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме
+                    и ставить тэги.</p>
+                </div>
+                <ol class="add-plan__header-list">
+                  <li class="add-plan__header-item">Даты</li>
+                  <li class="add-plan__header-item add-plan__header-item--active">Маршрут</li>
+                  <li class="add-plan__header-item">Развлечения</li>
+                </ol>
+              </header>
+              <div class="add-plan__content">
+                <ul class="add-plan__country">
+                  <li class="add-plan__country-item">
+                    <label class="add-plan__country-head" for="country1">
+                      <span class="add-plan__country-name">Босния и Герцеговина</span>
+                      <img class="add-plan__country-flag img-flag" src="img/flags/flag-bosnia.svg" width="35" height="24"
+                         alt="Флаг Босня и Герцеговина">
+                    </label>
+                    <p class="add-plan__country-content add-plan__country-content--error">
+                      <textarea class="add-plan__country-input" id="country1" name="select-country[]" placeholder="План действий"></textarea>
+                      <span class="add-plan__country-error">Это поле должно быть заполнено</span>
+                    </p>
+                  </li>
+                  <li class="add-plan__country-item">
+                    <label class="add-plan__country-head" for="country1">
+                      <span class="add-plan__country-name">Чехословакия</span>
+                      <img class="add-plan__country-flag img-flag" src="img/flags/flag-czech.svg" width="35" height="24"
+                         alt="Флаг Чехословакии">
+                    </label>
+                    <p class="add-plan__country-content">
+                      <textarea class="add-plan__country-input" id="country1" name="select-country[]"
+                                placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+                      <span class="add-plan__country-error">Это поле должно быть заполнено</span>
+                    </p>
+                  </li>
+                </ul>
+                <div class="add-plan__button-wrapp">
+                  <a class="add-plan__button-next button-big" href="catalog.html">
+                    Следующий шаг
+                    <svg class="button-big__arrow" width="10" height="14">
+                      <use xlink:href="#arrow-svg"></use>
+                    </svg>
+                  </a>
+                  <a class="add-plan__button-down button-big button-big--transparent" href="catalog.html">
+                    На шаг назад
+                    <svg class="button-big__arrow button-big__arrow--rotate" width="10" height="14">
+                      <use xlink:href="#arrow-svg"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
-            <button class="add-plan__next button" type="submit">
-              Отправить
-            </button>
-            <a class="add-plan__back" href="#">На шаг назад</a>
-          </fieldset>
+          </div>
         </div>
       </div>
     </section>
