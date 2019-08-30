@@ -267,3 +267,38 @@ for (var i = 0; i < levelModule.length; i++) {
     circle.setAttribute("style", "stroke-dasharray: " + c + "; stroke-dashoffset: " + pct);
   }
 }
+
+/**
+ * Выбрать страну
+ **/
+
+var routeCountryBtn = document.querySelectorAll(".route__country-btn");
+var routeModal = document.querySelector(".route__modal");
+var routeModalBtn = document.querySelector(".route__modal-btn");
+
+if (routeCountryBtn && routeModal) {
+  for (i = 0; i < routeCountryBtn.length; i++) {
+    routeCountryBtn[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+
+      if (routeModal.classList.contains("route__modal--show")) {
+        routeModal.classList.remove("route__modal--show");
+      } else {
+        routeModal.classList.add("route__modal--show");
+      }
+    });
+  }
+
+  if (routeModalBtn) {
+    routeModalBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+
+      if (routeModal.classList.contains("route__modal--show")) {
+        routeModal.classList.remove("route__modal--show");
+      } else {
+        routeModal.classList.add("route__modal--show");
+      }
+    });
+  }
+}
+

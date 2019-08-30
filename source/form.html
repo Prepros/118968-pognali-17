@@ -138,14 +138,14 @@
                srcset="img/mobile/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
         </picture>
       </a>
-      <button class="page-header__toggle page-header__toggle--open">
+      <button class="page-header__toggle page-header__toggle--open" type="button">
         <span class="visually-hidden">Открыть меню</span>
         <svg class="page-header__toggle-icon" width="25" height="25" role="presentation" aria-label="Открыть меню"
              aria-hidden="true" focusable="false">
           <use xlink:href="#menu-svg"></use>
         </svg>
       </button>
-      <button class="page-header__toggle page-header__toggle--close">
+      <button class="page-header__toggle page-header__toggle--close" type="button">
         <span class="visually-hidden">Закрыть меню</span>
         <svg class="page-header__toggle-icon" width="19" height="19" role="presentation" aria-label="Закрыть меню"
              aria-hidden="true" focusable="false">
@@ -379,13 +379,13 @@
                   <b class="add-plan__item-title">Ищу попутчиков:</b>
                   <span class="add-plan__item-desc">Чел.</span>
                   <p class="add-plan__item-counter counter-input">
-                    <button class="counter-input__button counter-input__button--minus">
+                    <button class="counter-input__button counter-input__button--minus" type="button">
                       <span class="visually-hidden">отнять</span>
                     </button>
                     <label class="visually-hidden" for="count-person">Добавить/убавить попутчиков</label>
                     <input class="counter-input__text" id="count-person" type="text" name="count-person" placeholder="0"
                            value="2">
-                    <button class="counter-input__button counter-input__button--plus">
+                    <button class="counter-input__button counter-input__button--plus" type="button">
                       <span class="visually-hidden">прибавить</span>
                     </button>
                   </p>
@@ -394,12 +394,12 @@
                   <b class="add-plan__item-title">Длительность:</b>
                   <span class="add-plan__item-desc">Дн.</span>
                   <p class="add-plan__item-counter counter-input">
-                    <button class="counter-input__button counter-input__button--minus">
+                    <button class="counter-input__button counter-input__button--minus" type="button">
                       <span class="visually-hidden">отнять</span>
                     </button>
                     <label class="visually-hidden" for="count-day">Добавить/убавить дни</label>
                     <input class="counter-input__text" id="count-day" type="text" name="count-day" placeholder="0" value="2">
-                    <button class="counter-input__button counter-input__button--plus">
+                    <button class="counter-input__button counter-input__button--plus" type="button">
                       <span class="visually-hidden">прибавить</span>
                     </button>
                   </p>
@@ -418,11 +418,11 @@
                 </p>
                 <article class="add-plan__calendar calendar">
                   <header class="calendar__head">
-                    <button class="calendar__button calendar__button--left">
+                    <button class="calendar__button calendar__button--left" type="button">
                       <span class="visually-hidden">Назад</span>
                     </button>
                     <h2 class="calendar__title">Март 2019</h2>
-                    <button class="calendar__button calendar__button--right">
+                    <button class="calendar__button calendar__button--right" type="button">
                       <span class="visually-hidden">Вперед</span>
                     </button>
                   </header>
@@ -530,14 +530,14 @@
                   <li class="route__item">
                     <div class="route__country">
                       <h3 class="route__country-name">Босния и Герцеговина</h3>
-                      <button class="route__country-btn">
+                      <button class="route__country-btn" type="button">
                         <span class="visually-hidden">Выбрать страну</span>
                       </button>
                     </div>
                     <div class="route__flag">
                       <img class="route__flag-img img-flag" src="img/flags/flag-bosnia.svg" width="35" height="24"
                            alt="Флаг Босня и Герцеговина">
-                      <button class="route__flag-btn">
+                      <button class="route__flag-btn" type="button">
                         <span class="visually-hidden">Удалить страну</span>
                       </button>
                     </div>
@@ -545,14 +545,14 @@
                   <li class="route__item">
                     <div class="route__country">
                       <h3 class="route__country-name">Чехословакия</h3>
-                      <button class="route__country-btn">
+                      <button class="route__country-btn" type="button">
                         <span class="visually-hidden">Выбрать страну</span>
                       </button>
                     </div>
                     <div class="route__flag">
                       <img class="route__flag-img img-flag" src="img/flags/flag-czech.svg" width="35" height="24"
                            alt="Флаг Чехословакии">
-                      <button class="route__flag-btn">
+                      <button class="route__flag-btn" type="button">
                         <span class="visually-hidden">Удалить страну</span>
                       </button>
                     </div>
@@ -565,14 +565,14 @@
                       </button>
                     </div>
                     <div class="route__flag">
-                      <button class="route__flag-btn">
+                      <button class="route__flag-btn" type="button">
                         <span class="visually-hidden">Удалить страну</span>
                       </button>
                     </div>
-                    <div style="display: none;" class="route__modal">
+                    <div class="route__modal">
                       <header class="route__modal-head">
                         <h3 class="route__modal-action">Выберите страну</h3>
-                        <button class="route__modal-btn">
+                        <button class="route__modal-btn" type="button">
                           <span class="visually-hidden">Добавить страну</span>
                           <svg class="route__modal-svg" width="9" height="9" role="presentation"
                                aria-label="Закрыть меню"
@@ -1245,7 +1245,7 @@
                   <li class="route__item route__item--add">
                     <div class="route__country">
                       <h3 class="route__country-name">Добавить страну</h3>
-                      <button class="route__country-btn route__country-btn--add">
+                      <button class="route__country-btn route__country-btn--add" type="button">
                         <span class="visually-hidden">Добавить страну</span>
                       </button>
                     </div>
@@ -1310,12 +1310,12 @@
                   </li>
                 </ul>
                 <div class="add-plan__button-wrapp">
-                  <a class="add-plan__button-next button-big" href="catalog.html">
+                  <button class="add-plan__button-next button-big" type="button">
                     Отправить
                     <svg class="button-big__arrow" width="10" height="14">
                       <use xlink:href="#arrow-svg"></use>
                     </svg>
-                  </a>
+                  </button>
                   <a class="add-plan__button-down button-big button-big--transparent" href="catalog.html">
                     На шаг назад
                     <svg class="button-big__arrow button-big__arrow--rotate" width="10" height="14">
