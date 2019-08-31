@@ -7,23 +7,14 @@
   @include reset-ul;
 }
 
-/* Элемент пользовательского меню */
-.user-menu__item {
-  //
-}
-
 /* Ссылка пользовательского меню */
 .user-menu__link {
   width: 100%;
   padding: 11px 15px 9px;
 
   border-radius: 30px;
-}
 
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .user-menu__link {
+  @media (min-width: $breakpoint-tablet) {
     min-width: 189px;
   }
 }

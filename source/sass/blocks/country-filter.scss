@@ -20,18 +20,12 @@
   }
 }
 
-.country-filter__container {
-
-}
-
+/* Обертка */
 .country-filter__main-wrapp {
   box-sizing: border-box;
 }
 
-.country-filter__main-wrapp--close {
-
-}
-
+/* Фильтр открыт */
 .country-filter__main-wrapp--open {
   padding-bottom: 27px;
 
@@ -40,6 +34,7 @@
   }
 }
 
+/* Фильтрация по континентам */
 .country-filter__continent {
   display: flex;
   justify-content: space-between;
@@ -51,6 +46,7 @@
   }
 }
 
+/* Фильтр закрыт */
 .country-filter__main-wrapp--close .country-filter__continent {
   padding-bottom: 17px;
 
@@ -59,12 +55,14 @@
   }
 }
 
+/* Фильтр открыт */
 .country-filter__main-wrapp--open .country-filter__continent {
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 55px;
   }
 }
 
+/* Заголовок сеции фильтр */
 .country-filter__continent-title {
   position: relative;
 
@@ -93,6 +91,7 @@
   }
 }
 
+/* Миниатюра заголовка */
 .country-filter__continent-title::before {
   content: "";
   position: absolute;
@@ -106,6 +105,7 @@
   transform: translateY(-50%);
 }
 
+/* Список континентов */
 .country-filter__continent-list {
   @include reset-ul;
   order: 3;
@@ -128,6 +128,7 @@
   }
 }
 
+/* Фильтр закрыт */
 .country-filter__main-wrapp--close .country-filter__continent-list {
   display: none;
 
@@ -136,6 +137,7 @@
   }
 }
 
+/* Элементы списка */
 .country-filter__continent-item {
   margin-bottom: 5px;
 
@@ -158,11 +160,13 @@
   }
 }
 
+/* Названия континентов */
 .country-filter__continent-link {
   color: rgba($blue-color, 0.3);
   text-decoration: none;
 }
 
+/* Различное состояние у названий континентов */
 .country-filter__continent-link:hover,
 .country-filter__continent-link:focus {
   color: rgba($blue-color, 0.6);
@@ -173,6 +177,7 @@
   color: $blue-color;
 }
 
+/* Кнопка показать все */
 .country-filter__continent-button {
   position: relative;
 
@@ -216,6 +221,7 @@
   }
 }
 
+/* Декоративный элемент у кнопки */
 .country-filter__continent-button::after {
   content: "";
   position: absolute;
@@ -240,28 +246,24 @@
   }
 }
 
-.country-filter__main-wrapp--close .country-filter__continent-button {
-
-}
-
-.country-filter__main-wrapp--open .country-filter__continent-button {
-
-}
-
+/* Декоративный элемент у кнопки в виде точек */
 .country-filter__main-wrapp--close .country-filter__continent-button::after {
   background-image: url("../img/icons/dots.svg");
 }
 
+/* Декоративный элемент у кнопки в виде крестика */
 .country-filter__main-wrapp--open .country-filter__continent-button::after {
   background-image: url("../img/icons/filter-close.svg");
 }
 
+/* Скрываем показываем подпись кнопки */
 .country-filter__continent-button .visually-hidden {
   @media (min-width: $breakpoint-tablet) {
     @include visually-show;
   }
 }
 
+/* Обертка списка стран */
 .country-filter__country {
   position: relative;
 
@@ -275,14 +277,18 @@
   }
 }
 
+/* Фильтр закрыт */
 .country-filter__main-wrapp--close .country-filter__country {
   display: none;
 }
 
+
+/* Фильтр открыт */
 .country-filter__main-wrapp--open .country-filter__country {
   display: block;
 }
 
+/* Спиисок стран */
 .country-filter__country-list {
   @include reset-ul;
   display: flex;
@@ -300,6 +306,7 @@
   }
 }
 
+/* Элементы списка стран */
 .country-filter__country-item {
   font-size: 14px;
   line-height: 18px;
@@ -325,18 +332,21 @@
   }
 }
 
+/* Убираем отступы */
 .country-filter__country-item:nth-of-type(5n) {
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
     margin-right: 0;
   }
 }
 
+/* Убираем отступы у самых последних 5 элементов списка */
 .country-filter__country-item:nth-last-child(-n+5) {
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
     margin-bottom: 0;
   }
 }
 
+/* Заглавная буква стран */
 .country-filter__country-letter {
   display: flex;
   justify-content: center;
@@ -368,6 +378,7 @@
   }
 }
 
+/* Различное состояние */
 .country-filter__country-item--active .country-filter__country-letter,
 .country-filter__country-letter:hover,
 .country-filter__country-letter:focus {
@@ -383,6 +394,7 @@
   }
 }
 
+/* Список стран */
 .country-filter__country-sublist {
   @include reset-ul;
   position: absolute;
@@ -405,11 +417,13 @@
   }
 }
 
+/* Показать страны активной буквы */
 .country-filter__country-item--active .country-filter__country-sublist {
   display: flex;
   flex-direction: column;
 }
 
+/* Элементы списка стран */
 .country-filter__country-subitem {
   font-size: $fz;
   line-height: $lh;
@@ -423,6 +437,7 @@
   }
 }
 
+/* Название страны */
 .country-filter__country-name {
   color: $grey-color;
   text-decoration: none;
@@ -437,6 +452,7 @@
   }
 }
 
+/* Свернуть фильтр */
 .country-filter__country-button {
   position: relative;
 
@@ -471,14 +487,17 @@
   }
 }
 
+/* Фильтр закрыт */
 .country-filter__main-wrapp--close .country-filter__country-button {
   display: none;
 }
 
+/* Фильтр открыт */
 .country-filter__main-wrapp--open .country-filter__country-button {
   display: block;
 }
 
+/* Миниатюра у кнопки */
 .country-filter__country-button::before {
   content: "";
   position: absolute;
@@ -504,6 +523,7 @@
   }
 }
 
+/* Миниатюра у кнопки */
 .country-filter__country-button:active::before {
   opacity: 0.3;
 }

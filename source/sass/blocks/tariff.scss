@@ -108,11 +108,6 @@
   margin-bottom: 0;
 }
 
-/* Обертка для таблицы прайс */
-.tariff__price {
-  //
-}
-
 /* Кнопка показать все тарифы */
 .tariff__button {
   display: flex;
@@ -141,6 +136,7 @@
   }
 }
 
+/* Разное состояние */
 .tariff__button:hover,
 .tariff__button:focus {
   color: rgba(#132576, 0.7);

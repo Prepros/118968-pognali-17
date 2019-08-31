@@ -299,16 +299,6 @@
   }
 }
 
-/* Картинка флага */
-.companion__flag-img {
-  //
-}
-
-/* Тултип обертка */
-.companion__tooltip {
-  //
-}
-
 /* Треугольник */
 .companion__tooltip:hover::before {
   top: 24px;
@@ -363,11 +353,6 @@
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 25px;
   }
-}
-
-/* Транспорт обертка */
-.companion__transport {
-  //
 }
 
 .companion__transport .transport__item {

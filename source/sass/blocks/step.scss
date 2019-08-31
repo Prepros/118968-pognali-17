@@ -25,6 +25,7 @@
   }
 }
 
+/* Список шагов */
 .step__list {
   @include reset-ul;
   box-sizing: border-box;
@@ -36,6 +37,7 @@
   }
 }
 
+/* Элементы шагов */
 .step__item {
   position: relative;
 
@@ -171,6 +173,7 @@
   }
 }
 
+/* Текст */
 .step__text {
   display: inline-block;
   max-width: 143px;

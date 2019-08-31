@@ -11,6 +11,7 @@
   margin: 0;
 }
 
+/* Кнопки добавить-убавить */
 .counter-input__button {
   position: absolute;
   top: 50%;
@@ -40,6 +41,7 @@
   }
 }
 
+/* Убавить */
 .counter-input__button--minus {
   left: 13px;
   background-image: url("../img/icons/qty-minus-mobile.svg");
@@ -53,6 +55,7 @@
   }
 }
 
+/* Добавить */
 .counter-input__button--plus {
   right: 13px;
   background-image: url("../img/icons/qty-plus-mobile.svg");
@@ -66,6 +69,7 @@
   }
 }
 
+/* Значение */
 .counter-input__text {
   display: flex;
   width: 100%;

@@ -7,6 +7,7 @@
   width: 100%;
 }
 
+/* Верхняя часть шапки с название месяца */
 .calendar__head {
   display: flex;
   justify-content: space-between;
@@ -23,6 +24,7 @@
   }
 }
 
+/* Стрелки вперед назад */
 .calendar__button {
   width: 17px;
   height: 17px;
@@ -50,14 +52,17 @@
   }
 }
 
+/* Левая стрелка */
 .calendar__button--left {
   background-image: url("../img/icons/month-arrow-left.svg");
 }
 
+/* Правая стрелка */
 .calendar__button--right {
   background-image: url("../img/icons/month-arrow-right.svg");
 }
 
+/* Название месяца */
 .calendar__title {
   margin: 0;
 
@@ -72,17 +77,20 @@
   }
 }
 
+/* Контент календаря */
 .calendar__content {
   margin: 0 auto;
   border-collapse: collapse;
 }
 
+/* Строка календаря */
 .calendar__row {
   font-size: 14px;
   line-height: 18px;
   color: $grey-color;
 }
 
+/* Столбцы календаря */
 .calendar__row th,
 .calendar__row td {
   width: 30px;
@@ -108,6 +116,7 @@
   }
 }
 
+/* Столбцы с название недели */
 .calendar__row th {
   cursor: pointer;
 
@@ -119,10 +128,12 @@
   }
 }
 
+/* Последние 2 столбца с названием недели */
 .calendar__row th:nth-last-child(-n+2) {
   color: $orange-color--dark;
 }
 
+/* Столбцы с датами */
 .calendar__row td {
   color: rgba($grey-color, 0.3);
   border: 1px solid #cbced9;
@@ -140,6 +151,7 @@
   }
 }
 
+/* Активные для выбора столбцы */
 .calendar__row .calendar__col {
   color: $grey-color;
 
@@ -147,6 +159,7 @@
   cursor: pointer;
 }
 
+/* Активные для выбора столбцы выбранные*/
 .calendar__row .calendar__col--chosen {
   color: $white-color;
   background-color: #101d41;
@@ -156,6 +169,7 @@
   }
 }
 
+/* Обертка */
 .calendar__col--chosen div {
   display: flex;
   justify-content: center;
@@ -189,6 +203,7 @@
   }
 }
 
+/* Описательный текст */
 .calendar__col--chosen span {
   display: none;
 
@@ -198,7 +213,8 @@
   }
 }
 
-.calendar__mounth {
+/* Название месяца в дате */
+.calendar__month {
   display: none;
 
   @media (min-width: $breakpoint-desktop) {

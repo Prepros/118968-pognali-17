@@ -65,6 +65,7 @@
   }
 }
 
+/* Для анимации ссылки */
 .site-menu__link span {
   display: block;
   transition: transform 0.3s;
@@ -81,5 +82,3 @@
 
   transform: translate3d(0, 0, 0);
 }
-
-

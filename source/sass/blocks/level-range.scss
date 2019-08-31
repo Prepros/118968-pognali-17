@@ -16,6 +16,7 @@
   }
 }
 
+/* Обертка для полей ввода уровня */
 .level-range__level {
   display: flex;
   margin: 0;
@@ -34,6 +35,7 @@
   }
 }
 
+/* Label поля ввода */
 .level-range__min,
 .level-range__max {
   position: relative;
@@ -44,6 +46,7 @@
   z-index: 1;
 }
 
+/* Декоративные линии */
 .level-range__min::before,
 .level-range__max::before {
   content: "";
@@ -64,6 +67,7 @@
   left: 0;
 }
 
+/* Декоративная линия */
 .level-range__min::after {
   content: "";
   position: absolute;
@@ -76,6 +80,7 @@
   background-color: #cbced9;
 }
 
+/* Поле ввода уровня */
 .level-range__input {
   width: 100%;
   padding: 10px 15px;
@@ -90,10 +95,12 @@
   outline: none;
 }
 
+/* Поле минимального уровня */
 .level-range__min .level-range__input {
   border-radius: 3px 0 0 3px;
 }
 
+/* Различные состояния */
 .level-range__level .level-range__input:hover,
 .level-range__level .level-range__input:focus {
   border-color: #959bb2;
@@ -103,10 +110,12 @@
   border-color: $blue-color--dark;
 }
 
+/* Поле максимального уровня */
 .level-range__max .level-range__input {
   border-radius: 0 3px 3px 0;
 }
 
+/* Обертка ползунока уровня */
 .level-range__range {
   position: relative;
 
@@ -121,6 +130,7 @@
   }
 }
 
+/* Индикатор уровня */
 .level-range__range-scale {
   position: relative;
 
@@ -134,6 +144,7 @@
   }
 }
 
+/* Индикатор уровня подсвеченный */
 .level-range__range-bar {
   position: absolute;
   right: 0;
@@ -152,6 +163,7 @@
   }
 }
 
+/* Переключатели уровня */
 .level-range__range-toggle {
   position: absolute;
   top: -4px;
@@ -172,6 +184,7 @@
   }
 }
 
+/* Левый переключатель */
 .level-range__range-toggle--min {
   left: 66px;
 
@@ -180,10 +193,12 @@
   }
 }
 
+/* Правый переключатель */
 .level-range__range-toggle--max {
   right: 0;
 }
 
+/* Состояния переключателей */
 .level-range__range-toggle:hover,
 .level-range__range-toggle:focus {
   top: -8px;

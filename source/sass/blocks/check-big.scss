@@ -18,6 +18,7 @@
   }
 }
 
+/* Контейнер */
 .check-big__box {
   display: flex;
   align-items: center;
@@ -25,6 +26,7 @@
   cursor: pointer;
 }
 
+/* Фон чекбокса */
 .check-big__input {
   display: flex;
   justify-content: center;
@@ -43,6 +45,7 @@
   }
 }
 
+/* Иконка чекбокса */
 .check-big__svg {
   display: none;
   fill: $blue-color;
@@ -53,10 +56,12 @@
   }
 }
 
+/* Отмеченый чекбокс */
 .check-big__checkbox:checked + .check-big__box .check-big__svg {
   display: block;
 }
 
+/* Различные состояния чекбокса */
 .check-big__box:hover .check-big__input,
 .check-big__box:focus .check-big__input {
   border-color: #959bb2;
@@ -71,6 +76,7 @@
   opacity: 0.2;
 }
 
+/* Название чекбокса */
 .check-big__name {
   font-weight: normal;
   text-transform: none;

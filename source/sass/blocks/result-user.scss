@@ -6,6 +6,7 @@
   padding-bottom: 50px;
 }
 
+/* Контейнер */
 .result-user__container {
   display: flex;
   flex-direction: column;
@@ -17,6 +18,7 @@
   }
 }
 
+/* Основной контент */
 .result-user__content-main {
   order: 1;
 
@@ -26,6 +28,7 @@
   }
 }
 
+/* Сайтбар с фильтрацией */
 .result-user__user-filter {
   order: 0;
   margin-bottom: 28px;
@@ -36,6 +39,7 @@
   }
 }
 
+/* Обертка для найденых пользователей */
 .result-user__wrapp {
   box-sizing: border-box;
   margin-bottom: 18px;
@@ -49,6 +53,7 @@
   }
 }
 
+/* Блок найденого пользователя */
 .result-user__content {
   margin-bottom: 10px;
   padding-top: 15px;
@@ -74,8 +79,7 @@
   }
 }
 
-/* Первая секция с фотографией, именем и тегами
-   ========================================================================== */
+/* Первая секция с фотографией, именем и тегами */
 .result-user__head {
   display: flex;
   align-items: flex-start;
@@ -97,6 +101,7 @@
   }
 }
 
+/* Обертка для фото */
 .result-user__head-photo {
   width: 70px;
   height: 70px;
@@ -119,6 +124,7 @@
   }
 }
 
+/* Фото */
 .result-user__head-img {
   width: 70px;
   height: 70px;
@@ -140,6 +146,7 @@
   }
 }
 
+/* Оберка для описания */
 .result-user__head-wrapp {
   position: relative;
 
@@ -160,6 +167,7 @@
   }
 }
 
+/* Имя пользователя */
 .result-user__head-name {
   margin: 0;
   margin-left: 87px;
@@ -185,6 +193,7 @@
   }
 }
 
+/* Индикатор присутствия на сайте */
 .result-user__head-name .indicator {
   padding-left: 0;
   padding-right: 65px;
@@ -194,6 +203,7 @@
   }
 }
 
+/* Декоративный элемент */
 .result-user__head-name .indicator::before {
   top: 15px;
   left: auto;
@@ -209,6 +219,7 @@
   }
 }
 
+/* Ссылка на профиль пользователя */
 .result-user__head-link {
   color: $blue-color--light;
   text-decoration: none;
@@ -226,6 +237,7 @@
   }
 }
 
+/* Лайкнуть */
 .result-user__head-like {
   margin-left: 50px;
   margin-bottom: 10px;
@@ -240,6 +252,7 @@
   }
 }
 
+/* Тэги */
 .result-user__head-tags {
   margin-bottom: 15px;
   padding-left: 8px;
@@ -251,8 +264,7 @@
   }
 }
 
-/* Вторая секция со странами
-   ========================================================================== */
+/* Вторая секция со странами */
 .result-user__footer {
   margin-bottom: 10px;
 
@@ -270,6 +282,7 @@
   }
 }
 
+/* Заголовок секции */
 .result-user__title {
   position: relative;
   z-index: 1;
@@ -299,12 +312,14 @@
   }
 }
 
+/* Убрать заголовок у секции хочет посетить */
 .result-user__footer .result-user__title {
   @media (min-width: $breakpoint-desktop) {
     display: none;
   }
 }
 
+/* Заголовок у секции транспорт */
 .result-user__title-text {
   margin-left: 13px;
   margin-right: 11px;
@@ -321,6 +336,7 @@
   }
 }
 
+/* Список стран */
 .result-user__footer-flags {
   @include reset-ul;
   padding: 0 25px;
@@ -336,6 +352,7 @@
   }
 }
 
+/* Элемент списка стран */
 .result-user__footer-flag {
   display: flex;
   align-items: flex-start;
@@ -360,6 +377,7 @@
   }
 }
 
+/* Последний элемент списка стран */
 .result-user__footer-flag:last-child {
   margin-bottom: 0;
 
@@ -368,11 +386,13 @@
   }
 }
 
+/* Тултип */
 .result-user__footer-tooltip {
   margin-right: 15px;
   z-index: 20;
 }
 
+/* Разное состояние */
 .result-user__footer-tooltip:hover::before {
   top: 14px;
 }
@@ -381,6 +401,7 @@
   top: 30px;
 }
 
+/* Иконка флага */
 .result-user__footer-img {
   width: 26px;
   height: 18px;
@@ -391,12 +412,7 @@
   }
 }
 
-.result-user__footer-country {
-  //
-}
-
-/* Третья секция с транспортом и уровнем
-   ========================================================================== */
+/* Третья секция с транспортом и уровнем */
 .result-user__aside {
   display: flex;
   justify-content: space-between;
@@ -423,12 +439,14 @@
   }
 }
 
+/* Заголовок секции */
 .result-user__aside .result-user__title {
   @media (min-width: $breakpoint-tablet) {
     display: none;
   }
 }
 
+/* Левая часть */
 .result-user__aside-left {
   width: 182px;
 
@@ -443,6 +461,7 @@
   }
 }
 
+/* Список транспортов */
 .result-user__aside-transport {
   @media (min-width: $breakpoint-tablet) {
     flex-direction: column;
@@ -454,6 +473,7 @@
   }
 }
 
+/* Элементы списока транспортов */
 .result-user__aside-transport .transport__item {
   width: auto;
   height: auto;
@@ -469,6 +489,7 @@
   }
 }
 
+/* Тултипы */
 .result-user__aside-transport .transport__tooltip {
   display: flex;
   justify-content: center;
@@ -484,6 +505,7 @@
   }
 }
 
+/* Правая часть */
 .result-user__aside-right {
   width: 87px;
 
@@ -496,10 +518,12 @@
   }
 }
 
+/* Заголовок */
 .result-user__aside-right .result-user__title {
   margin-bottom: 4px;
 }
 
+/* Уровень */
 .result-user__level {
   width: 45px;
   height: 45px;
@@ -516,6 +540,7 @@
   }
 }
 
+/* Описательная часть */
 .result-user__level::before {
   top: 50%;
 
@@ -531,6 +556,7 @@
   }
 }
 
+/* Индикатор уровня */
 .result-user__level .level-module__svg {
   width: 45px;
   height: 45px;
@@ -541,6 +567,7 @@
   }
 }
 
+/* Круг */
 .result-user__level .level-module__draw {
   r: 20;
   cx: 22;
@@ -553,6 +580,7 @@
   }
 }
 
+/* Название */
 .result-user__level .level-module__text {
   display: none;
 
@@ -562,12 +590,12 @@
   }
 }
 
+/* Декоративный элемент */
 .result-user__level .level-module__text::before {
   background-color: rgba($black-color, 0.1);
 }
 
-/* Кнопка позвать
-   ========================================================================== */
+/* Кнопка позвать */
 .result-user__button {
   display: block;
   max-width: 230px;
@@ -593,8 +621,7 @@
   }
 }
 
-/* Кнопка показать еще
-   ========================================================================== */
+/* Кнопка показать еще */
 .result-user__more {
   position: relative;
 
@@ -624,6 +651,7 @@
   }
 }
 
+/* Декоративный элемент */
 .result-user__more::before,
 .result-user__more::after {
   content: "";

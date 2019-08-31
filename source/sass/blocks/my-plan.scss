@@ -20,10 +20,7 @@
   }
 }
 
-.my-plan__container {
-
-}
-
+/* Обертка */
 .my-plan__wrapp {
   @media (min-width: $breakpoint-tablet) {
     padding: 0 35px;
@@ -34,6 +31,7 @@
   }
 }
 
+/* Заголовок секции */
 .my-plan__title {
   margin: 0;
   margin-bottom: 30px;
@@ -51,12 +49,14 @@
   }
 }
 
+/* Список планов */
 .my-plan__list {
   @include reset-ul;
   box-sizing: border-box;
   counter-reset: section;
 }
 
+/* Элементы планов */
 .my-plan__item {
   margin-bottom: 10px;
   padding: 20px 25px;
@@ -82,6 +82,7 @@
   }
 }
 
+/* Название страны */
 .my-plan__country {
   position: relative;
 
@@ -114,6 +115,7 @@
   }
 }
 
+/* Порядковый номер */
 .my-plan__country::before {
   counter-increment: section;
   content: counter(section) ".";
@@ -135,13 +137,7 @@
   }
 }
 
-.my-plan__country span {
-  @media (min-width: $breakpoint-tablet) {
-    font-size: 20px;
-    line-height: 18px;
-  }
-}
-
+/* Обертка описание плана */
 .my-plan__desc {
   width: 100%;
   margin: 0;
@@ -162,6 +158,7 @@
   }
 }
 
+/* Описание плана */
 .my-plan__info {
   display: block;
   margin: 0;
@@ -189,6 +186,7 @@
   }
 }
 
+/* Изменить план */
 .my-plan__edit {
   font-size: 14px;
   line-height: 18px;

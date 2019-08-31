@@ -28,10 +28,12 @@
   }
 }
 
+/* Показать тарифы */
 .tariff-popup--show {
   display: block;
 }
 
+/* Обертка */
 .tariff-popup__wrapp {
   padding: 33px 25px;
 
@@ -44,6 +46,7 @@
   }
 }
 
+/* Заголовок */
 .tariff-popup__title {
   margin: 0;
   margin-bottom: 25px;
@@ -62,11 +65,13 @@
   }
 }
 
+/* Таблица */
 .tariff-popup__table {
   border-collapse: collapse;
   width: 100%;
 }
 
+/* Строка */
 .tariff-popup__row {
   font-size: $fz;
   line-height: $lh;
@@ -87,6 +92,7 @@
   }
 }
 
+/* Услуга и цена */
 .tariff-popup__name,
 .tariff-popup__cash {
   display: block;
@@ -115,6 +121,7 @@
   }
 }
 
+/* Закрыть окно */
 .tariff-popup__button {
   width: 100%;
   padding: 18px 25px;
@@ -135,7 +142,7 @@
   &:focus {
     background-color: $white-color--blue;
   }
-  
+
   &:active {
     color: rgba($blue-color--light, 0.3);
   }

@@ -14,6 +14,7 @@
   border-radius: 50%;
 }
 
+/* Выводит уровень пользователя */
 .level-module::before {
   content: attr(data-level);
   position: absolute;
@@ -28,6 +29,7 @@
   transform: translateX(-50%);
 }
 
+/* Индикатор уровня */
 .level-module__svg {
   top: 0;
   left: 0;
@@ -39,11 +41,13 @@
   transform: rotate(-83deg);
 }
 
+/* Круг индикатора */
 .level-module__svg circle {
   stroke: $orange-color;
   stroke-width: 3px;
 }
 
+/* Подпись к уровню */
 .level-module__text {
   position: absolute;
   bottom: 9px;
@@ -56,6 +60,7 @@
   transform: translateX(-50%);
 }
 
+/* Декоративная линия к подписи */
 .level-module__text::before {
   content: "";
   position: absolute;
@@ -67,4 +72,3 @@
 
   background-color: rgba($white-color, 0.3);
 }
-

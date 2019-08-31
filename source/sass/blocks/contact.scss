@@ -14,12 +14,9 @@
     margin-top: -50px;
     border-radius: 0 0 60px 60px;
   }
-
-  @media (min-width: $breakpoint-desktop) {
-    //
-  }
 }
 
+/* Верхняя часть секции с контактами */
 .contact__top {
   position: relative;
 
@@ -34,10 +31,12 @@
   }
 }
 
+/* Нижняя часть секции с контактами */
 .contact__bottom {
   margin-top: -25px;
 }
 
+/* Контейнер */
 .contact__container {
   padding-bottom: 40px;
 
@@ -50,6 +49,7 @@
   }
 }
 
+/* Обертка */
 .contact__wrapp {
   @media (min-width: $breakpoint-desktop) {
     display: flex;
@@ -61,6 +61,7 @@
   }
 }
 
+/* Меню с миниатюрами */
 .contact__thumb-menu {
   margin-bottom: 30px;
 
@@ -70,12 +71,14 @@
   }
 }
 
+/* Перенос для различных разрешений экрана */
 .contact__thumb-menu br {
   @media (min-width: $breakpoint-tablet) {
     display: none;
   }
 }
 
+/* Кнопка проложить маршрут */
 .contact__button {
   @media (min-width: $breakpoint-tablet) {
     width: 100%;
@@ -86,6 +89,7 @@
   }
 }
 
+/* Различные состояния кнопки */
 .contact__button:hover,
 .contact__button:focus {
   color: $white-color;
@@ -104,10 +108,12 @@
   }
 }
 
+/* Карта */
 .contact__map {
   margin-top: -50px;
 }
 
+/* Карта встроеная*/
 .contact__map-js {
   width: 100%;
   height: 340px;

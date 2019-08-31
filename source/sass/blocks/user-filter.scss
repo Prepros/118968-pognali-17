@@ -16,6 +16,7 @@
   }
 }
 
+/* Заголовок */
 .user-filter__title {
   margin: 0;
   margin-bottom: 20px;
@@ -43,10 +44,7 @@
   }
 }
 
-.user-filter__form {
-
-}
-
+/* Элемент фильтра */
 .user-filter__feature {
   display: flex;
   align-items: center;
@@ -68,6 +66,7 @@
   margin-bottom: 25px;
 }
 
+/* Обертка заголовка */
 .user-filter__subtitle {
   width: 100%;
   margin: 0;
@@ -107,12 +106,7 @@
   }
 }
 
-.user-filter__feature--collapse .user-filter__subtitle {
-  @media (min-width: $breakpoint-tablet) {
-    //
-  }
-}
-
+/* Заголовок */
 .user-filter__subtitle-link {
   position: relative;
 
@@ -152,6 +146,7 @@
   }
 }
 
+/* Треугольник */
 .user-filter__subtitle-link::before {
   content: "";
   position: absolute;
@@ -183,6 +178,7 @@
   border-top-color: transparent;
 }
 
+/* Список элементов категорий */
 .user-filter__list {
   @include reset-ul;
   display: none;
@@ -199,6 +195,7 @@
   }
 }
 
+/* При скрытом списке */
 .user-filter__feature--collapse .user-filter__list {
   display: none;
 
@@ -212,6 +209,7 @@
   }
 }
 
+/* При раскрытом списке */
 .user-filter__feature--show .user-filter__list {
   display: block;
 
@@ -225,6 +223,7 @@
   }
 }
 
+/* Элемент списка */
 .user-filter__item {
   margin-bottom: 12px;
 
@@ -242,6 +241,7 @@
   }
 }
 
+/* Элемент списка уровень */
 .user-filter__level {
   @media (min-width: $breakpoint-tablet) {
     width: 488px;
@@ -252,6 +252,7 @@
   }
 }
 
+/* Кнопка показать */
 .user-filter__button {
   width: 230px;
   margin-left: -5px;
@@ -262,4 +263,3 @@
     padding: 12px 15px 8px;
   }
 }
-

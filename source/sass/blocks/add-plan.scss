@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Основной файл
+   Форма добавления плана
    ========================================================================== */
 
 .add-plan {
@@ -18,10 +18,7 @@
   }
 }
 
-.add-plan__container {
-  //
-}
-
+/* Обертка */
 .add-plan__wrapp {
   box-sizing: border-box;
 
@@ -34,6 +31,7 @@
   }
 }
 
+/* Заголовок секции с планами */
 .add-plan__title {
   position: relative;
 
@@ -55,6 +53,7 @@
   }
 }
 
+/* 3 индикатора напротив заголовка */
 .add-plan__title::after {
   content: "";
   position: absolute;
@@ -78,6 +77,7 @@
   }
 }
 
+/* Секция с шагом */
 .add-plan__step {
   margin-bottom: 10px;
   padding: 25px 25px 20px;
@@ -97,6 +97,7 @@
   }
 }
 
+/* Обертка */
 .add-plan__step-wrapp {
   @media (min-width: $breakpoint-desktop) {
     padding-left: 110px;
@@ -104,6 +105,7 @@
   }
 }
 
+/* Верхняя часть с информацией */
 .add-plan__header {
   display: flex;
   justify-content: space-between;
@@ -115,6 +117,7 @@
   }
 }
 
+/* Обертка информации */
 .add-plan__header-info {
   @media (min-width: $breakpoint-tablet) {
     width: 525px;
@@ -125,6 +128,7 @@
   }
 }
 
+/* Заголовок в секции с шагами */
 .add-plan__step-title {
   margin: 0;
   margin-bottom: 15px;
@@ -148,6 +152,7 @@
   }
 }
 
+/* Описание в секции с шагами */
 .add-plan__info {
   margin: 0;
 
@@ -162,6 +167,7 @@
   }
 }
 
+/* Перенос слов на разных разрешениях */
 .add-plan__info br {
   display: none;
 
@@ -170,6 +176,7 @@
   }
 }
 
+/* Список позиции шага */
 .add-plan__header-list {
   @include reset-ul;
   display: none;
@@ -180,6 +187,7 @@
   }
 }
 
+/* Элемент списка позиции шага */
 .add-plan__header-item {
   position: relative;
 
@@ -212,6 +220,7 @@
   }
 }
 
+/* Активный элемент списка позиции шага */
 .add-plan__header-item--active {
   color: $black-color;
 
@@ -220,6 +229,7 @@
   }
 }
 
+/* Основное содежимое секции с шагом */
 .add-plan__content {
   @media (min-width: $breakpoint-tablet) {
     display: flex;
@@ -227,12 +237,9 @@
 
     border-top: 1px solid #d6d9e6;
   }
-
-  @media (min-width: $breakpoint-desktop) {
-
-  }
 }
 
+/* Элементы первой секции планов */
 .add-plan__item {
   display: flex;
   flex-wrap: wrap;
@@ -260,6 +267,7 @@
   }
 }
 
+/* Попутчики */
 .add-plan__item--person {
   @media (min-width: $breakpoint-tablet) {
     order: 1;
@@ -273,6 +281,7 @@
   }
 }
 
+/* Дни */
 .add-plan__item--day {
   @media (min-width: $breakpoint-tablet) {
     order: 3;
@@ -289,6 +298,7 @@
   }
 }
 
+/* Дети */
 .add-plan__item--children {
   @media (min-width: $breakpoint-tablet) {
     order: 2;
@@ -302,6 +312,7 @@
   }
 }
 
+/* Заголовок элементов первой секции планов */
 .add-plan__item-title {
   max-width: 146px;
   font-weight: 500;
@@ -317,6 +328,7 @@
   }
 }
 
+/* Описание элементов первой секции планов */
 .add-plan__item-desc {
   margin-left: auto;
   margin-bottom: 10px;
@@ -335,6 +347,7 @@
   }
 }
 
+/* Счетчик элементов первой секции планов */
 .add-plan__item-counter {
   @media (min-width: $breakpoint-desktop) {
     order: 2;
@@ -343,6 +356,7 @@
   }
 }
 
+/* Календарь элементов первой секции планов */
 .add-plan__calendar {
   margin-bottom: 22px;
 
@@ -352,6 +366,7 @@
   }
 }
 
+/* Обертка для кнопок */
 .add-plan__button-wrapp {
   order: 5;
 
@@ -363,6 +378,7 @@
   }
 }
 
+/* Кнопка следующий шаг */
 .add-plan__button-next {
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
@@ -390,6 +406,7 @@
   }
 }
 
+/* Треугольник у кнопки */
 .add-plan__button-next .button-big__arrow,
 .add-plan__button-down .button-big__arrow {
   display: none;
@@ -399,6 +416,7 @@
   }
 }
 
+/* Предыдущий шаг */
 .add-plan__button-down {
   width: 100%;
   padding: 0;
@@ -415,6 +433,7 @@
   }
 }
 
+/* Секция вторая с маршрутами */
 .add-plan__route {
   margin-bottom: 25px;
 
@@ -427,6 +446,7 @@
   }
 }
 
+/* Секция третья с маршрутами */
 .add-plan__country {
   @include reset-ul;
   width: 100%;
@@ -438,6 +458,7 @@
   }
 }
 
+/* Элемент маршрутов */
 .add-plan__country-item {
   position: relative;
   margin-bottom: 25px;
@@ -456,6 +477,7 @@
   }
 }
 
+/* Декоративная линия */
 .add-plan__country-item::before {
   content: "";
   position: absolute;
@@ -485,6 +507,12 @@
   }
 }
 
+/* Убрать декоративную линию у последнего элемента */
+.add-plan__country-item:last-child::before {
+  display: none;
+}
+
+/* Верхняя часть с названием страны */
 .add-plan__country-head {
   position: relative;
 
@@ -494,6 +522,7 @@
   margin-bottom: 15px;
 }
 
+/* Декоративный круг */
 .add-plan__country-head::before {
   content: "";
   position: absolute;
@@ -520,10 +549,7 @@
   }
 }
 
-.add-plan__country-item:last-child::before {
-  display: none;
-}
-
+/* Имя страны */
 .add-plan__country-name {
   position: relative;
 
@@ -540,17 +566,28 @@
     line-height: 18px;
     font-weight: 700;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 730px;
+  }
 }
 
+/* Имя страны */
 .add-plan__country-name::after {
   content: "";
   position: absolute;
+  top: 0;
   right: 0;
   width: 50px;
   height: 100%;
   background-image: linear-gradient(to right, transparent 0, $white-color 70%);
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 100px;
+  }
 }
 
+/* Флаг страны */
 .add-plan__country-flag {
   width: 35px;
   height: 24px;
@@ -561,6 +598,7 @@
   }
 }
 
+/* Контент третьей секции с развлечениями */
 .add-plan__country-content {
   position: relative;
   margin: 0;
@@ -570,6 +608,7 @@
   }
 }
 
+/* Поле для ввода текста */
 .add-plan__country-input {
   @include placeholder {
     color: rgba($grey-color, 0.3);
@@ -605,10 +644,12 @@
   }
 }
 
+/* Ошибка ввода */
 .add-plan__country-content--error .add-plan__country-input {
   border-color: #f47e7e;
 }
 
+/* Ошибка ввода */
 .add-plan__country-error {
   position: absolute;
   left: 1px;
@@ -638,6 +679,7 @@
   }
 }
 
+/* Ошибка ввода */
 .add-plan__country-content--error .add-plan__country-error {
   display: block;
 }

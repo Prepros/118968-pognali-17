@@ -16,6 +16,7 @@
   }
 }
 
+/* Декоративная вертикальная линия */
 .route::after {
   @media (min-width: $breakpoint-tablet) {
     content: "";
@@ -35,6 +36,7 @@
   }
 }
 
+/* Элемент списка */
 .route__item {
   position: relative;
 
@@ -51,6 +53,7 @@
   }
 }
 
+/* Декоративный элемент стрелка вниз */
 .route__item::after {
   content: "";
   position: absolute;
@@ -71,6 +74,7 @@
   display: none;
 }
 
+/* Элемент добавить страну */
 .route__item--add {
   background-color: $white-color--blue;
   border-radius: 5px;
@@ -80,6 +84,7 @@
   }
 }
 
+/* Обертка для название страны */
 .route__country {
   position: relative;
 
@@ -102,6 +107,7 @@
   }
 }
 
+/* Декоративный элемент */
 .route__country::before {
   content: "";
   position: absolute;
@@ -126,6 +132,7 @@
   }
 }
 
+/* Разное состояние */
 .route__item--select .route__country,
 .route__item--add .route__country {
   border-right: none;
@@ -162,6 +169,7 @@
   }
 }
 
+/* Наименование */
 .route__country-name {
   position: relative;
 
@@ -197,11 +205,13 @@
   }
 }
 
+/* Разное состояние */
 .route__item--select .route__country-name::after,
 .route__item--add .route__country-name::after {
   display: none;
 }
 
+/* Кнопка */
 .route__country-btn {
   position: relative;
   z-index: 1;
@@ -219,6 +229,7 @@
   }
 }
 
+/* Картинка */
 .route__country-btn::before {
   content: "";
   position: absolute;
@@ -239,6 +250,7 @@
   }
 }
 
+/* Разное состояние кнопки */
 .route__country-btn:hover,
 .route__country-btn:focus {
   &::before {
@@ -262,6 +274,7 @@
   }
 }
 
+/* Кнопка добавить страну */
 .route__country-btn--add {
   width: 14px;
   height: 14px;
@@ -274,6 +287,7 @@
   }
 }
 
+/* Флаг страны */
 .route__flag {
   display: flex;
   justify-content: center;
@@ -297,6 +311,7 @@
   }
 }
 
+/* Убираем закругления */
 .route__item--select .route__flag,
 .route__item--add .route__flag {
   border-radius: 0 5px 5px 0;
@@ -312,6 +327,7 @@
   border: none;
 }
 
+/* Миниатюра флага страны */
 .route__flag-img {
   width: 35px;
   height: 24px;
@@ -322,6 +338,7 @@
   }
 }
 
+/* Кнопка */
 .route__flag-btn {
   position: absolute;
   top: -10px;
@@ -344,6 +361,7 @@
   }
 }
 
+/* Декоративный элемент кнопки */
 .route__flag-btn::before {
   content: "";
   position: absolute;
@@ -366,6 +384,7 @@
   }
 }
 
+/* Разное состояние кнопки */
 .route__flag-btn:hover,
 .route__flag-btn:focus {
   &::before {
@@ -379,6 +398,7 @@
   }
 }
 
+/* Модальное окно добавления страны */
 .route__modal {
   position: absolute;
   left: 0;
@@ -399,10 +419,12 @@
   }
 }
 
+/* Показать модальное окно */
 .route__modal--show {
   display: block;
 }
 
+/* Верхняя часть модального окна */
 .route__modal-head {
   position: relative;
 
@@ -426,6 +448,7 @@
   }
 }
 
+/* Заголовок */
 .route__modal-action {
   margin: 0;
 
@@ -442,6 +465,7 @@
   }
 }
 
+/* Кнопка закрыть меню */
 .route__modal-btn {
   display: flex;
   justify-content: center;
@@ -459,6 +483,7 @@
   }
 }
 
+/* Иконка закрыть меню */
 .route__modal-svg {
   width: 9px;
   height: 9px;
@@ -471,6 +496,7 @@
   }
 }
 
+/* Разное состояние */
 .route__modal-btn:hover .route__modal-svg,
 .route__modal-btn:focus .route__modal-svg {
   fill: rgba($white-color, 0.3);
@@ -480,6 +506,7 @@
   fill: rgba($white-color, 0.5);
 }
 
+/* Список букв */
 .route__modal-letters {
   @include reset-ul;
   display: flex;
@@ -496,6 +523,7 @@
   }
 }
 
+/* Элементы букв */
 .route__modal-letter {
   flex-grow: 1;
   width: 44px;
@@ -551,6 +579,7 @@
   }
 }
 
+/* Заглавная буква страны */
 .route__modal-abr {
   display: flex;
   justify-content: center;
@@ -582,6 +611,7 @@
   }
 }
 
+/* Список стран */
 .route__modal-list {
   @include reset-ul;
   position: absolute;
@@ -620,10 +650,7 @@
   display: block;
 }
 
-.route__modal-item {
-
-}
-
+/* Название страны */
 .route__modal-name {
   font-size: $fz;
   line-height: $lh;

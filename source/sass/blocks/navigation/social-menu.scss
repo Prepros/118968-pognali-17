@@ -25,11 +25,7 @@
   }
 }
 
-/* Ссылка меню с соц. сетями */
-.social-menu__link {
-  //
-}
-
+/* Социальная ссылка с фоном  */
 .social-menu--bg .social-menu__link {
   display: flex;
   justify-content: center;
@@ -79,6 +75,7 @@
   fill: rgba($grey-color--light, 0.3);
 }
 
+/* Facebook  */
 .social-menu__icon--fb {
   width: 11px;
   height: 22px;
@@ -89,6 +86,7 @@
   }
 }
 
+/* Вконтакте  */
 .social-menu__icon--vk {
   width: 23px;
   height: 12px;
@@ -99,6 +97,7 @@
   }
 }
 
+/* Инстаграм  */
 .social-menu__icon--inst {
   width: 18px;
   height: 18px;

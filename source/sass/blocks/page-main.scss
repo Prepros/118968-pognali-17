@@ -6,6 +6,7 @@
   //
 }
 
+/* Секция с наименование страницы */
 .page-main__head {
   display: flex;
   justify-content: space-between;
@@ -20,8 +21,8 @@
   }
 }
 
+/* Обертка */
 .page-main__container {
-  //
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     justify-content: space-between;
@@ -29,6 +30,7 @@
   }
 }
 
+/* Название страницы */
 .page-main__title {
   position: relative;
 
@@ -72,6 +74,7 @@
   }
 }
 
+/* Ссылка на главную страницу */
 .page-main__link {
   display: none;
 
@@ -107,6 +110,7 @@
   }
 }
 
+/* Декоративная стрелка */
 .page-main__link::before {
   @media (min-width: $breakpoint-tablet) {
     content: "";
@@ -124,6 +128,7 @@
   }
 }
 
+/* Разное состояние */
 .page-main__link:hover::before,
 .page-main__link:focus::before {
   opacity: 0.6;
