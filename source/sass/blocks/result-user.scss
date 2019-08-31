@@ -254,11 +254,13 @@
 
 /* Тэги */
 .result-user__head-tags {
+  width: 190px;
   margin-bottom: 15px;
   padding-left: 8px;
 
   @media (min-width: $breakpoint-tablet) {
     order: 2;
+    width: auto;
     margin: 0;
     padding: 0;
   }

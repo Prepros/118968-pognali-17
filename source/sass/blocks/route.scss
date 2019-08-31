@@ -640,7 +640,7 @@
     box-shadow: 50px 20px 50px rgba(29, 46, 91, 0.1);
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-desktop) {
     min-height: 488px;
     border-radius: 0 0 5px 0;
   }
