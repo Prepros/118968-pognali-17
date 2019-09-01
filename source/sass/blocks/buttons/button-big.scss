@@ -39,7 +39,7 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 30px 35px 27px;
+    padding: 30px 33px 27px;
 
     font-size: 24px;
     line-height: 24px;
@@ -80,13 +80,13 @@
   fill: $blue-color--light;
 
   @media (min-width: $breakpoint-tablet) {
-    right: 35px;
+    right: 37px;
     top: 50%;
   }
 }
 
 .button-big--bold .button-big__arrow {
-  right: 20px;
+  //right: 20px;
 }
 
 .button-big__arrow--rotate {

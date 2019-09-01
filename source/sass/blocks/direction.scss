@@ -16,7 +16,7 @@
   @media (min-width: $breakpoint-tablet) {
     margin-top: -50px;
     padding-top: 120px;
-    padding-bottom: 80px;
+    padding-bottom: 79px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -32,7 +32,7 @@
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-size: 289px auto;
-    background-position: 440px top;
+    background-position: 440px 10px;
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
@@ -72,7 +72,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     width: 350px;
-    margin-bottom: 100px;
+    margin-bottom: 108px;
     padding: 0;
   }
 
@@ -183,7 +183,7 @@
   margin: 0;
 
   @media (min-width: $breakpoint-tablet) {
-    top: 13px;
+    top: 15px;
     left: -35px;
   }
 }

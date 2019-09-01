@@ -51,6 +51,10 @@
 
 /* Обертка */
 .contact__wrapp {
+  @media (min-width: $breakpoint-tablet) {
+    padding: 12px 34px;
+  }
+
   @media (min-width: $breakpoint-desktop) {
     display: flex;
     justify-content: space-between;
@@ -64,6 +68,10 @@
 /* Меню с миниатюрами */
 .contact__thumb-menu {
   margin-bottom: 30px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 40px;
+  }
 
   @media (min-width: $breakpoint-desktop) {
     width: 560px;

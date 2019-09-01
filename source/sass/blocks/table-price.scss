@@ -28,7 +28,7 @@
   @media (min-width: $breakpoint-tablet) {
     content: "";
     position: absolute;
-    right: -33px;
+    right: 2px;
     z-index: -1;
 
     width: 196px;
@@ -134,7 +134,7 @@
 
     width: 67px;
     height: 67px;
-    padding: 24px 26px;
+    padding: 20px 26px;
 
     font-size: 28px;
     line-height: 28px;

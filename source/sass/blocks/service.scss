@@ -103,7 +103,7 @@
 
     background-image: url("../img/tablet/about-tablet@1x.png");
     background-size: 376px auto;
-    background-position: 20px 0;
+    background-position: 16px 4px;
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
@@ -200,7 +200,7 @@
     margin-bottom: 35px;
 
     &:last-of-type {
-      margin-bottom: 45px;
+      margin-bottom: 49px;
     }
   }
 

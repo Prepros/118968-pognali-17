@@ -52,6 +52,7 @@
   @media (min-width: $breakpoint-tablet) {
     width: 213px;
     height: 213px;
+    top: 40px;
     left: 40px;
   }
 
@@ -79,6 +80,7 @@
   @media (min-width: $breakpoint-tablet) {
     width: 285px;
     height: 285px;
+    top: 40px;
     right: 75px;
 
     background-image: url("../img/desktop/rogovaya-back-desktop@1x.png");
@@ -128,9 +130,9 @@
     z-index: 2;
 
     width: 440px;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
     padding: 0;
-    padding-top: 65px;
+    padding-top: 97px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -238,6 +240,10 @@
 
   border-radius: 12px 12px 0 0;
   overflow: hidden;
+
+  @media (min-width: $breakpoint-tablet) {
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 /* Фотография попутчика */
@@ -260,6 +266,11 @@
   position: absolute;
   top: 17px;
   left: 17px;
+
+  @media (min-width: $breakpoint-tablet) {
+    top: 22px;
+    left: 20px;
+  }
 }
 
 /* Контент попутчика */
@@ -272,7 +283,10 @@
   border-radius: 0 0 12px 12px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 0 35px 30px;
+    margin-top: -10px;
+    padding: 0 20px 22px;
+
+    border-radius: 0 0 20px 20px;
   }
 }
 
@@ -285,7 +299,7 @@
   margin-bottom: 6px;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -348,7 +362,7 @@
   margin-bottom: 17px;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
 }
 
@@ -357,6 +371,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 13px;
   }
 }
 

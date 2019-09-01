@@ -62,9 +62,9 @@ window.addEventListener("scroll", function (evt) {
 
   // Если страница проскролена и имеется .page-header
   if (scroll && pageHeader) {
-    pageHeader.classList.add("page-header--fixed");
+    // pageHeader.classList.add("page-header--fixed");
   } else {
-    pageHeader.classList.remove("page-header--fixed");
+    // pageHeader.classList.remove("page-header--fixed");
   }
 });
 

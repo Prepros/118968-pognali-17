@@ -16,7 +16,7 @@
   @media (min-width: $breakpoint-tablet) {
     margin-top: -50px;
     padding-top: 120px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -67,6 +67,10 @@
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 65px;
     padding: 0;
+
+    &:last-of-type {
+      margin-bottom: 43px;
+    }
   }
 }
 
@@ -99,7 +103,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     height: 81px;
-    margin-bottom: 55px;
+    margin-bottom: 57px;
   }
 }
 

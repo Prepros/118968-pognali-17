@@ -10,7 +10,7 @@
   background-color: $blue-color--dark;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 30px;
+    padding-top: 27px;
     padding-bottom: 0;
 
     background-color: $blue-color--light2;
@@ -75,7 +75,7 @@
     height: 100%;
 
     background-image: url("../img/tablet/traveller-illustration-tablet@1x.png"), url("../img/tablet/globe-back-tablet@1x.jpg");
-    background-position: 280px 260px, center bottom;
+    background-position: 284px 245px, center 223px;
     background-size: 372px auto, 1479px auto;
 
     @media (min-resolution: $retina-dpi),
@@ -122,7 +122,7 @@
   color: $white-color;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 85px;
+    margin-bottom: 88px;
     padding: 0 145px;
 
     font-size: 60px;

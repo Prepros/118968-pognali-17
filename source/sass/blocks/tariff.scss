@@ -14,7 +14,8 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-top: -50px;
-    padding-top: 100px;
+    padding-top: 121px;
+    padding-bottom: 65px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -30,19 +31,19 @@
   position: relative;
 
   box-sizing: border-box;
-  padding: 14px 25px 0;
+  //padding: 14px 25px 0;
   margin-bottom: 30px;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 35px;
-    padding: 0;
-    padding-left: 90px;
-    padding-right: 35px;
+    //padding: 0;
+    //padding-left: 90px;
+    //padding-right: 35px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-left: 160px;
-    padding-right: 345px;
+    //padding-left: 160px;
+    //padding-right: 345px;
   }
 }
 
@@ -68,7 +69,7 @@
   @media (min-width: $breakpoint-tablet) {
     top: auto;
     right: 45px;
-    bottom: -115px;
+    bottom: -118px;
     z-index: 10;
   }
 
@@ -85,12 +86,16 @@
 
 /* Информационный блок */
 .tariff__page-info {
-  width: 110px;
-  margin-bottom: 45px;
+  width: 150px;
+  margin-bottom: 31px;
+  padding-left: 25px;
+  padding-top: 14px;
 
   @media (min-width: $breakpoint-tablet) {
     width: auto;
-    margin-bottom: 70px;
+    margin-bottom: 77px;
+    padding: 0;
+    padding-right: 12px;
 
     text-align: center;
   }
@@ -106,6 +111,22 @@
 /* Заголовок */
 .tariff__page-info .page-info__title {
   margin-bottom: 0;
+}
+
+/* Таблица с прайсом */
+.tariff__price tbody {
+  padding: 14px 25px 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0;
+    padding-left: 90px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-left: 160px;
+    padding-right: 345px;
+  }
 }
 
 /* Кнопка показать все тарифы */
