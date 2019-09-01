@@ -13,45 +13,35 @@
 
 /* Транспорт */
 .transport__item {
-  width: 24px;
-  height: 24px;
-  margin-right: 13px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  //
 }
 
 /* Тултип обертка */
 .transport__tooltip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  margin: 0;
-
-  background-color: $white-color--blue;
-  border-radius: 50%;
-
-  @media (min-width: $breakpoint-tablet) {
-    display: block;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    border-radius: 0;
-  }
+  //
 }
 
-.transport .transport-svg--plane {
+/* Треугольник */
+.transport__tooltip:hover::before {
+  top: 24px;
+}
+
+/* Тело тултипа */
+.transport__tooltip:hover::after {
+  top: 40px;
+}
+
+/* Иконка */
+.transport__svg {
+  fill: rgba($black-color, 0.15);
+}
+
+/* Иконка активная */
+.transport__svg--active {
+  fill: $blue-color--light;
+}
+
+.transport__svg--plane {
   width: 14px;
   height: 16px;
 
@@ -61,7 +51,7 @@
   }
 }
 
-.transport__tooltip .transport-svg--bus {
+.transport__svg--bus {
   width: 13px;
   height: 16px;
 
@@ -71,7 +61,7 @@
   }
 }
 
-.transport__tooltip .transport-svg--bike {
+.transport__svg--bike {
   width: 19px;
   height: 17px;
 
@@ -81,7 +71,7 @@
   }
 }
 
-.transport__tooltip .transport-svg--run {
+.transport__svg--run {
   width: 15px;
   height: 17px;
 
@@ -89,14 +79,4 @@
     width: 20px;
     height: 21px;
   }
-}
-
-/* Иконка */
-.transport-svg {
-  fill: #d9d9d9;
-}
-
-/* Иконка активная */
-.transport-svg--active {
-  fill: #1d2e5b;
 }

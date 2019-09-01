@@ -3,10 +3,23 @@
    ========================================================================== */
 
 .tariff {
-  padding: 37px 0;
+  position: relative;
+  z-index: 6;
+
+  margin-top: -30px;
+  padding: 67px 0 39px;
+
   background-color: $white-color--blue;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: $breakpoint-tablet) {
+    margin-top: -50px;
+    padding-top: 100px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
     padding-top: 75px;
     padding-bottom: 85px;
   }
@@ -17,7 +30,7 @@
   position: relative;
 
   box-sizing: border-box;
-  padding: 10px 25px 0;
+  padding: 14px 25px 0;
   margin-bottom: 30px;
 
   @media (min-width: $breakpoint-tablet) {
@@ -95,11 +108,6 @@
   margin-bottom: 0;
 }
 
-/* Обертка для таблицы прайс */
-.tariff__price {
-  //
-}
-
 /* Кнопка показать все тарифы */
 .tariff__button {
   display: flex;
@@ -128,6 +136,7 @@
   }
 }
 
+/* Разное состояние */
 .tariff__button:hover,
 .tariff__button:focus {
   color: rgba(#132576, 0.7);

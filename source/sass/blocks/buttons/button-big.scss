@@ -8,7 +8,7 @@
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  padding: 22px 75px 22px 20px;
+  padding: 21px 70px 22px 24px;
 
   font-size: 18px;
   line-height: 18px;
@@ -34,13 +34,42 @@
   }
 
   &--bold {
+    padding-left: 21px;
     border: 3px solid $blue-color;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 30px 35px 27px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+}
+
+.button-big--transparent {
+  padding: 0;
+  padding-left: 35px;
+
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: rgba($blue-color--light, 0.7);
+    background-color: transparent;
+  }
+
+  &:active {
+    color: rgba($blue-color--light, 0.3);
   }
 }
 
 .button-big__arrow {
   position: absolute;
-  right: 25px;
+  right: 23px;
   top: 50%;
 
   width: 10px;
@@ -49,6 +78,23 @@
   transform: translateY(-50%);
 
   fill: $blue-color--light;
+
+  @media (min-width: $breakpoint-tablet) {
+    right: 35px;
+    top: 50%;
+  }
+}
+
+.button-big--bold .button-big__arrow {
+  right: 20px;
+}
+
+.button-big__arrow--rotate {
+  top: 6px;
+  left: 0;
+  right: auto;
+
+  transform: rotate(180deg);
 }
 
 .button-big:active .button-big__arrow {
@@ -57,30 +103,8 @@
 
 .button-big__text {
   display: none;
-}
 
-/* Планшеты
-   ========================================================================== */
-@media (min-width: $breakpoint-tablet) {
-  .button-big {
-    padding: 30px 35px 27px;
-
-    font-size: 24px;
-    line-height: 24px;
-
-    border-radius: 20px;
-  }
-
-  .button-big__arrow {
-    right: 35px;
-    top: 50%;
-  }
-}
-
-/* Компьютеры
-   ========================================================================== */
-@media (min-width: $breakpoint-desktop) {
-  .button-big__text {
+  @media (min-width: $breakpoint-desktop) {
     display: inline-block;
   }
 }

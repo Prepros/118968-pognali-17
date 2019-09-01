@@ -3,17 +3,33 @@
    ========================================================================== */
 
 .main-footer {
-  padding-top: 40px;
+  position: relative;
+  z-index: 4;
+
+  margin-top: -10px;
+  padding-top: 37px;
   padding-bottom: 15px;
 
   color: $grey-color;
+
   background-color: $white-color;
+  border-radius: 30px 30px 0 0;
 
   @media (min-width: $breakpoint-tablet) {
+    margin-top: -40px;
+    padding-top: 70px;
     padding-bottom: 40px;
+
+    border-radius: 60px 60px 0 0;
   }
 }
 
+/* Подвал не на главной странице */
+.inner-page .main-footer {
+  margin-top: 0;
+}
+
+/* Контейнер */
 .main-footer__container {
   display: flex;
   flex-direction: column;
@@ -25,6 +41,7 @@
   }
 }
 
+/* Логотип */
 .main-footer__logo {
   display: block;
   margin-bottom: 37px;
@@ -35,6 +52,7 @@
   }
 }
 
+/* Навигация с социальными ссылками */
 .main-footer__social-menu {
   margin-bottom: 37px;
 
@@ -44,10 +62,12 @@
   }
 }
 
+/* Элементы */
 .main-footer .social-menu__item {
   margin-right: 0;
 }
 
+/* Копирайт */
 .main-footer__copyright {
   display: flex;
   justify-content: space-between;
@@ -68,6 +88,7 @@
   }
 }
 
+/* Название копирайта */
 .main-footer__copyright-link {
   position: relative;
 
@@ -96,6 +117,7 @@
   }
 }
 
+/* Значок копирайта */
 .main-footer__copyright-link::before {
   content: "";
   position: absolute;
@@ -111,6 +133,7 @@
   transform: translateY(-50%);
 }
 
+/* Разное состояние */
 .main-footer__copyright-link:hover::before,
 .main-footer__copyright-link:focus::before {
   opacity: 0.6;

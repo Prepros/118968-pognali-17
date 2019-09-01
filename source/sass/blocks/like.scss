@@ -19,6 +19,7 @@
   }
 }
 
+/* Обертка для иконки с сердечком */
 .like__icon {
   display: flex;
   justify-content: center;
@@ -37,6 +38,7 @@
   }
 }
 
+/* Иконка с сердечком */
 .like__svg {
   width: 13px;
   height: 11px;
@@ -49,22 +51,27 @@
   }
 }
 
+/* Неактивное состояние */
 .like__heart {
   display: block;
 }
 
+/* Активное состояние */
 .like__heart-active {
   display: none;
 }
 
+/* Неактивное состояние */
 .like--active .like__heart {
   display: none;
 }
 
+/* Активное состояние */
 .like--active .like__heart-active {
   display: block;
 }
 
+/* Различное состояние */
 .like:hover .like__icon,
 .like:focus .like__icon {
   background-color: #e2e5f2;
@@ -96,8 +103,4 @@
 
 .like--active:active .like__svg {
   opacity: 0.3;
-}
-
-.like__count {
-  //
 }

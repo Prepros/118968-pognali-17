@@ -25,6 +25,7 @@ body {
   color: $black-color;
 
   background-color: $white-color--blue;
+  overflow-x: hidden;
 }
 
 img {
@@ -43,4 +44,14 @@ img {
   clip: rect(0, 0, 0, 0);
   clip-path: inset(100%);
   overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-tb {
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
 }

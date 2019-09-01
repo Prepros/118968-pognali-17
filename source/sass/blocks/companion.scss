@@ -3,13 +3,22 @@
    ========================================================================== */
 
 .companion {
-  padding-top: 40px;
+  position: relative;
+  z-index: 7;
+
+  margin-top: -30px;
+  padding-top: 70px;
   padding-bottom: 30px;
+
   background-color: $blue-color;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 80px;
+    margin-top: -50px;
+    padding-top: 90px;
     padding-bottom: 88px;
+
+    border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -109,7 +118,7 @@
 
 /* Информационный блок */
 .companion__page-info {
-  margin-bottom: 55px;
+  margin-bottom: 60px;
   padding-top: 30px;
   padding-left: 25px;
   padding-right: 30px;
@@ -222,17 +231,17 @@
 
 /* Верхняя часть элемента Попутчик */
 .companion__header {
+  position: relative;
   margin: 0;
 
   line-height: 0;
 
-  border-radius: 20px 20px 0 0;
+  border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
 
 /* Фотография попутчика */
 .companion__header-img {
-  border-radius: 20px 20px 0 0;
   transition: all 1s ease;
 
   @media (min-width: $breakpoint-tablet) {
@@ -246,14 +255,21 @@
   transform: scale(1.25);
 }
 
+/* Индикатор уровня пользователя */
+.companion__level {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+}
+
 /* Контент попутчика */
 .companion__content {
   margin-top: -12px;
   padding: 0 40px;
-  padding-bottom: 22px;
+  padding-bottom: 16px;
 
   background-color: $white-color;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 12px 12px;
 
   @media (min-width: $breakpoint-tablet) {
     padding: 0 35px 30px;
@@ -266,7 +282,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 20px;
@@ -282,20 +298,20 @@
   }
 }
 
-/* Картинка флага */
-.companion__flag-img {
-  //
+/* Треугольник */
+.companion__tooltip:hover::before {
+  top: 24px;
 }
 
-/* Тултип обертка */
-.companion__tooltip {
-  margin: 0;
+/* Тело тултипа */
+.companion__tooltip:hover::after {
+  top: 40px;
 }
 
 /* Заголовок */
 .companion__title {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 
   font-size: 21px;
   line-height: 21px;
@@ -329,16 +345,39 @@
 /* Теги */
 .companion__tags {
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 25px;
   }
 }
 
-/* Транспорт обертка */
-.companion__transport {
-  //
+.companion__transport .transport__item {
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.companion__transport .transport__svg--plane {
+  width: 19px;
+  height: 21px;
+}
+
+.companion__transport .transport__svg--bus {
+  width: 17px;
+  height: 21px;
+}
+
+.companion__transport .transport__svg--bike {
+  width: 24px;
+  height: 21px;
+}
+
+.companion__transport .transport__svg--run {
+  width: 20px;
+  height: 21px;
 }
 
 /* Кнопка */

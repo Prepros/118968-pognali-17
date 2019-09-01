@@ -14,28 +14,9 @@
   }
 }
 
-/* Главное меню закрыто */
-.page-nav--close {
-  display: none;
-
-  @media (min-width: $breakpoint-desktop) {
-    display: block;
-  }
-}
-
-/* Главное меню открыто при выключенном js */
-.page-header--no-js .page-nav--close {
-  display: block;
-}
-
-/* Главное меню открыто */
-.page-nav--open {
-  display: flex;
-}
-
 /* Главное меню */
 .page-nav__site-menu {
-  margin-bottom: 43px;
+  margin-bottom: 49px;
 
   @media (min-width: $breakpoint-tablet) {
     width: 100%;
@@ -53,7 +34,7 @@
 
 /* Пользовательское меню */
 .page-nav__user-menu {
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 
   @media (min-width: $breakpoint-tablet) {
     display: none;
@@ -87,7 +68,6 @@
 
 /* Меню с соц. сетями */
 .page-nav__social-menu {
-  //
   @media (min-width: $breakpoint-tablet) {
     width: 100%;
     margin-left: 83px;
