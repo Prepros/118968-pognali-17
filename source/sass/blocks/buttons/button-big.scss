@@ -8,7 +8,7 @@
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  padding: 22px 75px 22px 20px;
+  padding: 21px 70px 22px 24px;
 
   font-size: 18px;
   line-height: 18px;
@@ -34,6 +34,7 @@
   }
 
   &--bold {
+    padding-left: 21px;
     border: 3px solid $blue-color;
   }
 
@@ -68,7 +69,7 @@
 
 .button-big__arrow {
   position: absolute;
-  right: 25px;
+  right: 23px;
   top: 50%;
 
   width: 10px;
@@ -82,6 +83,10 @@
     right: 35px;
     top: 50%;
   }
+}
+
+.button-big--bold .button-big__arrow {
+  right: 20px;
 }
 
 .button-big__arrow--rotate {

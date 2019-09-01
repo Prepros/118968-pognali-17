@@ -118,7 +118,7 @@
 
 /* Информационный блок */
 .companion__page-info {
-  margin-bottom: 55px;
+  margin-bottom: 60px;
   padding-top: 30px;
   padding-left: 25px;
   padding-right: 30px;
@@ -236,13 +236,12 @@
 
   line-height: 0;
 
-  border-radius: 20px 20px 0 0;
+  border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
 
 /* Фотография попутчика */
 .companion__header-img {
-  border-radius: 20px 20px 0 0;
   transition: all 1s ease;
 
   @media (min-width: $breakpoint-tablet) {
@@ -259,18 +258,18 @@
 /* Индикатор уровня пользователя */
 .companion__level {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 17px;
+  left: 17px;
 }
 
 /* Контент попутчика */
 .companion__content {
   margin-top: -12px;
   padding: 0 40px;
-  padding-bottom: 22px;
+  padding-bottom: 16px;
 
   background-color: $white-color;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 12px 12px;
 
   @media (min-width: $breakpoint-tablet) {
     padding: 0 35px 30px;
@@ -283,7 +282,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 20px;
@@ -312,7 +311,7 @@
 /* Заголовок */
 .companion__title {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 
   font-size: 21px;
   line-height: 21px;
@@ -330,8 +329,6 @@
 
 /* Ссылка */
 .companion__title-link {
-  padding-left: 17px;
-
   color: $blue-color--light;
   text-decoration: none;
 
@@ -348,7 +345,7 @@
 /* Теги */
 .companion__tags {
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 25px;
@@ -356,7 +353,7 @@
 }
 
 .companion__transport .transport__item {
-  margin-right: 17px;
+  margin-right: 14px;
 
   &:last-child {
     margin-right: 0;

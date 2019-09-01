@@ -16,7 +16,7 @@
   }
 
   width: 100%;
-  padding-left: 25px;
+  padding-left: 20px;
   padding-right: 85px;
 
   font-size: 18px;
@@ -41,6 +41,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     width: 850px;
+    border-radius: 20px 0 0 20px;
   }
 }
 

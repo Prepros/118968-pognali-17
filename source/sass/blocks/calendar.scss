@@ -206,6 +206,7 @@
 /* Описательный текст */
 .calendar__col--chosen span {
   display: none;
+  line-height: 0;
 
   @media (min-width: $breakpoint-desktop) {
     display: block;

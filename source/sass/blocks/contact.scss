@@ -20,7 +20,7 @@
 .contact__top {
   position: relative;
 
-  padding-top: 65px;
+  padding-top: 62px;
 
   background-color: $yellow-color;
   border-radius: 0 0 30px 30px;
@@ -38,7 +38,7 @@
 
 /* Контейнер */
 .contact__container {
-  padding-bottom: 40px;
+  padding-bottom: 32px;
 
   @media (min-width: $breakpoint-tablet) {
     padding-bottom: 70px;
@@ -80,8 +80,10 @@
 
 /* Кнопка проложить маршрут */
 .contact__button {
+  width: 100%;
+
   @media (min-width: $breakpoint-tablet) {
-    width: 100%;
+
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -110,7 +112,7 @@
 
 /* Карта */
 .contact__map {
-  margin-top: -50px;
+  margin-top: -57px;
 }
 
 /* Карта встроеная*/

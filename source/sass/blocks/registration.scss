@@ -8,7 +8,7 @@
 
   margin-top: -30px;
   padding-top: 100px;
-  padding-bottom: 40px;
+  padding-bottom: 29px;
 
   background-color: $blue-color;
   border-radius: 0 0 30px 30px;
@@ -44,6 +44,8 @@
 
 /* Обертка */
 .registration__wrapp {
+  box-sizing: border-box;
+
   @media (min-width: $breakpoint-tablet) {
     padding: 0 35px;
   }
@@ -57,6 +59,10 @@
 .registration__page-info {
   margin-bottom: 30px;
   padding: 0 25px;
+
+  &:last-of-type {
+    margin-bottom: 18px;
+  }
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 65px;
@@ -89,7 +95,7 @@
 
 /* Регистрационная форма */
 .registration__form {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: $breakpoint-tablet) {
     height: 81px;
