@@ -1,3 +1,10 @@
+if (!('remove' in Element.prototype)) {
+  Element.prototype.remove = function() {
+    if (this.parentNode) {
+      this.parentNode.removeChild(this);
+    }
+  };
+}
 /**
 * Навигационное меню
 **/
@@ -145,6 +152,7 @@ function removeEmptyLetter() {
     else {
       countryListBlock.innerHTML = "";
       for (i = 0; i < countryItemBlock.length; i++) {
+        console.log(countryItemBlock[i]);
         countryListBlock.appendChild(countryItemBlock[i]);
       }
     }
@@ -249,7 +257,7 @@ for (var i = 0; i < levelModule.length; i++) {
     r = parseInt(r, 10);
 
     // Длина окружности
-    var c = Math.PI*r*2;
+    var c = Math.floor(Math.PI*r*2);
     // dashoffset
     var pct = 0;
 
@@ -258,11 +266,10 @@ for (var i = 0; i < levelModule.length; i++) {
     }
     if (levelNumber >= 100) {
       levelNumber = 100;
-      pct = ((100-levelNumber)/100)*c;
+      pct = Math.floor(((100-levelNumber)/100)*c);
     } else {
-      pct = ((100-levelNumber)/100)*c+3;
+      pct = Math.floor(((100-levelNumber)/100)*c+3);
     }
-
 
     circle.setAttribute("style", "stroke-dasharray: " + c + "; stroke-dashoffset: " + pct);
   }

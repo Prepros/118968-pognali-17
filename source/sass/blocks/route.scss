@@ -203,6 +203,10 @@
     font-size: 20px;
     line-height: 18px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 100%;
+  }
 }
 
 /* Разное состояние */
@@ -511,9 +515,11 @@
   @include reset-ul;
   display: flex;
   flex-wrap: wrap;
+  max-width: 220px;
   margin-left: 1px;
 
   @media (min-width: $breakpoint-tablet) {
+    max-width: 100%;
     margin-left: 0;
     padding: 34px 27px;
 

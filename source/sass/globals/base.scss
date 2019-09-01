@@ -49,3 +49,9 @@ img {
 .hidden {
   display: none;
 }
+
+.hidden-tb {
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

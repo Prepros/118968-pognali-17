@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 30px;
+    padding-top: 27px;
     background-color: $blue-color--dark;
   }
 }
@@ -61,31 +61,31 @@
 /* Меню открыто */
 .page-header--open {
   position: absolute;
-  top: -73px;
+  //top: -79px;
 
   color: $blue-color--dark;
   background-color: $white-color;
 
   @media (min-width: $breakpoint-tablet) {
-    top: -132px;
+    //top: -132px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    top: -120px;
+    //top: -120px;
     background-color: $blue-color--dark;
   }
 }
 
 /* Меню открыто соседняя секция не занимает места свободного потока */
 .page-header--open + .page-main {
-  margin-top: 73px;
+  padding-top: 79px;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: 132px;
+    padding-top: 138px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-top: 120px;
+    padding-top: 126px;
   }
 }
 
@@ -119,14 +119,14 @@
 
 /* Меню зафиксировано соседняя секция не занимает места свободного потока */
 .page-header--fixed + .page-main {
-  margin-top: 73px;
+  padding-top: 79px;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: 132px;
+    padding-top: 138px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-top: 120px;
+    padding-top: 126px;
   }
 }
 
@@ -149,11 +149,13 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 132px;
+    //min-height: 132px;
+    padding: 41px 0;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    min-height: 90px;
+    //min-height: 90px;
+    padding: 20px 0;
   }
 }
 
@@ -162,18 +164,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 73px;
+  //min-height: 73px;
+  padding: 27px 0;
 
   @media (min-width: $breakpoint-tablet) {
     width: 355px;
-    min-height: 132px;
+    //min-height: 132px;
+    padding: 0;
   }
 
   @media (min-width: $breakpoint-desktop) {
     position: relative;
 
     width: 300px;
-    min-height: 90px;
+    //min-height: auto;
   }
 }
 
