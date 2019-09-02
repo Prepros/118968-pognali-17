@@ -16,8 +16,12 @@
   border-radius: 0 0 20px 20px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 100px;
+    padding-top: 84px;
     border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-top: 115px;
   }
 }
 
@@ -56,9 +60,8 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    max-width: 310px;
     margin-left: 35px;
-    padding-bottom: 60px;
+    padding-bottom: 67px;
 
     font-size: 60px;
     line-height: 70px;
@@ -70,7 +73,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-left: 70px;
+    margin-left: 67px;
   }
 }
 

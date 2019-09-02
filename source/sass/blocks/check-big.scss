@@ -43,6 +43,10 @@
     height: 36px;
     margin-right: 25px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-right: 20px;
+  }
 }
 
 /* Иконка чекбокса */
@@ -86,5 +90,6 @@
     line-height: 18px;
     font-weight: 500;
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }

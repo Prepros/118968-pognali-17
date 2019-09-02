@@ -280,7 +280,7 @@ for (var i = 0; i < levelModule.length; i++) {
  * Выбрать страну
  **/
 
-var routeCountryBtn = document.querySelectorAll(".route__country-btn");
+var routeCountryBtn = document.querySelectorAll(".route__country");
 var routeModal = document.querySelector(".route__modal");
 var routeModalBtn = document.querySelector(".route__modal-btn");
 

@@ -30,7 +30,11 @@
 
 /* Подвал не на главной странице */
 .inner-page .main-footer {
-  margin-top: 0;
+  margin-top: -20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -50px;
+  }
 }
 
 /* Контейнер */

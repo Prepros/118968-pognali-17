@@ -3,18 +3,25 @@
    ========================================================================== */
 
 .add-plan {
-  padding-top: 27px;
-  padding-bottom: 45px;
+  position: relative;
+  z-index: 3;
+
+  margin-top: -25px;
+  padding-top: 28px;
+  padding-bottom: 64px;
 
   background-color: #d4d9eb;
   border-radius: 30px 30px 0 0;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-
+    padding-top: 45px;
+    padding-bottom: 111px;
 
     border-radius: 40px 40px 0 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: 122px;
   }
 }
 
@@ -44,6 +51,8 @@
   color: $blue-color--light;
 
   @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 52px;
+
     font-size: 36px;
     line-height: 50px;
   }
@@ -68,8 +77,9 @@
   box-shadow: 22px 0 #bbbfcc, 42px 0 #bbbfcc;
 
   @media (min-width: $breakpoint-tablet) {
-    right: 58px;
-    box-shadow: 29px 0 #bbbfcc, 58px 0 #bbbfcc;
+    top: 46%;
+    right: 68px;
+    box-shadow: 34px 0 #bbbfcc, 68px 0 #bbbfcc;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -92,18 +102,23 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 50px;
-    padding: 50px 43px 55px;
+    margin-bottom: 44px;
+    padding: 45px 43px 56px;
 
     border-radius: 30px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 97px 43px 105px;
+    border-radius: 60px;
   }
 }
 
 /* Обертка */
 .add-plan__step-wrapp {
   @media (min-width: $breakpoint-desktop) {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 116px;
+    padding-right: 118px;
   }
 }
 
@@ -115,7 +130,32 @@
   margin-bottom: 22px;
 
   @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 56px;
+  }
+}
+
+.add-plan__step:nth-of-type(2) {
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: 50px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 43px;
+  }
+}
+
+.add-plan__step:nth-of-type(2) .add-plan__header,
+.add-plan__step:nth-of-type(3) .add-plan__header {
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 55px;
   }
 }
 
@@ -173,6 +213,10 @@
 .add-plan__info br {
   display: none;
 
+  @media (min-width: $breakpoint-tablet) {
+    display: inline-block;
+  }
+
   @media (min-width: $breakpoint-desktop) {
     display: inline-block;
   }
@@ -207,18 +251,30 @@
     margin-bottom: 0;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
+  @media (min-width: $breakpoint-desktop) {
+    padding-left: 46px;
+  }
+}
 
-    width: 4px;
-    height: 4px;
+.add-plan__header-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
 
-    background-color: #d9d9da;
-    border-radius: 50%;
-    transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+
+  background-color: #d9d9da;
+  border-radius: 50%;
+  transform: translateY(-50%);
+
+  @media (min-width: $breakpoint-desktop) {
+    top: 60%;
+    left: 3px;
+
+    width: 5px;
+    height: 5px;
   }
 }
 
@@ -257,7 +313,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 25px;
-    padding-top: 20px;
+    padding-top: 23px;
 
     font-size: 20px;
     line-height: 18px;
@@ -273,12 +329,13 @@
 .add-plan__item--person {
   @media (min-width: $breakpoint-tablet) {
     order: 1;
-    margin-bottom: 14px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $breakpoint-desktop) {
     align-items: center;
     width: 500px;
+    margin-bottom: 14px;
     padding-top: 30px;
   }
 }
@@ -295,6 +352,7 @@
   @media (min-width: $breakpoint-desktop) {
     align-items: center;
     width: 500px;
+    margin-bottom: 32px;
 
     border-top: none;
   }
@@ -308,9 +366,10 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    width: 250px;
+    width: auto;
     margin: 0;
     margin-left: auto;
+    padding-top: 16px;
   }
 }
 
@@ -321,12 +380,13 @@
 
   @media (min-width: $breakpoint-tablet) {
     max-width: 100%;
+    letter-spacing: 2px;
   }
 
   @media (min-width: $breakpoint-desktop) {
     order: 1;
-    width: 180px;
-    margin-right: 30px;
+    width: 201px;
+    margin-right: 20px;
   }
 }
 
@@ -338,7 +398,7 @@
   color: rgba($blue-color--light, 0.3);
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -354,7 +414,7 @@
   @media (min-width: $breakpoint-desktop) {
     order: 2;
     width: 181px;
-    margin-right: 35px;
+    margin-right: 38px;
   }
 }
 
@@ -365,6 +425,10 @@
   @media (min-width: $breakpoint-tablet) {
     order: 4;
     margin-bottom: 45px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 58px;
   }
 }
 
@@ -395,9 +459,9 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    max-width: 286px;
+    width: 288px;
     margin-bottom: 0;
-    padding: 25px 76px 25px 35px;
+    padding: 28px 76px 27px 35px;
 
     font-size: 24px;
     line-height: 24px;
@@ -430,7 +494,10 @@
 
   @media (min-width: $breakpoint-tablet) {
     width: auto;
-    padding-left: 35px;
+    margin-top: 0;
+    padding-left: 30px;
+
+    line-height: 24px;
 
     text-transform: none;
   }
@@ -458,6 +525,11 @@
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 47px;
     padding-top: 27px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 59px;
+    padding-top: 70px;
   }
 }
 
@@ -495,7 +567,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     left: auto;
-    right: -1px;
+    right: 2px;
     top: 31px;
 
     width: 3px;
@@ -506,7 +578,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    right: 230px;
+    right: 223px;
+    height: 117%;
   }
 }
 
@@ -523,6 +596,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 /* Декоративный круг */
@@ -542,14 +619,14 @@
 
   @media (min-width: $breakpoint-tablet) {
     left: auto;
-    right: -37px;
+    right: -34px;
 
     width: 15px;
     height: 15px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    right: 112px;
+    right: 105px;
   }
 }
 
@@ -566,6 +643,8 @@
   color: $blue-color--light;
 
   @media (min-width: $breakpoint-tablet) {
+    padding-left: 1px;
+
     font-size: 30px;
     line-height: 18px;
     font-weight: 700;
@@ -619,7 +698,7 @@
   }
   width: 100%;
   min-height: 220px;
-  padding: 5px 15px;
+  padding: 7px 14px;
 
   font-size: $fz;
   line-height: $lh;
@@ -641,10 +720,15 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 20px 25px;
+    min-height: 140px;
+    padding: 15px 20px;
 
     font-size: 20px;
     line-height: 24px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 23px 26px;
   }
 }
 
@@ -660,7 +744,7 @@
   bottom: 1px;
 
   display: none;
-  width: 220px;
+  width: 217px;
   padding: 5px 15px;
 
   font-size: $fz;
@@ -671,7 +755,7 @@
   background-color: #ffefef;
 
   @media (min-width: $breakpoint-tablet) {
-    width: 500px;
+    width: 499px;
     padding: 15px 23px;
 
     font-size: 20px;
@@ -679,7 +763,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    width: 728px;
+    width: 727px;
   }
 }
 
