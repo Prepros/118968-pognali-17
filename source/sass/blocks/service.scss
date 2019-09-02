@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 195px;
+    padding-top: 188px;
 
     background-color: transparent;
     background-image: linear-gradient(to bottom, transparent 120px, $blue-color 120px, $blue-color 100%);
@@ -37,7 +37,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-bottom: 145px;
+    padding-bottom: 163px;
   }
 }
 
@@ -69,6 +69,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
+    top: 3px;
     left: 60px;
     right: auto;
 
@@ -112,7 +113,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    top: 0;
+    top: 18px;
     right: 60px;
 
     width: 630px;

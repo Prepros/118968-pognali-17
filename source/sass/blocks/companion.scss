@@ -22,7 +22,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 130px;
+    padding-top: 183px;
+    padding-bottom: 80px;
   }
 }
 
@@ -93,8 +94,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    top: 255px;
-    left: 190px;
+    top: 252px;
+    left: 191px;
     right: auto;
   }
 }
@@ -136,8 +137,9 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
+    margin-top: -10px;
+    margin-bottom: 165px;
     padding-top: 0;
-    margin-bottom: 168px;
   }
 }
 
@@ -270,6 +272,11 @@
   @media (min-width: $breakpoint-tablet) {
     top: 22px;
     left: 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: 25px;
+    left: 22px;
   }
 }
 

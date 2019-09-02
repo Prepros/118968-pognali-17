@@ -41,10 +41,10 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 160px;
-    padding-bottom: 150px;
+    padding-top: 213px;
+    padding-bottom: 133px;
 
-    background-position: 1090px 80px;
+    background-position: 1090px 138px;
   }
 }
 
@@ -186,6 +186,10 @@
     top: 15px;
     left: -35px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: 23px;
+  }
 }
 
 /* Флаг страны */
@@ -225,6 +229,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     width: 373px;
+    padding: 22px 31px 20px;
   }
 }
 
@@ -244,6 +249,10 @@
 
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 3px;
   }
 }
 
@@ -302,6 +311,11 @@
     width: 20px;
     height: 20px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: 4px;
+    left: 2px;
+  }
 }
 
 /* Описательный текст */
@@ -316,6 +330,10 @@
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 15px;
     font-size: 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 25px;
   }
 }
 

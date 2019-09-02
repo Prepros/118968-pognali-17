@@ -46,6 +46,10 @@
 
     border-radius: 20px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 27px 36px 27px;
+  }
 }
 
 .button-big--transparent {
@@ -82,6 +86,10 @@
   @media (min-width: $breakpoint-tablet) {
     right: 37px;
     top: 50%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    right: 34px;
   }
 }
 

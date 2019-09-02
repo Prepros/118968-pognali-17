@@ -21,8 +21,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 75px;
-    padding-bottom: 85px;
+    padding-top: 153px;
+    padding-bottom: 165px;
   }
 }
 
@@ -44,6 +44,7 @@
   @media (min-width: $breakpoint-desktop) {
     //padding-left: 160px;
     //padding-right: 345px;
+    margin-bottom: 36px;
   }
 }
 
@@ -75,7 +76,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     right: 75px;
-    bottom: 65px;
+    bottom: 0;
 
     width: 198px;
     height: 198px;
@@ -102,9 +103,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     width: auto;
-    margin-bottom: 70px;
-
-    text-align: right;
+    margin-bottom: 135px;
   }
 }
 

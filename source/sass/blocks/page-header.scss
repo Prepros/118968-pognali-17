@@ -155,7 +155,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     //min-height: 90px;
-    padding: 20px 0;
+    padding: 20px 0 0;
   }
 }
 
@@ -176,7 +176,7 @@
   @media (min-width: $breakpoint-desktop) {
     position: relative;
 
-    width: 300px;
+    width: 290px;
     //min-height: auto;
   }
 }
@@ -186,7 +186,8 @@
   @media (min-width: $breakpoint-desktop) {
     content: "";
     position: absolute;
-    right: 0;
+    top: 50%;
+    right: -10px;
 
     width: 60px;
     height: 2px;
@@ -349,6 +350,7 @@
     order: 0;
     display: block;
     width: 630px;
+    margin-top: 11px;
     padding: 0;
   }
 }

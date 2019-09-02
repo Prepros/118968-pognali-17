@@ -73,7 +73,7 @@ window.addEventListener("scroll", function (evt) {
  **/
 
 var tariffPopup = document.querySelector(".tariff-popup");
-var tariffPopupOpen = document.querySelector(".tariff__button-text");
+var tariffPopupOpen = document.querySelector(".tariff__button");
 var tariffPopupClose = document.querySelector(".tariff-popup__button");
 
 if (tariffPopup) {

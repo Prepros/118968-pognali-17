@@ -22,6 +22,10 @@
 
     border-radius: 60px 60px 0 0;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: -46px;
+  }
 }
 
 /* Подвал не на главной странице */
@@ -49,6 +53,11 @@
     width: 170px;
     margin: 0;
     margin-right: 84px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 205px;
+    margin-right: 365px;
   }
 }
 
