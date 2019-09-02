@@ -41,6 +41,30 @@
   transform: rotate(-83deg);
 }
 
+/* Для пользователя Демин */
+.level-module__svg--demin {
+  stroke-dasharray: 358;
+  stroke-dashoffset: 72;
+}
+
+/* Для пользователя Фирсова */
+.level-module__svg--firsova {
+  stroke-dasharray: 358;
+  stroke-dashoffset: 8;
+}
+
+/* Для пользователя Смолов */
+.level-module__svg--smolov {
+  stroke-dasharray: 358;
+  stroke-dashoffset: 268;
+}
+
+/* Для пользователя Рогова */
+.level-module__svg--rogova {
+  stroke-dasharray: 358;
+  stroke-dashoffset: 179;
+}
+
 /* Круг индикатора */
 .level-module__svg circle {
   stroke: $orange-color;

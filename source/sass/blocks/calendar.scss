@@ -12,8 +12,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 13px 0;
+  margin-bottom: 16px;
+  padding: 10px 0;
 
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
@@ -26,7 +26,7 @@
 
 /* Стрелки вперед назад */
 .calendar__button {
-  width: 17px;
+  width: 10;
   height: 17px;
   padding: 0;
 
@@ -79,7 +79,7 @@
 
 /* Контент календаря */
 .calendar__content {
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -94,7 +94,7 @@
 .calendar__row th,
 .calendar__row td {
   width: 30px;
-  height: 30px;
+  height: 31px;
 
   font-weight: normal;
   text-align: center;

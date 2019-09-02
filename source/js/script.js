@@ -238,7 +238,7 @@ window.addEventListener("resize", function (evt) {
 
 /**
  * Уровень пользователя
- **/
+
 var levelModule = document.querySelectorAll(".level-module");
 
 for (var i = 0; i < levelModule.length; i++) {
@@ -274,6 +274,7 @@ for (var i = 0; i < levelModule.length; i++) {
     circle.setAttribute("style", "stroke-dasharray: " + c + "; stroke-dashoffset: " + pct);
   }
 }
+ **/
 
 /**
  * Выбрать страну

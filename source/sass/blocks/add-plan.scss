@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .add-plan {
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 45px;
 
   background-color: #d4d9eb;
@@ -58,14 +58,14 @@
   content: "";
   position: absolute;
   top: 50%;
-  right: 32px;
+  right: 60px;
 
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
 
   background-color: $blue-color--light;
   border-radius: 50%;
-  box-shadow: 16px 0 #bbbfcc, 32px 0 #bbbfcc;
+  box-shadow: 22px 0 #bbbfcc, 42px 0 #bbbfcc;
 
   @media (min-width: $breakpoint-tablet) {
     right: 58px;
@@ -80,7 +80,9 @@
 /* Секция с шагом */
 .add-plan__step {
   margin-bottom: 10px;
-  padding: 25px 25px 20px;
+  padding: 23px 25px;
+
+  line-height: 0;
 
   background-color: $white-color;
   border-radius: 10px;
@@ -110,7 +112,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 50px;
@@ -244,10 +246,10 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
-  font-size: $fz;
-  line-height: 16px;
+  font-size: 15px;
+  line-height: 15px;
   font-weight: 500;
   color: $blue-color--light;
   text-transform: uppercase;
@@ -382,7 +384,6 @@
 .add-plan__button-next {
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
-    margin-bottom: 12px;
     padding: 5px 30px;
 
     font-size: 17px;
@@ -419,8 +420,10 @@
 /* Предыдущий шаг */
 .add-plan__button-down {
   width: 100%;
+  margin-top: 27px;
   padding: 0;
 
+  line-height: 0;
   text-align: center;
 
   background-color: transparent;
@@ -461,7 +464,7 @@
 /* Элемент маршрутов */
 .add-plan__country-item {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 
   &:last-child {
     margin-bottom: 0;
@@ -482,10 +485,10 @@
   content: "";
   position: absolute;
   top: 11px;
-  left: -12px;
+  left: -14px;
 
   width: 15px;
-  height: 110%;
+  height: 109%;
 
   border: 2px solid $blue-color--light;
   border-right-color: transparent;
@@ -527,7 +530,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -2px;
   z-index: 1;
 
   width: 6px;
@@ -653,11 +656,11 @@
 /* Ошибка ввода */
 .add-plan__country-error {
   position: absolute;
-  left: 1px;
-  bottom: 7px;
+  left: 2px;
+  bottom: 1px;
 
   display: none;
-  width: 218px;
+  width: 220px;
   padding: 5px 15px;
 
   font-size: $fz;
