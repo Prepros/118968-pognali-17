@@ -72,10 +72,10 @@
 .level-range__min::after {
   content: "";
   position: absolute;
-  top: 19px;
-  right: -11px;
+  top: 17px;
+  right: -7px;
 
-  width: 21px;
+  width: 16px;
   height: 1px;
 
   background-color: #cbced9;
@@ -84,7 +84,7 @@
 /* Поле ввода уровня */
 .level-range__input {
   width: 100%;
-  padding: 10px 15px;
+  padding: 7px 15px;
 
   font-size: 15px;
   line-height: 15px;

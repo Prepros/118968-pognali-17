@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .country-filter {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   padding-top: 17px;
 
   background-color: #e2e5f2;
@@ -48,7 +48,7 @@
 
 /* Фильтр закрыт */
 .country-filter__main-wrapp--close .country-filter__continent {
-  padding-bottom: 17px;
+  padding-bottom: 14px;
 
   @media (min-width: $breakpoint-tablet) {
     padding-bottom: 0;
@@ -183,7 +183,7 @@
 
   width: 17px;
   height: 12px;
-  margin-right: 4px;
+  margin-right: 2px;
   padding: 10px;
 
   font-weight: 700;
@@ -351,8 +351,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 43px;
-  height: 40px;
+  width: 45px;
+  height: 42px;
   margin-top: -1px;
   margin-left: -1px;
 
@@ -457,7 +457,7 @@
   position: relative;
 
   width: 100%;
-  padding: 5px 15px;
+  padding: 5px 34px 5px 60px;
 
   font-size: 17px;
   line-height: 30px;
@@ -501,8 +501,8 @@
 .country-filter__country-button::before {
   content: "";
   position: absolute;
-  top: 14px;
-  left: 70px;
+  top: 15px;
+  left: 85px;
 
   width: 12px;
   height: 12px;

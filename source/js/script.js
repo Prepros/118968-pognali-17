@@ -120,7 +120,7 @@ function countHeight() {
         listHeight = 195;
       }
 
-      countryMainBlock.style.height = listHeight + subListHeight + 50 + 'px';
+      countryMainBlock.style.height = listHeight + subListHeight + 40 + 'px';
     }
     // Считаем высоту countryMainBlock для планшетных устройств
     else if (window.innerWidth <= 1439) {
