@@ -116,8 +116,8 @@ function countHeight() {
 
     // Считаем высоту countryMainBlock для мобильных устройств
     if (window.innerWidth <= 767) {
-      if (listHeight < 234) {
-        listHeight = 234;
+      if (listHeight < 195) {
+        listHeight = 195;
       }
 
       countryMainBlock.style.height = listHeight + subListHeight + 50 + 'px';
@@ -209,7 +209,7 @@ var countryItemBlock = document.querySelectorAll(".country-filter__country-item"
 
 if (countryItemBlock) {
   // Удаляем пустые буквы
-  removeEmptyLetter();
+  // removeEmptyLetter();
 
   // Переключаем буквы
   for (i = 0; i < countryItemBlock.length; i++) {
@@ -233,7 +233,7 @@ if (countryItemBlock) {
 // При переходе на разное разрешение экрана пересчитываем высоту блока
 window.addEventListener("resize", function (evt) {
   countHeight();
-  removeEmptyLetter();
+  // removeEmptyLetter();
 });
 
 /**
