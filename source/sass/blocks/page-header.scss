@@ -122,11 +122,11 @@
   padding-top: 79px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 138px;
+    padding-top: 132px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 126px;
+    padding-top: 100px;
   }
 }
 
@@ -159,6 +159,12 @@
   }
 }
 
+.page-header--fixed .page-header__wrapp {
+  @media (min-width: $breakpoint-desktop) {
+    padding: 20px 0;
+  }
+}
+
 /* Обертка для логотипа с кнопки открытия меню */
 .page-header__scroll {
   display: flex;
@@ -178,6 +184,12 @@
 
     width: 290px;
     //min-height: auto;
+  }
+}
+
+.page-header--fixed .page-header__scroll {
+  @media (max-width: $breakpoint-tablet) {
+    padding: 24px 0;
   }
 }
 
