@@ -14,6 +14,10 @@
   @media (min-width: $breakpoint-tablet) {
     padding: 35px 35px 38px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 45px 47px 49px;
+  }
 }
 
 /* Заголовок */
@@ -60,16 +64,36 @@
     padding-top: 0;
 
     border-top: none;
+  }
 
-    &:nth-of-type(3) {
-      margin-bottom: 21px;
-    }
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 11px;
+  }
+}
+
+.user-filter__feature--show {
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 26px;
+  }
+}
+
+.user-filter__feature--eat {
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 11px;
   }
 }
 
 .user-filter__feature--transport {
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 14px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 29px;
   }
 }
 
@@ -87,6 +111,11 @@
     margin-bottom: 36px;
 
     border-bottom: 1px solid #f3c72b;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 6px;
+    border-bottom: none;
   }
 }
 
@@ -124,7 +153,9 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-right: 25px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
     span {
       display: none;
@@ -150,7 +181,11 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
+    top: 12px;
+
     display: block;
+
+    border-width: 5px;
   }
 }
 
@@ -159,6 +194,10 @@
   top: 4px;
   border-bottom-color: $blue-color;
   border-top-color: transparent;
+
+  @media (min-width: $breakpoint-desktop) {
+    top: 7px;
+  }
 }
 
 .user-filter__feature--show .user-filter__subtitle-link {
@@ -166,6 +205,22 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 21px;
+  }
+}
+
+.user-filter__feature--transport .user-filter__subtitle-link {
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 14px;
+  }
+}
+
+.user-filter__feature--lvl .user-filter__subtitle-link {
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 16px;
   }
 }
 
@@ -227,6 +282,12 @@
     width: 150px;
     margin-right: 20px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
   }
 }
 

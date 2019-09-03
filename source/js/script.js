@@ -159,9 +159,22 @@ function removeEmptyLetter() {
   }
 }
 
+function nameButton() {
+  // Меняем название кнопки
+  var textButton = countryFilterOpen.querySelector(".visually-hidden");
+
+  if (textButton.innerHTML === "Показать все") {
+    textButton.innerHTML = "Свернуть";
+  } else {
+    textButton.innerHTML = "Показать все";
+  }
+}
+
 var countryFilterOpen = document.querySelector(".country-filter__continent-button");
 var countryFilterClose = document.querySelector(".country-filter__country-button");
 var countryFilterWrapp = document.querySelector(".country-filter__main-wrapp");
+
+nameButton();
 
 // Открываем-закрываем фильтр
 if (countryFilterOpen) {
@@ -169,13 +182,7 @@ if (countryFilterOpen) {
     evt.preventDefault();
 
     // Меняем название кнопки
-    var textButton = countryFilterOpen.querySelector(".visually-hidden");
-
-    if (textButton.innerHTML === "Показать все") {
-      textButton.innerHTML = "Свернуть";
-    } else {
-      textButton.innerHTML = "Показать все";
-    }
+    nameButton();
 
     // Открываем-закрываем фильтр
     if (countryFilterWrapp.classList.contains("country-filter__main-wrapp--close")) {

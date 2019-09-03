@@ -18,7 +18,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-bottom: 75px;
+    margin-bottom: 77px;
   }
 }
 
@@ -33,6 +33,10 @@
 
   @media (min-width: $breakpoint-tablet) {
     padding-bottom: 19px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: 18px;
   }
 }
 
@@ -62,6 +66,10 @@
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 71px;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 58px;
+  }
 }
 
 /* Заголовок сеции фильтр */
@@ -89,7 +97,8 @@
     display: flex;
     max-width: 300px;
     margin-left: 20px;
-    margin-right: 35px;
+    margin-right: 39px;
+    padding-left: 44px;
   }
 }
 
@@ -105,6 +114,11 @@
 
   background: url("../img/icons/filter.svg") no-repeat;
   transform: translateY(-50%);
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 23px;
+    height: 16px;
+  }
 }
 
 /* Список континентов */
@@ -158,7 +172,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-right: 35px;
+    margin-right: 27px;
   }
 }
 
@@ -219,7 +233,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     margin-left: auto;
-    margin-right: 60px;
+    margin-right: 64px;
   }
 }
 
@@ -275,7 +289,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-left: 65px;
+    margin-left: 66px;
+    margin-bottom: 27px;
   }
 }
 
@@ -329,6 +344,7 @@
   @media (min-width: $breakpoint-desktop) {
     width: 182px;
     margin-right: 25px;
+    margin-bottom: 65px;
 
     color: $blue-color;
   }
@@ -492,6 +508,10 @@
     line-height: 30px;
     color: $blue-color--light;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 100%;
+  }
 }
 
 /* Фильтр закрыт */
@@ -521,7 +541,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    left: 570px;
+    top: 42px;
+    left: 594px;
   }
 }
 

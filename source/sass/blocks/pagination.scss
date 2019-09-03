@@ -75,6 +75,10 @@
   @media (min-width: $breakpoint-tablet) {
     width: 56px;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 65px;
+  }
 }
 
 /* Стрелки вперед назад */
@@ -111,6 +115,10 @@
 
   @media (min-width: $breakpoint-tablet) {
     width: 11px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 20px;
   }
 }
 

@@ -8,6 +8,10 @@
   @media (min-width: $breakpoint-tablet) {
     padding-bottom: 112px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: 126px;
+  }
 }
 
 /* Контейнер */
@@ -57,12 +61,14 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin: 0;
+    margin-bottom: 65px;
   }
 }
 
 /* Блок найденого пользователя */
 .result-user__content {
+  position: relative;
+
   margin-bottom: 10px;
   padding-top: 15px;
   padding-bottom: 23px;
@@ -85,10 +91,21 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    background-image: url("../img/div.png");
-    background-repeat: no-repeat;
-    background-position: 630px center;
+    margin-bottom: 30px;
   }
+}
+
+.result-user__content::before {
+  content: "";
+  position: absolute;
+  left: 630px;
+  top: 50%;
+
+  width: 1px;
+  height: 100%;
+
+  background-image: linear-gradient(to bottom, transparent 10%, #e6e6e6 50%, transparent 90%);
+  transform: translateY(-50%);
 }
 
 /* Первая секция с фотографией, именем и тегами */
@@ -202,7 +219,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-bottom: 15px;
+    margin: 0;
+    margin-bottom: 18px;
   }
 }
 
@@ -214,6 +232,10 @@
 
   @media (min-width: $breakpoint-tablet) {
     padding-right: 30px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-right: 0;
   }
 }
 
@@ -262,7 +284,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin: 46px 0 0 143px;
+    margin-top: 48px;
   }
 }
 
@@ -293,8 +315,8 @@
   @media (min-width: $breakpoint-desktop) {
     order: 1;
     width: 230px;
-    margin-left: 45px;
-    padding-top: 45px;
+    margin-left: 44px;
+    padding-top: 47px;
   }
 }
 
@@ -414,6 +436,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     margin: 0;
+    margin-bottom: 5px;
   }
 }
 
@@ -433,6 +456,10 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-right: 12px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-right: 20px;
   }
 }
 
@@ -476,7 +503,7 @@
   @media (min-width: $breakpoint-desktop) {
     order: 3;
     flex-direction: row;
-    width: 230px;
+    width: 238px;
     margin-top: -102px;
     margin-left: 180px;
     padding: 0;
@@ -500,7 +527,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    width: 120px;
+    width: 135px;
     margin-bottom: 0;
   }
 }
@@ -526,7 +553,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     margin-bottom: 0;
-    margin-right: -3px;
+    margin-right: 2px;
 
     &:last-child {
       margin-right: 0;
@@ -665,7 +692,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     order: 2;
-    margin-top: -100px;
+    margin-top: -98px;
     margin-left: 340px;
   }
 }
@@ -696,7 +723,9 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
+    padding-left: 0;
+    padding-right: 22px;
   }
 }
 
@@ -714,8 +743,8 @@
   background: $blue-color--light;
 
   @media (min-width: $breakpoint-tablet) {
-    left: 247px;
-    top: 17px;
+    left: 345px;
+    top: 12px;
 
     width: 27px;
     height: 3px;
