@@ -121,7 +121,7 @@
 <header class="page-header page-header--no-js">
   <div class="page-header__wrapp container">
     <div class="page-header__scroll">
-      <a class="page-header__logo page-header__logo--white logo" href="#">
+      <a class="page-header__logo page-header__logo--white logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-white@1x.png 1x, img/desktop/logo-desktop-white@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-white@1x.png 1x, img/tablet/logo-tablet-white@2x.png 2x">
@@ -135,13 +135,13 @@
           <img class="logo__img" src="img/mobile/logo-mobile-blue@1x.png" srcset="img/mobile/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
         </picture>
       </a>
-      <button class="page-header__toggle page-header__toggle--open" type="button">
+      <button class="page-header__toggle page-header__toggle--open">
         <span class="visually-hidden">Открыть меню</span>
         <svg class="page-header__toggle-icon" width="25" height="25" role="presentation" aria-label="Открыть меню" aria-hidden="true" focusable="false">
           <use xlink:href="#menu-svg"></use>
         </svg>
       </button>
-      <button class="page-header__toggle page-header__toggle--close" type="button">
+      <button class="page-header__toggle page-header__toggle--close">
         <span class="visually-hidden">Закрыть меню</span>
         <svg class="page-header__toggle-icon" width="19" height="19" role="presentation" aria-label="Закрыть меню" aria-hidden="true" focusable="false">
           <use xlink:href="#menu-svg--close"></use>
@@ -172,13 +172,19 @@
     <nav class="page-header__nav page-nav">
       <ul class="page-nav__site-menu site-menu">
         <li class="site-menu__item">
-          <a class="site-menu__link" href="#">О сервисе</a>
+          <a class="site-menu__link" href="#">
+            <span data-hover="О сервисе">О сервисе</span>
+          </a>
         </li>
         <li class="site-menu__item">
-          <a class="site-menu__link" href="form.html">Направления</a>
+          <a class="site-menu__link" href="form.html">
+            <span data-hover="Направления">Направления</span>
+          </a>
         </li>
         <li class="site-menu__item">
-          <a class="site-menu__link" href="catalog.html">Попутчики</a>
+          <a class="site-menu__link" href="catalog.html">
+            <span data-hover="Попутчики">Попутчики</span>
+          </a>
         </li>
       </ul>
       <ul class="page-nav__user-menu user-menu">
@@ -1297,7 +1303,7 @@
 
 <footer class="main-footer">
   <div class="main-footer__container container">
-    <a class="main-footer__logo logo logo--blue" href="#">
+    <a class="main-footer__logo logo logo--blue" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-blue@1x.png 1x, img/desktop/logo-desktop-blue@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-blue@1x.png 1x, img/tablet/logo-tablet-blue@2x.png 2x">
@@ -1332,11 +1338,12 @@
       </li>
     </ul>
     <p class="main-footer__copyright">
-      <a class="main-footer__copyright-link" href="#">Разработано</a>
+      <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
     </p>
   </div>
 </footer>
 
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="js/picturefill.js"></script>
 <script src="js/script.js"></script>
 </body>

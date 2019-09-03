@@ -76,7 +76,7 @@
     width: 56px;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-desktop) {
     width: 65px;
   }
 }
@@ -117,7 +117,7 @@
     width: 11px;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-desktop) {
     width: 20px;
   }
 }

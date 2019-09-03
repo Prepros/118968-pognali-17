@@ -96,16 +96,18 @@
 }
 
 .result-user__content::before {
-  content: "";
-  position: absolute;
-  left: 630px;
-  top: 50%;
+  @media (min-width: $breakpoint-desktop) {
+    content: "";
+    position: absolute;
+    left: 630px;
+    top: 50%;
 
-  width: 1px;
-  height: 100%;
+    width: 1px;
+    height: 100%;
 
-  background-image: linear-gradient(to bottom, transparent 10%, #e6e6e6 50%, transparent 90%);
-  transform: translateY(-50%);
+    background-image: linear-gradient(to bottom, transparent 10%, #e6e6e6 50%, transparent 90%);
+    transform: translateY(-50%);
+  }
 }
 
 /* Первая секция с фотографией, именем и тегами */
@@ -743,11 +745,16 @@
   background: $blue-color--light;
 
   @media (min-width: $breakpoint-tablet) {
-    left: 345px;
-    top: 12px;
+    left: 247px;
+    top: 15px;
 
     width: 27px;
     height: 3px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    left: 345px;
+    top: 12px;
   }
 }
 

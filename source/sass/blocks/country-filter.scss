@@ -67,7 +67,7 @@
     margin-bottom: 71px;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-desktop) {
     margin-bottom: 58px;
   }
 }
@@ -533,7 +533,7 @@
   background-repeat: no-repeat;
 
   @media (min-width: $breakpoint-tablet) {
-    top: 46px;
+    top: 42px;
     left: 242px;
 
     width: 18px;

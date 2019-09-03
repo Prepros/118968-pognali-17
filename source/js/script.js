@@ -160,13 +160,15 @@ function removeEmptyLetter() {
 }
 
 function nameButton() {
-  // Меняем название кнопки
-  var textButton = countryFilterOpen.querySelector(".visually-hidden");
+  if (countryFilterOpen) {
+    // Меняем название кнопки
+    var textButton = countryFilterOpen.querySelector(".visually-hidden");
 
-  if (textButton.innerHTML === "Показать все") {
-    textButton.innerHTML = "Свернуть";
-  } else {
-    textButton.innerHTML = "Показать все";
+    if (textButton.innerHTML === "Показать все") {
+      textButton.innerHTML = "Свернуть";
+    } else {
+      textButton.innerHTML = "Показать все";
+    }
   }
 }
 
@@ -315,4 +317,35 @@ if (routeCountryBtn && routeModal) {
       }
     });
   }
+}
+
+if (ymaps) {
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+        center: [59.936243, 30.320795],
+        zoom: 16,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Мы здесь',
+        balloonContent: 'Ну что погнали'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/map-marker.svg',
+        // Размеры метки.
+        iconImageSize: [42, 42],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-20, -5]
+      });
+
+    myMap.geoObjects
+      .add(myPlacemark);
+  });
 }
