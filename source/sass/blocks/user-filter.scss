@@ -13,6 +13,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     padding: 35px;
+    padding-right: 33px;
   }
 }
 
@@ -28,8 +29,8 @@
   color: $blue-color--light;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 23px;
-    padding-bottom: 35px;
+    margin-bottom: 31px;
+    padding-bottom: 39px;
 
     font-size: 30px;
     line-height: 30px;
@@ -56,62 +57,19 @@
   border-top: 1px solid #f3c72b;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     padding-top: 0;
-    border-top: none;
-  }
-}
 
-.user-filter__feature--show {
-  margin-bottom: 19px;
+    border-top: none;
+
+    &:nth-of-type(3) {
+      margin-bottom: 21px;
+    }
+  }
 }
 
 .user-filter__feature:last-of-type {
-  margin-bottom: 25px;
-}
-
-/* Обертка заголовка */
-.user-filter__subtitle {
-  width: 100%;
-  margin: 0;
-
-  font-size: $fz;
-  line-height: 18px;
-  font-weight: 700;
-  color: $blue-color--light;
-  text-transform: uppercase;
-
-  @media (min-width: $breakpoint-tablet) {
-    max-width: 130px;
-    margin-bottom: 0;
-    padding-right: 25px;
-
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 500;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    width: 100%;
-    max-width: 100%;
-    padding-right: 0;
-  }
-}
-
-.user-filter__feature:last-of-type .user-filter__subtitle {
-  margin-bottom: 14px;
-}
-
-.user-filter__feature--show .user-filter__subtitle {
-  margin-bottom: 16px;
-
-  @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    margin-bottom: 18px;
-  }
+  margin-bottom: 15px;
 }
 
 /* Заголовок */
@@ -119,9 +77,14 @@
   position: relative;
 
   display: block;
+  width: 100%;
   padding-right: 25px;
 
+  font-size: $fz;
+  line-height: 18px;
+  font-weight: 700;
   color: $blue-color--light;
+  text-transform: uppercase;
   text-decoration: none;
 
   span {
@@ -154,7 +117,7 @@
   }
 }
 
-/* Треугольник */
+/* Треугольник вниз */
 .user-filter__subtitle-link::before {
   content: "";
   position: absolute;
@@ -165,6 +128,7 @@
   height: 0;
 
   border: 4px solid transparent;
+  border-top-color: $blue-color;
 
   @media (min-width: $breakpoint-tablet) {
     display: none;
@@ -175,15 +139,15 @@
   }
 }
 
-.user-filter__feature--collapse .user-filter__subtitle-link::before {
-  border-top-color: $blue-color;
-  border-bottom-color: transparent;
-}
-
+/* Треугольник верх */
 .user-filter__feature--show .user-filter__subtitle-link::before {
   top: 4px;
   border-bottom-color: $blue-color;
   border-top-color: transparent;
+}
+
+.user-filter__feature--show .user-filter__subtitle-link {
+  margin-bottom: 16px;
 }
 
 /* Список элементов категорий */
@@ -195,21 +159,7 @@
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-wrap: wrap;
-    width: 488px;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    display: none;
-  }
-}
-
-/* При скрытом списке */
-.user-filter__feature--collapse .user-filter__list {
-  display: none;
-
-  @media (min-width: $breakpoint-tablet) {
-    display: flex;
-    flex-wrap: wrap;
+    width: auto;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -220,15 +170,22 @@
 /* При раскрытом списке */
 .user-filter__feature--show .user-filter__list {
   display: block;
+  margin-bottom: 8px;
 
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   @media (min-width: $breakpoint-desktop) {
     display: block;
   }
+}
+
+.user-filter__feature--transport.user-filter__feature--show .user-filter__list {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* Элемент списка */
@@ -237,7 +194,8 @@
 
   @media (min-width: $breakpoint-tablet) {
     width: 150px;
-    margin-right: 18px;
+    margin-right: 19px;
+    margin-bottom: 0;
   }
 }
 
@@ -246,6 +204,12 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-right: 0;
+  }
+}
+
+.user-filter__item .check__box {
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 12px;
   }
 }
 

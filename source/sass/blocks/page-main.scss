@@ -101,14 +101,14 @@
     position: relative;
 
     display: block;
-    margin-top: 27px;
-    margin-right: 35px;
+    margin-top: 26px;
+    margin-right: 36px;
     padding-right: 60px;
 
     text-align: right;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-desktop) {
     margin-right: 60px;
   }
 }

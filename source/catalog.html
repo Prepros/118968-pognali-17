@@ -1416,10 +1416,8 @@
       <aside class="result-user__user-filter user-filter">
           <h2 class="user-filter__title">Подберите идеального попутчика</h2>
           <form class="user-filter__form" action="http://echo.htmlacademy.ru" method="get">
-            <div class="user-filter__feature user-filter__feature--collapse">
-              <h3 class="user-filter__subtitle">
-                <a class="user-filter__subtitle-link" href="#">Хобби<span>:</span></a>
-              </h3>
+            <div class="user-filter__feature user-filter__feature--hobby">
+              <a class="user-filter__subtitle-link" href="#">Хобби<span>:</span></a>
               <ul class="user-filter__list">
                 <li class="user-filter__item">
                   <input class="visually-hidden" id="hobby1" type="checkbox" name="hobby[]" value="Спортзал" checked>
@@ -1456,10 +1454,8 @@
                 </li>
               </ul>
             </div>
-            <div class="user-filter__feature user-filter__feature--show">
-              <h3 class="user-filter__subtitle">
-                <a class="user-filter__subtitle-link" href="#">Музыка<span>:</span></a>
-              </h3>
+            <div class="user-filter__feature user-filter__feature--music user-filter__feature--show">
+              <a class="user-filter__subtitle-link" href="#">Музыка<span>:</span></a>
               <ul class="user-filter__list">
                 <li class="user-filter__item">
                   <input class="visually-hidden" id="music1" type="checkbox" name="music[]" value="Тяжелый рок" checked>
@@ -1496,10 +1492,8 @@
                 </li>
               </ul>
             </div>
-            <div class="user-filter__feature user-filter__feature--collapse">
-              <h3 class="user-filter__subtitle">
-                <a class="user-filter__subtitle-link" href="#">Еда<span>:</span></a>
-              </h3>
+            <div class="user-filter__feature user-filter__feature--eat">
+              <a class="user-filter__subtitle-link" href="#">Еда<span>:</span></a>
               <ul class="user-filter__list">
                 <li class="user-filter__item">
                   <input class="visually-hidden" id="eat1" type="checkbox" name="eat[]" value="Мясоед" checked>
@@ -1536,11 +1530,9 @@
                 </li>
               </ul>
             </div>
-            <div class="user-filter__feature user-filter__feature--show">
-              <h3 class="user-filter__subtitle">
-                <a class="user-filter__subtitle-link" href="#">Транспорт<span>:</span></a>
-              </h3>
-              <ul class="user-filter__transport transport-action">
+            <div class="user-filter__feature user-filter__feature--transport user-filter__feature--show">
+              <a class="user-filter__subtitle-link" href="#">Транспорт<span>:</span></a>
+              <ul class="user-filter__list transport-action">
                 <li class="transport-action__item">
                   <input class="visually-hidden transport-action__input" id="transport1" type="checkbox" name="transport[]" value="Авиаперелет" checked>
                   <label class="transport-action__tooltip tooltip" for="transport1" data-tooltip="Авиаперелет">
@@ -1575,11 +1567,9 @@
                 </li>
               </ul>
             </div>
-            <div class="user-filter__feature user-filter__feature--show">
-              <h3 class="user-filter__subtitle">
-                <a class="user-filter__subtitle-link" href="#">Левел<span>:</span></a>
-              </h3>
-              <div class="user-filter__level level-range">
+            <div class="user-filter__feature user-filter__feature--lvl user-filter__feature--show">
+              <a class="user-filter__subtitle-link" href="#">Левел<span>:</span></a>
+              <div class="user-filter__list level-range">
                 <p class="level-range__level">
                   <label class="level-range__min">
                     <input class="level-range__input" type="text" name="price" value="30">
