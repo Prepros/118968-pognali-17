@@ -4,6 +4,10 @@
 
 .result-user {
   padding-bottom: 69px;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-bottom: 112px;
+  }
 }
 
 /* Контейнер */
@@ -33,6 +37,10 @@
   order: 0;
   margin-bottom: 28px;
 
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 40px;
+  }
+
   @media (min-width: $breakpoint-desktop) {
     order: 1;
     width: 285px;
@@ -45,7 +53,7 @@
   margin-bottom: 18px;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -63,6 +71,10 @@
 
   background-color: $white-color;
   border-radius: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $breakpoint-tablet) {
     display: flex;
@@ -89,7 +101,7 @@
   @media (min-width: $breakpoint-tablet) {
     order: 0;
     width: 580px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding: 35px 0 0 35px;
   }
 
@@ -180,8 +192,9 @@
 
   @media (min-width: $breakpoint-tablet) {
     order: 0;
-    margin-left: 0;
-    margin-bottom: 15px;
+    margin-top: -4px;
+    margin-left: -2px;
+    margin-bottom: 18px;
     padding: 0;
 
     font-size: 30px;
@@ -211,7 +224,7 @@
   right: 0;
 
   @media (min-width: $breakpoint-tablet) {
-    top: 20px;
+    top: 16px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -287,14 +300,26 @@
 
 .result-user__content--demin .result-user__footer {
   margin-bottom: 12px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .result-user__content--smolov .result-user__footer {
   margin-bottom: 10px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .result-user__content--rogovaya .result-user__footer {
   margin-bottom: 13px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+  }
 }
 
 /* Заголовок секции */
@@ -359,7 +384,7 @@
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 35px 25px;
+    padding: 0 35px 20px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -381,7 +406,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin: 0;
-    margin-right: 30px;
+    margin-right: 28px;
 
     font-size: 20px;
     line-height: 30px;
@@ -405,6 +430,10 @@
 .result-user__footer-tooltip {
   margin-right: 15px;
   z-index: 20;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 12px;
+  }
 }
 
 /* Разное состояние */
@@ -440,8 +469,8 @@
     align-items: center;
     width: 108px;
     margin: 0;
-    padding-top: 35px;
-    padding-right: 25px;
+    padding-top: 31px;
+    padding-right: 7px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -480,6 +509,7 @@
 .result-user__aside-transport {
   @media (min-width: $breakpoint-tablet) {
     flex-direction: column;
+    margin-bottom: 4px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -628,7 +658,7 @@
     order: 2;
     max-width: none;
     margin: 0;
-    margin-top: -75px;
+    margin-top: -71px;
     margin-left: 255px;
     padding: 10px 32px;
   }
@@ -659,8 +689,8 @@
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
-    max-width: 200px;
-    padding-left: 50px;
+    margin-bottom: 53px;
+    padding-left: 40px;
 
     font-size: 20px;
   }
@@ -682,6 +712,14 @@
   height: 2px;
 
   background: $blue-color--light;
+
+  @media (min-width: $breakpoint-tablet) {
+    left: 247px;
+    top: 17px;
+
+    width: 27px;
+    height: 3px;
+  }
 }
 
 .result-user__more::after {

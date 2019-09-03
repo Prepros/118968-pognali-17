@@ -12,8 +12,7 @@
   border-radius: 20px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 35px;
-    padding-right: 33px;
+    padding: 35px 35px 38px;
   }
 }
 
@@ -68,8 +67,27 @@
   }
 }
 
+.user-filter__feature--transport {
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 14px;
+  }
+}
+
+.user-filter__feature--lvl .level-range__range {
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -3px;
+  }
+}
+
 .user-filter__feature:last-of-type {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+
+    border-bottom: 1px solid #f3c72b;
+  }
 }
 
 /* Заголовок */
@@ -92,16 +110,13 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    padding-right: 0;
+    width: 105px;
+    margin-right: 21px;
+    padding: 0;
 
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
 
     span {
       display: inline-block;
@@ -148,6 +163,10 @@
 
 .user-filter__feature--show .user-filter__subtitle-link {
   margin-bottom: 16px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+  }
 }
 
 /* Список элементов категорий */
@@ -188,13 +207,25 @@
   justify-content: flex-start;
 }
 
+.user-filter__feature--transport .user-filter__list {
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: -6px;
+  }
+}
+
+.user-filter__feature--lvl .user-filter__list {
+  @media (min-width: $breakpoint-tablet) {
+    width: 490px;
+  }
+}
+
 /* Элемент списка */
 .user-filter__item {
   margin-bottom: 12px;
 
   @media (min-width: $breakpoint-tablet) {
     width: 150px;
-    margin-right: 19px;
+    margin-right: 20px;
     margin-bottom: 0;
   }
 }
