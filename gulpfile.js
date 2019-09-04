@@ -70,7 +70,7 @@ gulp.task("minifyjs", function () {
 
 // Оптимизация изображений
 gulp.task("image", function () {
-  return gulp.src("./build/img/**/*.{png, jpg, svg}")
+  return gulp.src("./build/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({
         optimizationLevel: 3  // уровень оптимизации
@@ -78,21 +78,23 @@ gulp.task("image", function () {
       imagemin.jpegtran({
         progressive: true // прогрессивная загрузка картинки
       }),
-      imagemin.svgo({
-        plugins: [
-          {cleanupIDs: false},
-          {removeUselessDefs: false},
-          {removeViewBox: true},
-          {removeComments: true}
-        ]
-      })
+      imagemin.svgo(
+      //   {
+      //   plugins: [
+      //     {cleanupIDs: false},
+      //     {removeUselessDefs: false},
+      //     {removeViewBox: true},
+      //     {removeComments: true}
+      //   ]
+      // }
+      )
     ]))
     .pipe(gulp.dest("./build/img"));
 });
 
 // Оптимизация webp
 gulp.task("webp", function () {
-  return gulp.src("./source/img/**/*.{png, jpg}")
+  return gulp.src("./source/img/**/*.{png,jpg}")
     .pipe(webp({
       quality: 90
     }))
@@ -112,7 +114,7 @@ gulp.task("sprite", function () {
 // Копируем файлы в build
 gulp.task("copy", function () {
   return gulp.src([
-    "./source/fonts/**/*.{woff, woff2}",
+    "./source/fonts/**/*.{woff,woff2}",
     "./source/img/**",
     "./source/*.ico"
   ], {
@@ -150,14 +152,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("./source/img/**/icon-*.svg", gulp.series("sprite", "html"));
-  gulp.watch("./source/sass/**/*.{sass, scss}", {usePolling: true}, gulp.series("css"));
+  gulp.watch("./source/sass/**/*.{sass,scss}", {usePolling: true}, gulp.series("css"));
   gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
 });
 
 gulp.task("start", gulp.series("compose", "server"));
-
-// gulp.task("build", gulp.series("compose", function () {
-//   browserSync.init({
-//     server: "./build",
-//   });
-// }));
