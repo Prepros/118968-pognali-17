@@ -13,6 +13,8 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 // Минификатор css
 const minifycss = require("gulp-csso");
+// Минификатор js
+const minifyjs = require("gulp-uglify");
 // Переименование файла
 const rename = require("gulp-rename");
 // Удаляем каталог
@@ -27,6 +29,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 // Svg спрайты
 const svgstore = require("gulp-svgstore");
+// Объединение файлов
+const concat = require("gulp-concat");
 
 // html
 gulp.task("html", function () {
@@ -48,8 +52,6 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()  // добавляем префиксы
     ]))
-    .pipe(sourcemaps.write("."))  // запись map файла в текущий каталог
-    .pipe(gulp.dest("./build/css")) // кладем обычный css файл
     .pipe(minifycss()) // минифицируем css файл
     .pipe(rename("style.min.css"))  // переименование файла
     .pipe(sourcemaps.write("."))  // запись map файла в текущий каталог
@@ -57,9 +59,18 @@ gulp.task("css", function () {
     .pipe(browserSync.stream());  // перезагружаем сервер
 });
 
+// Минификация js
+gulp.task("minifyjs", function () {
+  return gulp.src("./source/js/**/*.js")
+    .pipe(concat("all.js"))
+    .pipe(minifyjs())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("./build/js"));
+});
+
 // Оптимизация изображений
 gulp.task("image", function () {
-  return gulp.src("./source/img/**/*.{png, jpg, svg}")
+  return gulp.src("./build/img/**/*.{png, jpg, svg}")
     .pipe(imagemin([
       imagemin.optipng({
         optimizationLevel: 3  // уровень оптимизации
@@ -90,12 +101,12 @@ gulp.task("webp", function () {
 
 // svg спрайт
 gulp.task("sprite", function () {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src("./source/img/**/icon-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("./build/img"));
+    .pipe(gulp.dest("./source/img"));
 });
 
 // Копируем файлы в build
@@ -103,9 +114,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "./source/fonts/**/*.{woff, woff2}",
     "./source/img/**",
-    "./source/js/**",
-    "./source/*.ico",
-    "./source/*.html"
+    "./source/*.ico"
   ], {
       base: "./source"  // корень откуда копировать
     })
@@ -118,17 +127,18 @@ gulp.task("clean", function () {
 });
 
 // Сборка
-gulp.task("build", gulp.series(
+gulp.task("compose", gulp.series(
   "clean",  // удаляем папку build
+  "sprite", // создаем svg спрайт
   "copy",   // копируем необходимые файлы в папку build
   "image",  // оптимизируем изображения
   "webp",   // конвертируем в webp
-  "sprite", // создаем svg спрайт
-  "html",   // собираем html
-  "css"     // собираем css
+  "css",     // собираем css
+  "minifyjs", // минификация js
+  "html"   // собираем html
 ));
 
-// Запускаем локльный сервер
+// Запускаем локальный сервер для разработки
 gulp.task("server", function () {
   browserSync.init({
     server: "./build",  // каталог который слушаем
@@ -144,4 +154,10 @@ gulp.task("server", function () {
   gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
 });
 
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("start", gulp.series("compose", "server"));
+
+// gulp.task("build", gulp.series("compose", function () {
+//   browserSync.init({
+//     server: "./build",
+//   });
+// }));
