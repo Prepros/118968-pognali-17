@@ -94,7 +94,7 @@ gulp.task("image", function () {
 
 // Оптимизация webp
 gulp.task("webp", function () {
-  return gulp.src("./source/img/**/*.{png,jpg}")
+  return gulp.src("./build/img/**/*.{png,jpg}")
     .pipe(webp({
       quality: 90
     }))
@@ -151,7 +151,8 @@ gulp.task("server", function () {
     ui: false           // доступ к пользовательскому интерфейсу
   });
 
-  gulp.watch("./source/img/**/icon-*.svg", gulp.series("sprite", "html"));
+  gulp.watch("./source/img/**/icon-*.svg", gulp.series("sprite", "html")).on("change", browserSync.reload);
+  gulp.watch("./source/js/*.js", {usePolling: true}, gulp.series("minifyjs")).on("change", browserSync.reload);
   gulp.watch("./source/sass/**/*.{sass,scss}", {usePolling: true}, gulp.series("css"));
   gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
 });
