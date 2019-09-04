@@ -614,10 +614,6 @@
   }
 }
 
-.result-user__level .level-module__svg {
-  stroke-width: 6;
-}
-
 /* Описательная часть */
 .result-user__level::before {
   top: 50%;
@@ -638,6 +634,8 @@
 .result-user__level .level-module__svg {
   width: 45px;
   height: 45px;
+
+  stroke-width: 6;
 
   @media (min-width: $breakpoint-tablet) {
     width: 60px;

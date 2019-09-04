@@ -21,6 +21,12 @@ const del = require("del");
 const posthtml = require("gulp-posthtml");
 // Подключение html файлов
 const includehtml = require("posthtml-include");
+// Оптимизация картинок
+const imagemin = require("gulp-imagemin");
+// Оптимизация картинок webp
+const webp = require("gulp-webp");
+// Svg спрайты
+const svgstore = require("gulp-svgstore");
 
 // html
 gulp.task("html", function () {
@@ -51,6 +57,47 @@ gulp.task("css", function () {
     .pipe(browserSync.stream());  // перезагружаем сервер
 });
 
+// Оптимизация изображений
+gulp.task("image", function () {
+  return gulp.src("./source/img/**/*.{png, jpg, svg}")
+    .pipe(imagemin([
+      imagemin.optipng({
+        optimizationLevel: 3  // уровень оптимизации
+      }),
+      imagemin.jpegtran({
+        progressive: true // прогрессивная загрузка картинки
+      }),
+      imagemin.svgo({
+        plugins: [
+          {cleanupIDs: false},
+          {removeUselessDefs: false},
+          {removeViewBox: true},
+          {removeComments: true}
+        ]
+      })
+    ]))
+    .pipe(gulp.dest("./build/img"));
+});
+
+// Оптимизация webp
+gulp.task("webp", function () {
+  return gulp.src("./source/img/**/*.{png, jpg}")
+    .pipe(webp({
+      quality: 90
+    }))
+    .pipe(gulp.dest("./build/img"));
+});
+
+// svg спрайт
+gulp.task("sprite", function () {
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("./build/img"));
+});
+
 // Копируем файлы в build
 gulp.task("copy", function () {
   return gulp.src([
@@ -72,10 +119,13 @@ gulp.task("clean", function () {
 
 // Сборка
 gulp.task("build", gulp.series(
-  "clean",
-  "copy",
-  "html",
-  "css"
+  "clean",  // удаляем папку build
+  "copy",   // копируем необходимые файлы в папку build
+  "image",  // оптимизируем изображения
+  "webp",   // конвертируем в webp
+  "sprite", // создаем svg спрайт
+  "html",   // собираем html
+  "css"     // собираем css
 ));
 
 // Запускаем локльный сервер
@@ -89,6 +139,7 @@ gulp.task("server", function () {
     ui: false           // доступ к пользовательскому интерфейсу
   });
 
+  gulp.watch("./source/img/**/icon-*.svg", gulp.series("sprite", "html"));
   gulp.watch("./source/sass/**/*.{sass, scss}", {usePolling: true}, gulp.series("css"));
   gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
 });
