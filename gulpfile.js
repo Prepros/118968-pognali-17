@@ -1,121 +1,96 @@
-// gulp.task - 1 последовательная вещь
-// gulp.series - последовательное выполнение сценариев
-// gulp.parallel - параллельное выполнение сценариев
-
 const gulp = require("gulp");
+const browserSync = require("browser-sync").create();
+
+// Преобразует sass в css
 const sass = require("gulp-sass");
+// Обработчик ошибок
 const plumber = require("gulp-plumber");
+// Указывает в инспекторе пути к свойствам
+const sourcemaps = require("gulp-sourcemaps");
+// Для манипуляций с css файлом
 const postcss = require("gulp-postcss");
+// Добавляет префиксы к свойствам
 const autoprefixer = require("autoprefixer");
-const sourcemap = require("gulp-sourcemaps");
-const server = require("browser-sync").create();
-const csso = require("gulp-csso");
+// Минификатор css
+const minifycss = require("gulp-csso");
+// Переименование файла
 const rename = require("gulp-rename");
-const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
+// Удаляем каталог
 const del = require("del");
+// Для манипуляция с html файлами
+const posthtml = require("gulp-posthtml");
+// Подключение html файлов
+const includehtml = require("posthtml-include");
 
-
-gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});
-
-gulp.task("image", function () {
-  return gulp.src("source/img/**/*.{png, jpg, svg}")
-    .pipe(imagemin([
-      imagemin.optipng({
-        optimizationLevel: 3
-      }),
-      imagemin.jpegtran({
-        progressive: true
-      }),
-      imagemin.svgo() // комментарии, пробелы и ентеры
-    ]))
-    .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png, jpg}")
-    .pipe(webp({
-      quality: 90
-    }))
-    .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-});
-
+// html
 gulp.task("html", function () {
-  return gulp.src("source/*.html")
+  return gulp.src("./source/*.html")
     .pipe(posthtml([
-      include() // <include src="build/img/sprite.svg"></include>
+      includehtml({
+        root: "./source"  // корень откуда копировать
+      })
     ]))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("./build"));
 });
 
+// Sass в CSS
+gulp.task("css", function () {
+  return gulp.src("./source/sass/style.scss") // берем scss файл
+    .pipe(plumber())  // обрабатывает ошибки в scss файле
+    .pipe(sourcemaps.init())  // инициализация map файла
+    .pipe(sass()) // компиляция в css
+    .pipe(postcss([
+      autoprefixer()  // добавляем префиксы
+    ]))
+    .pipe(sourcemaps.write("."))  // запись map файла в текущий каталог
+    .pipe(gulp.dest("./build/css")) // кладем обычный css файл
+    .pipe(minifycss()) // минифицируем css файл
+    .pipe(rename("style.min.css"))  // переименование файла
+    .pipe(sourcemaps.write("."))  // запись map файла в текущий каталог
+    .pipe(gulp.dest("./build/css")) // кладем css файл
+    .pipe(browserSync.stream());  // перезагружаем сервер
+});
+
+// Копируем файлы в build
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff, woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
+    "./source/fonts/**/*.{woff, woff2}",
+    "./source/img/**",
+    "./source/js/**",
+    "./source/*.ico",
+    "./source/*.html"
   ], {
-    base: "source" // корень от куда копировать
+      base: "./source"  // корень откуда копировать
     })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("./build"));
 });
 
+// Удаляем каталог build
 gulp.task("clean", function () {
-  return del("build");
+  return del("./build");
 });
 
-gulp.task("refresh", function () {
-  server.reload();
-  done();
-});
-
-gulp.task("server", function () {
-  server.init({
-    server: "build/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("source/sass/**/*.{scss,sass}", {usePolling: true}, gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html"));
-  gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
-
-  // gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
-  // gulp.watch("source/*.html", gulp.series("html", "refresh"));
-});
-
+// Сборка
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "css",
-  "sprite",
-  "html"
+  "html",
+  "css"
 ));
+
+// Запускаем локльный сервер
+gulp.task("server", function () {
+  browserSync.init({
+    server: "./build",  // каталог который слушаем
+    port: 3000,         // порт
+    notify: false,      // уведомление
+    open: true,         // url по умолчанию
+    cors: true,         //
+    ui: false           // доступ к пользовательскому интерфейсу
+  });
+
+  gulp.watch("./source/sass/**/*.{sass, scss}", {usePolling: true}, gulp.series("css"));
+  gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
+});
+
 gulp.task("start", gulp.series("build", "server"));
