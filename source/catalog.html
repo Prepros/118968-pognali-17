@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="preload" href="fonts/bloggersans.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="inner-page">
@@ -859,19 +862,21 @@
           <article class="result-user__content result-user__content--firsova">
             <div class="result-user__head">
               <p class="result-user__head-photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/firsova-desktop@1x.webp 1x, img/desktop/firsova-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/firsova-tablet@1x.webp 1x, img/tablet/firsova-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/mobile/firsova-mobile@1x.webp 1x, img/mobile/firsova-tablet@2x.webp 2x">
+                <a href="/user/firsova">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/firsova-desktop@1x.webp 1x, img/desktop/firsova-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/firsova-tablet@1x.webp 1x, img/tablet/firsova-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/mobile/firsova-mobile@1x.webp 1x, img/mobile/firsova-tablet@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" srcset="img/desktop/firsova-desktop@1x.jpg 1x, img/desktop/firsova-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/tablet/firsova-tablet@1x.jpg 1x, img/tablet/firsova-tablet@2x.jpg 2x">
-                  <img class="result-user__head-img" src="img/mobile/firsova-mobile@1x.jpg" srcset="img/mobile/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Тани Фирсовой">
-                </picture>
+                    <source media="(min-width: 1440px)" srcset="img/desktop/firsova-desktop@1x.jpg 1x, img/desktop/firsova-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/tablet/firsova-tablet@1x.jpg 1x, img/tablet/firsova-tablet@2x.jpg 2x">
+                    <img class="result-user__head-img" src="img/mobile/firsova-mobile@1x.jpg" srcset="img/mobile/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Тани Фирсовой">
+                  </picture>
+                </a>
               </p>
               <div class="result-user__head-wrapp">
                 <h2 class="result-user__head-name">
-                  <a class="result-user__head-link indicator indicator--offline" href="#">Таня Фирсова</a>
+                  <a class="result-user__head-link indicator indicator--offline" href="/user/firsova">Таня Фирсова</a>
                 </h2>
                 <a class="result-user__head-like like like--active" href="#">
                   <p class="like__icon">
@@ -977,24 +982,26 @@
                 </div>
               </div>
             </div>
-            <a class="result-user__button button" href="#">Позвать!</a>
+            <a class="result-user__button button" href="call.html">Позвать!</a>
           </article>
           <article class="result-user__content result-user__content--demin">
             <div class="result-user__head">
               <p class="result-user__head-photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.webp 1x, img/desktop/demin-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.webp 1x, img/tablet/demin-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/mobile/demin-mobile@1x.webp 1x, img/mobile/demin-tablet@2x.webp 2x">
+                <a href="/user/demin">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.webp 1x, img/desktop/demin-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.webp 1x, img/tablet/demin-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/mobile/demin-mobile@1x.webp 1x, img/mobile/demin-tablet@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.jpg 1x, img/desktop/demin-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.jpg 1x, img/tablet/demin-tablet@2x.jpg 2x">
-                  <img class="result-user__head-img" src="img/mobile/demin-mobile@1x.jpg" srcset="img/mobile/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Пети Демина">
-                </picture>
+                    <source media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.jpg 1x, img/desktop/demin-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.jpg 1x, img/tablet/demin-tablet@2x.jpg 2x">
+                    <img class="result-user__head-img" src="img/mobile/demin-mobile@1x.jpg" srcset="img/mobile/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Пети Демина">
+                  </picture>
+                </a>
               </p>
               <div class="result-user__head-wrapp">
                 <h2 class="result-user__head-name">
-                  <a class="result-user__head-link indicator indicator--offline" href="#">Петя Демин</a>
+                  <a class="result-user__head-link indicator indicator--offline" href="/user/demin">Петя Демин</a>
                 </h2>
                 <a class="result-user__head-like like" href="#">
                   <p class="like__icon">
@@ -1091,24 +1098,26 @@
                 </div>
               </div>
             </div>
-            <a class="result-user__button button" href="#">Позвать!</a>
+            <a class="result-user__button button" href="call.html">Позвать!</a>
           </article>
           <article class="result-user__content result-user__content--smolov">
             <div class="result-user__head">
               <p class="result-user__head-photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/smolov-desktop@1x.webp 1x, img/desktop/smolov-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/smolov-tablet@1x.webp 1x, img/tablet/smolov-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/mobile/smolov-mobile@1x.webp 1x, img/mobile/smolov-tablet@2x.webp 2x">
+                <a href="/user/smolov">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/smolov-desktop@1x.webp 1x, img/desktop/smolov-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/smolov-tablet@1x.webp 1x, img/tablet/smolov-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/mobile/smolov-mobile@1x.webp 1x, img/mobile/smolov-tablet@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" srcset="img/desktop/smolov-desktop@1x.jpg 1x, img/desktop/smolov-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/tablet/smolov-tablet@1x.jpg 1x, img/tablet/smolov-tablet@2x.jpg 2x">
-                  <img class="result-user__head-img" src="img/mobile/smolov-mobile@1x.jpg" srcset="img/mobile/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Марка Смолова">
-                </picture>
+                    <source media="(min-width: 1440px)" srcset="img/desktop/smolov-desktop@1x.jpg 1x, img/desktop/smolov-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/tablet/smolov-tablet@1x.jpg 1x, img/tablet/smolov-tablet@2x.jpg 2x">
+                    <img class="result-user__head-img" src="img/mobile/smolov-mobile@1x.jpg" srcset="img/mobile/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Марка Смолова">
+                  </picture>
+                </a>
               </p>
               <div class="result-user__head-wrapp">
                 <h2 class="result-user__head-name">
-                  <a class="result-user__head-link indicator indicator--offline" href="#">Марк Смолов</a>
+                  <a class="result-user__head-link indicator indicator--offline" href="/user/smolov">Марк Смолов</a>
                 </h2>
                 <a class="result-user__head-like like" href="#">
                   <p class="like__icon">
@@ -1211,24 +1220,26 @@
                 </div>
               </div>
             </div>
-            <a class="result-user__button button" href="#">Позвать!</a>
+            <a class="result-user__button button" href="call.html">Позвать!</a>
           </article>
           <article class="result-user__content result-user__content--rogovaya">
             <div class="result-user__head">
               <p class="result-user__head-photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/rogovaya-desktop@1x.webp 1x, img/desktop/rogovaya-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/rogovaya-tablet@1x.webp 1x, img/tablet/rogovaya-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/mobile/rogovaya-mobile@1x.webp 1x, img/mobile/rogovaya-tablet@2x.webp 2x">
+                <a href="/user/rogovaya">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/rogovaya-desktop@1x.webp 1x, img/desktop/rogovaya-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/rogovaya-tablet@1x.webp 1x, img/tablet/rogovaya-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/mobile/rogovaya-mobile@1x.webp 1x, img/mobile/rogovaya-tablet@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" srcset="img/desktop/rogovaya-desktop@1x.jpg 1x, img/desktop/rogovaya-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/tablet/rogovaya-tablet@1x.jpg 1x, img/tablet/rogovaya-tablet@2x.jpg 2x">
-                  <img class="result-user__head-img" src="img/mobile/rogovaya-mobile@1x.jpg" srcset="img/mobile/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Ларисы Роговой">
-                </picture>
+                    <source media="(min-width: 1440px)" srcset="img/desktop/rogovaya-desktop@1x.jpg 1x, img/desktop/rogovaya-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/tablet/rogovaya-tablet@1x.jpg 1x, img/tablet/rogovaya-tablet@2x.jpg 2x">
+                    <img class="result-user__head-img" src="img/mobile/rogovaya-mobile@1x.jpg" srcset="img/mobile/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Фотография Ларисы Роговой">
+                  </picture>
+                </a>
               </p>
               <div class="result-user__head-wrapp">
                 <h2 class="result-user__head-name">
-                  <a class="result-user__head-link indicator indicator--online" href="#">Лариса Роговая</a>
+                  <a class="result-user__head-link indicator indicator--online" href="/user/rogovaya">Лариса Роговая</a>
                 </h2>
                 <a class="result-user__head-like like" href="#">
                   <p class="like__icon">
@@ -1322,10 +1333,10 @@
                 </div>
               </div>
             </div>
-            <a class="result-user__button button" href="#">Позвать!</a>
+            <a class="result-user__button button" href="call.html">Позвать!</a>
           </article>
         </div>
-        <a class="result-user__more" href="#">Показать еще</a>
+        <a class="result-user__more" href="/user/more.html">Показать еще</a>
         <div class="result-user__pagination pagination">
           <ul class="pagination__number">
             <li class="pagination__number-item">
@@ -1343,7 +1354,7 @@
           </ul>
           <ul class="pagination__arrow">
             <li class="pagination__arrow-left">
-              <a class="pagination__arrow-link" href="#">
+              <a class="pagination__arrow-link" href="/user/more/1">
                 <svg class="pagination__icon-triangle-right" width="10" height="20">
                   <use xlink:href="#triangle-left"></use>
                 </svg>
@@ -1351,7 +1362,7 @@
               </a>
             </li>
             <li class="pagination__arrow-right">
-              <a class="pagination__arrow-link" href="#">
+              <a class="pagination__arrow-link" href="/user/more/2">
                 <svg class="pagination__icon-triangle-right" width="10" height="20">
                   <use xlink:href="#triangle-right"></use>
                 </svg>

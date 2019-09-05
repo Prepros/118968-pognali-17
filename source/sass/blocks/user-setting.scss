@@ -140,12 +140,17 @@
 
   line-height: 0;
 
+  background: $white-color--dark;
+  border-radius: 50%;
+
   @media (min-width: $breakpoint-tablet) {
     order: 3;
     width: 94px;
     height: 94px;
     margin-right: 0;
     margin-bottom: 52px;
+
+    border-radius: 5px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -154,6 +159,8 @@
     height: 190px;
     margin-bottom: 0;
     margin-right: 95px;
+
+    border-radius: 5px 5px 0 0;
   }
 }
 

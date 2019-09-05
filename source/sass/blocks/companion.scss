@@ -236,14 +236,21 @@
 /* Верхняя часть элемента Попутчик */
 .companion__header {
   position: relative;
+
+  width: 270px;
+  height: 270px;
   margin: 0;
 
   line-height: 0;
 
+  background-color: $white-color--dark;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 
   @media (min-width: $breakpoint-tablet) {
+    width: 285px;
+    height: 285px;
+
     border-radius: 20px 20px 0 0;
   }
 }

@@ -150,12 +150,21 @@
 /* Миниатюра страны */
 .direction__thumb {
   position: relative;
+
+  width: 270px;
+  height: 110px;
   margin: 0;
+
   line-height: 0;
-  border-radius: 10px;
+
+  background-color: $white-color--dark;
+  border-radius: 10px 10px 0 0;
 
   @media (min-width: $breakpoint-tablet) {
     width: 186px;
+    height: 140px;
+
+    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -163,7 +172,7 @@
 .direction__thumb-img {
   width: 270px;
   height: 110px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 
   @media (min-width: $breakpoint-tablet) {
     width: 186px;
