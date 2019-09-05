@@ -571,7 +571,7 @@
     top: 31px;
 
     width: 3px;
-    height: 111%;
+    height: 116%;
 
     background-color: $blue-color--light;
     border: none;
@@ -599,6 +599,10 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    justify-content: flex-start;
   }
 }
 
@@ -678,6 +682,10 @@
   @media (min-width: $breakpoint-tablet) {
     width: 70px;
     height: 47px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-left: auto;
   }
 }
 
