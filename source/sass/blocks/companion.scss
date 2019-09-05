@@ -250,6 +250,9 @@
 
 /* Фотография попутчика */
 .companion__header-img {
+  width: 270px;
+  height: 270px;
+
   transition: all 1s ease;
 
   @media (min-width: $breakpoint-tablet) {

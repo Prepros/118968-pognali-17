@@ -373,6 +373,18 @@
   @include reset-ul;
 }
 
+.user-setting__transport .transport-action__tooltip:hover::before {
+  @media (min-width: $breakpoint-tablet) {
+    top: 39px;
+  }
+}
+
+.user-setting__transport .transport-action__tooltip:hover::after {
+  @media (min-width: $breakpoint-tablet) {
+    top: 55px;
+  }
+}
+
 /* Элементы списка */
 .user-setting__transport .transport-action__item {
   @media (min-width: $breakpoint-tablet) {

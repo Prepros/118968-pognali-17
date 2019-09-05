@@ -20,6 +20,10 @@
     <div class="page-header__scroll">
       <a class="page-header__logo page-header__logo--white logo" href="index.html">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-white@1x.webp 1x, img/desktop/logo-desktop-white@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/logo-tablet-white@1x.webp 1x, img/tablet/logo-tablet-white@2x.webp 2x">
+          <source type="image/webp" srcset="img/mobile/logo-mobile-white@1x.webp 1x, img/mobile/logo-mobile-white@2x.webp 2x">
+
           <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-white@1x.png 1x, img/desktop/logo-desktop-white@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-white@1x.png 1x, img/tablet/logo-tablet-white@2x.png 2x">
           <img class="logo__img" src="img/mobile/logo-mobile-white@1x.png" srcset="img/mobile/logo-mobile-white@2x.png 2x" alt="Логотип Погнали">
@@ -27,6 +31,10 @@
       </a>
       <a class="page-header__logo page-header__logo--blue logo" href="#">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-blue@1x.webp 1x, img/desktop/logo-desktop-blue@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/logo-tablet-blue@1x.webp 1x, img/tablet/logo-tablet-blue@2x.webp 2x">
+          <source type="image/webp" srcset="img/mobile/logo-mobile-blue@1x.webp 1x, img/mobile/logo-mobile-blue@2x.webp 2x">
+
           <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-blue@1x.png 1x, img/desktop/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-blue@1x.png 1x, img/tablet/logo-tablet-blue@2x.png 2x">
           <img class="logo__img" src="img/mobile/logo-mobile-blue@1x.png" srcset="img/mobile/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
@@ -161,8 +169,11 @@
           </div>
           <p class="user-setting__avatar">
             <picture>
-              <source media="(min-width: 1440px)"
-                      srcset="img/desktop/demin-desktop@1x.jpg 1x, img/desktop/demin-desktop@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.webp, img/desktop/demin-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.webp, img/tablet/demin-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/mobile/demin-mobile2@1x.webp, img/mobile/demin-mobile2@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/desktop/demin-desktop@1x.jpg 1x, img/desktop/demin-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/tablet/demin-tablet@1x.jpg 1x, img/tablet/demin-tablet@2x.jpg 2x">
               <img class="user-setting__avatar-img" src="img/mobile/demin-mobile2@1x.jpg" srcset="img/mobile/demin-mobile2@2x.jpg 2x" width="270" height="270" alt="Фотография Пети Демина">
             </picture>
@@ -228,7 +239,7 @@
               <p class="my-plan__desc">
                 <b class="my-plan__info">3 попутчика</b>
                 <b class="my-plan__info">26 мар — 29 мар</b>
-                <a class="my-plan__edit" href="#">Изменить</a>
+                <a class="my-plan__edit" href="edit.html">Изменить</a>
               </p>
             </li>
             <li class="my-plan__item">
@@ -236,7 +247,7 @@
               <p class="my-plan__desc">
                 <b class="my-plan__info">1 попутчик</b>
                 <b class="my-plan__info">1 июл — 15 июл</b>
-                <a class="my-plan__edit" href="#">Изменить</a>
+                <a class="my-plan__edit" href="edit.html">Изменить</a>
               </p>
             </li>
           </ol>
@@ -248,7 +259,7 @@
       <div class="add-plan__container container">
         <div class="add-plan__wrapp">
           <h2 class="add-plan__title">Добавить план:</h2>
-          <div class="add-plan__step">
+          <div class="add-plan__step" id="step1">
             <div class="add-plan__step-wrapp">
               <header class="add-plan__header">
                 <div class="add-plan__header-info">
@@ -264,39 +275,37 @@
               </header>
               <div class="add-plan__content">
                 <div class="add-plan__item add-plan__item--person">
-                  <b class="add-plan__item-title">Ищу попутчиков:</b>
-                  <span class="add-plan__item-desc">Чел.</span>
+                  <label class="add-plan__item-title" for="count-person">Ищу попутчиков:</label>
+                  <label class="add-plan__item-desc" for="count-person">Чел.</label>
                   <p class="add-plan__item-counter counter-input">
                     <button class="counter-input__button counter-input__button--minus" type="button">
                       <span class="visually-hidden">отнять</span>
                     </button>
-                    <label class="visually-hidden" for="count-person">Добавить/убавить попутчиков</label>
-                    <input class="counter-input__text" id="count-person" type="text" name="count-person" placeholder="0" value="2">
+                    <input class="counter-input__text" id="count-person" type="text" name="count-person" placeholder="0" value="2" aria-label="Добавить/убавить дни">
                     <button class="counter-input__button counter-input__button--plus" type="button">
                       <span class="visually-hidden">прибавить</span>
                     </button>
                   </p>
                 </div>
                 <div class="add-plan__item add-plan__item--day">
-                  <b class="add-plan__item-title">Длительность:</b>
-                  <span class="add-plan__item-desc">Дн.</span>
-                  <p class="add-plan__item-counter counter-input">
+                  <label class="add-plan__item-title" for="count-day">Длительность:</label>
+                  <label class="add-plan__item-desc" for="count-day">Дн.</label>
+                  <div class="add-plan__item-counter counter-input">
                     <button class="counter-input__button counter-input__button--minus" type="button">
                       <span class="visually-hidden">отнять</span>
                     </button>
-                    <label class="visually-hidden" for="count-day">Добавить/убавить дни</label>
-                    <input class="counter-input__text" id="count-day" type="text" name="count-day" placeholder="0" value="2">
+                    <input class="counter-input__text" id="count-day" type="text" name="count-day" placeholder="0" value="2" aria-label="Добавить/убавить дни">
                     <button class="counter-input__button counter-input__button--plus" type="button">
                       <span class="visually-hidden">прибавить</span>
                     </button>
-                  </p>
+                  </div>
                 </div>
                 <p class="add-plan__item add-plan__item--children check-big">
                   <input class="visually-hidden check-big__checkbox" id="children" type="checkbox" name="children" value="Можно с детьми" checked>
                   <label class="check-big__box" for="children">
                       <span class="check-big__input">
                         <svg class="check-big__svg" width="9" height="9">
-                          <use xlink:href="#tick-svg"></use>
+                          <use xlink:href="#icon-tick"></use>
                         </svg>
                       </span>
                     <b class="check-big__name">Можно с детьми</b>
@@ -385,7 +394,7 @@
                   </table>
                 </article>
                 <div class="add-plan__button-wrapp">
-                  <a class="add-plan__button-next button-big" href="catalog.html">
+                  <a class="add-plan__button-next button-big" href="#step2">
                     Следующий шаг
                     <svg class="button-big__arrow" width="10" height="14">
                       <use xlink:href="#icon-triangle-right"></use>
@@ -395,7 +404,7 @@
               </div>
             </div>
           </div>
-          <div class="add-plan__step">
+          <div class="add-plan__step" id="step2">
             <div class="add-plan__step-wrapp">
               <header class="add-plan__header">
                 <div class="add-plan__header-info">
@@ -1121,13 +1130,13 @@
                   </li>
                 </ul>
                 <div class="add-plan__button-wrapp">
-                  <a class="add-plan__button-next button-big" href="catalog.html">
+                  <a class="add-plan__button-next button-big" href="#step3">
                     Следующий шаг
                     <svg class="button-big__arrow" width="10" height="14">
                       <use xlink:href="#icon-triangle-right"></use>
                     </svg>
                   </a>
-                  <a class="add-plan__button-down button-big button-big--transparent" href="catalog.html">
+                  <a class="add-plan__button-down button-big button-big--transparent" href="#step1">
                     На шаг назад
                     <svg class="button-big__arrow button-big__arrow--rotate" width="10" height="14">
                       <use xlink:href="#icon-triangle-right"></use>
@@ -1137,8 +1146,7 @@
               </div>
             </div>
           </div>
-
-          <div class="add-plan__step">
+          <div class="add-plan__step" id="step3">
             <div class="add-plan__step-wrapp">
               <header class="add-plan__header">
                 <div class="add-plan__header-info">
@@ -1182,7 +1190,7 @@
                       <use xlink:href="#icon-triangle-right"></use>
                     </svg>
                   </button>
-                  <a class="add-plan__button-down button-big button-big--transparent" href="catalog.html">
+                  <a class="add-plan__button-down button-big button-big--transparent" href="#step2">
                     На шаг назад
                     <svg class="button-big__arrow button-big__arrow--rotate" width="10" height="14">
                       <use xlink:href="#icon-triangle-right"></use>
@@ -1202,6 +1210,10 @@
   <div class="main-footer__container container">
     <a class="main-footer__logo logo logo--blue" href="index.html">
       <picture>
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-blue@1x.webp 1x, img/desktop/logo-desktop-blue@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/logo-tablet-blue@1x.webp 1x, img/tablet/logo-tablet-blue@2x.webp 2x">
+        <source type="image/webp" srcset="img/mobile/logo-mobile-blue@1x.webp 1x, img/mobile/logo-mobile-blue@2x.webp 2x">
+
         <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-blue@1x.png 1x, img/desktop/logo-desktop-blue@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-blue@1x.png 1x, img/tablet/logo-tablet-blue@2x.png 2x">
         <img class="logo__img" src="img/mobile/logo-mobile-blue@1x.png" srcset="img/mobile/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">

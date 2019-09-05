@@ -79,14 +79,14 @@ gulp.task("image", function () {
         progressive: true // прогрессивная загрузка картинки
       }),
       imagemin.svgo(
-      //   {
-      //   plugins: [
-      //     {cleanupIDs: false},
-      //     {removeUselessDefs: false},
-      //     {removeViewBox: true},
-      //     {removeComments: true}
-      //   ]
-      // }
+        {
+        plugins: [
+          {cleanupIDs: false},
+          {removeUselessDefs: false},
+          {removeViewBox: true},
+          {removeComments: true}
+        ]
+      }
       )
     ]))
     .pipe(gulp.dest("./build/img"));
@@ -129,7 +129,7 @@ gulp.task("clean", function () {
 });
 
 // Сборка
-gulp.task("compose", gulp.series(
+gulp.task("build", gulp.series(
   "clean",  // удаляем папку build
   "sprite", // создаем svg спрайт
   "copy",   // копируем необходимые файлы в папку build
@@ -157,4 +157,4 @@ gulp.task("server", function () {
   gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
 });
 
-gulp.task("start", gulp.series("compose", "server"));
+gulp.task("start", gulp.series("build", "server"));
