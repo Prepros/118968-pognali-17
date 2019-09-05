@@ -178,6 +178,9 @@ var countryFilterWrapp = document.querySelector(".country-filter__main-wrapp");
 
 nameButton();
 
+// Подгоняем высоту блока под содержимое
+countHeight();
+
 // Открываем-закрываем фильтр
 if (countryFilterOpen) {
   countryFilterOpen.addEventListener("click", function (evt) {

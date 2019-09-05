@@ -108,7 +108,7 @@ gulp.task("sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("./source/img"));
+    .pipe(gulp.dest("./build/img"));
 });
 
 // Копируем файлы в build

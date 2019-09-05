@@ -58,7 +58,7 @@
 
 /* Левая стрелка */
 .calendar__button--left {
-  background-image: url("../img/icons/month-arrow-left.svg");
+  background-image: url("../img/icons/icon-arrow-left.svg");
   background-position: left;
 
   @media (min-width: $breakpoint-tablet) {
@@ -72,7 +72,7 @@
 
 /* Правая стрелка */
 .calendar__button--right {
-  background-image: url("../img/icons/month-arrow-right.svg");
+  background-image: url("../img/icons/icon-arrow-right.svg");
   background-position: right;
 
   @media (min-width: $breakpoint-tablet) {
