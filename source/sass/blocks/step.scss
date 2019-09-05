@@ -11,7 +11,7 @@
   background-image: linear-gradient(to bottom, $blue-color--dark 80px, $blue-color 80px, $blue-color 100%);
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: -139px;
+    margin-top: -155px;
     padding-top: 0;
     padding-bottom: 95px;
 
@@ -20,7 +20,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-top: -230px;
+    margin-top: -245px;
     padding: 0;
   }
 }
@@ -83,7 +83,7 @@
   @media (min-width: $breakpoint-tablet) {
     width: 54.7%;
     margin: 0;
-    padding: 30px 100px 60px 35px;
+    padding: 29px 100px 63px 33px;
 
     font-size: 24px;
     line-height: 24px;
@@ -108,12 +108,13 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-bottom: 30px;
+    padding: 27px 100px 32px 35px;
 
     &:nth-child(4n+1)::before,
     &:nth-child(4n+2)::before,
     &:nth-child(4n+3)::before {
-      right: 66px;
+      right: 63px;
+      top: -20px;
     }
 
     /* Каждый элемент */
@@ -128,19 +129,19 @@
 
     /* Каждый первый элемент после каждого четвертого */
     &:nth-child(4n+1) {
-      width: 25%; //330px
+      width: 344px;
       margin-left: 0;
     }
 
     /* Каждый второй и третий элементы после каждого четвертого */
     &:nth-child(4n+2),
     &:nth-child(4n+3) {
-      width: 29.16666666666667%; //385px
+      width: 377px;
     }
 
     /* Каждый четвертый элемент после каждого четвертого */
     &:nth-child(4n+4) {
-      width: 23.86363636363636%; //315px
+      width: 318px;
     }
   }
 }
@@ -165,7 +166,7 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    top: -15px;
+    top: -20px;
     left: auto;
     right: 33px;
 

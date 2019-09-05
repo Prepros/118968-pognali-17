@@ -42,6 +42,16 @@
 
 /* Ссылка пагинации */
 .pagination__number-link {
+  &:hover,
+  &:focus {
+    color: rgba($black-color, 0.6);
+  }
+
+  &--active,
+  &:not([href]) {
+    background-color: $yellow-color;
+  }
+
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     justify-content: center;
@@ -53,11 +63,6 @@
     text-decoration: none;
 
     border-radius: 50%;
-
-    &--active,
-    &:not([href]) {
-      background-color: $yellow-color;
-    }
   }
 }
 
@@ -68,7 +73,11 @@
   justify-content: space-between;
 
   @media (min-width: $breakpoint-tablet) {
-    width: 60px;
+    width: 56px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 65px;
   }
 }
 
@@ -83,7 +92,9 @@
   cursor: pointer;
 
   @media (min-width: $breakpoint-tablet) {
-    width: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 53px;
   }
 }
 
@@ -91,12 +102,24 @@
 .pagination__arrow-left {
   width: 135px;
   border-radius: 20px 0 0 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 11px;
+  }
 }
 
 /* Стрелка вперед */
 .pagination__arrow-right {
   width: 134px;
   border-radius: 0 20px 20px 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 11px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 20px;
+  }
 }
 
 /* Ссылки */
@@ -113,6 +136,10 @@
   height: 20px;
 
   fill: $blue-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 14px;
+  }
 }
 
 /* Разное состояние иконок */

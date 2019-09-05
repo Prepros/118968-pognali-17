@@ -23,6 +23,10 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 36px;
+  }
 }
 
 /* Социальная ссылка с фоном  */

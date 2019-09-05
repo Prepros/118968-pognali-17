@@ -3,12 +3,12 @@
    ========================================================================== */
 
 .user-setting {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 22px;
+  padding-bottom: 34px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 63px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -40,7 +40,7 @@
 .user-setting__level {
   width: 100px;
   height: 100px;
-  margin-left: 18px;
+  margin-left: 19px;
 
   color: $grey-color;
 
@@ -48,8 +48,8 @@
 
   @media (min-width: $breakpoint-tablet) {
     order: 1;
-    //width: 94px;
-    //height: 94px;
+    width: 94px;
+    height: 94px;
     margin-left: 0;
   }
 
@@ -84,11 +84,17 @@
   width: 100px;
   height: 100px;
 
+  stroke-width: 3;
+
   @media (min-width: $breakpoint-tablet) {
     position: absolute;
     left: 2px;
-    //width: 94px;
-    //height: 94px;
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    left: 0;
   }
 }
 
@@ -129,17 +135,22 @@
   width: 100px;
   height: 100px;
   margin: 0;
-  margin-right: 18px;
+  margin-right: 17px;
   margin-bottom: 20px;
 
   line-height: 0;
+
+  background: $white-color--dark;
+  border-radius: 50%;
 
   @media (min-width: $breakpoint-tablet) {
     order: 3;
     width: 94px;
     height: 94px;
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
+
+    border-radius: 5px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -148,6 +159,8 @@
     height: 190px;
     margin-bottom: 0;
     margin-right: 95px;
+
+    border-radius: 5px 5px 0 0;
   }
 }
 
@@ -159,6 +172,9 @@
   border-radius: 50%;
 
   @media (min-width: $breakpoint-tablet) {
+    width: 94px;
+    height: 94px;
+
     border-radius: 5px;
   }
 
@@ -174,11 +190,11 @@
 .user-setting__button {
   width: 100%;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
 
   @media (min-width: $breakpoint-tablet) {
     order: 4;
-    margin-bottom: 50px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -204,6 +220,7 @@
     font-size: 20px;
     line-height: 18px;
     font-weight: 500;
+    letter-spacing: 2px;
 
     border-radius: 5px;
   }
@@ -228,7 +245,7 @@
   position: relative;
 
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 26px;
 
   line-height: 0;
 
@@ -256,7 +273,13 @@
 
 .user-setting__box--tag .user-setting__box-title {
   @media (min-width: $breakpoint-desktop) {
-    left: 60px;
+    left: 63px;
+  }
+}
+
+.user-setting__box--tag .user-setting__box-text {
+  @media (min-width: $breakpoint-desktop) {
+    padding: 31px 38px 13px;
   }
 }
 
@@ -274,12 +297,13 @@
   @media (min-width: $breakpoint-tablet) {
     order: 2;
     width: 308px;
-    padding: 24px 50px;
+    padding: 25px 50px;
   }
 
   @media (min-width: $breakpoint-desktop) {
     order: 5;
     width: 385px;
+    padding: 25px 50px 24px;
   }
 }
 
@@ -305,15 +329,18 @@
     top: auto;
     bottom: -8px;
 
+    padding: 0 17px;
+
     font-size: 20px;
     font-weight: 500;
+    letter-spacing: 2px;
   }
 }
 
 /* Поле ввода */
 .user-setting__box-text {
   width: 100%;
-  padding: 20px 25px;
+  padding: 21px 25px;
 
   font-size: $fz;
   line-height: $lh;
@@ -337,20 +364,32 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 30px 25px 10px;
+    padding: 32px 38px 11px;
 
     font-size: 20px;
     line-height: 24px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding: 35px 40px 8px;
+    padding: 23px 75px 25px;
   }
 }
 
 /* Список транспортов */
 .user-setting__transport {
   @include reset-ul;
+}
+
+.user-setting__transport .transport-action__tooltip:hover::before {
+  @media (min-width: $breakpoint-tablet) {
+    top: 39px;
+  }
+}
+
+.user-setting__transport .transport-action__tooltip:hover::after {
+  @media (min-width: $breakpoint-tablet) {
+    top: 55px;
+  }
 }
 
 /* Элементы списка */
@@ -361,5 +400,9 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-right: 0;
   }
 }

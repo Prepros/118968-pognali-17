@@ -73,7 +73,7 @@ window.addEventListener("scroll", function (evt) {
  **/
 
 var tariffPopup = document.querySelector(".tariff-popup");
-var tariffPopupOpen = document.querySelector(".tariff__button-text");
+var tariffPopupOpen = document.querySelector(".tariff__button");
 var tariffPopupClose = document.querySelector(".tariff-popup__button");
 
 if (tariffPopup) {
@@ -116,11 +116,11 @@ function countHeight() {
 
     // Считаем высоту countryMainBlock для мобильных устройств
     if (window.innerWidth <= 767) {
-      if (listHeight < 234) {
-        listHeight = 234;
+      if (listHeight < 195) {
+        listHeight = 195;
       }
 
-      countryMainBlock.style.height = listHeight + subListHeight + 50 + 'px';
+      countryMainBlock.style.height = listHeight + subListHeight + 40 + 'px';
     }
     // Считаем высоту countryMainBlock для планшетных устройств
     else if (window.innerWidth <= 1439) {
@@ -159,15 +159,8 @@ function removeEmptyLetter() {
   }
 }
 
-var countryFilterOpen = document.querySelector(".country-filter__continent-button");
-var countryFilterClose = document.querySelector(".country-filter__country-button");
-var countryFilterWrapp = document.querySelector(".country-filter__main-wrapp");
-
-// Открываем-закрываем фильтр
-if (countryFilterOpen) {
-  countryFilterOpen.addEventListener("click", function (evt) {
-    evt.preventDefault();
-
+function nameButton() {
+  if (countryFilterOpen) {
     // Меняем название кнопки
     var textButton = countryFilterOpen.querySelector(".visually-hidden");
 
@@ -176,6 +169,25 @@ if (countryFilterOpen) {
     } else {
       textButton.innerHTML = "Показать все";
     }
+  }
+}
+
+var countryFilterOpen = document.querySelector(".country-filter__continent-button");
+var countryFilterClose = document.querySelector(".country-filter__country-button");
+var countryFilterWrapp = document.querySelector(".country-filter__main-wrapp");
+
+nameButton();
+
+// Подгоняем высоту блока под содержимое
+countHeight();
+
+// Открываем-закрываем фильтр
+if (countryFilterOpen) {
+  countryFilterOpen.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    // Меняем название кнопки
+    nameButton();
 
     // Открываем-закрываем фильтр
     if (countryFilterWrapp.classList.contains("country-filter__main-wrapp--close")) {
@@ -209,7 +221,7 @@ var countryItemBlock = document.querySelectorAll(".country-filter__country-item"
 
 if (countryItemBlock) {
   // Удаляем пустые буквы
-  removeEmptyLetter();
+  // removeEmptyLetter();
 
   // Переключаем буквы
   for (i = 0; i < countryItemBlock.length; i++) {
@@ -233,12 +245,12 @@ if (countryItemBlock) {
 // При переходе на разное разрешение экрана пересчитываем высоту блока
 window.addEventListener("resize", function (evt) {
   countHeight();
-  removeEmptyLetter();
+  // removeEmptyLetter();
 });
 
 /**
  * Уровень пользователя
- **/
+
 var levelModule = document.querySelectorAll(".level-module");
 
 for (var i = 0; i < levelModule.length; i++) {
@@ -274,12 +286,13 @@ for (var i = 0; i < levelModule.length; i++) {
     circle.setAttribute("style", "stroke-dasharray: " + c + "; stroke-dashoffset: " + pct);
   }
 }
+ **/
 
 /**
  * Выбрать страну
  **/
 
-var routeCountryBtn = document.querySelectorAll(".route__country-btn");
+var routeCountryBtn = document.querySelectorAll(".route__country");
 var routeModal = document.querySelector(".route__modal");
 var routeModalBtn = document.querySelector(".route__modal-btn");
 
@@ -307,4 +320,35 @@ if (routeCountryBtn && routeModal) {
       }
     });
   }
+}
+
+if (ymaps) {
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+        center: [59.936243, 30.320795],
+        zoom: 16,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Мы здесь',
+        balloonContent: 'Ну что погнали'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/map-marker.svg',
+        // Размеры метки.
+        iconImageSize: [42, 42],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-20, -5]
+      });
+
+    myMap.geoObjects
+      .add(myPlacemark);
+  });
 }

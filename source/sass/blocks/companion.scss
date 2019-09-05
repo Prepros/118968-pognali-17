@@ -22,7 +22,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding-top: 130px;
+    padding-top: 183px;
+    padding-bottom: 80px;
   }
 }
 
@@ -52,6 +53,7 @@
   @media (min-width: $breakpoint-tablet) {
     width: 213px;
     height: 213px;
+    top: 40px;
     left: 40px;
   }
 
@@ -79,6 +81,7 @@
   @media (min-width: $breakpoint-tablet) {
     width: 285px;
     height: 285px;
+    top: 40px;
     right: 75px;
 
     background-image: url("../img/desktop/rogovaya-back-desktop@1x.png");
@@ -91,8 +94,8 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    top: 255px;
-    left: 190px;
+    top: 252px;
+    left: 191px;
     right: auto;
   }
 }
@@ -128,14 +131,15 @@
     z-index: 2;
 
     width: 440px;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
     padding: 0;
-    padding-top: 65px;
+    padding-top: 97px;
   }
 
   @media (min-width: $breakpoint-desktop) {
+    margin-top: -10px;
+    margin-bottom: 165px;
     padding-top: 0;
-    margin-bottom: 168px;
   }
 }
 
@@ -232,16 +236,30 @@
 /* Верхняя часть элемента Попутчик */
 .companion__header {
   position: relative;
+
+  width: 270px;
+  height: 270px;
   margin: 0;
 
   line-height: 0;
 
+  background-color: $white-color--dark;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 285px;
+    height: 285px;
+
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 /* Фотография попутчика */
 .companion__header-img {
+  width: 270px;
+  height: 270px;
+
   transition: all 1s ease;
 
   @media (min-width: $breakpoint-tablet) {
@@ -260,6 +278,20 @@
   position: absolute;
   top: 17px;
   left: 17px;
+
+  @media (min-width: $breakpoint-tablet) {
+    top: 22px;
+    left: 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    top: 25px;
+    left: 22px;
+  }
+}
+
+.companion__level .level-module__svg {
+  stroke-width: 6;
 }
 
 /* Контент попутчика */
@@ -272,7 +304,10 @@
   border-radius: 0 0 12px 12px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 0 35px 30px;
+    margin-top: -10px;
+    padding: 0 20px 22px;
+
+    border-radius: 0 0 20px 20px;
   }
 }
 
@@ -285,7 +320,7 @@
   margin-bottom: 6px;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -348,7 +383,7 @@
   margin-bottom: 17px;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
 }
 
@@ -357,6 +392,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 13px;
   }
 }
 

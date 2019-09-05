@@ -12,15 +12,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 13px 0;
+  margin-bottom: 16px;
+  padding: 11px 0;
 
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 35px;
+    margin-bottom: 24px;
     padding: 25px 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 0;
   }
 }
 
@@ -54,12 +58,30 @@
 
 /* Левая стрелка */
 .calendar__button--left {
-  background-image: url("../img/icons/month-arrow-left.svg");
+  background-image: url("../img/icons/icon-arrow-left.svg");
+  background-position: left;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-position: right;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    background-position: left;
+  }
 }
 
 /* Правая стрелка */
 .calendar__button--right {
-  background-image: url("../img/icons/month-arrow-right.svg");
+  background-image: url("../img/icons/icon-arrow-right.svg");
+  background-position: right;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-position: left;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    background-position: right;
+  }
 }
 
 /* Название месяца */
@@ -79,8 +101,16 @@
 
 /* Контент календаря */
 .calendar__content {
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 530px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 100%;
+  }
 }
 
 /* Строка календаря */
@@ -94,24 +124,24 @@
 .calendar__row th,
 .calendar__row td {
   width: 30px;
-  height: 30px;
+  height: 31px;
 
   font-weight: normal;
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
     width: 75px;
-    height: 68px;
+    height: 69px;
   }
 
   @media (min-width: $breakpoint-desktop) {
     width: 142px;
-    height: 70px;
-    text-align: left;
-    vertical-align: top;
+    height: 71px;
     padding-top: 10px;
     padding-left: 15px;
 
+    text-align: left;
+    vertical-align: top;
     letter-spacing: 2px;
   }
 }
@@ -121,10 +151,14 @@
   cursor: pointer;
 
   @media (min-width: $breakpoint-tablet) {
-    height: 45px;
+    height: 40px;
 
     font-size: 18px;
     line-height: 30px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 54px;
   }
 }
 
@@ -183,8 +217,10 @@
   @media (min-width: $breakpoint-desktop) {
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 10px;
-    padding-left: 15px;
+    padding-top: 4px;
+    padding-left: 14px;
+
+    line-height: 26px;
 
     border: 2px solid transparent;
   }

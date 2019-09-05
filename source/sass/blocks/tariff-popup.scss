@@ -20,11 +20,14 @@
 
   @media (min-width: $breakpoint-tablet) {
     width: 688px;
+    margin-top: 70px;
+
     border-radius: 30px;
   }
 
   @media (min-width: $breakpoint-desktop) {
     width: 750px;
+    margin-top: 187px;
   }
 }
 
@@ -38,7 +41,7 @@
   padding: 33px 25px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 50px 90px;
+    padding: 50px 92px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -148,7 +151,8 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 40px 45px 45px;
+    padding: 42px 45px 45px;
+
     font-size: 24px;
     line-height: 24px;
     text-transform: none;

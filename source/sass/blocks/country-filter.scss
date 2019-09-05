@@ -3,20 +3,22 @@
    ========================================================================== */
 
 .country-filter {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   padding-top: 17px;
 
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
 
   @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 45px;
     padding-top: 55px;
-    padding-bottom: 50px;
+    padding-bottom: 56px;
+
     border-radius: 0 0 60px 60px;
   }
 
-  @media (min-width: $breakpoint-tablet) {
-    padding-bottom: 75px;
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 77px;
   }
 }
 
@@ -30,7 +32,11 @@
   padding-bottom: 27px;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-bottom: 0;
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: 18px;
   }
 }
 
@@ -48,7 +54,7 @@
 
 /* Фильтр закрыт */
 .country-filter__main-wrapp--close .country-filter__continent {
-  padding-bottom: 17px;
+  padding-bottom: 14px;
 
   @media (min-width: $breakpoint-tablet) {
     padding-bottom: 0;
@@ -58,7 +64,11 @@
 /* Фильтр открыт */
 .country-filter__main-wrapp--open .country-filter__continent {
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 55px;
+    margin-bottom: 71px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 58px;
   }
 }
 
@@ -87,7 +97,8 @@
     display: flex;
     max-width: 300px;
     margin-left: 20px;
-    margin-right: 35px;
+    margin-right: 39px;
+    padding-left: 44px;
   }
 }
 
@@ -103,6 +114,11 @@
 
   background: url("../img/icons/filter.svg") no-repeat;
   transform: translateY(-50%);
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 23px;
+    height: 16px;
+  }
 }
 
 /* Список континентов */
@@ -149,14 +165,14 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 0;
-    margin-right: 25px;
+    margin-right: 27px;
 
     font-size: 20px;
     line-height: 24px;
   }
 
-  @media (min-width: $breakpoint-tablet) {
-    margin-right: 35px;
+  @media (min-width: $breakpoint-desktop) {
+    margin-right: 27px;
   }
 }
 
@@ -183,7 +199,7 @@
 
   width: 17px;
   height: 12px;
-  margin-right: 4px;
+  margin-right: 2px;
   padding: 10px;
 
   font-weight: 700;
@@ -217,7 +233,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     margin-left: auto;
-    margin-right: 60px;
+    margin-right: 64px;
   }
 }
 
@@ -268,12 +284,13 @@
   position: relative;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-left: 35px;
-    margin-bottom: 77px;
+    margin-left: 30px;
+    margin-bottom: 74px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-left: 65px;
+    margin-left: 66px;
+    margin-bottom: 27px;
   }
 }
 
@@ -316,7 +333,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-right: 35px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 
     font-size: 60px;
     line-height: 60px;
@@ -327,6 +344,7 @@
   @media (min-width: $breakpoint-desktop) {
     width: 182px;
     margin-right: 25px;
+    margin-bottom: 65px;
 
     color: $blue-color;
   }
@@ -351,8 +369,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 43px;
-  height: 40px;
+  width: 45px;
+  height: 42px;
   margin-top: -1px;
   margin-left: -1px;
 
@@ -398,16 +416,17 @@
 .country-filter__country-sublist {
   @include reset-ul;
   position: absolute;
-  top: 255px;
+  top: 219px;
   left: 25px;
 
   display: none;
 
   @media (min-width: $breakpoint-tablet) {
-    width: 182px;
-    top: 0;
+    top: -14px;
     left: auto;
-    right: 25px;
+    right: 28px;
+
+    width: 182px;
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -457,7 +476,7 @@
   position: relative;
 
   width: 100%;
-  padding: 5px 15px;
+  padding: 5px 34px 5px 60px;
 
   font-size: 17px;
   line-height: 30px;
@@ -479,11 +498,19 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
+    display: block;
+    width: 617px;
+    margin: 0 auto;
     padding: 35px;
+    padding-left: 73px;
 
     font-size: 20px;
     line-height: 30px;
     color: $blue-color--light;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 100%;
   }
 }
 
@@ -492,17 +519,12 @@
   display: none;
 }
 
-/* Фильтр открыт */
-.country-filter__main-wrapp--open .country-filter__country-button {
-  display: block;
-}
-
 /* Миниатюра у кнопки */
 .country-filter__country-button::before {
   content: "";
   position: absolute;
-  top: 14px;
-  left: 70px;
+  top: 15px;
+  left: 85px;
 
   width: 12px;
   height: 12px;
@@ -511,15 +533,16 @@
   background-repeat: no-repeat;
 
   @media (min-width: $breakpoint-tablet) {
-    top: 40px;
-    left: 260px;
+    top: 42px;
+    left: 242px;
 
     width: 18px;
     height: 18px;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    left: 570px;
+    top: 42px;
+    left: 594px;
   }
 }
 

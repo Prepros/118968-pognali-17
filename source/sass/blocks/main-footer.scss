@@ -16,17 +16,25 @@
   border-radius: 30px 30px 0 0;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: -40px;
-    padding-top: 70px;
-    padding-bottom: 40px;
+    margin-top: -60px;
+    padding-top: 45px;
+    padding-bottom: 45px;
 
     border-radius: 60px 60px 0 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: -46px;
   }
 }
 
 /* Подвал не на главной странице */
 .inner-page .main-footer {
-  margin-top: 0;
+  margin-top: -20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -50px;
+  }
 }
 
 /* Контейнер */
@@ -37,7 +45,6 @@
 
   @media (min-width: $breakpoint-tablet) {
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -49,6 +56,12 @@
   @media (min-width: $breakpoint-tablet) {
     width: 170px;
     margin: 0;
+    margin-right: 84px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 205px;
+    margin-right: 365px;
   }
 }
 
@@ -57,7 +70,7 @@
   margin-bottom: 37px;
 
   @media (min-width: $breakpoint-tablet) {
-    width: 220px;
+    width: 185px;
     margin: 0;
   }
 }
@@ -82,6 +95,7 @@
     display: flex;
     justify-content: space-between;
     width: 155px;
+    margin-left: auto;
     padding-top: 0;
 
     border-top: none;
@@ -127,7 +141,7 @@
   width: 27px;
   height: 34px;
 
-  background-image: url("../img/social/htmlacademy.svg");
+  background-image: url("../img/social/icon-htmlacademy.svg");
   background-repeat: no-repeat;
 
   transform: translateY(-50%);
