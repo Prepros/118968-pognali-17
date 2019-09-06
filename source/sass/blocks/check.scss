@@ -79,12 +79,14 @@ input[type="checkbox"]:checked + .check .check__svg {
 
 /* Различные сотсояния чекбокса */
 .check:hover .check__box,
-.check:focus .check__box {
+.check:focus .check__box,
+input[type="checkbox"]:focus + .check .check__box {
   background-color: rgba($white-color, 0.6);
 }
 
 .check:active .check__box,
-input[type="checkbox"]:disabled + .check .check__box {
+input[type="checkbox"]:disabled + .check .check__box,
+input[type="checkbox"]:active + .check .check__box {
   background-color: rgba($white-color, 0.3);
 }
 
