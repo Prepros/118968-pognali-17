@@ -56,15 +56,6 @@
   fill: $blue-color--light;
 }
 
-.social-menu--bg .social-menu__link:hover .social-menu__icon,
-.social-menu--bg .social-menu__link:focus .social-menu__icon {
-  fill: $white-color;
-}
-
-.social-menu--bg .social-menu__link:active .social-menu__icon {
-  opacity: 0.3;
-}
-
 /* Изображение соц сети */
 .social-menu__icon {
   fill: $grey-color--light;

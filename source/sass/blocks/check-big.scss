@@ -67,7 +67,8 @@
 
 /* Различные состояния чекбокса */
 .check-big__box:hover .check-big__input,
-.check-big__box:focus .check-big__input {
+.check-big__box:focus .check-big__input,
+.check-big__checkbox:focus + .check-big__box .check-big__input {
   border-color: #959bb2;
 }
 

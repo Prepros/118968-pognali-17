@@ -233,6 +233,10 @@
   }
 }
 
+.user-setting__button .visually-hidden:focus + .user-setting__button-file {
+  background-color: #d1d7e9;
+}
+
 /* Прячем слово Сменить */
 .user-setting__button-file span {
   @media (min-width: $breakpoint-desktop) {

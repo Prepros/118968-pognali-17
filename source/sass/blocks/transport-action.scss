@@ -69,6 +69,11 @@
   fill: $blue-color--light;
 }
 
+.transport-action__svg--active:hover,
+.transport-action__input:checked:focus + .transport-action__tooltip .transport-action__svg {
+  fill: rgba($black-color, 0.6);
+}
+
 .transport-action__input:checked + .transport-action__tooltip:hover .transport-action__svg,
 .transport-action__input:checked + .transport-action__tooltip:focus .transport-action__svg {
   fill: #101e44;

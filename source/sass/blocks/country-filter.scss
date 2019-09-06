@@ -133,6 +133,7 @@
   @media (min-width: $breakpoint-tablet) {
     order: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 410px;
     margin: 0;
@@ -147,10 +148,6 @@
 /* Фильтр закрыт */
 .country-filter__main-wrapp--close .country-filter__continent-list {
   display: none;
-
-  @media (min-width: $breakpoint-tablet) {
-    display: flex;
-  }
 }
 
 /* Элементы списка */

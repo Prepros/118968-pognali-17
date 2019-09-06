@@ -630,7 +630,17 @@
     </div>
     <div class="contact__map">
       <div class="contact__map-js yandex-map" id="map"></div>
-<!--      <img class="contact__map-img" src="" width="" height="" alt="">-->
+      <div class="contact__map-picture">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/map-desktop@1x.webp 1x, img/desktop/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/map-tablet@1x.jpg 1x, img/tablet/map-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="img/mobile/map-mobile@1x.webp 1x, img/mobile/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" srcset="img/desktop/map-desktop@1x.jpg 1x, img/desktop/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/tablet/map-tablet@1x.jpg 1x, img/tablet/map-tablet@2x.jpg 2x">
+          <img class="contact__map-img" src="img/mobile/map-mobile@1x.jpg" srcset="img/mobile/map-mobile@2x.jpg 2x" alt="Логотип Погнали">
+        </picture>
+      </div>
     </div>
   </section>
 

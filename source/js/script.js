@@ -1,4 +1,4 @@
-if (!('remove' in Element.prototype)) {
+if (!("remove" in Element.prototype)) {
   Element.prototype.remove = function() {
     if (this.parentNode) {
       this.parentNode.removeChild(this);
@@ -120,19 +120,19 @@ function countHeight() {
         listHeight = 195;
       }
 
-      countryMainBlock.style.height = listHeight + subListHeight + 40 + 'px';
+      countryMainBlock.style.height = listHeight + subListHeight + 40 + "px";
     }
     // Считаем высоту countryMainBlock для планшетных устройств
     else if (window.innerWidth <= 1439) {
       if (listHeight >= subListHeight) {
-        countryMainBlock.style.height = listHeight + 'px';
+        countryMainBlock.style.height = listHeight + "px";
       } else {
-        countryMainBlock.style.height = subListHeight + 'px';
+        countryMainBlock.style.height = subListHeight + "px";
       }
     }
     // Высота блока для десктопа
     else {
-      countryMainBlock.style.height = listHeight + 'px';
+      countryMainBlock.style.height = listHeight + "px";
     }
   }
 }
@@ -230,11 +230,11 @@ if (countryItemBlock) {
 
       // Деактивируем предыдущую выбранную букву
       for (var j = 0; j < countryItemBlock.length; j++) {
-        countryItemBlock[j].classList.remove('country-filter__country-item--active');
+        countryItemBlock[j].classList.remove("country-filter__country-item--active");
       }
 
       // Активируем текущую выбранную букву
-      this.classList.add('country-filter__country-item--active');
+      this.classList.add("country-filter__country-item--active");
 
       // Подгоняем высоту блока под содержимое
       countHeight();
@@ -324,23 +324,23 @@ if (routeCountryBtn && routeModal) {
 
 if (ymaps) {
   ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
+    var myMap = new ymaps.Map("map", {
         center: [59.936243, 30.320795],
         zoom: 16,
         controls: []
       }, {
-        searchControlProvider: 'yandex#search'
+        searchControlProvider: "yandex#search"
       }),
 
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Мы здесь',
-        balloonContent: 'Ну что погнали'
+        hintContent: "Мы здесь",
+        balloonContent: "Ну что погнали"
       }, {
         // Опции.
         // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
+        iconLayout: "default#image",
         // Своё изображение иконки метки.
-        iconImageHref: 'img/map-marker.svg',
+        iconImageHref: "img/map-marker.svg",
         // Размеры метки.
         iconImageSize: [42, 42],
         // Смещение левого верхнего угла иконки относительно
